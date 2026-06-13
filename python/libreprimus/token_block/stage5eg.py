@@ -344,6 +344,12 @@ def validate_stage5eg_post_edit_doc_audit() -> ValidationResult:
         if phrase in start_here:
             errors.append(f"start-here still contains stale phrase: {phrase}")
     current = read_yaml(CURRENT_STAGE_STATE_PATH)
+    current_pair = (current.get("latest_completed_stage_id"), current.get("recommended_next_stage_id"))
+    later_stage_pairs = {
+        ("stage-5eh", "stage-5ei"): Path("data/project-state/stage5eh-summary.yaml"),
+    }
+    if current_pair in later_stage_pairs and later_stage_pairs[current_pair].exists():
+        return _result(errors, stale_current_claim_validation_error_count=report.error_count)
     if current.get("latest_completed_stage_id") != STAGE_ID:
         errors.append("current-stage-state latest stage is not Stage 5EG")
     if current.get("recommended_next_stage_id") != NEXT_STAGE_ID:

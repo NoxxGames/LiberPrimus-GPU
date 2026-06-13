@@ -1,0 +1,185 @@
+stage_id: stage-5eh
+stage_title: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock
+  addendum, diagnostic probe manifests, and enriched fact cards, without execution
+prompt_type: codex_plan_mode_source_lock_addendum
+metadata_only: true
+reviewability_stage: true
+number_fact_review_batch_stage: false
+puzzle_execution_allowed: false
+canonical_codex_handoff_root: codex-output
+status: complete
+recommended_next_stage_id: stage-5ei
+recommended_next_stage_title: Stage 5EI - Source-lock number-fact review batch 006,
+  without execution
+historical_source_lock_records_rewritten: false
+number_fact_backfill_performed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+raw_third_party_files_committed: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+xor_reconstruction_performed_now: false
+outguess_execution_performed: false
+pgp_verification_performed_now: false
+stegdetect_execution_performed_now: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+image_forensics_performed: false
+ocr_performed: false
+audio_stego_performed: false
+spectrogram_stego_performed: false
+tor_network_access_performed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+target_class_validation_implemented: false
+cuda_execution_performed: false
+scoring_performed: false
+benchmark_performed: false
+canonical_corpus_active: false
+page_boundaries_finalized: false
+page_boundaries_final: false
+solve_claim: false
+execution_performed: false
+generated_outputs_committed: false
+record_type: stage5eh_outguess_pgp_xor_records
+schema: schemas\historical-route\stage5eh-outguess-pgp-xor-record-v0.schema.json
+lp_outguessed_expected_pgp_signed_output_count: 8
+pgp_signature_key_id_observed_prior: 181F01E57A35090F
+pgp_short_key_id_observed_prior: 7A35090F
+pgp_signature_verification_status: key_missing_or_not_verified_now
+outguess_xor_share_count: 3
+outguess_xor_share_hex_payload_length_bytes_prior_observed: 991
+outguess_xor_reconstruction_performed_now: false
+xor_txt_local_file_present: false
+xor_txt_exact_local_source_gap: true
+xor_txt_observed_prior_ciphertext_length: 70
+xor_txt_observed_prior_grouping: 14 groups of 5
+xor_txt_observed_prior_digit_symbols:
+- 4
+- 5
+- 7
+xor_txt_possible_29_symbol_alphabet_candidate: true
+xor_txt_decode_attempt_performed_now: false
+outguess03_jpeg_transcription:
+  outguess03_jpeg_transcription_source: operator_supplied_human_transcription
+  outguess03_jpeg_transcription_review_status: requires_human_review
+  outguess03_ocr_performed_now: false
+  outguess03_image_forensics_performed_now: false
+  outguess03_literal_digit_markers:
+  - 5
+  - 3
+  outguess03_rune_gp_prime_values:
+  - 5
+  - 71
+  - 89
+  - 41
+  - 2
+  - 71
+  - 97
+  - 11
+  - 3
+  - 101
+  - 79
+  - 11
+  - 79
+  - 109
+  - 71
+  - 41
+  - 2
+  - 107
+  outguess03_rune_token_count: 18
+  outguess03_visible_item_count_including_digits: 20
+  outguess03_segment_lengths_between_literal_digits:
+  - 8
+  - 5
+  - 5
+  outguess03_rune_zero_based_index_sum: 261
+  outguess03_index_sum_factorization: 9 * 29
+  outguess03_index_sum_mod29: 0
+  outguess03_rune_gp_prime_sum: 990
+  outguess03_segment_index_sums:
+  - 103
+  - 72
+  - 86
+  outguess03_segment_prime_sums:
+  - 387
+  - 273
+  - 330
+  outguess03_control_key_candidate: true
+  outguess03_digit_split_candidate: true
+  outguess03_mod29_neutral_sequence_candidate: true
+  outguess03_used_to_decode_now: false
+  outguess03_key_or_route_accepted_now: false
+  not_solve_evidence: true
+candidate_records:
+- candidate_id: outguess_pgp_signed_family_candidate_v0
+  label: Expected signed output family
+  review_state: source_lock_context
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: outguess_00_01_02_xor_context_v0
+  label: 00/01/02 XOR-share precedent
+  review_state: source_lock_context
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: outguess_xor_txt_signed_ciphertext_gap_v0
+  label: xor.txt signed ciphertext surface gap
+  review_state: reviewability_gap
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: outguess_03_jpeg_gp_transcription_v0
+  label: 03 JPEG GP transcription context
+  review_state: operator_supplied_review
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: outguess_03_mod29_zero_candidate_v0
+  label: 03 index-sum neutral sequence
+  review_state: review_only_numeric_candidate
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: outguess_03_digit_split_candidate_v0
+  label: 03 literal digit split candidate
+  review_state: review_only_numeric_candidate
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: outguess_magic_square_tor_instruction_context_v0
+  label: Magic-square Tor instruction context
+  review_state: source_lock_context
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: outguess_magic_square_0_1_3_distinct_set_v0
+  label: Magic-square 0/1/3 distinct set context
+  review_state: review_only_context
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: outguess_pgp_key_id_context_v0
+  label: PGP key ID verification gap
+  review_state: reviewability_gap
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: outguess_staged_intermediate_model_v0
+  label: Staged intermediate model
+  review_state: review_only_context
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true

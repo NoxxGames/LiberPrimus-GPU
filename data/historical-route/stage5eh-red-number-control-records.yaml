@@ -1,0 +1,87 @@
+stage_id: stage-5eh
+stage_title: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock
+  addendum, diagnostic probe manifests, and enriched fact cards, without execution
+prompt_type: codex_plan_mode_source_lock_addendum
+metadata_only: true
+reviewability_stage: true
+number_fact_review_batch_stage: false
+puzzle_execution_allowed: false
+canonical_codex_handoff_root: codex-output
+status: complete
+recommended_next_stage_id: stage-5ei
+recommended_next_stage_title: Stage 5EI - Source-lock number-fact review batch 006,
+  without execution
+historical_source_lock_records_rewritten: false
+number_fact_backfill_performed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+raw_third_party_files_committed: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+xor_reconstruction_performed_now: false
+outguess_execution_performed: false
+pgp_verification_performed_now: false
+stegdetect_execution_performed_now: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+image_forensics_performed: false
+ocr_performed: false
+audio_stego_performed: false
+spectrogram_stego_performed: false
+tor_network_access_performed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+target_class_validation_implemented: false
+cuda_execution_performed: false
+scoring_performed: false
+benchmark_performed: false
+canonical_corpus_active: false
+page_boundaries_finalized: false
+page_boundaries_final: false
+solve_claim: false
+execution_performed: false
+generated_outputs_committed: false
+record_type: stage5eh_red_number_control_records
+schema: schemas\historical-route\stage5eh-red-number-control-record-v0.schema.json
+page54_55_red_numbered_line_blocks_candidate_v0:
+  source_images:
+  - path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/54.jpg
+    filename: 54.jpg
+    present: true
+    raw_body_committed: false
+    size_bytes: 503830
+    sha256: cee96d7e71b7de4d4e57237faacefad791229c153202e8224e4bedda45fb8f43
+    mime_guess: image/jpeg
+    line_count: null
+    image_metadata:
+      format: JPEG
+      width: 2400
+      height: 3600
+  - path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/55.jpg
+    filename: 55.jpg
+    present: true
+    raw_body_committed: false
+    size_bytes: 519224
+    sha256: aec1898f599f57265d6422f3082a481db94a27f62230affbadee595d05077f8c
+    mime_guess: image/jpeg
+    line_count: null
+    image_metadata:
+      format: JPEG
+      width: 2400
+      height: 3600
+  page54_red_numbers_observed_by_assistant_or_operator:
+  - 2
+  - 3
+  - 4
+  page55_red_numbers_observed_by_operator:
+  - 5
+  large_vertical_margin_around_numbered_blocks_observed_by_operator: true
+  line_blocks_start_with_red_arabic_numeral_candidate: true
+  arabic_numeral_control_token_candidate: true
+  page55_direct_visual_verification_status: verify_metadata_only_or_pending
+  not_same_as_a_postlude_red_heading_theory: true
+  red_number_role_unknown: true
+  route_control_not_accepted_now: true
+  future_probe_id: page54_55_red_numbered_line_block_transcript_alignment_probe_candidate_v0
+  run_now: false

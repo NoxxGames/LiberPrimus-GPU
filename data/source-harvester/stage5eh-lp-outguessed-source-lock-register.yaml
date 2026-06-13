@@ -1,0 +1,165 @@
+stage_id: stage-5eh
+stage_title: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock
+  addendum, diagnostic probe manifests, and enriched fact cards, without execution
+prompt_type: codex_plan_mode_source_lock_addendum
+metadata_only: true
+reviewability_stage: true
+number_fact_review_batch_stage: false
+puzzle_execution_allowed: false
+canonical_codex_handoff_root: codex-output
+status: complete
+recommended_next_stage_id: stage-5ei
+recommended_next_stage_title: Stage 5EI - Source-lock number-fact review batch 006,
+  without execution
+historical_source_lock_records_rewritten: false
+number_fact_backfill_performed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+raw_third_party_files_committed: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+xor_reconstruction_performed_now: false
+outguess_execution_performed: false
+pgp_verification_performed_now: false
+stegdetect_execution_performed_now: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+image_forensics_performed: false
+ocr_performed: false
+audio_stego_performed: false
+spectrogram_stego_performed: false
+tor_network_access_performed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+target_class_validation_implemented: false
+cuda_execution_performed: false
+scoring_performed: false
+benchmark_performed: false
+canonical_corpus_active: false
+page_boundaries_finalized: false
+page_boundaries_final: false
+solve_claim: false
+execution_performed: false
+generated_outputs_committed: false
+record_type: stage5eh_lp_outguessed_source_lock_register
+schema: schemas\source-harvester\stage5eh-lp-outguessed-source-lock-register-v0.schema.json
+source_root: third_party/CiadaSolversIddqd_v2/lp_outguessed
+source_root_present: true
+lp_outguessed_inventory_performed_before_records: true
+lp_outguessed_xor_txt_local_presence_checked: true
+lp_outguessed_file_count: 150
+lp_outguessed_txt_file_count: 75
+lp_outguessed_jpg_file_count: 75
+lp_outguessed_expected_pgp_signed_output_count: 8
+expected_pgp_signed_output_present_count: 8
+expected_pgp_signed_outputs:
+- path: third_party/CiadaSolversIddqd_v2/lp_outguessed/00.txt
+  filename: 00.txt
+  present: true
+  raw_body_committed: false
+  size_bytes: 2899
+  sha256: 2efba5e2283fa16592bedb7c339223bf2db94f07cf2d42188684aa393c12d180
+  mime_guess: text/plain
+  line_count: 54
+  image_metadata: null
+- path: third_party/CiadaSolversIddqd_v2/lp_outguessed/01.txt
+  filename: 01.txt
+  present: true
+  raw_body_committed: false
+  size_bytes: 2899
+  sha256: da4ad19d7e46a9df54fe800bb2477914fbb7b83d34e4ea748760ce2e0902e656
+  mime_guess: text/plain
+  line_count: 54
+  image_metadata: null
+- path: third_party/CiadaSolversIddqd_v2/lp_outguessed/02.txt
+  filename: 02.txt
+  present: true
+  raw_body_committed: false
+  size_bytes: 2899
+  sha256: b1d1d69e32e6c5725dffbcd871c2acb482371889d48ce6734c17741816ad23a3
+  mime_guess: text/plain
+  line_count: 54
+  image_metadata: null
+- path: third_party/CiadaSolversIddqd_v2/lp_outguessed/03.txt
+  filename: 03.txt
+  present: true
+  raw_body_committed: false
+  size_bytes: 31809
+  sha256: a14c1e144760c361a39da41e4784a9a22a3ce490baf42d9eb99b37feab8a47c1
+  mime_guess: text/plain
+  line_count: 533
+  image_metadata: null
+- path: third_party/CiadaSolversIddqd_v2/lp_outguessed/10.txt
+  filename: 10.txt
+  present: true
+  raw_body_committed: false
+  size_bytes: 1234
+  sha256: 56467e78411358a236479a867a073de1a6fe9be2572e19759be1128968b3feeb
+  mime_guess: text/plain
+  line_count: 43
+  image_metadata: null
+- path: third_party/CiadaSolversIddqd_v2/lp_outguessed/11.txt
+  filename: 11.txt
+  present: true
+  raw_body_committed: false
+  size_bytes: 1234
+  sha256: 6f2db751c9d6acd7f17c59679e4313632402a66e7295447781d0de5701894027
+  mime_guess: text/plain
+  line_count: 43
+  image_metadata: null
+- path: third_party/CiadaSolversIddqd_v2/lp_outguessed/12.txt
+  filename: 12.txt
+  present: true
+  raw_body_committed: false
+  size_bytes: 1234
+  sha256: 78581663e7a5ba77494d1840820098b122217edd13009661f1be2e497db88179
+  mime_guess: text/plain
+  line_count: 43
+  image_metadata: null
+- path: third_party/CiadaSolversIddqd_v2/lp_outguessed/13.txt
+  filename: 13.txt
+  present: true
+  raw_body_committed: false
+  size_bytes: 1234
+  sha256: 83835b0e148c1061d42693ea14a5035f54ad41fa45496b00b37311b8e96a2095
+  mime_guess: text/plain
+  line_count: 43
+  image_metadata: null
+pgp_signature_key_id_observed_prior: 181F01E57A35090F
+pgp_short_key_id_observed_prior: 7A35090F
+pgp_signature_verification_status: key_missing_or_not_verified_now
+outguess_xor_share_count: 3
+outguess_xor_share_hex_payload_length_bytes_prior_observed: 991
+outguess_xor_reconstruction_performed_now: false
+xor_txt_local_file_present: false
+lp_outguessed_xor_txt_source_locked_from_local_file: false
+lp_outguessed_xor_txt_reviewability_gap: true
+xor_txt_exact_hash_recorded: false
+xor_txt_reconstructed_now: false
+xor_txt_synthesized_now: false
+xor_txt_raw_body_committed: false
+xor_txt_canonical_record:
+  path: third_party/CiadaSolversIddqd_v2/lp_outguessed/xor.txt
+  filename: xor.txt
+  present: false
+  raw_body_committed: false
+duplicate_or_old_xor_txt_candidate_paths:
+- path: third_party/CicadaSolversIddqd/assets/2014/stage03/xor.txt
+  filename: xor.txt
+  present: true
+  raw_body_committed: false
+  size_bytes: 991
+  sha256: 81139c4d7e025878767fe79ad91024c6cf4b4ede6c763e6b5e500de43fd90866
+  mime_guess: text/plain
+  line_count: 30
+  image_metadata: null
+- path: third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage03/xor.txt
+  filename: xor.txt
+  present: true
+  raw_body_committed: false
+  size_bytes: 991
+  sha256: 81139c4d7e025878767fe79ad91024c6cf4b4ede6c763e6b5e500de43fd90866
+  mime_guess: text/plain
+  line_count: 30
+  image_metadata: null

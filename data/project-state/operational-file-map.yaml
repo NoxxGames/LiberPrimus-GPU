@@ -8471,3 +8471,1043 @@ records:
   staleness_check_level: historical
   owner_context: codex_agent
   notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eh-summary.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-stage5eg-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-stage5ef-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-stage5eb-validation-policy-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-recent-source-lock-register.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-enriched-fact-card-batch-result.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-source-browser-loadability-summary.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-current-truth-doc-staleness-guard-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-reviewable-validation-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-reviewability-gap-register.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-chatgpt-context-update-summary.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/project-state/stage5eh-scope-control.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-lp-outguessed-source-lock-register.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-lp-outguessed-pgp-signed-output-inventory.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-byte-strings-context-crosswalk.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-page54-55-red-number-source-crosswalk.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-page13-stegdetect-operator-result-lock.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-codex-handoff-policy.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-credential-redaction-policy-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/source-harvester/stage5eh-raw-source-noncommit-proof.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/historical-route/stage5eh-lag5-candidate-records.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/historical-route/stage5eh-byte-string-context-records.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/historical-route/stage5eh-red-number-control-records.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/historical-route/stage5eh-stegdetect-f5-signal-records.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/token-block/stage5eh-stage5bd-plan-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/token-block/stage5eh-active-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/token-block/stage5eh-no-active-ingestion-proof.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/token-block/stage5eh-no-byte-stream-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/token-block/stage5eh-no-execution-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/token-block/stage5eh-token-block-static-context-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/operator-console/source-browser/number-fact-overlays/stage5eh-recent-lag5-outguess-byte-control-overlays.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: data/operator-console/source-browser/number-fact-review-batches/stage5eh-recent-lag5-outguess-byte-control-result.yaml
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-summary-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-next-stage-decision-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-stage5eg-preservation-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-stage5ef-preservation-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-stage5eb-validation-policy-preservation-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-recent-source-lock-register-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-diagnostic-probe-manifest-index-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-enriched-fact-card-batch-result-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-source-browser-loadability-summary-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-current-truth-doc-staleness-guard-evidence-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-reviewable-validation-evidence-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-reviewability-gap-register-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-chatgpt-context-update-summary-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/project-state/stage5eh-scope-control-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-lag5-local-source-lock-register-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-lag5-file-inventory-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-lp-outguessed-source-lock-register-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-lp-outguessed-pgp-signed-output-inventory-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-byte-strings-context-crosswalk-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-page54-55-red-number-source-crosswalk-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-page13-stegdetect-operator-result-lock-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-codex-handoff-policy-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-credential-redaction-policy-preservation-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/source-harvester/stage5eh-raw-source-noncommit-proof-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/historical-route/stage5eh-lag5-candidate-record-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/historical-route/stage5eh-outguess-pgp-xor-record-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/historical-route/stage5eh-byte-string-context-record-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/historical-route/stage5eh-red-number-control-record-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/historical-route/stage5eh-stegdetect-f5-signal-record-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/token-block/stage5eh-stage5bd-plan-preservation-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/token-block/stage5eh-active-lineage-preservation-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/token-block/stage5eh-no-active-ingestion-proof-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/token-block/stage5eh-no-byte-stream-transition-gate-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/token-block/stage5eh-no-execution-transition-gate-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/token-block/stage5eh-token-block-static-context-preservation-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/token-block/stage5eh-diagnostic-probe-manifest-records-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/operator-console/source-browser-stage5eh-number-fact-overlay-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: schemas/operator-console/stage5eh-source-browser-number-fact-review-batch-result-v0.schema.json
+  category: active_data_record
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: docs/development-logs/2026-06-13-stage-5eh-lag5-outguess-byte-control-source-lock.md
+  category: historical_log
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+- path: research-log/2026-06-13-stage5eh-lag5-outguess-byte-control-summary.md
+  category: historical_log
+  purpose: Stage 5EH metadata-only source-lock addendum, diagnostic probe, overlay,
+    schema, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eh
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: Stage 5EH source-lock metadata; current-stage-state
+    remains authoritative.
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Raw third_party files and generated outputs remain ignored and uncommitted.

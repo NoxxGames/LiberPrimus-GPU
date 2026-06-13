@@ -204,3 +204,12 @@ These commands build and validate metadata/tooling records only. They do not exe
 - `python -m libreprimus.cli token-block stage5eg-summary`
 - `python -m libreprimus.cli consistency audit-stale-current-claims --strict`
 <!-- END stage5eg -->
+
+<!-- BEGIN stage5eh -->
+## Stage 5EH Token-Block Commands
+
+- `python -m libreprimus.cli token-block build-stage5eh`
+- `python -m libreprimus.cli token-block validate-stage5eh`
+- `python -m libreprimus.cli token-block stage5eh-summary`
+- focused validators include Lag5 inventory, lp_outguessed inventory, overlays, Source Browser loadability, sidecar gates, handoff continuity, and governance scope.
+<!-- END stage5eh -->

@@ -433,7 +433,7 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest validation stage: Stage 5AX adds opt-in parallel validation infrastructure with `10` parallel-safe commands, `6` serial commands, `1` blocked command, separated logs, failure aggregation, and safety audits while keeping git/GitHub/network/generated-output-writing operations serial. Stage 5DQ preserves the local parallel-validation and pytest cap at 8 workers for Stage 5CM and later.
 - Latest doc-staleness stage: Stage 5AH repairs README stage-ledger coverage, operational-file-map coverage, and current/next-stage consistency checks before curated extraction. Stage 5EE updates current/next-stage records to Stage 5EE complete and Stage 5EF next.
 - Latest validation infrastructure stage: Stage 5EB finalizes the 10-worker local validation policy, full-serial-rare fallback boundary, current-stage registry finalization handoff policy, generic stage wrapper aliases, pytest shard/rerun guidance, and Source Browser overlay-cache reuse evidence.
-- Next: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
+- Next: Stage 5EI - Source-lock number-fact review batch 006, without execution.
 
 ## How To Use This Repo
 
@@ -656,3 +656,13 @@ Latest completed: Stage 5EG - Post-edit doc-staleness guardians, read-only audit
 
 Next routed: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
 <!-- END stage5eg -->
+
+<!-- BEGIN stage5eh -->
+## Stage 5EH Current Status
+
+The authoritative current-stage registry is `data/project-state/current-stage-state.yaml`.
+
+Latest completed: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock addendum, diagnostic probe manifests, and enriched fact cards, without execution.
+
+Next routed: Stage 5EI - Source-lock number-fact review batch 006, without execution.
+<!-- END stage5eh -->

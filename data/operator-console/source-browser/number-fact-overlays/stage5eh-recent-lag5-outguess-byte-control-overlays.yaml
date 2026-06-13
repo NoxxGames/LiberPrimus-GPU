@@ -1,0 +1,1238 @@
+stage_id: stage-5eh
+stage_title: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock
+  addendum, diagnostic probe manifests, and enriched fact cards, without execution
+prompt_type: codex_plan_mode_source_lock_addendum
+metadata_only: true
+reviewability_stage: true
+number_fact_review_batch_stage: false
+puzzle_execution_allowed: false
+canonical_codex_handoff_root: codex-output
+status: complete
+recommended_next_stage_id: stage-5ei
+recommended_next_stage_title: Stage 5EI - Source-lock number-fact review batch 006,
+  without execution
+historical_source_lock_records_rewritten: false
+number_fact_backfill_performed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+raw_third_party_files_committed: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+xor_reconstruction_performed_now: false
+outguess_execution_performed: false
+pgp_verification_performed_now: false
+stegdetect_execution_performed_now: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+image_forensics_performed: false
+ocr_performed: false
+audio_stego_performed: false
+spectrogram_stego_performed: false
+tor_network_access_performed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+target_class_validation_implemented: false
+cuda_execution_performed: false
+scoring_performed: false
+benchmark_performed: false
+canonical_corpus_active: false
+page_boundaries_finalized: false
+page_boundaries_final: false
+solve_claim: false
+execution_performed: false
+generated_outputs_committed: false
+record_type: stage5eh_source_browser_number_fact_enrichment_overlay_collection
+schema: schemas\operator-console\source-browser-stage5eh-number-fact-overlay-v0.schema.json
+review_batch_id: stage5eh_recent_lag5_outguess_byte_control
+review_batch_selection_policy: metadata_only_recent_lag5_outguess_byte_control_addendum
+reviewed_entry_count: 9
+overlay_count: 36
+overlay_only_fact_cards_supported_required: true
+review_state: overlay_enriched_fact
+selected_source_record_paths:
+- data/historical-route/stage5eh-lag5-candidate-records.yaml
+- data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+- data/historical-route/stage5eh-byte-string-context-records.yaml
+- data/historical-route/stage5eh-red-number-control-records.yaml
+- data/historical-route/stage5eh-stegdetect-f5-signal-records.yaml
+- data/source-harvester/stage5eh-lp-outguessed-source-lock-register.yaml
+- data/source-harvester/stage5eh-byte-strings-context-crosswalk.yaml
+- data/source-harvester/stage5eh-page54-55-red-number-source-crosswalk.yaml
+- data/source-harvester/stage5eh-page13-stegdetect-operator-result-lock.yaml
+overlays:
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_lag5_d1_d4_57_overlay
+  source_record_path: data/historical-route/stage5eh-lag5-candidate-records.yaml
+  source_fact_id: lag5_counts
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: 'Lag5 d1/d4 events: 29 + 28 = 57'
+  short_label: 'Lag5 d1/d4 events: 29 + 28 = 57'
+  value: 29
+  values:
+  - 29
+  - 28
+  - 57
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: 'Lag5 d1/d4 events: 29 + 28 = 57'
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_lag5_msum_12956_overlay
+  source_record_path: data/historical-route/stage5eh-lag5-candidate-records.yaml
+  source_fact_id: lag5_msum
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Lag5 M-sum 479 over claimed N=12,956
+  short_label: Lag5 M-sum 479 over claimed N=12,956
+  value: 479
+  values:
+  - 479
+  - 12956
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Lag5 M-sum 479 over claimed N=12,956
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_lag5_d_counts_overlay
+  source_record_path: data/historical-route/stage5eh-lag5-candidate-records.yaml
+  source_fact_id: lag5_d_counts
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Lag5 control counts d1..d6 = 29/15/14/28/19/15
+  short_label: Lag5 control counts d1..d6 = 29/15/14/28/19/15
+  value: 29
+  values:
+  - 29
+  - 15
+  - 14
+  - 28
+  - 19
+  - 15
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Lag5 control counts d1..d6 = 29/15/14/28/19/15
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_lag5_marker_definition_overlay
+  source_record_path: data/historical-route/stage5eh-lag5-candidate-records.yaml
+  source_fact_id: lag5_marker
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Lag5 marker M[i] = 1 iff C[i] = C[i+5]
+  short_label: Lag5 marker M[i] = 1 iff C[i] = C[i+5]
+  value: 5
+  values:
+  - 5
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Lag5 marker M[i] = 1 iff C[i] = C[i+5]
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_lag5_modest_significance_overlay
+  source_record_path: data/historical-route/stage5eh-lag5-candidate-records.yaml
+  source_fact_id: lag5_warning
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Lag5 significance remains modest and nuisance-search sensitive
+  short_label: Lag5 significance remains modest and nuisance-search sensitive
+  value: 57
+  values:
+  - 57
+  - 479
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Lag5 significance remains modest and nuisance-search sensitive
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: quarantine
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_lag5_null_model_required_overlay
+  source_record_path: data/historical-route/stage5eh-lag5-candidate-records.yaml
+  source_fact_id: lag5_null
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Lag5 requires doublet-suppressed null controls
+  short_label: Lag5 requires doublet-suppressed null controls
+  value: 5
+  values:
+  - 5
+  - 57
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Lag5 requires doublet-suppressed null controls
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_outguess_expected_signed_set_overlay
+  source_record_path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  source_fact_id: outguess_signed_set
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: 'Expected signed outputs: 00/01/02/03/10/11/12/13'
+  short_label: 'Expected signed outputs: 00/01/02/03/10/11/12/13'
+  value: 8
+  values:
+  - 8
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: 'Expected signed outputs: 00/01/02/03/10/11/12/13'
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_outguess_pgp_key_gap_overlay
+  source_record_path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  source_fact_id: outguess_pgp_key
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: PGP key 181F01E57A35090F / 7A35090F not verified now
+  short_label: PGP key 181F01E57A35090F / 7A35090F not verified now
+  value: 181
+  values:
+  - 181
+  - 35090
+  - 7
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: PGP key 181F01E57A35090F / 7A35090F not verified now
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_outguess_xor_share_991_overlay
+  source_record_path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  source_fact_id: outguess_xor_share
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: 00/01/02 prior XOR-share context reports 991-byte payloads
+  short_label: 00/01/02 prior XOR-share context reports 991-byte payloads
+  value: 3
+  values:
+  - 3
+  - 991
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: 00/01/02 prior XOR-share context reports 991-byte payloads
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_xor_txt_canonical_status_overlay
+  source_record_path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  source_fact_id: xor_txt_status
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Canonical lp_outguessed/xor.txt local presence checked before records
+  short_label: Canonical lp_outguessed/xor.txt local presence checked before records
+  value: 70
+  values:
+  - 70
+  - 14
+  - 5
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Canonical lp_outguessed/xor.txt local presence checked before records
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_xor_txt_prior_surface_overlay
+  source_record_path: data/project-state/stage5eh-reviewability-gap-register.yaml
+  source_fact_id: xor_prior_surface
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Absent xor.txt preserves prior 70 chars / 14 groups of 5 / digits
+    4,5,7
+  short_label: Absent xor.txt preserves prior 70 chars / 14 groups of 5 / digits 4,5,7
+  value: 70
+  values:
+  - 70
+  - 14
+  - 5
+  - 4
+  - 5
+  - 7
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Absent xor.txt preserves prior 70 chars / 14 groups of 5 / digits 4,5,7
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_xor_txt_duplicate_candidates_overlay
+  source_record_path: data/project-state/stage5eh-reviewability-gap-register.yaml
+  source_fact_id: xor_duplicate_candidates
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Duplicate xor.txt candidates remain non-canonical reviewability context
+  short_label: Duplicate xor.txt candidates remain non-canonical reviewability context
+  value: 2
+  values:
+  - 2
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Duplicate xor.txt candidates remain non-canonical reviewability context
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_outguess03_digit_split_overlay
+  source_record_path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  source_fact_id: outguess03_digit_split
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: 03 JPEG transcription split is 8/5/5 with literal digits 5 and 3
+  short_label: 03 JPEG transcription split is 8/5/5 with literal digits 5 and 3
+  value: 8
+  values:
+  - 8
+  - 5
+  - 5
+  - 5
+  - 3
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: 03 JPEG transcription split is 8/5/5 with literal digits 5 and 3
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_outguess03_index_sum_overlay
+  source_record_path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  source_fact_id: outguess03_index_sum
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: 03 JPEG index sum 261 = 9 * 29 = 0 mod29
+  short_label: 03 JPEG index sum 261 = 9 * 29 = 0 mod29
+  value: 261
+  values:
+  - 261
+  - 9
+  - 29
+  - 0
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: 03 JPEG index sum 261 = 9 * 29 = 0 mod29
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_outguess03_prime_sum_overlay
+  source_record_path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  source_fact_id: outguess03_prime_sum
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: 03 JPEG GP prime sum is 990
+  short_label: 03 JPEG GP prime sum is 990
+  value: 990
+  values:
+  - 990
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: 03 JPEG GP prime sum is 990
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_outguess03_segment_index_sums_overlay
+  source_record_path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  source_fact_id: outguess03_segment_index_sums
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: 03 JPEG segment index sums are 103/72/86
+  short_label: 03 JPEG segment index sums are 103/72/86
+  value: 103
+  values:
+  - 103
+  - 72
+  - 86
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: 03 JPEG segment index sums are 103/72/86
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_outguess03_segment_prime_sums_overlay
+  source_record_path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  source_fact_id: outguess03_segment_prime_sums
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: 03 JPEG segment prime sums are 387/273/330
+  short_label: 03 JPEG segment prime sums are 387/273/330
+  value: 387
+  values:
+  - 387
+  - 273
+  - 330
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: 03 JPEG segment prime sums are 387/273/330
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_outguess03_human_review_required_overlay
+  source_record_path: data/historical-route/stage5eh-outguess-pgp-xor-records.yaml
+  source_fact_id: outguess03_review
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: 03 JPEG transcription is operator supplied and requires human review
+  short_label: 03 JPEG transcription is operator supplied and requires human review
+  value: 18
+  values:
+  - 18
+  - 20
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: 03 JPEG transcription is operator supplied and requires human review
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_byte_strings_4x512_overlay
+  source_record_path: data/historical-route/stage5eh-byte-string-context-records.yaml
+  source_fact_id: byte_strings_count
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Byte strings are 4 exact 512-hex / 256-byte surfaces
+  short_label: Byte strings are 4 exact 512-hex / 256-byte surfaces
+  value: 4
+  values:
+  - 4
+  - 512
+  - 256
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Byte strings are 4 exact 512-hex / 256-byte surfaces
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_byte_string4_token_block_overlay
+  source_record_path: data/historical-route/stage5eh-byte-string-context-records.yaml
+  source_fact_id: byte_string4_token_block
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Byte string 4 crosslinks page49-51 matrix/token-block context
+  short_label: Byte string 4 crosslinks page49-51 matrix/token-block context
+  value: 4
+  values:
+  - 4
+  - 49
+  - 51
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Byte string 4 crosslinks page49-51 matrix/token-block context
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_byte_strings_magic_square_warning_overlay
+  source_record_path: data/historical-route/stage5eh-byte-string-context-records.yaml
+  source_fact_id: byte_strings_magic_warning
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Byte strings are not ordinary magic-square row-sum controls
+  short_label: Byte strings are not ordinary magic-square row-sum controls
+  value: 4
+  values:
+  - 4
+  - 16
+  - 16
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Byte strings are not ordinary magic-square row-sum controls
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_byte_strings_no_real_bytes_overlay
+  source_record_path: data/historical-route/stage5eh-byte-string-context-records.yaml
+  source_fact_id: byte_strings_no_bytes
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Stage 5EH generates no real byte streams from byte strings
+  short_label: Stage 5EH generates no real byte streams from byte strings
+  value: 0
+  values:
+  - 0
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Stage 5EH generates no real byte streams from byte strings
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: quarantine
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_page54_red_numbers_overlay
+  source_record_path: data/historical-route/stage5eh-red-number-control-records.yaml
+  source_fact_id: page54_red_numbers
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Page54 red numbered line blocks observed as 2/3/4
+  short_label: Page54 red numbered line blocks observed as 2/3/4
+  value: 54
+  values:
+  - 54
+  - 2
+  - 3
+  - 4
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Page54 red numbered line blocks observed as 2/3/4
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_page55_red_number_overlay
+  source_record_path: data/historical-route/stage5eh-red-number-control-records.yaml
+  source_fact_id: page55_red_number
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Page55 red numbered line block observed as 5
+  short_label: Page55 red numbered line block observed as 5
+  value: 55
+  values:
+  - 55
+  - 5
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Page55 red numbered line block observed as 5
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_red_numbers_separate_postlude_overlay
+  source_record_path: data/historical-route/stage5eh-red-number-control-records.yaml
+  source_fact_id: red_numbers_separate
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Page54/55 red numbers are separate from A POSTLUDE red-heading theory
+  short_label: Page54/55 red numbers are separate from A POSTLUDE red-heading theory
+  value: 54
+  values:
+  - 54
+  - 55
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Page54/55 red numbers are separate from A POSTLUDE red-heading theory
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_red_numbers_margin_control_overlay
+  source_record_path: data/historical-route/stage5eh-red-number-control-records.yaml
+  source_fact_id: red_number_margins
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Large vertical margins around numbered blocks remain review-only
+    context
+  short_label: Large vertical margins around numbered blocks remain review-only context
+  value: 54
+  values:
+  - 54
+  - 55
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Large vertical margins around numbered blocks remain review-only context
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_arabic_numeral_control_family_overlay
+  source_record_path: data/historical-route/stage5eh-red-number-control-records.yaml
+  source_fact_id: arabic_numerals
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Arabic numerals are a control-token family candidate, not accepted
+    route controls
+  short_label: Arabic numerals are a control-token family candidate, not accepted
+    route control
+  value: 2
+  values:
+  - 2
+  - 3
+  - 4
+  - 5
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Arabic numerals are a control-token family candidate, not accepted route
+    controls
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_page13_f5_beta_overlay
+  source_record_path: data/historical-route/stage5eh-stegdetect-f5-signal-records.yaml
+  source_fact_id: page13_f5_beta
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: 'Page13 operator StegDetect signal: f5[1.368187], beta 1.368'
+  short_label: 'Page13 operator StegDetect signal: f5[1.368187], beta 1.368'
+  value: 13
+  values:
+  - 13
+  - 1368
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: 'Page13 operator StegDetect signal: f5[1.368187], beta 1.368'
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_page13_known_outguess_confound_overlay
+  source_record_path: data/historical-route/stage5eh-stegdetect-f5-signal-records.yaml
+  source_fact_id: page13_outguess_confound
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Page13 has known lp_outguessed output context; F5 signal may be cross-hit
+  short_label: Page13 has known lp_outguessed output context; F5 signal may be cross-hit
+  value: 13
+  values:
+  - 13
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Page13 has known lp_outguessed output context; F5 signal may be cross-hit
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: high
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_page13_no_f5_extraction_overlay
+  source_record_path: data/historical-route/stage5eh-stegdetect-f5-signal-records.yaml
+  source_fact_id: page13_no_f5
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: No F5 extraction, password search, or StegDetect execution is authorized
+    now
+  short_label: No F5 extraction, password search, or StegDetect execution is authorized
+    now
+  value: 0
+  values:
+  - 0
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: No F5 extraction, password search, or StegDetect execution is authorized
+    now
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: quarantine
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_page13_canonical_image_required_overlay
+  source_record_path: data/historical-route/stage5eh-stegdetect-f5-signal-records.yaml
+  source_fact_id: page13_canonical_image
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Page13 detector reproduction requires canonical image hash in a future
+    probe
+  short_label: Page13 detector reproduction requires canonical image hash in a future
+    probe
+  value: 13
+  values:
+  - 13
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Page13 detector reproduction requires canonical image hash in a future
+    probe
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_future_lag5_probes_overlay
+  source_record_path: data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  source_fact_id: lag5_future_probes
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Lag5 future probes are declared with run_now=false
+  short_label: Lag5 future probes are declared with run_now=false
+  value: 8
+  values:
+  - 8
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Lag5 future probes are declared with run_now=false
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_future_outguess_probes_overlay
+  source_record_path: data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  source_fact_id: outguess_future_probes
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Outguess/PGP/XOR/03 probes are declared with run_now=false
+  short_label: Outguess/PGP/XOR/03 probes are declared with run_now=false
+  value: 6
+  values:
+  - 6
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Outguess/PGP/XOR/03 probes are declared with run_now=false
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_future_byte_red_page13_probes_overlay
+  source_record_path: data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  source_fact_id: byte_red_f5_future_probes
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Byte/red/Page13 probes are declared with run_now=false
+  short_label: Byte/red/Page13 probes are declared with run_now=false
+  value: 9
+  values:
+  - 9
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Byte/red/Page13 probes are declared with run_now=false
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_crosslink_family_count_overlay
+  source_record_path: data/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk.yaml
+  source_fact_id: crosslinks
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Stage 5EH crosslinks 15 prior candidate families without target selection
+  short_label: Stage 5EH crosslinks 15 prior candidate families without target selection
+  value: 15
+  values:
+  - 15
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Stage 5EH crosslinks 15 prior candidate families without target selection
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: medium
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5eh_stage5eh_no_backfill_overlay
+  source_record_path: data/project-state/stage5eh-scope-control.yaml
+  source_fact_id: scope_control
+  fact_class: stage5eh_lag5_outguess_byte_control_review_fact
+  display_label: Stage 5EH adds overlays only and performs no source-record backfill
+  short_label: Stage 5EH adds overlays only and performs no source-record backfill
+  value: 0
+  values:
+  - 0
+  value_type: sequence
+  operation_type: metadata_only_source_lock_context
+  expression: Stage 5EH adds overlays only and performs no source-record backfill
+  relation: Review-only Stage 5EH context; not proof, not a route seed, and not execution
+    evidence.
+  why_stored: Keeps high-value numeric/source-lock context visible in the Source Browser
+    without mutating source records.
+  verification_status: metadata_only_or_operator_supplied_context
+  display_priority: quarantine
+  risk_notes:
+  - review_only
+  - no_execution
+  - no_solve_claim
+  - future_probe_required

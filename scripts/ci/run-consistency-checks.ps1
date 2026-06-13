@@ -22,6 +22,7 @@ if ($Profile -ne "full") {
     & $Python -m libreprimus.cli token-block validate-stage5eb
     & $Python -m libreprimus.cli token-block validate-stage5ef
     & $Python -m libreprimus.cli token-block validate-stage5eg
+    & $Python -m libreprimus.cli token-block validate-stage5eh
     & $Python -m libreprimus.cli consistency audit-stale-current-claims --strict
     & $Python -m libreprimus.cli consistency check-current-truth-authority
     & $Python -m libreprimus.cli consistency check-doc-update-policy
@@ -63,6 +64,12 @@ try {
     & $Python -m libreprimus.cli consistency audit-stale-current-claims --strict
     git check-ignore -q "codex-output/stage5eg-codex-completion.md"
 
+    Write-Host "Validating Stage 5EH Lag5/outguess/byte-control source-lock addendum records"
+    & $Python -m libreprimus.cli token-block validate-stage5eh
+    & $Python -m libreprimus.cli token-block stage5eh-summary
+    & $Python -m libreprimus.cli consistency audit-stale-current-claims --strict
+    git check-ignore -q "codex-output/stage5eh-codex-completion.md"
+
     Write-Host "Running document staleness checks"
     & $Python -m libreprimus.cli consistency check-doc-staleness `
         --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml `
@@ -82,22 +89,24 @@ import json
 from pathlib import Path
 import yaml
 from libreprimus.doc_staleness.stage_ledger import stage_ledger_findings_for_text
+from libreprimus.stage_state.current import current_latest_stage_label
 
 out = Path(r"$Stage5AHOut")
+expected_latest_stage = current_latest_stage_label()
 readme = Path("README.md").read_text(encoding="utf-8")
 findings = [
     finding.to_dict()
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5EG",
+        expected_latest_stage=expected_latest_stage,
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5EG",
+            "expected_latest_stage": expected_latest_stage,
             "finding_count": len(findings),
             "findings": findings,
         },

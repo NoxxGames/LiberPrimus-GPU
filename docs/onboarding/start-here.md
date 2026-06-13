@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
-- Current planning focus: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
+- Latest completed stage: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock addendum, diagnostic probe manifests, and enriched fact cards, without execution.
+- Current planning focus: Stage 5EI - Source-lock number-fact review batch 006, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

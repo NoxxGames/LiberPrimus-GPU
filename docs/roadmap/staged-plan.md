@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
-- Current planning focus: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
+- Latest completed stage: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock addendum, diagnostic probe manifests, and enriched fact cards, without execution.
+- Current planning focus: Stage 5EI - Source-lock number-fact review batch 006, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -338,3 +338,11 @@ Status: complete.
 
 Stage 5EG adds deterministic stale-current-claim scanning, project-local declared hooks, read-only auditor-agent definitions, and daily report-only automation setup. Lag5 source-lock is deferred to Stage 5EH. Number-fact review batch 006 is deferred to Stage 5EI.
 <!-- END stage5eg -->
+
+<!-- BEGIN stage5eh -->
+## Stage 5EH - Lag5/Outguess/Byte-Control Source-Lock Addendum
+
+- Latest completed stage: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock addendum, diagnostic probe manifests, and enriched fact cards, without execution.
+- Current planning focus: Stage 5EI - Source-lock number-fact review batch 006, without execution.
+- Stage 5EH is source-lock/reviewability metadata only and does not authorize route extraction, byte streams, stego execution, OCR, image forensics, CUDA, scoring, benchmarks, or solve claims.
+<!-- END stage5eh -->

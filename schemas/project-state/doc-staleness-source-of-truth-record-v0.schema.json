@@ -21,7 +21,7 @@
   ],
   "properties": {
     "record_type": { "const": "doc_staleness_source_of_truth_record" },
-    "stage_id": { "enum": ["stage-5ab", "stage-5ac", "stage-5ad", "stage-5ad-fix", "stage-5ae", "stage-5af", "stage-5ag", "stage-5ah", "stage-5eg"] },
+    "stage_id": { "enum": ["stage-5ab", "stage-5ac", "stage-5ad", "stage-5ad-fix", "stage-5ae", "stage-5af", "stage-5ag", "stage-5ah", "stage-5eg", "stage-5eh"] },
     "latest_completed_stage_after_this_stage": { "type": "string", "pattern": "Stage 5[A-Z]+(-fix)?" },
     "latest_completed_stage_prefix": { "type": "string", "pattern": "Stage 5[A-Z]+(-fix)?" },
     "next_stage_after_this_stage": { "type": "string", "pattern": "Stage 5[A-Z]+(-fix)?" },

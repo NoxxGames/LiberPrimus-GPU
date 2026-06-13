@@ -358,6 +358,7 @@ def validate_stage5eb_current_stage_registry_policy() -> Stage5EBValidationResul
         ("stage-5ee", "stage-5ef"),
         ("stage-5ef", "stage-5eg"),
         ("stage-5eg", "stage-5eh"),
+        ("stage-5eh", "stage-5ei"),
     }
     current_pair = (state.get("latest_completed_stage_id"), state.get("recommended_next_stage_id"))
     if current_pair not in allowed_current_states:

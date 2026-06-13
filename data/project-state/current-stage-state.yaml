@@ -1,9 +1,9 @@
-stage_id: stage-5eg
-stage_title: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents,
-  stop-hook drift gate, and daily automation setup, without puzzle execution
-prompt_type: codex_plan_mode_metadata_tooling_implementation
+stage_id: stage-5eh
+stage_title: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock
+  addendum, diagnostic probe manifests, and enriched fact cards, without execution
+prompt_type: codex_plan_mode_source_lock_addendum
 metadata_only: true
-source_lock_only: false
+source_lock_only: true
 reviewability_stage: true
 number_fact_review_batch_stage: false
 puzzle_execution_allowed: false
@@ -87,18 +87,18 @@ raw_third_party_files_committed: false
 record_type: current_stage_state
 schema: schemas/project-state/current-stage-state-v0.schema.json
 status: complete
-latest_completed_stage_id: stage-5eg
-latest_completed_stage_title: Stage 5EG - Post-edit doc-staleness guardians, read-only
-  auditor agents, stop-hook drift gate, and daily automation setup, without puzzle
-  execution
+latest_completed_stage_id: stage-5eh
+latest_completed_stage_title: Stage 5EH - Lag5/outguess/byte-string/red-number/F5
+  context source-lock addendum, diagnostic probe manifests, and enriched fact cards,
+  without execution
 latest_completed_stage_commit_recording_policy: external_post_push_handoff
 latest_completed_stage_ci_status_recording_policy: external_post_push_handoff
 latest_completed_stage_commit_in_committed_registry: not_applicable_self_referential
 latest_completed_stage_ci_status_in_committed_registry: not_applicable_pre_push
-recommended_next_stage_id: stage-5eh
-recommended_next_stage_title: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe
-  manifest, and enriched fact cards, without execution
-recommended_next_prompt_type: codex_plan_mode_source_lock_addendum
+recommended_next_stage_id: stage-5ei
+recommended_next_stage_title: Stage 5EI - Source-lock number-fact review batch 006,
+  without execution
+recommended_next_prompt_type: codex_plan_mode_number_fact_review_batch
 stage_registry_is_source_of_truth: true
 historical_tests_must_not_require_latest_stage: true
 current_stage_registry_is_committed_pre_push_state: true
@@ -119,7 +119,7 @@ blocking_hooks_enabled_now: false
 codex_automations_scheduled_now: false
 automation_auto_commit_enabled: false
 repo_local_skills_installed_now: false
-number_fact_enrichment_overlays_added_now: false
+number_fact_enrichment_overlays_added_now: true
 number_fact_review_batch_006_performed_now: false
 stage5ef_recommended_stage5eg_number_fact_batch_006: true
 operator_inserted_doc_staleness_guardian_stage_before_lag5: true
@@ -129,4 +129,18 @@ number_fact_review_batch_006_deferred_to_stage5ei: true
 project_hooks_declared_now: true
 active_hooks_effective_now: false
 blocking_hooks_effective_now: false
-lag5_source_lock_performed_now: false
+lag5_source_lock_performed_now: true
+stage5eg_doc_staleness_scanner_preserved: true
+stage5ef_current_truth_authority_preserved: true
+stage5eb_10_worker_validation_policy_preserved: true
+lp_outguessed_inventory_performed_before_records: true
+lp_outguessed_xor_txt_local_presence_checked: true
+source_lock_records_created_now: true
+new_source_lock_evidence_added_as_raw_body: false
+xor_reconstruction_performed_now: false
+outguess_execution_performed: false
+pgp_verification_performed_now: false
+stegdetect_execution_performed_now: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+future_probe_manifest_count: 23

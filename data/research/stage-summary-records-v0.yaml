@@ -4251,3 +4251,23 @@ records:
   generated_outputs_committed: false
   notes: No source-lock evidence, overlays, route extraction, byte streams, execution,
     CUDA, scoring, benchmarks, or solve claim.
+- record_type: stage_summary_record
+  stage_id: stage-5eh
+  title: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock addendum,
+    diagnostic probe manifests, and enriched fact cards, without execution
+  status: complete
+  category: metadata_source_lock_reviewability
+  summary: Added metadata-only Lag5, lp_outguessed, byte-string, Page54/55 red-number,
+    and Page13 detector context records plus overlay fact cards and future probe manifests.
+  key_outputs:
+  - 'Lag5 files inventoried: 5; event rows: 57.'
+  - 'lp_outguessed signed outputs present: 8; xor.txt local present: False.'
+  - 'Future probes declared with run_now=false: 23.'
+  - 'Source Browser overlays added: 36.'
+  result_status: metadata_source_lock_addendum_complete
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: No route extraction, byte streams, stego execution, image forensics, OCR,
+    CUDA, scoring, benchmarks, or solve claim.

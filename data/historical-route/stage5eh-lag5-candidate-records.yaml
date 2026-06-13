@@ -1,0 +1,166 @@
+stage_id: stage-5eh
+stage_title: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock
+  addendum, diagnostic probe manifests, and enriched fact cards, without execution
+prompt_type: codex_plan_mode_source_lock_addendum
+metadata_only: true
+reviewability_stage: true
+number_fact_review_batch_stage: false
+puzzle_execution_allowed: false
+canonical_codex_handoff_root: codex-output
+status: complete
+recommended_next_stage_id: stage-5ei
+recommended_next_stage_title: Stage 5EI - Source-lock number-fact review batch 006,
+  without execution
+historical_source_lock_records_rewritten: false
+number_fact_backfill_performed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+raw_third_party_files_committed: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+xor_reconstruction_performed_now: false
+outguess_execution_performed: false
+pgp_verification_performed_now: false
+stegdetect_execution_performed_now: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+image_forensics_performed: false
+ocr_performed: false
+audio_stego_performed: false
+spectrogram_stego_performed: false
+tor_network_access_performed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+target_class_validation_implemented: false
+cuda_execution_performed: false
+scoring_performed: false
+benchmark_performed: false
+canonical_corpus_active: false
+page_boundaries_finalized: false
+page_boundaries_final: false
+solve_claim: false
+execution_performed: false
+generated_outputs_committed: false
+record_type: stage5eh_lag5_candidate_records
+schema: schemas\historical-route\stage5eh-lag5-candidate-record-v0.schema.json
+lag5_marker_definition: M[i] = 1 iff C[i] = C[i+5]
+lag_value: 5
+d1_definition: M[i] = M[i+1] = 1; adjacent pair repeats 5 later
+d4_definition: M[i] = M[i+4] = 1; endpoint-spaced pair repeats 5 later
+d1_count: 29
+d4_count: 28
+d1_plus_d4_event_count: 57
+event_list_expected_row_count: 57
+event_list_observed_row_count: 57
+lag5_m_sum_claimed_or_reproduced: 479
+unsolved_corpus_rune_count_claimed_or_reproduced: 12956
+lag5_d_counts:
+  d1: 29
+  d2: 15
+  d3: 14
+  d4: 28
+  d5: 19
+  d6: 15
+lag5_fourth_order_correlation_candidate: true
+ordinary_period5_cipher_claimed_now: false
+validated_cipher_mechanism_now: false
+statistical_significance_modest: true
+wide_nuisance_parameter_search_weakens_global_significance: true
+requires_exact_corpus_boundary: true
+requires_doublet_suppressed_null_model: true
+requires_independent_reproduction_from_canonical_transcription: true
+not_target_priority_evidence_alone: true
+not_solve_evidence: true
+candidate_records:
+- candidate_id: lag5_paired_copy_anomaly_candidate_v0
+  label: Lag5 paired copy anomaly
+  review_state: lag5_review_only
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_57_event_source_lock_v0
+  label: 57-event d1+d4 source lock
+  review_state: lag5_review_only
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_raw_frequency_source_lock_v0
+  label: Raw frequency-data source lock
+  review_state: lag5_review_only
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_d1_d4_fourth_order_correlation_candidate_v0
+  label: d1/d4 fourth-order correlation
+  review_state: lag5_review_only
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_doublet_suppressed_null_warning_v0
+  label: Doublet-suppressed null requirement
+  review_state: null_control_required
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_holdout_nuisance_warning_v0
+  label: Holdout and nuisance-search warning
+  review_state: reviewability_warning
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_copy_semantics_candidate_v0
+  label: Copy semantics candidate
+  review_state: lag5_review_only
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_backreference_stutter_candidate_v0
+  label: Backreference/stutter candidate
+  review_state: lag5_review_only
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_token_block_cluster_context_v0
+  label: Token-block cluster bridge
+  review_state: crosslink_context
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_pdd153_56311_distance5_bridge_v0
+  label: PDD153/56311 distance-5 bridge
+  review_state: crosslink_context
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_disk_doublet_model_context_v0
+  label: Disk doublet model bridge
+  review_state: crosslink_context
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_page32_diagnostic_context_v0
+  label: Page32 diagnostic bridge
+  review_state: crosslink_context
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true
+- candidate_id: lag5_negative_space_bridge_v0
+  label: Negative-space bridge
+  review_state: crosslink_context
+  usable_for_decision_now: false
+  target_priority_decision_created_now: false
+  run_now: false
+  not_solve_evidence: true

@@ -330,7 +330,11 @@ def validate_stage5ef_current_truth() -> ValidationResult:
         errors.append("historical sections are not explicitly exempted")
     current = read_yaml(CURRENT_STAGE_STATE_PATH)
     current_pair = (current.get("latest_completed_stage_id"), current.get("recommended_next_stage_id"))
-    if current_pair == ("stage-5eg", "stage-5eh") and Path("data/project-state/stage5eg-summary.yaml").exists():
+    later_stage_pairs = {
+        ("stage-5eg", "stage-5eh"): Path("data/project-state/stage5eg-summary.yaml"),
+        ("stage-5eh", "stage-5ei"): Path("data/project-state/stage5eh-summary.yaml"),
+    }
+    if current_pair in later_stage_pairs and later_stage_pairs[current_pair].exists():
         return _result(errors, authority_count=len(record.get("authoritative_current_truth", [])))
     if current.get("latest_completed_stage_id") != STAGE_ID:
         errors.append("current-stage-state latest stage is not Stage 5EF")

@@ -4,7 +4,7 @@
 
 Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution is complete.
 
-Next recommended prompt: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5EI - Source-lock number-fact review batch 006, without execution. Public website expansion remains deferred to a future review-gated project.
 
 ## Completed in Stage 5EG
 
@@ -1459,3 +1459,13 @@ Recommended next stage: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/prob
 
 Doc-staleness guard: strict tracked-file stale-current scanner plus declared Stop hook, read-only closeout agents, and daily report-only automation setup.
 <!-- END stage5eg -->
+
+<!-- BEGIN stage5eh -->
+## Stage 5EH Status
+
+Latest completed stage: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock addendum, diagnostic probe manifests, and enriched fact cards, without execution.
+
+Recommended next stage: Stage 5EI - Source-lock number-fact review batch 006, without execution.
+
+Stage 5EH records Lag5 29/28/57 event context, M-sum 479 over claimed N=12,956, lp_outguessed signed-output metadata, the canonical xor.txt presence/gap result, operator-supplied 03 JPEG transcription facts, Stage 5BK byte-string crosslinks, Page54/55 red-number controls, and Page13 detector context. All probe manifests are disabled with `run_now=false`.
+<!-- END stage5eh -->
