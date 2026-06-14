@@ -414,12 +414,12 @@ def consistency_audit_stale_current_claims(
         finding for finding in report.findings if finding.severity == "error"
     ]
     for finding in printable_findings:
-        style = "red" if finding.severity == "error" else "yellow"
-        text = (
+        text = _console_safe(
             f"{finding.severity}:{finding.claim_type}:{finding.path}:{finding.line}: "
-            f"{_console_safe(finding.matched_text)}"
+            f"{finding.matched_text}"
         )
-        console.print(text, style=style, markup=False, highlight=False)
+        console.file.write(f"{text}\n")
+    console.file.flush()
     if strict and not report_only and report.error_count:
         raise typer.Exit(1)
     console.print("stale_current_claim_audit_valid=true")
