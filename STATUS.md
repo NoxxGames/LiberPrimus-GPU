@@ -2,9 +2,9 @@
 
 ## Current Stage
 
-- Latest completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
-- Current next stage: Stage 6 - Probe and diagnostic readiness, without execution.
-- Next recommended prompt: Stage 6 - Probe and diagnostic readiness, without execution.
+- Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+- Current next stage: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Next recommended prompt: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Stage 5EI supersedes the previously routed ordinary number-fact review batch 006 and routes the project to Stage 6 probe/diagnostic readiness.
 - Stage 5EI records PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, Pascal/Fibonacci diagonal context, and fingerprint-based route-diagnostic policy as review-only metadata.
 - No probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, or solve work is authorized.
@@ -1476,9 +1476,18 @@ Stage 5EH records Lag5 29/28/57 event context, M-sum 479 over claimed N=12,956, 
 <!-- BEGIN stage5ei current-state -->
 ## Current Stage
 
-- Latest completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
-- Current next stage: Stage 6 - Probe and diagnostic readiness, without execution.
+- Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+- Current next stage: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Stage 5EI supersedes the previously routed ordinary number-fact review batch 006 and routes the project to Stage 6 probe/diagnostic readiness.
 - Stage 5EI records PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, Pascal/Fibonacci diagonal context, and fingerprint-based route-diagnostic policy as review-only metadata.
 - No probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, or solve work is authorized.
 <!-- END stage5ei current-state -->
+
+<!-- stage6:start -->
+## Stage 6 Status
+
+- Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+- Current next stage: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 6 preserves Stage 5EI and Stage 5EH, records a bounded source-root census, maps diagnostic families, adds future-only discovery probes, and defines Stage 7 result-bundle policy.
+- No probes ran, no ZIP result archive was created, and no raw third-party or generated outputs are committed.
+<!-- stage6:end -->

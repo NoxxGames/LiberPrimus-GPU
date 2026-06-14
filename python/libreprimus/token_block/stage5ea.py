@@ -305,7 +305,7 @@ def validate_stage5ea_current_stage_registry() -> Stage5EAValidationResult:
                 path,
             )
         )
-    elif not latest_stage.startswith("stage-5"):
+    elif latest_stage not in {"stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee", "stage-5ef", "stage-5eg", "stage-5eh", "stage-5ei", "stage-6"}:
         errors.append(f"{path.as_posix()}: unexpected latest_completed_stage_id {latest_stage!r}")
     return _result("current_stage_registry", payload, errors)
 

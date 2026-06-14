@@ -2,7 +2,7 @@
 
 ## Current Direction
 
-Current completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
+Current completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
 
 Next routed stage: Stage 6 - Probe and diagnostic readiness, without execution.
 
@@ -528,3 +528,9 @@ Next: Stage 5EG - Source-lock number-fact review batch 006, without execution.
 - Batch 006 remains deferred to Stage 5EI.
 <!-- END stage5eh -->
 <!-- BEGIN stage5ei current-state -->
+
+<!-- stage6:start -->
+## Stage 6 Roadmap Update
+
+Stage 6 completed the diagnostic backlog readiness foundation without execution. Stage 6B should finalize the finite Stage 7 probe manifest and archive-run contract. Stage 7 remains the earliest bounded diagnostic execution stage after Stage 6B, Stage 8 remains triangle readiness, and Stage 9 remains earliest bounded triangle experiments.
+<!-- stage6:end -->

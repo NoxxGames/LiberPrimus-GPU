@@ -9519,3 +9519,7 @@ stage_records:
     route_policy: data/token-block/stage5ei-route-diagnostic-policy.yaml
     overlays: data/operator-console/source-browser/number-fact-overlays/stage5ei-final-stage5-triangle-transition-overlays.yaml
     next_stage: stage-6
+stage6_summary_record: data/project-state/stage6-summary.yaml
+stage6_diagnostic_backlog_census: data/project-state/stage6-diagnostic-backlog-census.yaml
+stage6_discovery_probe_manifest_registry: data/token-block/stage6-discovery-probe-manifest-registry.yaml
+stage6_observation_rune_frequency_source_lock_register: data/source-harvester/stage6-observation-rune-frequency-source-lock-register.yaml

@@ -35,3 +35,4 @@ def test_parallel_scripts_default_to_current_ten_worker_policy_and_ignored_state
 
 def test_stage5cu_cli_test_is_serial_isolated_from_parallel_shards() -> None:
     assert Path("tests/python/test_stage5cu_cli.py") in SERIAL_ISOLATED_TEST_FILES
+    assert Path("tests/python/test_stage5cq_cli.py") in SERIAL_ISOLATED_TEST_FILES

@@ -4299,3 +4299,36 @@ records:
   notes: next=stage-6; full_serial_pytest_required=false; no probes, route extraction,
     byte streams, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target
     selection, canonical-corpus activation, page-boundary finalisation, or solve claim.
+- record_type: stage_summary_record
+  stage_id: stage-6
+  title: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle
+    policy, and Stage 7/8/9 handoff, without execution
+  status: complete
+  category: metadata_diagnostic_readiness
+  summary: Completed metadata-only diagnostic backlog readiness with a bounded source-root
+    census, future-only discovery probes, no-lossy Stage 7 archive policy, and Stage
+    8/9 triangle boundaries.
+  key_outputs:
+  - 'Bounded source-root census records: 25.'
+  - 'Diagnostic families represented: 15.'
+  - 'Future discovery probes declared with execution disabled: 34.'
+  - ObservationOnRuneFrequency recorded as archive-observed future-probe context only.
+  - Stage 7 archive policy forbids lossy filtering, score discard, top-N-only retention,
+    CUDA triage, and scoring triage.
+  - 'Recommended next stage: stage-6b.'
+  result_status: metadata_readiness_complete
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: No probes, ZIP archive, Stage 7 outputs, raw third-party commits, generated-output
+    commits, bigrams.py execution, OCR/image/stego/PGP/OutGuess/F5/StegDetect/CUDA/scoring/benchmarks,
+    target selection, canonical-corpus activation, page-boundary finalisation, or
+    solve claim.
+  summary_path: data/project-state/stage6-summary.yaml
+  recommended_next_stage_id: stage-6b
+  recommended_next_stage_title: Stage 6B - Final finite Stage 7 probe manifest and
+    archive-run contract, without execution
+  source_root_count: 25
+  diagnostic_family_count: 15
+  discovery_probe_count: 34

@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
-- Current planning focus: Stage 6 - Probe and diagnostic readiness, without execution.
+- Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+- Current planning focus: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -163,9 +163,9 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Stage
 
-Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution is the latest completed stage. It supersedes the previously routed ordinary number-fact review batch 006, records final Stage 5 triangle/route diagnostic context, preserves Stage 5EH counts, and keeps all probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, and solve gates closed.
+Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution is the latest completed stage. It supersedes the previously routed ordinary number-fact review batch 006, records final Stage 5 triangle/route diagnostic context, preserves Stage 5EH counts, and keeps all probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, and solve gates closed.
 
-Current planning focus: Stage 6 - Probe and diagnostic readiness, without execution. Stage 6 is a readiness stage only; Stage 5EI does not run Stage 6 probes or generate route streams.
+Current planning focus: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6 is a readiness stage only; Stage 5EI does not run Stage 6 probes or generate route streams.
 
 ## Planned Next Stages
 
@@ -360,3 +360,11 @@ Stage 5EI records PDD153/T17 geometry, triangular-transposition taxonomy ambigui
 
 Next: Stage 6 - Probe and diagnostic readiness, without execution.
 <!-- END stage5ei -->
+
+<!-- stage6:start -->
+## Stage 6 - Diagnostic Backlog Readiness
+
+Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution is the latest completed stage. It is metadata-only and creates a bounded source-root census, diagnostic-backlog census, discovery-probe registry, bridge/keeper taxonomy, no-lossy Stage 7 archive policy, and Stage 8/9 triangle boundary handoff.
+
+Next: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+<!-- stage6:end -->

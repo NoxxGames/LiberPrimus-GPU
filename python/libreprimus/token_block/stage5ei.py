@@ -362,10 +362,15 @@ def validate_stage5ei_stage5eh_preservation() -> ValidationResult:
 def validate_stage5ei_current_mirror_repair() -> ValidationResult:
     state = read_yaml(CURRENT_STAGE_STATE_PATH)
     errors: list[str] = []
-    if state.get("latest_completed_stage", {}).get("stage_id") != STAGE_ID:
-        errors.append("current-stage-state latest completed stage is not stage-5ei")
-    if state.get("next_stage", {}).get("stage_id") != NEXT_STAGE_ID:
-        errors.append("current-stage-state next stage is not stage-6")
+    current_pair = (state.get("latest_completed_stage_id"), state.get("recommended_next_stage_id"))
+    later_stage_pairs = {
+        ("stage-6", "stage-6b"): Path("data/project-state/stage6-summary.yaml"),
+    }
+    if current_pair not in later_stage_pairs or not later_stage_pairs[current_pair].exists():
+        if state.get("latest_completed_stage", {}).get("stage_id") != STAGE_ID:
+            errors.append("current-stage-state latest completed stage is not stage-5ei")
+        if state.get("next_stage", {}).get("stage_id") != NEXT_STAGE_ID:
+            errors.append("current-stage-state next stage is not stage-6")
     for path in CURRENT_MIRROR_PATHS:
         if not path.exists():
             errors.append(f"missing current mirror: {path.as_posix()}")

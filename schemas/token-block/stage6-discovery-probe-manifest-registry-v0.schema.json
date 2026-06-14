@@ -1,0 +1,68 @@
+{
+  "$id": "https://liberprimus-gpu.local/schemas/stage6/discovery_probe_manifest_registry",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "benchmark_performed": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "puzzle_execution_allowed": {
+      "const": false
+    },
+    "raw_source_files_committed": {
+      "const": false
+    },
+    "raw_third_party_files_committed": {
+      "const": false
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "record_type": {
+      "type": "string"
+    },
+    "route_stream_generated_now": {
+      "const": false
+    },
+    "schema": {
+      "type": "string"
+    },
+    "scoring_performed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage6_probe_execution_performed_now": {
+      "const": false
+    },
+    "stage6_zip_result_bundle_created_now": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-6"
+    },
+    "stage_title": {
+      "const": "Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution"
+    }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "stage_title",
+    "metadata_only",
+    "puzzle_execution_allowed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

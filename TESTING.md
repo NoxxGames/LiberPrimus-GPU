@@ -1202,3 +1202,9 @@ pytest is not required for normal completion.
 
 Stage 5EI uses focused validators first, then the stale-current scanner in strict mode, Source Browser validation, focused Stage 5EI pytest files, ruff, `stage-fast`, `local-fast`, and one `full-parallel` run with `Workers=10` and `PytestWorkers=10`. Full serial pytest is not required for normal closeout.
 <!-- END stage5ei -->
+
+<!-- stage6:start -->
+## Stage 6 Validation Policy
+
+Stage 6 uses focused validators first, then stale-current scanner strict mode, Source Browser validation, focused Stage 6 pytest files, ruff, stage-fast, local-fast, and one full-parallel run with Workers=10 and PytestWorkers=10. Full serial pytest remains opt-in only and is not required for normal closeout.
+<!-- stage6:end -->

@@ -368,3 +368,11 @@ are evidence, not current truth.
 - Next routed stage: Stage 6 - Probe and diagnostic readiness, without execution.
 - Historical logs and previous stage sections remain evidence, not current truth.
 <!-- END stage5ei -->
+
+<!-- stage6:start -->
+## Stage 6 Source-Of-Truth Update
+
+- Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+- Next routed stage: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 6 records ObservationOnRuneFrequency as community-observation archive context only; canonical transcript reproduction is future Stage 7 work.
+<!-- stage6:end -->

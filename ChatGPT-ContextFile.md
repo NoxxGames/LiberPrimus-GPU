@@ -2,11 +2,11 @@
 
 ## Current Project State
 
-## Stage 5EI Current Boundary
+## Stage 6 Current Boundary
 
-Latest completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
+Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
 
-Current planning focus: Stage 6 - Probe and diagnostic readiness, without execution.
+Current planning focus: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 5EI is the final Stage 5 metadata transition. It records PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, Pascal/Fibonacci diagonal context, and fingerprint-based route-diagnostic policy as review-only metadata. The ordinary number-fact review batch 006 was superseded and was not performed.
 
@@ -276,3 +276,13 @@ Current planning focus: Stage 5EI - Source-lock number-fact review batch 006, wi
 
 Stage 5EH source-locks Lag5, `lp_outguessed`, byte-string, Page54/55 red-number, and Page13 detector context as metadata only. It adds future diagnostic probe manifests with `run_now=false` and overlay-only fact cards, but it performs no route extraction, byte generation, XOR reconstruction, PGP verification, OutGuess/StegDetect/F5 execution, OCR, image forensics, CUDA, scoring, benchmark, or solve claim.
 <!-- END stage5eh -->
+
+<!-- stage6:start -->
+## Stage 6 Current Boundary
+
+Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+
+Current planning focus: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6 created the diagnostic backlog census and Stage 7 archive-policy foundation without execution. ObservationOnRuneFrequency is recorded as archive-observed future-probe context only, not canonical transcript truth.
+<!-- stage6:end -->

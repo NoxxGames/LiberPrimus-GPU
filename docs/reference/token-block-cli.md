@@ -222,3 +222,9 @@ These commands build and validate metadata/tooling records only. They do not exe
 - `libreprimus token-block stage5ei-summary`
 - focused validators are available for Stage 5EH preservation, current mirrors, stale-current scanner regressions, PDD153 geometry, route-diagnostic policy, Stage 6 roadmap, overlays, Source Browser loadability, gate closure, and handoff.
 <!-- END stage5ei -->
+
+<!-- stage6:start -->
+## Stage 6 Token-Block Commands
+
+Stage 6 token-block commands: `build-stage6`, `validate-stage6`, `stage6-summary`, and focused validators for preservation, source-root census, source-lock family census, diagnostic backlog, discovery probes, route fingerprints, controls, bridge/keeper taxonomy, result-bundle policy, no-lossy filtering, non-CUDA/non-scoring policy, ObservationOnRuneFrequency, Stage 7 menu, Stage 8 triangle boundary, Source Browser loadability, gate closure, and handoff.
+<!-- stage6:end -->

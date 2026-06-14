@@ -208,3 +208,9 @@ Stage 5EG adds `.codex/` project-local hook and agent declarations plus daily do
 
 Use `data/project-state/current-stage-state.yaml` for latest/next-stage truth. Stage 5EI is complete and Stage 6 is the next routed readiness stage. Older examples that mention Stage 5EI as batch 006 are historical and must not be used as current routing.
 <!-- END stage5ei -->
+
+<!-- stage6:start -->
+## Stage 6 Operational Map Update
+
+Stage 6 records live under `data/project-state/stage6-*`, `data/source-harvester/stage6-*`, `data/token-block/stage6-*`, and `data/historical-route/stage6-*`. Generated completion handoff remains ignored under `codex-output/stage6-codex-completion.md`.
+<!-- stage6:end -->

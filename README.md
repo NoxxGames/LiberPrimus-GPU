@@ -8,9 +8,9 @@
 
 ## Current boundaries and deferred work
 
-Current completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
+Current completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
 
-Current next prompt: Stage 6 - Probe and diagnostic readiness, without execution.
+Current next prompt: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 The Stage 5 source-lock/enrichment chain is closed for now. Stage 5EI did not run number-fact batch 006, generate route streams, execute probes, perform image/stego/OCR work, run CUDA/scoring/benchmarks, activate the canonical corpus, finalize page boundaries, or claim a solve.
 
@@ -682,3 +682,9 @@ Latest completed: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context so
 
 Next routed: Stage 5EI - Source-lock number-fact review batch 006, without execution.
 <!-- END stage5eh -->
+
+<!-- stage6:start -->
+## Stage 6 Readiness Snapshot
+
+Stage 6 is complete as metadata-only diagnostic readiness. The project now has a bounded source-root census, diagnostic-backlog census, future discovery-probe registry, bridge/keeper taxonomies, no-lossy Stage 7 archive policy, and Stage 8/9 triangle boundaries. The next routed stage is Stage 6B, not execution.
+<!-- stage6:end -->

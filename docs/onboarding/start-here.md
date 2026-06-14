@@ -8,7 +8,7 @@ LiberPrimus-GPU is a conservative research workbench for reproducible Liber Prim
 
 This project is not a solve claim, raw corpus dump, Discord scraper, live Tor crawler, image/OCR interpretation tool, broad hash-cracker, or CUDA campaign.
 
-## Stage 5EI Current Boundary
+## Stage 6 Current Boundary
 
 The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution as complete and Stage 6 - Probe and diagnostic readiness, without execution as next.
 
@@ -64,7 +64,7 @@ At the time of Stage 5CM, Stage 5CM was the latest completed stage. It consumes 
 Historical Stage 5CM state: Stage 5CM completed the boundary-hardening layer and selected Stage 5CN review. Stage 5CM keeps every fixture record fixture-only, operator approval record present now false, Deep Research activation accept record present now false, approval gate satisfied now false, activation decision valid now false, active-planning input authorized now false, active-planning input selected now false, String 4 active input false, dry-run ingestion false, byte-stream generation false, manifest supersession false, execution blocked, and Stage 5CM-and-later local parallel validation capped at 8 workers.
 
 <!-- BEGIN stage5ei -->
-## Stage 5EI Current Boundary
+## Stage 6 Current Boundary
 
 The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution as complete and Stage 6 - Probe and diagnostic readiness, without execution as next.
 
@@ -72,9 +72,15 @@ Historical Stage 5EE, Stage 5EG, and Stage 5EH sections are evidence of their ti
 <!-- END stage5ei -->
 
 <!-- BEGIN stage5ei current-state -->
-## Stage 5EI Current Boundary
+## Stage 6 Current Boundary
 
 The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution as complete and Stage 6 - Probe and diagnostic readiness, without execution as next.
 
 Historical Stage 5EE, Stage 5EG, and Stage 5EH sections are evidence of their time, not current routing instructions. If they mention old next prompts, read them as historical only when the section says so explicitly.
 <!-- END stage5ei current-state -->
+
+<!-- stage6:start -->
+## Stage 6 Current Boundary
+
+Use `data/project-state/current-stage-state.yaml` as the authoritative latest/next-stage truth. It records Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution as complete and Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution as next. Stage 6 did not run diagnostics or publish generated outputs.
+<!-- stage6:end -->

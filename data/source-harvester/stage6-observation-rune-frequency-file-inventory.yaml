@@ -1,0 +1,204 @@
+record_type: stage6_observation_rune_frequency_file_inventory
+schema: schemas/source-harvester/stage6-observation-rune-frequency-file-inventory-v0.schema.json
+stage_id: stage-6
+stage_title: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle
+  policy, and Stage 7/8/9 handoff, without execution
+prompt_type: codex_plan_mode_probe_diagnostic_readiness
+metadata_only: true
+reviewability_stage: true
+probe_diagnostic_readiness_stage: true
+number_fact_review_batch_stage: false
+puzzle_execution_allowed: false
+solve_claim: false
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+alberti_cipher_execution_performed_now: false
+alberti_html_executed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+combined_approval_gate_satisfied_now: false
+community_code_executed_now: false
+cuda_execution_performed: false
+cuda_triage_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+diagnostic_execution_performed_now: false
+diagnostic_probe_run_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+hidden_content_image_forensics_performed: false
+historical_source_lock_records_rewritten: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+lossy_filtering_performed: false
+machine_code_execution_performed_now: false
+mayfly_route_extraction_performed_now: false
+midi_route_extraction_performed_now: false
+mp3stego_execution_performed: false
+music_route_extraction_performed_now: false
+native_code_execution_performed_now: false
+network_target_validation_performed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+number_fact_backfill_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_target_priority_decision_created_now: false
+outguess_execution_performed: false
+page13_f5_payload_claim_accepted_now: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+page_boundaries_final: false
+page_boundaries_finalized: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+pivot_target_selected_now: false
+pgp_private_key_operation_performed: false
+pgp_signature_verified_now: false
+pgp_verification_performed_now: false
+probe_execution_performed_now: false
+raw_source_files_committed: false
+raw_third_party_files_committed: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+scoring_performed: false
+scoring_triage_performed: false
+semantic_image_interpretation_performed: false
+spectrogram_stego_performed: false
+stegdetect_execution_performed_now: false
+stego_tool_execution_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+token_block_variant_byte_streams_generated: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+triangular_transposition_readouts_generated_now: false
+triangular_transposition_route_stream_generated_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+vm_bytecode_execution_performed_now: false
+website_expansion_performed: false
+stage6_probe_execution_allowed: false
+stage6_probe_execution_performed_now: false
+stage6_result_archive_created_now: false
+stage6_zip_result_bundle_created_now: false
+stage6_runs_bigrams_py_now: false
+stage6_recomputes_canonical_bigram_matrix_now: false
+stage6_runs_lag5_probe_now: false
+stage6_runs_diskcipher_probe_now: false
+stage6_runs_music_probe_now: false
+stage6_runs_triangle_probe_now: false
+stage6_runs_stego_probe_now: false
+stage6_selects_stage7_probe_outputs_now: false
+stage6_discards_outputs_by_score_now: false
+source_root: third_party/ObservationOnRuneFrequency
+focused_hashing_only: true
+files:
+- file_name: messages.txt
+  relative_path: third_party/ObservationOnRuneFrequency/messages.txt
+  present: true
+  size_bytes: 7734
+  sha256: 103cbd4e035e633ddb813f4b4077faf02b1f9ec653b065be7620b2b7dc8ad1f9
+  metadata_only: true
+- file_name: bigrams.py
+  relative_path: third_party/ObservationOnRuneFrequency/bigrams.py
+  present: true
+  size_bytes: 3823
+  sha256: 3c0e4bdd7c8b24fee4a4a44d2492bf2ad7f981709d9a5d146f32a61de432eb66
+  metadata_only: true
+- file_name: cover of LP.jpg
+  relative_path: third_party/ObservationOnRuneFrequency/cover of LP.jpg
+  present: true
+  size_bytes: 2311679
+  sha256: e9b5c84c1283fee3a0eeb5d0b9ed848e2049c5768ccfade48d58bd29dbefa321
+  metadata_only: true
+- file_name: 6 and 7.png
+  relative_path: third_party/ObservationOnRuneFrequency/6 and 7.png
+  present: true
+  size_bytes: 1024824
+  sha256: b1d1a5f896327701ddb29962c14d8c2bd1b38f156caa591501c5eee12e387043
+  metadata_only: true
+- file_name: proper version1.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version1.png
+  present: true
+  size_bytes: 94235
+  sha256: f4d480ae5cf026792657873c1446b743bf26b251e113ac6b610fa7deaf394b07
+  metadata_only: true
+- file_name: proper version2.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version2.png
+  present: true
+  size_bytes: 59430
+  sha256: d265739c7ff05dc461141a464e660014efc8f68d6df2418279380d9691148820
+  metadata_only: true
+- file_name: proper version3.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version3.png
+  present: true
+  size_bytes: 65724
+  sha256: 53f19deabbcc729dc0c35c9b7258c420a8a5bf73d6c771ab6da53f6dacb7c33c
+  metadata_only: true
+- file_name: proper version4.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version4.png
+  present: true
+  size_bytes: 73424
+  sha256: f2919e560d90e515b29c566abe1fb4966acc6227cc5270356e08b7fde323d41b
+  metadata_only: true
+- file_name: proper version5.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version5.png
+  present: true
+  size_bytes: 75432
+  sha256: cf941516ae584e3101383824092ac8cdddf4dd43cb804b2115256f92ceca7729
+  metadata_only: true
+- file_name: proper version6.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version6.png
+  present: true
+  size_bytes: 63550
+  sha256: eaf7eaf0b99846d2b696c92a11b651c637df56641e158e30ead3418e712f7655
+  metadata_only: true
+- file_name: proper version7.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version7.png
+  present: true
+  size_bytes: 69790
+  sha256: 611a1ec5890f2b0bcc74922405616f9a347cec2c0b875cb4b9e1798c8a954f55
+  metadata_only: true
+- file_name: proper version8.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version8.png
+  present: true
+  size_bytes: 73017
+  sha256: d8b9d3f1b3324e5195c57073fada78eb6dc497d29fa86a4e337cac3f59c056b5
+  metadata_only: true
+- file_name: proper version9.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version9.png
+  present: true
+  size_bytes: 87967
+  sha256: 0a9398dac5b9710d1a06bab28d649a7aecbf6e486cdbc37a1770beec2902e273
+  metadata_only: true
+- file_name: proper version10.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version10.png
+  present: true
+  size_bytes: 46320
+  sha256: 994779120f627115d29891deea6bcc0fc1d2d4b6b18c5bba3ad6916a15a33d84
+  metadata_only: true
+- file_name: proper version11.png
+  relative_path: third_party/ObservationOnRuneFrequency/proper version11.png
+  present: true
+  size_bytes: 46828
+  sha256: d190d13519e159a4f4bf06581d8b1035fead27e2df8aa6425c50bb6e3c0976f2
+  metadata_only: true
+file_count: 15
+tree_digest: 764232281b48b6ba19ca42d40101360cac1628458e0ad0dccb9388b799a5f7e2

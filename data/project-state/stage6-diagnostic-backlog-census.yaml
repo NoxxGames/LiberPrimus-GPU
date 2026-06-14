@@ -1,0 +1,629 @@
+record_type: stage6_diagnostic_backlog_census
+schema: schemas/project-state/stage6-diagnostic-backlog-census-v0.schema.json
+stage_id: stage-6
+stage_title: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle
+  policy, and Stage 7/8/9 handoff, without execution
+prompt_type: codex_plan_mode_probe_diagnostic_readiness
+metadata_only: true
+reviewability_stage: true
+probe_diagnostic_readiness_stage: true
+number_fact_review_batch_stage: false
+puzzle_execution_allowed: false
+solve_claim: false
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+alberti_cipher_execution_performed_now: false
+alberti_html_executed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+combined_approval_gate_satisfied_now: false
+community_code_executed_now: false
+cuda_execution_performed: false
+cuda_triage_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+diagnostic_execution_performed_now: false
+diagnostic_probe_run_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+hidden_content_image_forensics_performed: false
+historical_source_lock_records_rewritten: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+lossy_filtering_performed: false
+machine_code_execution_performed_now: false
+mayfly_route_extraction_performed_now: false
+midi_route_extraction_performed_now: false
+mp3stego_execution_performed: false
+music_route_extraction_performed_now: false
+native_code_execution_performed_now: false
+network_target_validation_performed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+number_fact_backfill_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_target_priority_decision_created_now: false
+outguess_execution_performed: false
+page13_f5_payload_claim_accepted_now: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+page_boundaries_final: false
+page_boundaries_finalized: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+pivot_target_selected_now: false
+pgp_private_key_operation_performed: false
+pgp_signature_verified_now: false
+pgp_verification_performed_now: false
+probe_execution_performed_now: false
+raw_source_files_committed: false
+raw_third_party_files_committed: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+scoring_performed: false
+scoring_triage_performed: false
+semantic_image_interpretation_performed: false
+spectrogram_stego_performed: false
+stegdetect_execution_performed_now: false
+stego_tool_execution_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+token_block_variant_byte_streams_generated: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+triangular_transposition_readouts_generated_now: false
+triangular_transposition_route_stream_generated_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+vm_bytecode_execution_performed_now: false
+website_expansion_performed: false
+stage6_probe_execution_allowed: false
+stage6_probe_execution_performed_now: false
+stage6_result_archive_created_now: false
+stage6_zip_result_bundle_created_now: false
+stage6_runs_bigrams_py_now: false
+stage6_recomputes_canonical_bigram_matrix_now: false
+stage6_runs_lag5_probe_now: false
+stage6_runs_diskcipher_probe_now: false
+stage6_runs_music_probe_now: false
+stage6_runs_triangle_probe_now: false
+stage6_runs_stego_probe_now: false
+stage6_selects_stage7_probe_outputs_now: false
+stage6_discards_outputs_by_score_now: false
+diagnostic_families:
+- family_id: iddqd_v2_canonical_source_root_readiness
+  family_label: iddqd v2 canonical source root readiness
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  family_label: outguess pgp xor byte string detector diagnostics
+  source_roots: []
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: lag5_copy_null_doublet_diagnostics
+  family_label: lag5 copy null doublet diagnostics
+  source_roots:
+  - third_party/Lag5-phenomenon
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: adjacent_doublet_frequency_signature_421_fibonacci
+  family_label: adjacent doublet frequency signature 421 fibonacci
+  source_roots:
+  - third_party/ObservationOnRuneFrequency
+  source_lock_records:
+  - data/historical-route/stage6-observation-rune-frequency-adjacent-doublet-signature.yaml
+  - data/historical-route/stage6-observation-rune-frequency-421-bridge-candidates.yaml
+  number_fact_overlay_records:
+  - data/operator-console/source-browser/number-fact-overlays/stage6-observation-rune-frequency-overlays.yaml
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: diskcipher_alberti_doublet_56311_readiness
+  family_label: diskcipher alberti doublet 56311 readiness
+  source_roots:
+  - third_party/DiskCipherStuff
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: cicada_music_score_metadata_and_number_diagnostics
+  family_label: cicada music score metadata and number diagnostics
+  source_roots:
+  - third_party/CicadaMusic
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: page32_numberfacts_pixel_colour_diagnostics
+  family_label: page32 numberfacts pixel colour diagnostics
+  source_roots: []
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: pdd153_page32_triangle_readiness
+  family_label: pdd153 page32 triangle readiness
+  source_roots: []
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage8_triangle_readiness
+  stage7_candidate: false
+  stage8_candidate: true
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: community_visual_negative_space_red_rune_controls
+  family_label: community visual negative space red rune controls
+  source_roots: []
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: page54_55_red_number_alignment_readiness
+  family_label: page54 55 red number alignment readiness
+  source_roots: []
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: page56_dwh_hash_contract_readiness
+  family_label: page56 dwh hash contract readiness
+  source_roots: []
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: quarantine_background
+  stage7_candidate: false
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: token_block_static_primary60_matrix_readiness
+  family_label: token block static primary60 matrix readiness
+  source_roots: []
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: ouroboros_self_reference_symbolic_context
+  family_label: ouroboros self reference symbolic context
+  source_roots: []
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: quarantine_background
+  stage7_candidate: false
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: fandom_archive_source_crosswalk_readiness
+  family_label: fandom archive source crosswalk readiness
+  source_roots: []
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+- family_id: stego_positive_control_toolchain_readiness
+  family_label: stego positive control toolchain readiness
+  source_roots: []
+  source_lock_records: []
+  number_fact_overlay_records: []
+  candidate_records: []
+  third_party_support: []
+  source_status: source_locked_metadata
+  primary_discovery_value:
+  - number_bridges
+  - method_constraints
+  - control_deltas
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage7_candidate: true
+  stage8_candidate: false
+  stage9_candidate: false
+  archive_value_class:
+  - high_discovery_value
+  - high_bridge_value
+  - high_control_value
+  expected_output_review_mode:
+  - full_manual_ai_review
+  - number_bridge_review
+  - control_delta_review
+  blocked_actions:
+  - solve_claim
+  - target_selection
+  - route_stream_generation
+  controls_required:
+  - wrong source root
+  - wrong page/section boundary
+  - rune-frequency-preserving shuffle
+  stage6_execution_performed: false
+  solve_claim: false
+diagnostic_family_count: 15

@@ -4,6 +4,7 @@ from pathlib import Path
 
 from libreprimus.doc_staleness.stage_ids import parse_stage_id
 from libreprimus.doc_staleness.stale_current_claims import audit_repository, scan_text
+from libreprimus.stage_state.current import current_latest_stage_label, current_next_stage_label
 from test_stage5ei_common import stage5ei_data
 
 
@@ -56,5 +57,7 @@ def test_stage5ei_repository_strict_scanner_has_no_errors() -> None:
 def test_start_here_current_state_is_repaired() -> None:
     text = Path("docs/onboarding/start-here.md").read_text(encoding="utf-8")
 
-    findings = scan_text(text, "docs/onboarding/start-here.md", LATEST, NEXT)
+    latest = parse_stage_id(current_latest_stage_label())
+    next_stage = parse_stage_id(current_next_stage_label())
+    findings = scan_text(text, "docs/onboarding/start-here.md", latest, next_stage)
     assert not [finding for finding in findings if finding.severity == "error"]
