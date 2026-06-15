@@ -24,6 +24,7 @@ def test_current_stage_registry_preserves_stage5ea_or_newer_stage() -> None:
         "stage-5eh",
         "stage-5ei",
         "stage-6",
+        "stage-6b",
     }
     if state["latest_completed_stage_id"] == "stage-5ea":
         assert state["recommended_next_stage_id"] == "stage-5eb"
@@ -70,9 +71,14 @@ def test_current_stage_registry_preserves_stage5ea_or_newer_stage() -> None:
         assert current_latest_stage_label() == "Stage 5EI"
         assert current_next_stage_label() == "Stage 6"
         assert current_latest_stage_command_suffix() == "stage5ei"
-    else:
+    elif state["latest_completed_stage_id"] == "stage-6":
         assert state["recommended_next_stage_id"] == "stage-6b"
         assert current_latest_stage_label() == "Stage 6"
         assert current_next_stage_label() == "Stage 6B"
         assert current_latest_stage_command_suffix() == "stage6"
+    else:
+        assert state["recommended_next_stage_id"] == "stage-6c"
+        assert current_latest_stage_label() == "Stage 6B"
+        assert current_next_stage_label() == "Stage 6C"
+        assert current_latest_stage_command_suffix() == "stage6b"
     assert state["stage_registry_is_source_of_truth"] is True

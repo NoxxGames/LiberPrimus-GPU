@@ -372,7 +372,15 @@ are evidence, not current truth.
 <!-- stage6:start -->
 ## Stage 6 Source-Of-Truth Update
 
-- Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
-- Next routed stage: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Historical Stage 6 boundary: at the time of Stage 6, Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution was the latest completed stage.
+- Historical next route at Stage 6 closeout: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Stage 6 records ObservationOnRuneFrequency as community-observation archive context only; canonical transcript reproduction is future Stage 7 work.
 <!-- stage6:end -->
+
+<!-- stage6b:start -->
+## Stage 6B Source Of Truth
+
+- Latest completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
+- Next routed stage: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 6B repair ledger: `data/project-state/stage6b-stage6-registry-repair-ledger.yaml`.
+<!-- stage6b:end -->

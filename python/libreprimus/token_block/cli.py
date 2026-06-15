@@ -765,6 +765,7 @@ from . import stage5eg as stage5eg_module
 from . import stage5eh as stage5eh_module
 from . import stage5ei as stage5ei_module
 from . import stage6 as stage6_module
+from . import stage6b as stage6b_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -12062,6 +12063,124 @@ def validate_stage6_handoff_command() -> None:
     _print_stage5dv_result(
         stage6_module.validate_stage6_handoff(),
         "token_block_stage6_handoff_valid=true",
+    )
+
+
+@app.command("build-stage6b")
+def build_stage6b_command() -> None:
+    records = stage6b_module.build_stage6b()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"previous_stage_id={summary.get('previous_stage_id')}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+    console.print(
+        "stage6_probe_family_mapping_bug_repaired="
+        f"{summary.get('stage6_probe_family_mapping_bug_repaired')}"
+    )
+    console.print(f"discovery_probe_count={summary.get('discovery_probe_count')}")
+    console.print(f"hook_default_exit_zero_verified={summary.get('hook_default_exit_zero_verified')}")
+    console.print(f"source_browser_validation_error_count={summary.get('source_browser_validation_error_count')}")
+
+
+@app.command("validate-stage6b")
+def validate_stage6b_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b(),
+        "token_block_stage6b_valid=true",
+    )
+
+
+@app.command("stage6b-summary")
+def stage6b_summary_command() -> None:
+    console.print(stage6b_module.stage6b_summary_text())
+
+
+@app.command("validate-stage6b-stage6-preservation")
+def validate_stage6b_stage6_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_stage6_preservation(),
+        "token_block_stage6b_stage6_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage6b-stage6-repair-assessment")
+def validate_stage6b_stage6_repair_assessment_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_stage6_repair_assessment(),
+        "token_block_stage6b_stage6_repair_assessment_valid=true",
+    )
+
+
+@app.command("validate-stage6b-probe-family-mapping")
+def validate_stage6b_probe_family_mapping_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_probe_family_mapping(),
+        "token_block_stage6b_probe_family_mapping_valid=true",
+    )
+
+
+@app.command("validate-stage6b-probe-source-mapping")
+def validate_stage6b_probe_source_mapping_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_probe_source_mapping(),
+        "token_block_stage6b_probe_source_mapping_valid=true",
+    )
+
+
+@app.command("validate-stage6b-readiness-classification")
+def validate_stage6b_readiness_classification_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_readiness_classification(),
+        "token_block_stage6b_readiness_classification_valid=true",
+    )
+
+
+@app.command("validate-stage6b-stage7-menu-status")
+def validate_stage6b_stage7_menu_status_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_stage7_menu_status(),
+        "token_block_stage6b_stage7_menu_status_valid=true",
+    )
+
+
+@app.command("validate-stage6b-hook-stabilization")
+def validate_stage6b_hook_stabilization_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_hook_stabilization(),
+        "token_block_stage6b_hook_stabilization_valid=true",
+    )
+
+
+@app.command("validate-stage6b-current-stage-transition")
+def validate_stage6b_current_stage_transition_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_current_stage_transition(),
+        "token_block_stage6b_current_stage_transition_valid=true",
+    )
+
+
+@app.command("validate-stage6b-source-browser-loadability")
+def validate_stage6b_source_browser_loadability_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_source_browser_loadability(),
+        "token_block_stage6b_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage6b-gate-closure")
+def validate_stage6b_gate_closure_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_gate_closure(),
+        "token_block_stage6b_gate_closure_valid=true",
+    )
+
+
+@app.command("validate-stage6b-handoff")
+def validate_stage6b_handoff_command() -> None:
+    _print_stage5dv_result(
+        stage6b_module.validate_stage6b_handoff(),
+        "token_block_stage6b_handoff_valid=true",
     )
 
 

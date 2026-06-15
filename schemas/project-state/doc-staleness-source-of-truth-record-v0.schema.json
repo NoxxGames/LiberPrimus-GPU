@@ -19,29 +19,29 @@
       "const": false
     },
     "expected_next_stage_prefix": {
-      "pattern": "Stage (5[A-Z]+(-fix)?|6)",
+      "pattern": "Stage (5[A-Z]+(-fix)?|6[A-Z]?)",
       "type": "string"
     },
     "generated_outputs_committed": {
       "const": false
     },
     "latest_completed_stage_after_this_stage": {
-      "pattern": "Stage (5[A-Z]+(-fix)?|6)",
+      "pattern": "Stage (5[A-Z]+(-fix)?|6[A-Z]?)",
       "type": "string"
     },
     "latest_completed_stage_prefix": {
-      "pattern": "Stage (5[A-Z]+(-fix)?|6)",
+      "pattern": "Stage (5[A-Z]+(-fix)?|6[A-Z]?)",
       "type": "string"
     },
     "latest_previous_stage": {
-      "pattern": "Stage (5[A-Z]+(-fix)?|6)",
+      "pattern": "Stage (5[A-Z]+(-fix)?|6[A-Z]?)",
       "type": "string"
     },
     "new_cuda_kernels_added": {
       "const": 0
     },
     "next_stage_after_this_stage": {
-      "pattern": "Stage (5[A-Z]+(-fix)?|6)",
+      "pattern": "Stage (5[A-Z]+(-fix)?|6[A-Z]?)",
       "type": "string"
     },
     "page_boundaries_status": {
@@ -75,7 +75,8 @@
         "stage-5eg",
         "stage-5eh",
         "stage-5ei",
-        "stage-6"
+        "stage-6",
+        "stage-6b"
       ]
     },
     "unsolved_page_cuda_status": {

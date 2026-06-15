@@ -6,6 +6,8 @@ stage_title: Stage 6 - Diagnostic backlog census, discovery-probe readiness, res
 prompt_type: codex_plan_mode_probe_diagnostic_readiness
 metadata_only: true
 reviewability_stage: true
+source_lock_only: false
+source_lock_component_present: true
 probe_diagnostic_readiness_stage: true
 number_fact_review_batch_stage: false
 puzzle_execution_allowed: false
@@ -107,105 +109,134 @@ stage6_runs_triangle_probe_now: false
 stage6_runs_stego_probe_now: false
 stage6_selects_stage7_probe_outputs_now: false
 stage6_discards_outputs_by_score_now: false
+candidate_menu_status: partial_foundation_only
+stage7_candidate_menu_scope: observation_on_rune_frequency_only
+not_stage7_execution_manifest: true
+stage6c_final_menu_required: true
+stage7_execution_allowed_from_this_menu: false
+stage7_zip_archive_creation_allowed_from_this_menu: false
 stage7_candidates:
 - candidate_id: observation_on_rune_frequency_attachment_context_reconstruction_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  readiness_class: stage7_ready_deterministic_no_toolchain
+  readiness_class: stage7_ready_metadata_only
+  source_gap_or_stage6c_precondition: null
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 - candidate_id: adjacent_doublet_diagonal_vector_reproduction_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  readiness_class: stage7_ready_deterministic_no_toolchain
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_gap_or_stage6c_precondition: null
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 - candidate_id: adjacent_doublet_86_89_boundary_reconciliation_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  readiness_class: stage7_ready_deterministic_no_toolchain
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_gap_or_stage6c_precondition: null
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 - candidate_id: diagonal_421_delimiter_alphabet_order_control_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  readiness_class: stage7_ready_deterministic_no_toolchain
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_gap_or_stage6c_precondition: null
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 - candidate_id: lag1_lag5_joint_copy_null_fingerprint_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  readiness_class: stage7_ready_deterministic_no_toolchain
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_gap_or_stage6c_precondition: null
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 - candidate_id: diskcipher_doublet_metric_reimplementation_preflight_v0
-  family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  readiness_class: stage7_ready_deterministic_no_toolchain
+  family_id: diskcipher_alberti_doublet_56311_readiness
+  readiness_class: stage7_conditional_requires_reimplementation_metric_definition
+  source_gap_or_stage6c_precondition: null
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 - candidate_id: doublet_421_numeric_bridge_verification_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  readiness_class: stage7_ready_deterministic_no_toolchain
+  readiness_class: stage7_ready_metadata_only
+  source_gap_or_stage6c_precondition: null
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 - candidate_id: diagonal_421_blake_orc_control_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  readiness_class: stage7_ready_deterministic_no_toolchain
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_gap_or_stage6c_precondition: null
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 - candidate_id: diagonal_421_occurrence_index_prime_emirp_probe_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  readiness_class: stage7_ready_deterministic_no_toolchain
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_gap_or_stage6c_precondition: null
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 - candidate_id: adjacent_doublet_music_29_note_projection_control_v0
-  family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  readiness_class: stage7_ready_deterministic_no_toolchain
+  family_id: cicada_music_score_metadata_and_number_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_score_or_music_metadata
+  source_gap_or_stage6c_precondition: null
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 - candidate_id: adjacent_doublet_token_block_29_symbol_projection_control_v0
-  family_id: adjacent_doublet_frequency_signature_421_fibonacci
+  family_id: token_block_static_primary60_matrix_readiness
   readiness_class: stage7_ready_deterministic_no_toolchain
+  source_gap_or_stage6c_precondition: requires Stage 6C to bind finite token-block
+    projection input set
   stage6_run_now: false
   execution_enabled_now: false
   result_bundle_policy_required: true
   controls_required:
   - alphabet order controls
   - canonical boundary controls
+  not_solve_evidence: true
 candidate_count: 11
 stage6b_finalization_required: true

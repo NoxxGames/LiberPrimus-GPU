@@ -8,15 +8,17 @@
 
 ## Current boundaries and deferred work
 
-Current completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+Current completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
 
-Current next prompt: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current next prompt: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
-The Stage 5 source-lock/enrichment chain is closed for now. Stage 5EI did not run number-fact batch 006, generate route streams, execute probes, perform image/stego/OCR work, run CUDA/scoring/benchmarks, activate the canonical corpus, finalize page boundaries, or claim a solve.
+Stage 6B repaired Stage 6 probe-family/source/readiness metadata and project-local hooks only. It did not create the final Stage 7 manifest, generate result archives, execute probes, perform image/stego/OCR work, run CUDA/scoring/benchmarks, activate the canonical corpus, finalize page boundaries, or claim a solve.
 
 - Stage 5EG installed deterministic stale-current guardians and kept hooks scanner-based.
 - Stage 5EH added Lag5/outguess/byte-string/red-number/F5 source-lock context and review-only overlays without execution.
 - Stage 5EI closed Stage 5 as a triangle-transposition and diagnostics-transition metadata stage, routing next work to Stage 6 readiness without execution.
+- Stage 6 completed diagnostic-backlog readiness metadata.
+- Stage 6B repaired Stage 6 mappings and hook behavior, routing final manifest work to Stage 6C.
 
 These are not permanent project exclusions. CUDA and broad campaigns are deferred, not permanently excluded.
 
@@ -688,3 +690,9 @@ Next routed: Stage 5EI - Source-lock number-fact review batch 006, without execu
 
 Stage 6 is complete as metadata-only diagnostic readiness. The project now has a bounded source-root census, diagnostic-backlog census, future discovery-probe registry, bridge/keeper taxonomies, no-lossy Stage 7 archive policy, and Stage 8/9 triangle boundaries. The next routed stage is Stage 6B, not execution.
 <!-- stage6:end -->
+
+<!-- stage6b:start -->
+## Stage 6B Current State
+
+Stage 6B is complete as deterministic repair metadata. It fixes Stage 6 probe-family/source/readiness planning records, marks the Stage 7 menu as partial and non-executable, and stabilizes project-local hooks as report-only by default. Stage 6C remains the next planning stage for the final finite Stage 7 manifest and archive-run contract.
+<!-- stage6b:end -->

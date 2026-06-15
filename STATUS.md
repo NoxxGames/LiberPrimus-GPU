@@ -2,11 +2,11 @@
 
 ## Current Stage
 
-- Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
-- Current next stage: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-- Next recommended prompt: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-- Stage 5EI supersedes the previously routed ordinary number-fact review batch 006 and routes the project to Stage 6 probe/diagnostic readiness.
-- Stage 5EI records PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, Pascal/Fibonacci diagonal context, and fingerprint-based route-diagnostic policy as review-only metadata.
+- Latest completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
+- Current next stage: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Next recommended prompt: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 6B repairs Stage 6 probe-family/source/readiness metadata and project-local hooks, then routes final finite Stage 7 manifest work to Stage 6C.
+- Stage 6 and Stage 5EI remain historical readiness/transition metadata and did not run probes or generate route streams.
 - No probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, or solve work is authorized.
 
 ## Completed in Stage 5EG
@@ -1474,20 +1474,30 @@ Stage 5EH records Lag5 29/28/57 event context, M-sum 479 over claimed N=12,956, 
 <!-- END stage5eh -->
 
 <!-- BEGIN stage5ei current-state -->
-## Current Stage
+## Historical Stage 5EI Current-State Note
 
-- Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
-- Current next stage: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- At the time after Stage 5EI, Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution was the next routed readiness stage.
+- Stage 6B later repaired Stage 6 readiness metadata and routed final manifest work to Stage 6C.
 - Stage 5EI supersedes the previously routed ordinary number-fact review batch 006 and routes the project to Stage 6 probe/diagnostic readiness.
 - Stage 5EI records PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, Pascal/Fibonacci diagonal context, and fingerprint-based route-diagnostic policy as review-only metadata.
 - No probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, or solve work is authorized.
 <!-- END stage5ei current-state -->
 
 <!-- stage6:start -->
-## Stage 6 Status
+## Historical Stage 6 Status
 
-- Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
-- Current next stage: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- At the time of Stage 6, Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution was complete.
+- The routed follow-up at that time was Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Stage 6 preserves Stage 5EI and Stage 5EH, records a bounded source-root census, maps diagnostic families, adds future-only discovery probes, and defines Stage 7 result-bundle policy.
 - No probes ran, no ZIP result archive was created, and no raw third-party or generated outputs are committed.
 <!-- stage6:end -->
+
+<!-- stage6b:start -->
+## Stage 6B Status
+
+- Latest completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
+- Current next stage: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 7 execution allowed next: false.
+- Stage 7 ZIP archive creation allowed next: false.
+- Stage 6B repaired mappings and hooks only; final finite Stage 7 manifest work is deferred to Stage 6C.
+<!-- stage6b:end -->

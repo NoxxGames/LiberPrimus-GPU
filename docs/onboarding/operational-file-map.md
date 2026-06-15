@@ -214,3 +214,9 @@ Use `data/project-state/current-stage-state.yaml` for latest/next-stage truth. S
 
 Stage 6 records live under `data/project-state/stage6-*`, `data/source-harvester/stage6-*`, `data/token-block/stage6-*`, and `data/historical-route/stage6-*`. Generated completion handoff remains ignored under `codex-output/stage6-codex-completion.md`.
 <!-- stage6:end -->
+
+<!-- stage6b:start -->
+## Stage 6B Operational Files
+
+Stage 6B operational records live under `data/project-state/stage6b-*`, `data/token-block/stage6b-*`, and `data/source-harvester/stage6b-*`. Hook reports are ignored local output under `experiments/results/doc-drift/` and must not be staged.
+<!-- stage6b:end -->

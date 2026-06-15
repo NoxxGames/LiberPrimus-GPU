@@ -12,11 +12,17 @@ def test_stage6_routes_to_stage6b_by_default() -> None:
 def test_stage6_stage7_menu_is_future_only() -> None:
     payload = stage6_data("stage7_candidate_menu")
     assert payload["stage6b_finalization_required"] is True
+    assert payload["candidate_menu_status"] == "partial_foundation_only"
+    assert payload["not_stage7_execution_manifest"] is True
+    assert payload["stage6c_final_menu_required"] is True
+    assert payload["stage7_execution_allowed_from_this_menu"] is False
+    assert payload["stage7_zip_archive_creation_allowed_from_this_menu"] is False
     assert payload["candidate_count"] == 11
     for candidate in payload["stage7_candidates"]:
         assert candidate["stage6_run_now"] is False
         assert candidate["execution_enabled_now"] is False
         assert candidate["result_bundle_policy_required"] is True
+        assert candidate["readiness_class"].startswith("stage7_")
 
 
 def test_stage6_optional_source_browser_overlays_are_review_only() -> None:

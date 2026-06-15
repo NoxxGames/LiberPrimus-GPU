@@ -3,17 +3,16 @@
 from __future__ import annotations
 
 from pathlib import Path
-import subprocess
-import sys
+
+from hook_common import drain_stdin, python_for_repo, repo_root_from, run_hook_command, strict_mode
 
 
 def main() -> int:
-    root = _repo_root()
-    report = root / "experiments/results/doc-drift/stage5eg-stop-hook-audit.json"
-    report.parent.mkdir(parents=True, exist_ok=True)
-    python = _python(root)
+    drain_stdin()
+    root = repo_root_from(Path(__file__))
+    report = root / "experiments/results/doc-drift/stage6b-stop-hook-audit.json"
     command = [
-        str(python),
+        str(python_for_repo(root)),
         "-m",
         "libreprimus.cli",
         "consistency",
@@ -22,30 +21,9 @@ def main() -> int:
         "--out",
         str(report),
     ]
-    result = subprocess.run(command, cwd=root, text=True, capture_output=True, timeout=110)
-    print(result.stdout.strip())
-    if result.returncode != 0:
-        print(result.stderr.strip(), file=sys.stderr)
-        print(f"Stale current-stage claims remain. Fix them before closeout. Report: {report}", file=sys.stderr)
-    return result.returncode
-
-
-def _repo_root() -> Path:
-    path = Path.cwd().resolve()
-    for candidate in (path, *path.parents):
-        if (candidate / ".git").exists():
-            return candidate
-    return path
-
-
-def _python(root: Path) -> Path:
-    windows = root / ".venv/Scripts/python.exe"
-    posix = root / ".venv/bin/python"
-    if windows.exists():
-        return windows
-    if posix.exists():
-        return posix
-    return Path(sys.executable)
+    if not strict_mode():
+        command.append("--report-only")
+    return run_hook_command(command, root=root, report_path=report, timeout=110)
 
 
 if __name__ == "__main__":

@@ -6,6 +6,8 @@ stage_title: Stage 6 - Diagnostic backlog census, discovery-probe readiness, res
 prompt_type: codex_plan_mode_probe_diagnostic_readiness
 metadata_only: true
 reviewability_stage: true
+source_lock_only: false
+source_lock_component_present: true
 probe_diagnostic_readiness_stage: true
 number_fact_review_batch_stage: false
 puzzle_execution_allowed: false

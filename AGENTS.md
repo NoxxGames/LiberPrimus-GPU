@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+Current completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
 
-Current work: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 5EI superseded the previously routed ordinary number-fact review batch 006 and records final Stage 5 triangle/route diagnostic context as review-only metadata.
+Current work: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6B preserves Stage 6 and repairs active Stage 6 probe-family/source/readiness metadata and project-local hooks without execution.
 
 No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
 
@@ -1221,11 +1221,11 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 <!-- END stage5eh -->
 
 <!-- BEGIN stage5ei -->
-## Stage 5EI Current Boundary
+## Historical Stage 5EI Boundary
 
-Current completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+At the time of Stage 5EI closeout, Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution was the next routed readiness stage.
 
-Current work: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Stage 6B later repaired the Stage 6 readiness metadata and routed final manifest work to Stage 6C.
 
 Project-local `.codex` hooks are declared and operator-approved locally for Stage 5EI recording purposes. They remain deterministic scanner hooks, not custom-agent execution hooks: `blocking_hooks_effective_now=false`, `hook_execution_relies_on_deterministic_scanner=true`, and `custom_agents_invoked_by_hooks=false`.
 
@@ -1233,9 +1233,17 @@ Stage 5EI superseded the ordinary number-fact review batch 006. Do not run probe
 <!-- END stage5ei -->
 
 <!-- stage6:start -->
-## Stage 6 Current Boundary
+## Historical Stage 6 Boundary
 
-Current completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+At the time of Stage 6, Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution was complete.
 
-Current work: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6 is diagnostic-backlog and archive-policy metadata only. It records bounded source-root census, future discovery probes, no-lossy Stage 7 archive policy, and Stage 8/9 triangle boundaries. It does not execute probes, generate route or byte streams, run OCR/image/stego/PGP/OutGuess/F5/StegDetect/CUDA/scoring/benchmarks, select targets, activate the canonical corpus, finalize page boundaries, or claim a solve.
+The routed follow-up at that time was Stage 6B. Stage 6 is diagnostic-backlog and archive-policy metadata only. It records bounded source-root census, future discovery probes, no-lossy Stage 7 archive policy, and Stage 8/9 triangle boundaries. It does not execute probes, generate route or byte streams, run OCR/image/stego/PGP/OutGuess/F5/StegDetect/CUDA/scoring/benchmarks, select targets, activate the canonical corpus, finalize page boundaries, or claim a solve.
 <!-- stage6:end -->
+
+<!-- stage6b:start -->
+## Stage 6B Current Boundary
+
+Current completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
+
+Current work: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6B repaired Stage 6 probe-family/source/readiness metadata and made project-local Codex hooks report-only by default. It did not run probes, create the final Stage 7 manifest, create archives, execute tooling, generate route or byte streams, run CUDA/scoring/benchmarks, or make a solve claim.
+<!-- stage6b:end -->

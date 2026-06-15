@@ -4332,3 +4332,34 @@ records:
   source_root_count: 25
   diagnostic_family_count: 15
   discovery_probe_count: 34
+- record_type: stage_summary_record
+  stage_id: stage-6b
+  title: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization,
+    without execution
+  status: complete
+  category: metadata_repair
+  summary: Repaired Stage 6 discovery-probe family/source/readiness metadata, stabilized
+    Codex hooks, and rerouted final Stage 7 manifest work to Stage 6C without execution.
+  key_outputs:
+  - Stage 6 discovery-probe family/source/readiness metadata repaired with explicit
+    mapping tables.
+  - Stage 6 builder and committed Stage 6 YAML records made idempotent for repaired
+    probe mappings.
+  - Stage 7 candidate menu marked partial and non-executable pending Stage 6C final
+    manifest work.
+  - Codex SessionStart and Stop hooks stabilized as report-only defaults with opt-in
+    strict mode.
+  - 'Recommended next stage: stage-6c.'
+  result_status: metadata_repair_complete
+  recommended_next_stage_id: stage-6c
+  recommended_next_stage_title: Stage 6C - Final finite Stage 7 probe manifest and
+    archive-run contract, without execution
+  puzzle_execution_allowed: false
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: No probes, diagnostics, route extraction, byte streams, OCR/image/stego tooling,
+    PGP/OutGuess/F5/StegDetect execution, CUDA, scoring, benchmarks, target selection,
+    canonical-corpus activation, page-boundary finalisation, Stage 7 archive creation,
+    or solve claim.

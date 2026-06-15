@@ -399,6 +399,307 @@ OBSERVATION_PROBE_IDS = [
     "adjacent_doublet_token_block_29_symbol_projection_control_v0",
 ]
 
+READINESS_CLASSES = [
+    "stage7_ready_metadata_only",
+    "stage7_ready_deterministic_no_toolchain",
+    "stage7_conditional_requires_canonical_transcript_or_boundary",
+    "stage7_conditional_requires_toolchain",
+    "stage7_conditional_requires_toolchain_and_canonical_image",
+    "stage7_conditional_requires_reimplementation_metric_definition",
+    "stage7_conditional_requires_canonical_score_or_music_metadata",
+    "stage7_conditional_requires_source_and_fixture_boundary",
+    "stage7_conditional_requires_canonical_source_boundary",
+    "stage7_conditional_requires_canonical_image_or_transcript",
+    "stage8_triangle_readiness",
+    "stage9_triangle_experiment_deferred",
+    "quarantine_background",
+]
+
+PROBE_BLOCKED_ACTIONS = [
+    "solve_claim",
+    "target_selection",
+    "route_stream_generation_unless_later_stage_explicitly_allows",
+    "byte_stream_generation_unless_later_stage_explicitly_allows",
+]
+
+
+def _probe_classification(
+    family_id: str,
+    readiness_class: str,
+    *,
+    source_roots: list[str],
+    source_records: list[str] | None = None,
+    source_gap_or_stage6c_precondition: str | None = None,
+    run_allowed_stage: str = "stage-7",
+    triangle_scope_crosslink_only: bool = False,
+) -> dict[str, Any]:
+    return {
+        "family_id": family_id,
+        "readiness_class": readiness_class,
+        "source_roots": source_roots,
+        "source_records": source_records or [],
+        "source_gap_or_stage6c_precondition": source_gap_or_stage6c_precondition,
+        "run_allowed_stage": run_allowed_stage,
+        "triangle_scope_crosslink_only": triangle_scope_crosslink_only,
+        "triangle_execution_deferred_to_stage8_stage9": triangle_scope_crosslink_only,
+    }
+
+
+LAG5_SOURCE_RECORDS = [
+    "data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml",
+    "data/source-harvester/stage5eh-lag5-file-inventory.yaml",
+    "data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml",
+    "data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml",
+]
+OUTGUESS_SOURCE_RECORDS = [
+    "data/source-harvester/stage5eh-lp-outguessed-source-lock-register.yaml",
+    "data/source-harvester/stage5eh-lp-outguessed-pgp-signed-output-inventory.yaml",
+    "data/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk.yaml",
+    "data/source-harvester/stage5eh-byte-strings-context-crosswalk.yaml",
+    "data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml",
+    "data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml",
+]
+PAGE54_SOURCE_RECORDS = [
+    "data/source-harvester/stage5eh-page54-55-red-number-source-crosswalk.yaml",
+    "data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml",
+    "data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml",
+]
+STEGO_SOURCE_RECORDS = [
+    "data/source-harvester/stage5eh-page13-stegdetect-operator-result-lock.yaml",
+    "data/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk.yaml",
+    "data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml",
+    "data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml",
+]
+OBSERVATION_SOURCE_RECORDS = [
+    "data/source-harvester/stage6-observation-rune-frequency-source-lock-register.yaml",
+    "data/source-harvester/stage6-observation-rune-frequency-file-inventory.yaml",
+    "data/source-harvester/stage6-observation-rune-frequency-attachment-context-map.yaml",
+    "data/historical-route/stage6-observation-rune-frequency-adjacent-doublet-signature.yaml",
+    "data/historical-route/stage6-observation-rune-frequency-421-bridge-candidates.yaml",
+    "data/historical-route/stage6-observation-rune-frequency-disk-lag5-crosslink.yaml",
+    "data/historical-route/stage6-observation-rune-frequency-blake-orc-context.yaml",
+    "data/historical-route/stage6-observation-rune-frequency-probe-readiness.yaml",
+]
+
+EXPECTED_PROBE_CLASSIFICATION: dict[str, dict[str, Any]] = {
+    "lag5_reproduction_probe_candidate_v0": _probe_classification(
+        "lag5_copy_null_doublet_diagnostics",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/Lag5-phenomenon"],
+        source_records=LAG5_SOURCE_RECORDS,
+    ),
+    "lag5_doublet_suppressed_null_probe_candidate_v0": _probe_classification(
+        "lag5_copy_null_doublet_diagnostics",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/Lag5-phenomenon"],
+        source_records=LAG5_SOURCE_RECORDS,
+    ),
+    "lag5_page_section_event_overlay_probe_candidate_v0": _probe_classification(
+        "lag5_copy_null_doublet_diagnostics",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/Lag5-phenomenon"],
+        source_records=LAG5_SOURCE_RECORDS,
+    ),
+    "lag5_token_block_neighborhood_probe_candidate_v0": _probe_classification(
+        "lag5_copy_null_doublet_diagnostics",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/Lag5-phenomenon"],
+        source_records=LAG5_SOURCE_RECORDS + ["data/token-block/stage5eh-token-block-static-context-preservation.yaml"],
+    ),
+    "lag5_pdd153_56311_route_overlay_probe_candidate_v0": _probe_classification(
+        "lag5_copy_null_doublet_diagnostics",
+        "stage8_triangle_readiness",
+        source_roots=["third_party/Lag5-phenomenon"],
+        source_records=LAG5_SOURCE_RECORDS + ["data/historical-route/stage6-stage8-triangle-readiness-handoff.yaml"],
+        run_allowed_stage="stage-8",
+        triangle_scope_crosslink_only=True,
+    ),
+    "lag5_page32_route_stream_fingerprint_probe_candidate_v0": _probe_classification(
+        "lag5_copy_null_doublet_diagnostics",
+        "stage8_triangle_readiness",
+        source_roots=["third_party/Lag5-phenomenon"],
+        source_records=LAG5_SOURCE_RECORDS + ["data/historical-route/stage6-stage8-triangle-readiness-handoff.yaml"],
+        run_allowed_stage="stage-8",
+        triangle_scope_crosslink_only=True,
+    ),
+    "lag5_disk_doublet_suppression_model_constraint_probe_candidate_v0": _probe_classification(
+        "lag5_copy_null_doublet_diagnostics",
+        "stage7_conditional_requires_reimplementation_metric_definition",
+        source_roots=["third_party/Lag5-phenomenon", "third_party/DiskCipherStuff"],
+        source_records=LAG5_SOURCE_RECORDS + ["data/project-state/stage6-source-lock-family-census.yaml"],
+    ),
+    "lag5_negative_space_null_marker_bridge_probe_candidate_v0": _probe_classification(
+        "lag5_copy_null_doublet_diagnostics",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/Lag5-phenomenon", "third_party/BigGapsFoundInLiberPrimus"],
+        source_records=LAG5_SOURCE_RECORDS + ["data/project-state/stage6-source-lock-family-census.yaml"],
+    ),
+    "outguess_pgp_signature_verification_probe_candidate_v0": _probe_classification(
+        "outguess_pgp_xor_byte_string_detector_diagnostics",
+        "stage7_conditional_requires_toolchain",
+        source_roots=["third_party/CiadaSolversIddqd_v2/lp_outguessed"],
+        source_records=OUTGUESS_SOURCE_RECORDS,
+    ),
+    "outguess_00_01_02_xor_reconstruction_probe_candidate_v0": _probe_classification(
+        "outguess_pgp_xor_byte_string_detector_diagnostics",
+        "stage7_conditional_requires_source_and_fixture_boundary",
+        source_roots=["third_party/CiadaSolversIddqd_v2/lp_outguessed"],
+        source_records=OUTGUESS_SOURCE_RECORDS,
+    ),
+    "outguess_03_jpeg_extraction_metadata_probe_candidate_v0": _probe_classification(
+        "outguess_pgp_xor_byte_string_detector_diagnostics",
+        "stage7_conditional_requires_toolchain",
+        source_roots=["third_party/CiadaSolversIddqd_v2/lp_outguessed"],
+        source_records=OUTGUESS_SOURCE_RECORDS,
+    ),
+    "outguess_03_jpeg_human_transcription_verification_probe_candidate_v0": _probe_classification(
+        "outguess_pgp_xor_byte_string_detector_diagnostics",
+        "stage7_conditional_requires_canonical_source_boundary",
+        source_roots=["third_party/CiadaSolversIddqd_v2/lp_outguessed"],
+        source_records=OUTGUESS_SOURCE_RECORDS,
+    ),
+    "xor_txt_29_symbol_alphabet_classification_probe_candidate_v0": _probe_classification(
+        "outguess_pgp_xor_byte_string_detector_diagnostics",
+        "stage7_ready_deterministic_no_toolchain",
+        source_roots=["third_party/CiadaSolversIddqd_v2/lp_outguessed"],
+        source_records=OUTGUESS_SOURCE_RECORDS,
+        source_gap_or_stage6c_precondition="requires xor.txt source boundary if local file remains absent",
+    ),
+    "outguess_magic_square_route_mask_probe_candidate_v0": _probe_classification(
+        "outguess_pgp_xor_byte_string_detector_diagnostics",
+        "stage7_conditional_requires_source_and_fixture_boundary",
+        source_roots=["third_party/CiadaSolversIddqd_v2/lp_outguessed"],
+        source_records=OUTGUESS_SOURCE_RECORDS,
+    ),
+    "byte_strings_outguess_xor_precedent_comparison_probe_candidate_v0": _probe_classification(
+        "outguess_pgp_xor_byte_string_detector_diagnostics",
+        "stage7_ready_deterministic_no_toolchain",
+        source_roots=["third_party/CiadaSolversIddqd_v2/byte-strings"],
+        source_records=OUTGUESS_SOURCE_RECORDS,
+    ),
+    "byte_strings_03_control_key_probe_candidate_v0": _probe_classification(
+        "outguess_pgp_xor_byte_string_detector_diagnostics",
+        "stage7_conditional_requires_canonical_source_boundary",
+        source_roots=["third_party/CiadaSolversIddqd_v2/byte-strings"],
+        source_records=OUTGUESS_SOURCE_RECORDS,
+    ),
+    "byte_strings_16x16_matrix_route_mask_probe_candidate_v0": _probe_classification(
+        "outguess_pgp_xor_byte_string_detector_diagnostics",
+        "stage7_ready_deterministic_no_toolchain",
+        source_roots=["third_party/CiadaSolversIddqd_v2/byte-strings"],
+        source_records=OUTGUESS_SOURCE_RECORDS,
+    ),
+    "byte_strings_token_block_matrix_comparison_probe_candidate_v0": _probe_classification(
+        "outguess_pgp_xor_byte_string_detector_diagnostics",
+        "stage7_ready_deterministic_no_toolchain",
+        source_roots=["third_party/CiadaSolversIddqd_v2/byte-strings"],
+        source_records=OUTGUESS_SOURCE_RECORDS + ["data/project-state/stage6-source-lock-family-census.yaml"],
+    ),
+    "page54_55_red_numbered_line_block_transcript_alignment_probe_candidate_v0": _probe_classification(
+        "page54_55_red_number_alignment_readiness",
+        "stage7_conditional_requires_canonical_image_or_transcript",
+        source_roots=[
+            "third_party/CiadaSolversIddqd_v2/liber-primus__images--full",
+            "third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master",
+        ],
+        source_records=PAGE54_SOURCE_RECORDS,
+    ),
+    "lp_pages_stegdetect_baseline_probe_manifest_v0": _probe_classification(
+        "stego_positive_control_toolchain_readiness",
+        "stage7_conditional_requires_toolchain_and_canonical_image",
+        source_roots=["third_party/CiadaSolversIddqd_v2/liber-primus__images--full", "third_party/StegoPositiveControls"],
+        source_records=STEGO_SOURCE_RECORDS,
+    ),
+    "known_outguessed_pages_stegdetect_comparison_probe_manifest_v0": _probe_classification(
+        "stego_positive_control_toolchain_readiness",
+        "stage7_conditional_requires_toolchain_and_canonical_image",
+        source_roots=["third_party/CiadaSolversIddqd_v2/liber-primus__images--full", "third_party/StegoPositiveControls"],
+        source_records=STEGO_SOURCE_RECORDS,
+    ),
+    "star_artifact_mod8_dct_residue_probe_manifest_v0": _probe_classification(
+        "stego_positive_control_toolchain_readiness",
+        "stage7_conditional_requires_toolchain_and_canonical_image",
+        source_roots=["third_party/StarArtifactsInLPPageImages", "third_party/CiadaSolversIddqd_v2/liber-primus__images--full"],
+        source_records=STEGO_SOURCE_RECORDS,
+    ),
+    "page13_canonical_image_hash_and_detector_reproduction_probe_manifest_v0": _probe_classification(
+        "stego_positive_control_toolchain_readiness",
+        "stage7_conditional_requires_toolchain_and_canonical_image",
+        source_roots=["third_party/CiadaSolversIddqd_v2/liber-primus__images--full", "third_party/StegoPositiveControls"],
+        source_records=STEGO_SOURCE_RECORDS,
+    ),
+    "observation_on_rune_frequency_attachment_context_reconstruction_v0": _probe_classification(
+        "adjacent_doublet_frequency_signature_421_fibonacci",
+        "stage7_ready_metadata_only",
+        source_roots=["third_party/ObservationOnRuneFrequency"],
+        source_records=OBSERVATION_SOURCE_RECORDS,
+    ),
+    "adjacent_doublet_diagonal_vector_reproduction_v0": _probe_classification(
+        "adjacent_doublet_frequency_signature_421_fibonacci",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/ObservationOnRuneFrequency"],
+        source_records=OBSERVATION_SOURCE_RECORDS,
+    ),
+    "adjacent_doublet_86_89_boundary_reconciliation_v0": _probe_classification(
+        "adjacent_doublet_frequency_signature_421_fibonacci",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/ObservationOnRuneFrequency"],
+        source_records=OBSERVATION_SOURCE_RECORDS,
+    ),
+    "diagonal_421_delimiter_alphabet_order_control_v0": _probe_classification(
+        "adjacent_doublet_frequency_signature_421_fibonacci",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/ObservationOnRuneFrequency"],
+        source_records=OBSERVATION_SOURCE_RECORDS,
+    ),
+    "lag1_lag5_joint_copy_null_fingerprint_v0": _probe_classification(
+        "adjacent_doublet_frequency_signature_421_fibonacci",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/ObservationOnRuneFrequency", "third_party/Lag5-phenomenon"],
+        source_records=OBSERVATION_SOURCE_RECORDS + LAG5_SOURCE_RECORDS,
+    ),
+    "diskcipher_doublet_metric_reimplementation_preflight_v0": _probe_classification(
+        "diskcipher_alberti_doublet_56311_readiness",
+        "stage7_conditional_requires_reimplementation_metric_definition",
+        source_roots=["third_party/ObservationOnRuneFrequency", "third_party/DiskCipherStuff"],
+        source_records=[
+            "data/historical-route/stage6-observation-rune-frequency-disk-lag5-crosslink.yaml",
+            "data/project-state/stage6-source-lock-family-census.yaml",
+        ],
+    ),
+    "doublet_421_numeric_bridge_verification_v0": _probe_classification(
+        "adjacent_doublet_frequency_signature_421_fibonacci",
+        "stage7_ready_metadata_only",
+        source_roots=["third_party/ObservationOnRuneFrequency"],
+        source_records=OBSERVATION_SOURCE_RECORDS,
+    ),
+    "diagonal_421_blake_orc_control_v0": _probe_classification(
+        "adjacent_doublet_frequency_signature_421_fibonacci",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/ObservationOnRuneFrequency"],
+        source_records=OBSERVATION_SOURCE_RECORDS,
+    ),
+    "diagonal_421_occurrence_index_prime_emirp_probe_v0": _probe_classification(
+        "adjacent_doublet_frequency_signature_421_fibonacci",
+        "stage7_conditional_requires_canonical_transcript_or_boundary",
+        source_roots=["third_party/ObservationOnRuneFrequency"],
+        source_records=OBSERVATION_SOURCE_RECORDS,
+    ),
+    "adjacent_doublet_music_29_note_projection_control_v0": _probe_classification(
+        "cicada_music_score_metadata_and_number_diagnostics",
+        "stage7_conditional_requires_canonical_score_or_music_metadata",
+        source_roots=["third_party/ObservationOnRuneFrequency", "third_party/CicadaMusic", "third_party/CicadaMusic/community-theory"],
+        source_records=["data/project-state/stage6-source-lock-family-census.yaml"],
+    ),
+    "adjacent_doublet_token_block_29_symbol_projection_control_v0": _probe_classification(
+        "token_block_static_primary60_matrix_readiness",
+        "stage7_ready_deterministic_no_toolchain",
+        source_roots=["third_party/ObservationOnRuneFrequency"],
+        source_records=["data/project-state/stage6-source-lock-family-census.yaml"],
+        source_gap_or_stage6c_precondition="requires Stage 6C to bind finite token-block projection input set",
+    ),
+}
+
 OBSERVED_DIAGONAL_VECTOR = [
     4,
     2,
@@ -680,11 +981,34 @@ def validate_stage6_diagnostic_backlog_census() -> ValidationResult:
 def validate_stage6_discovery_probe_registry() -> ValidationResult:
     registry = read_yaml(TOKEN_BLOCK_PATHS["discovery_probe_manifest_registry"])
     diagnostics = registry["diagnostics"]
-    ids = {entry["diagnostic_id"] for entry in diagnostics}
+    by_id = {entry["diagnostic_id"]: entry for entry in diagnostics}
+    ids = set(by_id)
     errors = []
     for required in STAGE5EH_PROBE_IDS + OBSERVATION_PROBE_IDS:
         if required not in ids:
             errors.append(f"missing discovery probe ID: {required}")
+            continue
+        entry = by_id[required]
+        expected = EXPECTED_PROBE_CLASSIFICATION[required]
+        if entry.get("family_id") != expected["family_id"]:
+            errors.append(f"{required} family mismatch: {entry.get('family_id')} != {expected['family_id']}")
+        if entry.get("readiness_class") != expected["readiness_class"]:
+            errors.append(
+                f"{required} readiness mismatch: {entry.get('readiness_class')} != {expected['readiness_class']}"
+            )
+        if entry.get("run_allowed_stage") != expected["run_allowed_stage"]:
+            errors.append(
+                f"{required} run stage mismatch: {entry.get('run_allowed_stage')} != {expected['run_allowed_stage']}"
+            )
+        if not (entry.get("source_records") or entry.get("source_roots") or entry.get("source_gap_or_stage6c_precondition")):
+            errors.append(f"{required} lacks source traceability or explicit Stage 6C precondition")
+        for action in PROBE_BLOCKED_ACTIONS:
+            if action not in entry.get("blocked_actions", []):
+                errors.append(f"{required} missing blocked action: {action}")
+        if not entry.get("full_output_archive_required_when_run"):
+            errors.append(f"{required} does not require full output archive")
+        if not entry.get("not_solve_evidence"):
+            errors.append(f"{required} is not marked non-solve evidence")
     bad = [
         entry["diagnostic_id"]
         for entry in diagnostics
@@ -799,8 +1123,27 @@ def validate_stage6_stage7_candidate_menu() -> ValidationResult:
     errors = []
     if not menu["stage7_candidates"]:
         errors.append("Stage 7 candidate menu is empty")
+    if menu.get("candidate_menu_status") != "partial_foundation_only":
+        errors.append("Stage 7 candidate menu is not marked partial_foundation_only")
+    if not menu.get("not_stage7_execution_manifest"):
+        errors.append("Stage 7 candidate menu is not marked as non-execution manifest")
+    if not menu.get("stage6c_final_menu_required"):
+        errors.append("Stage 7 candidate menu does not require Stage 6C finalization")
+    if menu.get("stage7_execution_allowed_from_this_menu"):
+        errors.append("Stage 7 candidate menu allows execution")
+    if menu.get("stage7_zip_archive_creation_allowed_from_this_menu"):
+        errors.append("Stage 7 candidate menu allows ZIP archive creation")
     if any(candidate["stage6_run_now"] for candidate in menu["stage7_candidates"]):
         errors.append("Stage 7 candidate menu contains Stage 6 run-now entry")
+    for candidate in menu["stage7_candidates"]:
+        expected = EXPECTED_PROBE_CLASSIFICATION.get(candidate["candidate_id"])
+        if expected is None:
+            errors.append(f"unexpected Stage 7 candidate: {candidate['candidate_id']}")
+            continue
+        if candidate.get("family_id") != expected["family_id"]:
+            errors.append(f"Stage 7 menu family mismatch for {candidate['candidate_id']}")
+        if candidate.get("readiness_class") != expected["readiness_class"]:
+            errors.append(f"Stage 7 menu readiness mismatch for {candidate['candidate_id']}")
     return _result(errors, stage7_candidate_count=len(menu["stage7_candidates"]))
 
 
@@ -902,6 +1245,8 @@ def _base_record(record_type: str, schema_path: Path) -> dict[str, Any]:
         "prompt_type": PROMPT_TYPE,
         "metadata_only": True,
         "reviewability_stage": True,
+        "source_lock_only": False,
+        "source_lock_component_present": True,
         "probe_diagnostic_readiness_stage": True,
         "number_fact_review_batch_stage": False,
         "puzzle_execution_allowed": False,
@@ -1112,28 +1457,35 @@ def _diagnostic_backlog_census_record(families: list[dict[str, Any]]) -> dict[st
 
 
 def _discovery_probe_records() -> list[dict[str, Any]]:
-    records = []
-    for probe_id in STAGE5EH_PROBE_IDS:
-        records.append(_probe_record(probe_id, "lag5_copy_null_doublet_diagnostics", "stage-7"))
-    for probe_id in OBSERVATION_PROBE_IDS:
-        family_id = "adjacent_doublet_frequency_signature_421_fibonacci"
-        if "music" in probe_id:
-            family_id = "cicada_music_score_metadata_and_number_diagnostics"
-        if "token_block" in probe_id:
-            family_id = "token_block_static_primary60_matrix_readiness"
-        if "diskcipher" in probe_id:
-            family_id = "diskcipher_alberti_doublet_56311_readiness"
-        records.append(_probe_record(probe_id, family_id, "stage-7"))
-    return records
+    return [_probe_record(probe_id) for probe_id in STAGE5EH_PROBE_IDS + OBSERVATION_PROBE_IDS]
 
 
-def _probe_record(probe_id: str, family_id: str, run_allowed_stage: str) -> dict[str, Any]:
+def stage6_discovery_probe_records_for_validation() -> list[dict[str, Any]]:
+    """Return regenerated Stage 6 discovery records without writing files."""
+
+    return _discovery_probe_records()
+
+
+def expected_probe_classification_for_validation() -> dict[str, dict[str, Any]]:
+    """Return the explicit probe classification table used by Stage 6/6B validators."""
+
+    return EXPECTED_PROBE_CLASSIFICATION
+
+
+def _probe_record(probe_id: str) -> dict[str, Any]:
+    classification = EXPECTED_PROBE_CLASSIFICATION[probe_id]
     return {
         "diagnostic_id": probe_id,
-        "family_id": family_id,
-        "source_records": [],
-        "source_roots": ["third_party/ObservationOnRuneFrequency"] if "doublet" in probe_id or "421" in probe_id else [],
-        "run_allowed_stage": run_allowed_stage,
+        "family_id": classification["family_id"],
+        "readiness_class": classification["readiness_class"],
+        "source_records": classification["source_records"],
+        "source_roots": classification["source_roots"],
+        "source_gap_or_stage6c_precondition": classification["source_gap_or_stage6c_precondition"],
+        "run_allowed_stage": classification["run_allowed_stage"],
+        "triangle_scope_crosslink_only": classification["triangle_scope_crosslink_only"],
+        "triangle_execution_deferred_to_stage8_stage9": classification[
+            "triangle_execution_deferred_to_stage8_stage9"
+        ],
         "stage6_run_now": False,
         "execution_enabled_now": False,
         "finite_input_set_required": True,
@@ -1151,12 +1503,7 @@ def _probe_record(probe_id: str, family_id: str, run_allowed_stage: str) -> dict
             "negative_result",
         ],
         "archive_value_class": ["high_discovery_value", "high_bridge_value", "high_control_value"],
-        "blocked_actions": [
-            "solve_claim",
-            "target_selection",
-            "route_stream_generation_unless_later_stage_explicitly_allows",
-            "byte_stream_generation_unless_later_stage_explicitly_allows",
-        ],
+        "blocked_actions": PROBE_BLOCKED_ACTIONS,
         "usable_for_decision_now": False,
         "not_solve_evidence": True,
     }
@@ -1376,23 +1723,29 @@ def _observation_probe_readiness_record() -> dict[str, Any]:
 
 
 def _stage7_readiness_classification_record() -> dict[str, Any]:
+    classifications = [
+        {
+            "candidate_id": probe_id,
+            "family_id": classification["family_id"],
+            "readiness_class": classification["readiness_class"],
+            "reason": "explicit Stage 6B repaired probe classification",
+            "source_gap_or_stage6c_precondition": classification["source_gap_or_stage6c_precondition"],
+            "blocked_actions": PROBE_BLOCKED_ACTIONS,
+        }
+        for probe_id, classification in EXPECTED_PROBE_CLASSIFICATION.items()
+    ]
+    classifications.append(
+        {
+            "candidate_id": "pdd153_triangular_transposition_readouts",
+            "family_id": "pdd153_page32_triangle_readiness",
+            "readiness_class": "stage8_triangle_readiness",
+            "reason": "triangle-specific execution scope deferred",
+            "blocked_actions": ["route_stream_generation", "solve_claim", "target_selection"],
+        }
+    )
     return _base_project_record("stage6_stage7_readiness_classification") | {
-        "readiness_classes": [
-            "stage7_ready_metadata_only",
-            "stage7_ready_deterministic_no_toolchain",
-            "stage7_conditional_requires_toolchain",
-            "stage7_conditional_requires_canonical_score_or_image",
-            "stage8_triangle_readiness",
-            "stage9_triangle_experiment_deferred",
-            "quarantine_background",
-        ],
-        "classifications": [
-            {"candidate_id": probe_id, "readiness_class": "stage7_ready_deterministic_no_toolchain", "reason": "future finite diagnostic candidate", "blocked_actions": ["solve_claim"]}
-            for probe_id in OBSERVATION_PROBE_IDS
-        ]
-        + [
-            {"candidate_id": "pdd153_triangular_transposition_readouts", "readiness_class": "stage8_triangle_readiness", "reason": "triangle-specific execution scope deferred", "blocked_actions": ["route_stream_generation"]}
-        ],
+        "readiness_classes": READINESS_CLASSES,
+        "classifications": classifications,
     }
 
 
@@ -1400,16 +1753,26 @@ def _stage7_candidate_menu_record() -> dict[str, Any]:
     candidates = [
         {
             "candidate_id": probe_id,
-            "family_id": "adjacent_doublet_frequency_signature_421_fibonacci",
-            "readiness_class": "stage7_ready_deterministic_no_toolchain",
+            "family_id": EXPECTED_PROBE_CLASSIFICATION[probe_id]["family_id"],
+            "readiness_class": EXPECTED_PROBE_CLASSIFICATION[probe_id]["readiness_class"],
+            "source_gap_or_stage6c_precondition": EXPECTED_PROBE_CLASSIFICATION[probe_id][
+                "source_gap_or_stage6c_precondition"
+            ],
             "stage6_run_now": False,
             "execution_enabled_now": False,
             "result_bundle_policy_required": True,
             "controls_required": ["alphabet order controls", "canonical boundary controls"],
+            "not_solve_evidence": True,
         }
         for probe_id in OBSERVATION_PROBE_IDS
     ]
     return _base_project_record("stage6_stage7_candidate_menu") | {
+        "candidate_menu_status": "partial_foundation_only",
+        "stage7_candidate_menu_scope": "observation_on_rune_frequency_only",
+        "not_stage7_execution_manifest": True,
+        "stage6c_final_menu_required": True,
+        "stage7_execution_allowed_from_this_menu": False,
+        "stage7_zip_archive_creation_allowed_from_this_menu": False,
         "stage7_candidates": candidates,
         "candidate_count": len(candidates),
         "stage6b_finalization_required": True,
@@ -1968,6 +2331,8 @@ def _write_current_stage_state(summary: dict[str, Any]) -> None:
             "stage_title": STAGE_TITLE,
             "prompt_type": PROMPT_TYPE,
             "metadata_only": True,
+            "source_lock_only": False,
+            "source_lock_component_present": True,
             "probe_diagnostic_readiness_stage": True,
             "puzzle_execution_allowed": False,
             "solve_claim": False,

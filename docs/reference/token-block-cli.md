@@ -228,3 +228,9 @@ These commands build and validate metadata/tooling records only. They do not exe
 
 Stage 6 token-block commands: `build-stage6`, `validate-stage6`, `stage6-summary`, and focused validators for preservation, source-root census, source-lock family census, diagnostic backlog, discovery probes, route fingerprints, controls, bridge/keeper taxonomy, result-bundle policy, no-lossy filtering, non-CUDA/non-scoring policy, ObservationOnRuneFrequency, Stage 7 menu, Stage 8 triangle boundary, Source Browser loadability, gate closure, and handoff.
 <!-- stage6:end -->
+
+<!-- stage6b:start -->
+## Stage 6B CLI
+
+Use `libreprimus token-block build-stage6b`, `validate-stage6b`, and `stage6b-summary` for the aggregate repair stage. Focused validators cover Stage 6 preservation, repair assessment, family/source/readiness maps, Stage 7 menu status, hook stabilization, current-state transition, Source Browser loadability, gate closure, and handoff.
+<!-- stage6b:end -->

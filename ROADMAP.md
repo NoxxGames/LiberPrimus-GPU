@@ -2,11 +2,11 @@
 
 ## Current Direction
 
-Current completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+Current completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
 
-Next routed stage: Stage 6 - Probe and diagnostic readiness, without execution.
+Next routed stage: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
-Stage 6 is a readiness stage only. It should define finite probe sets, fingerprints, null controls, and result-source requirements before any later bounded diagnostic execution. Stage 7 may run bounded diagnostics only after Stage 6 records the readiness contract. Stage 8 remains triangle-specific experiment readiness, and Stage 9 is the earliest triangle-experiment stage.
+Stage 6B is a repair stage only. It fixes Stage 6 probe-family/source/readiness metadata and hook behavior, while Stage 6C remains responsible for the final finite Stage 7 manifest and archive-run contract. Stage 7 execution, Stage 8 triangle readiness, and Stage 9 experiments remain blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
@@ -534,3 +534,9 @@ Next: Stage 5EG - Source-lock number-fact review batch 006, without execution.
 
 Stage 6 completed the diagnostic backlog readiness foundation without execution. Stage 6B should finalize the finite Stage 7 probe manifest and archive-run contract. Stage 7 remains the earliest bounded diagnostic execution stage after Stage 6B, Stage 8 remains triangle readiness, and Stage 9 remains earliest bounded triangle experiments.
 <!-- stage6:end -->
+
+<!-- stage6b:start -->
+## Stage 6B Route
+
+Stage 6B completed triage repair and hook stabilization without execution. Next: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 7 execution, ZIP archive creation, Stage 8 triangle readiness, and Stage 9 experiments remain blocked.
+<!-- stage6b:end -->

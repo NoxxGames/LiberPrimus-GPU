@@ -6,6 +6,8 @@ stage_title: Stage 6 - Diagnostic backlog census, discovery-probe readiness, res
 prompt_type: codex_plan_mode_probe_diagnostic_readiness
 metadata_only: true
 reviewability_stage: true
+source_lock_only: false
+source_lock_component_present: true
 probe_diagnostic_readiness_stage: true
 number_fact_review_batch_stage: false
 puzzle_execution_allowed: false
@@ -110,69 +112,233 @@ stage6_discards_outputs_by_score_now: false
 readiness_classes:
 - stage7_ready_metadata_only
 - stage7_ready_deterministic_no_toolchain
+- stage7_conditional_requires_canonical_transcript_or_boundary
 - stage7_conditional_requires_toolchain
-- stage7_conditional_requires_canonical_score_or_image
+- stage7_conditional_requires_toolchain_and_canonical_image
+- stage7_conditional_requires_reimplementation_metric_definition
+- stage7_conditional_requires_canonical_score_or_music_metadata
+- stage7_conditional_requires_source_and_fixture_boundary
+- stage7_conditional_requires_canonical_source_boundary
+- stage7_conditional_requires_canonical_image_or_transcript
 - stage8_triangle_readiness
 - stage9_triangle_experiment_deferred
 - quarantine_background
 classifications:
+- candidate_id: lag5_reproduction_probe_candidate_v0
+  family_id: lag5_copy_null_doublet_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: &id001
+  - solve_claim
+  - target_selection
+  - route_stream_generation_unless_later_stage_explicitly_allows
+  - byte_stream_generation_unless_later_stage_explicitly_allows
+- candidate_id: lag5_doublet_suppressed_null_probe_candidate_v0
+  family_id: lag5_copy_null_doublet_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: lag5_page_section_event_overlay_probe_candidate_v0
+  family_id: lag5_copy_null_doublet_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: lag5_token_block_neighborhood_probe_candidate_v0
+  family_id: lag5_copy_null_doublet_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: lag5_pdd153_56311_route_overlay_probe_candidate_v0
+  family_id: lag5_copy_null_doublet_diagnostics
+  readiness_class: stage8_triangle_readiness
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: lag5_page32_route_stream_fingerprint_probe_candidate_v0
+  family_id: lag5_copy_null_doublet_diagnostics
+  readiness_class: stage8_triangle_readiness
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: lag5_disk_doublet_suppression_model_constraint_probe_candidate_v0
+  family_id: lag5_copy_null_doublet_diagnostics
+  readiness_class: stage7_conditional_requires_reimplementation_metric_definition
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: lag5_negative_space_null_marker_bridge_probe_candidate_v0
+  family_id: lag5_copy_null_doublet_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: outguess_pgp_signature_verification_probe_candidate_v0
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_toolchain
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: outguess_00_01_02_xor_reconstruction_probe_candidate_v0
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_source_and_fixture_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: outguess_03_jpeg_extraction_metadata_probe_candidate_v0
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_toolchain
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: outguess_03_jpeg_human_transcription_verification_probe_candidate_v0
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_source_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: xor_txt_29_symbol_alphabet_classification_probe_candidate_v0
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: requires xor.txt source boundary if local file
+    remains absent
+  blocked_actions: *id001
+- candidate_id: outguess_magic_square_route_mask_probe_candidate_v0
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_source_and_fixture_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: byte_strings_outguess_xor_precedent_comparison_probe_candidate_v0
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: byte_strings_03_control_key_probe_candidate_v0
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_source_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: byte_strings_16x16_matrix_route_mask_probe_candidate_v0
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: byte_strings_token_block_matrix_comparison_probe_candidate_v0
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: page54_55_red_numbered_line_block_transcript_alignment_probe_candidate_v0
+  family_id: page54_55_red_number_alignment_readiness
+  readiness_class: stage7_conditional_requires_canonical_image_or_transcript
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: lp_pages_stegdetect_baseline_probe_manifest_v0
+  family_id: stego_positive_control_toolchain_readiness
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: known_outguessed_pages_stegdetect_comparison_probe_manifest_v0
+  family_id: stego_positive_control_toolchain_readiness
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: star_artifact_mod8_dct_residue_probe_manifest_v0
+  family_id: stego_positive_control_toolchain_readiness
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
+- candidate_id: page13_canonical_image_hash_and_detector_reproduction_probe_manifest_v0
+  family_id: stego_positive_control_toolchain_readiness
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: observation_on_rune_frequency_attachment_context_reconstruction_v0
-  readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  family_id: adjacent_doublet_frequency_signature_421_fibonacci
+  readiness_class: stage7_ready_metadata_only
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: adjacent_doublet_diagonal_vector_reproduction_v0
-  readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  family_id: adjacent_doublet_frequency_signature_421_fibonacci
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: adjacent_doublet_86_89_boundary_reconciliation_v0
-  readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  family_id: adjacent_doublet_frequency_signature_421_fibonacci
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: diagonal_421_delimiter_alphabet_order_control_v0
-  readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  family_id: adjacent_doublet_frequency_signature_421_fibonacci
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: lag1_lag5_joint_copy_null_fingerprint_v0
-  readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  family_id: adjacent_doublet_frequency_signature_421_fibonacci
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: diskcipher_doublet_metric_reimplementation_preflight_v0
-  readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  family_id: diskcipher_alberti_doublet_56311_readiness
+  readiness_class: stage7_conditional_requires_reimplementation_metric_definition
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: doublet_421_numeric_bridge_verification_v0
-  readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  family_id: adjacent_doublet_frequency_signature_421_fibonacci
+  readiness_class: stage7_ready_metadata_only
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: diagonal_421_blake_orc_control_v0
-  readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  family_id: adjacent_doublet_frequency_signature_421_fibonacci
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: diagonal_421_occurrence_index_prime_emirp_probe_v0
-  readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  family_id: adjacent_doublet_frequency_signature_421_fibonacci
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: adjacent_doublet_music_29_note_projection_control_v0
-  readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  family_id: cicada_music_score_metadata_and_number_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_score_or_music_metadata
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: null
+  blocked_actions: *id001
 - candidate_id: adjacent_doublet_token_block_29_symbol_projection_control_v0
+  family_id: token_block_static_primary60_matrix_readiness
   readiness_class: stage7_ready_deterministic_no_toolchain
-  reason: future finite diagnostic candidate
-  blocked_actions:
-  - solve_claim
+  reason: explicit Stage 6B repaired probe classification
+  source_gap_or_stage6c_precondition: requires Stage 6C to bind finite token-block
+    projection input set
+  blocked_actions: *id001
 - candidate_id: pdd153_triangular_transposition_readouts
+  family_id: pdd153_page32_triangle_readiness
   readiness_class: stage8_triangle_readiness
   reason: triangle-specific execution scope deferred
   blocked_actions:
   - route_stream_generation
+  - solve_claim
+  - target_selection

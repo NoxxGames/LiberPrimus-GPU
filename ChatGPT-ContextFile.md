@@ -2,11 +2,11 @@
 
 ## Current Project State
 
-## Stage 6 Current Boundary
+## Stage 6B Current Boundary
 
-Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+Latest completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
 
-Current planning focus: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current planning focus: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 5EI is the final Stage 5 metadata transition. It records PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, Pascal/Fibonacci diagonal context, and fingerprint-based route-diagnostic policy as review-only metadata. The ordinary number-fact review batch 006 was superseded and was not performed.
 
@@ -278,11 +278,21 @@ Stage 5EH source-locks Lag5, `lp_outguessed`, byte-string, Page54/55 red-number,
 <!-- END stage5eh -->
 
 <!-- stage6:start -->
-## Stage 6 Current Boundary
+## Historical Stage 6 Boundary
 
-Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
+At the time of Stage 6, Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution was complete.
 
-Current planning focus: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+The routed follow-up at that time was Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 6 created the diagnostic backlog census and Stage 7 archive-policy foundation without execution. ObservationOnRuneFrequency is recorded as archive-observed future-probe context only, not canonical transcript truth.
 <!-- stage6:end -->
+
+<!-- stage6b:start -->
+## Stage 6B Current Boundary
+
+Latest completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
+
+Current planning focus: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6B is a triage repair stage. It preserves Stage 6 and the post-Stage-6 automation-hardening commit, repairs active Stage 6 planning metadata, and routes final finite Stage 7 manifest work to Stage 6C.
+<!-- stage6b:end -->

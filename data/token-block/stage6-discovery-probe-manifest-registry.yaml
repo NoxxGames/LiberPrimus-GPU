@@ -6,6 +6,8 @@ stage_title: Stage 6 - Diagnostic backlog census, discovery-probe readiness, res
 prompt_type: codex_plan_mode_probe_diagnostic_readiness
 metadata_only: true
 reviewability_stage: true
+source_lock_only: false
+source_lock_component_present: true
 probe_diagnostic_readiness_stage: true
 number_fact_review_batch_stage: false
 puzzle_execution_allowed: false
@@ -110,9 +112,18 @@ stage6_discards_outputs_by_score_now: false
 diagnostics:
 - diagnostic_id: lag5_reproduction_probe_candidate_v0
   family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records: &id001
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  source_roots:
+  - third_party/Lag5-phenomenon
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -131,7 +142,7 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
+  blocked_actions: &id002
   - solve_claim
   - target_selection
   - route_stream_generation_unless_later_stage_explicitly_allows
@@ -140,10 +151,14 @@ diagnostics:
   not_solve_evidence: true
 - diagnostic_id: lag5_doublet_suppressed_null_probe_candidate_v0
   family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records: *id001
   source_roots:
-  - third_party/ObservationOnRuneFrequency
+  - third_party/Lag5-phenomenon
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -162,18 +177,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: lag5_page_section_event_overlay_probe_candidate_v0
   family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records: *id001
+  source_roots:
+  - third_party/Lag5-phenomenon
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -192,18 +208,24 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: lag5_token_block_neighborhood_probe_candidate_v0
   family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records:
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/token-block/stage5eh-token-block-static-context-preservation.yaml
+  source_roots:
+  - third_party/Lag5-phenomenon
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -222,18 +244,24 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: lag5_pdd153_56311_route_overlay_probe_candidate_v0
   family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
-  run_allowed_stage: stage-7
+  readiness_class: stage8_triangle_readiness
+  source_records:
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/historical-route/stage6-stage8-triangle-readiness-handoff.yaml
+  source_roots:
+  - third_party/Lag5-phenomenon
+  source_gap_or_stage6c_precondition: null
+  run_allowed_stage: stage-8
+  triangle_scope_crosslink_only: true
+  triangle_execution_deferred_to_stage8_stage9: true
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -252,18 +280,24 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: lag5_page32_route_stream_fingerprint_probe_candidate_v0
   family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
-  run_allowed_stage: stage-7
+  readiness_class: stage8_triangle_readiness
+  source_records:
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/historical-route/stage6-stage8-triangle-readiness-handoff.yaml
+  source_roots:
+  - third_party/Lag5-phenomenon
+  source_gap_or_stage6c_precondition: null
+  run_allowed_stage: stage-8
+  triangle_scope_crosslink_only: true
+  triangle_execution_deferred_to_stage8_stage9: true
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -282,19 +316,25 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: lag5_disk_doublet_suppression_model_constraint_probe_candidate_v0
   family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
+  readiness_class: stage7_conditional_requires_reimplementation_metric_definition
+  source_records:
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/project-state/stage6-source-lock-family-census.yaml
   source_roots:
-  - third_party/ObservationOnRuneFrequency
+  - third_party/Lag5-phenomenon
+  - third_party/DiskCipherStuff
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -313,18 +353,25 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: lag5_negative_space_null_marker_bridge_probe_candidate_v0
   family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records:
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/project-state/stage6-source-lock-family-census.yaml
+  source_roots:
+  - third_party/Lag5-phenomenon
+  - third_party/BigGapsFoundInLiberPrimus
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -343,18 +390,25 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: outguess_pgp_signature_verification_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_toolchain
+  source_records: &id003
+  - data/source-harvester/stage5eh-lp-outguessed-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lp-outguessed-pgp-signed-output-inventory.yaml
+  - data/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk.yaml
+  - data/source-harvester/stage5eh-byte-strings-context-crosswalk.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -373,18 +427,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: outguess_00_01_02_xor_reconstruction_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_source_and_fixture_boundary
+  source_records: *id003
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -403,18 +458,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: outguess_03_jpeg_extraction_metadata_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_toolchain
+  source_records: *id003
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -433,18 +489,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: outguess_03_jpeg_human_transcription_verification_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_source_boundary
+  source_records: *id003
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -463,18 +520,20 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: xor_txt_29_symbol_alphabet_classification_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  source_records: *id003
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_gap_or_stage6c_precondition: requires xor.txt source boundary if local file
+    remains absent
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -493,18 +552,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: outguess_magic_square_route_mask_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_source_and_fixture_boundary
+  source_records: *id003
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -523,18 +583,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: byte_strings_outguess_xor_precedent_comparison_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  source_records: *id003
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/byte-strings
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -553,18 +614,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: byte_strings_03_control_key_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_conditional_requires_canonical_source_boundary
+  source_records: *id003
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/byte-strings
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -583,18 +645,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: byte_strings_16x16_matrix_route_mask_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  source_records: *id003
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/byte-strings
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -613,18 +676,26 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: byte_strings_token_block_matrix_comparison_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: outguess_pgp_xor_byte_string_detector_diagnostics
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  source_records:
+  - data/source-harvester/stage5eh-lp-outguessed-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lp-outguessed-pgp-signed-output-inventory.yaml
+  - data/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk.yaml
+  - data/source-harvester/stage5eh-byte-strings-context-crosswalk.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/project-state/stage6-source-lock-family-census.yaml
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/byte-strings
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -643,18 +714,23 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: page54_55_red_numbered_line_block_transcript_alignment_probe_candidate_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: page54_55_red_number_alignment_readiness
+  readiness_class: stage7_conditional_requires_canonical_image_or_transcript
+  source_records:
+  - data/source-harvester/stage5eh-page54-55-red-number-source-crosswalk.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -673,18 +749,24 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: lp_pages_stegdetect_baseline_probe_manifest_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: stego_positive_control_toolchain_readiness
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  source_records: &id004
+  - data/source-harvester/stage5eh-page13-stegdetect-operator-result-lock.yaml
+  - data/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  - third_party/StegoPositiveControls
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -703,18 +785,20 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: known_outguessed_pages_stegdetect_comparison_probe_manifest_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: stego_positive_control_toolchain_readiness
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  source_records: *id004
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  - third_party/StegoPositiveControls
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -733,18 +817,20 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: star_artifact_mod8_dct_residue_probe_manifest_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: stego_positive_control_toolchain_readiness
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  source_records: *id004
+  source_roots:
+  - third_party/StarArtifactsInLPPageImages
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -763,18 +849,20 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: page13_canonical_image_hash_and_detector_reproduction_probe_manifest_v0
-  family_id: lag5_copy_null_doublet_diagnostics
-  source_records: []
-  source_roots: []
+  family_id: stego_positive_control_toolchain_readiness
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  source_records: *id004
+  source_roots:
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  - third_party/StegoPositiveControls
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -793,18 +881,27 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: observation_on_rune_frequency_attachment_context_reconstruction_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  source_records: []
-  source_roots: []
+  readiness_class: stage7_ready_metadata_only
+  source_records: &id005
+  - data/source-harvester/stage6-observation-rune-frequency-source-lock-register.yaml
+  - data/source-harvester/stage6-observation-rune-frequency-file-inventory.yaml
+  - data/source-harvester/stage6-observation-rune-frequency-attachment-context-map.yaml
+  - data/historical-route/stage6-observation-rune-frequency-adjacent-doublet-signature.yaml
+  - data/historical-route/stage6-observation-rune-frequency-421-bridge-candidates.yaml
+  - data/historical-route/stage6-observation-rune-frequency-disk-lag5-crosslink.yaml
+  - data/historical-route/stage6-observation-rune-frequency-blake-orc-context.yaml
+  - data/historical-route/stage6-observation-rune-frequency-probe-readiness.yaml
+  source_roots:
+  - third_party/ObservationOnRuneFrequency
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -823,19 +920,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: adjacent_doublet_diagonal_vector_reproduction_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  source_records: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records: *id005
   source_roots:
   - third_party/ObservationOnRuneFrequency
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -854,19 +951,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: adjacent_doublet_86_89_boundary_reconciliation_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  source_records: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records: *id005
   source_roots:
   - third_party/ObservationOnRuneFrequency
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -885,19 +982,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: diagonal_421_delimiter_alphabet_order_control_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  source_records: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records: *id005
   source_roots:
   - third_party/ObservationOnRuneFrequency
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -916,18 +1013,32 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: lag1_lag5_joint_copy_null_fingerprint_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  source_records: []
-  source_roots: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records:
+  - data/source-harvester/stage6-observation-rune-frequency-source-lock-register.yaml
+  - data/source-harvester/stage6-observation-rune-frequency-file-inventory.yaml
+  - data/source-harvester/stage6-observation-rune-frequency-attachment-context-map.yaml
+  - data/historical-route/stage6-observation-rune-frequency-adjacent-doublet-signature.yaml
+  - data/historical-route/stage6-observation-rune-frequency-421-bridge-candidates.yaml
+  - data/historical-route/stage6-observation-rune-frequency-disk-lag5-crosslink.yaml
+  - data/historical-route/stage6-observation-rune-frequency-blake-orc-context.yaml
+  - data/historical-route/stage6-observation-rune-frequency-probe-readiness.yaml
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  source_roots:
+  - third_party/ObservationOnRuneFrequency
+  - third_party/Lag5-phenomenon
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -946,19 +1057,22 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: diskcipher_doublet_metric_reimplementation_preflight_v0
   family_id: diskcipher_alberti_doublet_56311_readiness
-  source_records: []
+  readiness_class: stage7_conditional_requires_reimplementation_metric_definition
+  source_records:
+  - data/historical-route/stage6-observation-rune-frequency-disk-lag5-crosslink.yaml
+  - data/project-state/stage6-source-lock-family-census.yaml
   source_roots:
   - third_party/ObservationOnRuneFrequency
+  - third_party/DiskCipherStuff
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -977,19 +1091,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: doublet_421_numeric_bridge_verification_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  source_records: []
+  readiness_class: stage7_ready_metadata_only
+  source_records: *id005
   source_roots:
   - third_party/ObservationOnRuneFrequency
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -1008,19 +1122,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: diagonal_421_blake_orc_control_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  source_records: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records: *id005
   source_roots:
   - third_party/ObservationOnRuneFrequency
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -1039,19 +1153,19 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: diagonal_421_occurrence_index_prime_emirp_probe_v0
   family_id: adjacent_doublet_frequency_signature_421_fibonacci
-  source_records: []
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  source_records: *id005
   source_roots:
   - third_party/ObservationOnRuneFrequency
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -1070,19 +1184,22 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: adjacent_doublet_music_29_note_projection_control_v0
   family_id: cicada_music_score_metadata_and_number_diagnostics
-  source_records: []
+  readiness_class: stage7_conditional_requires_canonical_score_or_music_metadata
+  source_records:
+  - data/project-state/stage6-source-lock-family-census.yaml
   source_roots:
   - third_party/ObservationOnRuneFrequency
+  - third_party/CicadaMusic
+  - third_party/CicadaMusic/community-theory
+  source_gap_or_stage6c_precondition: null
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -1101,19 +1218,21 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 - diagnostic_id: adjacent_doublet_token_block_29_symbol_projection_control_v0
   family_id: token_block_static_primary60_matrix_readiness
-  source_records: []
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  source_records:
+  - data/project-state/stage6-source-lock-family-census.yaml
   source_roots:
   - third_party/ObservationOnRuneFrequency
+  source_gap_or_stage6c_precondition: requires Stage 6C to bind finite token-block
+    projection input set
   run_allowed_stage: stage-7
+  triangle_scope_crosslink_only: false
+  triangle_execution_deferred_to_stage8_stage9: false
   stage6_run_now: false
   execution_enabled_now: false
   finite_input_set_required: true
@@ -1132,11 +1251,7 @@ diagnostics:
   - high_discovery_value
   - high_bridge_value
   - high_control_value
-  blocked_actions:
-  - solve_claim
-  - target_selection
-  - route_stream_generation_unless_later_stage_explicitly_allows
-  - byte_stream_generation_unless_later_stage_explicitly_allows
+  blocked_actions: *id002
   usable_for_decision_now: false
   not_solve_evidence: true
 diagnostic_count: 34

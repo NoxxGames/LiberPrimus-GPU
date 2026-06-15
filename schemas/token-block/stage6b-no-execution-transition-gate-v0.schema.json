@@ -1,0 +1,50 @@
+{
+  "$id": "https://liberprimus-gpu.local/schemas/stage6b/no_execution_transition_gate",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "metadata_only": {
+      "const": true
+    },
+    "puzzle_execution_allowed": {
+      "const": false
+    },
+    "record_type": {
+      "type": "string"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage6b_creates_stage7_result_archive_now": {
+      "const": false
+    },
+    "stage6b_final_finite_stage7_manifest_created_now": {
+      "const": false
+    },
+    "stage6b_generates_stage7_outputs_now": {
+      "const": false
+    },
+    "stage6b_routes_to_stage7_now": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-6b"
+    },
+    "stage_title": {
+      "const": "Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution"
+    }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "stage_title",
+    "metadata_only",
+    "puzzle_execution_allowed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

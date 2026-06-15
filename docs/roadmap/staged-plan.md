@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution.
-- Current planning focus: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Latest completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
+- Current planning focus: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -163,14 +163,14 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Stage
 
-Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution is the latest completed stage. It supersedes the previously routed ordinary number-fact review batch 006, records final Stage 5 triangle/route diagnostic context, preserves Stage 5EH counts, and keeps all probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, and solve gates closed.
+Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution is the latest completed stage. It repairs Stage 6 probe-family/source/readiness metadata, marks the Stage 7 menu as partial and non-executable, stabilizes project-local hooks as report-only by default, and keeps all probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, and solve gates closed.
 
-Current planning focus: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6 is a readiness stage only; Stage 5EI does not run Stage 6 probes or generate route streams.
+Current planning focus: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6B is a repair stage only; Stage 6C must finalize finite inputs, controls, source paths, toolchain requirements, and archive-run commands before any Stage 7 execution.
 
 ## Planned Next Stages
 
-- Stage 6 - Probe and diagnostic readiness, without execution.
-- Stage 7 - Actual probes and diagnostics only after Stage 6 approval gates.
+- Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 7 - Actual probes and diagnostics only after Stage 6C approval gates.
 - Stage 8 - Triangle-specific experiment readiness, without execution.
 - Stage 9 - Triangle experiments only after Stage 8 approval gates.
 - Future unnumbered website expansion project after CUDA reporting boundaries are stable.
@@ -364,7 +364,15 @@ Next: Stage 6 - Probe and diagnostic readiness, without execution.
 <!-- stage6:start -->
 ## Stage 6 - Diagnostic Backlog Readiness
 
-Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution is the latest completed stage. It is metadata-only and creates a bounded source-root census, diagnostic-backlog census, discovery-probe registry, bridge/keeper taxonomy, no-lossy Stage 7 archive policy, and Stage 8/9 triangle boundary handoff.
+Historical Stage 6 boundary: Stage 6 - Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff, without execution is metadata-only and creates a bounded source-root census, diagnostic-backlog census, discovery-probe registry, bridge/keeper taxonomy, no-lossy Stage 7 archive policy, and Stage 8/9 triangle boundary handoff.
 
-Next: Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+The routed follow-up at that time was Stage 6B - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 <!-- stage6:end -->
+
+<!-- stage6b:start -->
+## Stage 6B - Diagnostic Readiness Repair
+
+Stage 6B repairs active Stage 6 planning metadata and project-local hooks. It is complete and routes to Stage 6C.
+
+Current planning focus: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+<!-- stage6b:end -->

@@ -88,7 +88,7 @@ if ($Workers -gt $MaxWorkers -or $PytestWorkers -gt $MaxWorkers) {
     throw "Stage validation policy caps local workers at $MaxWorkers"
 }
 $StageDisplay = $StageId.ToUpperInvariant().Replace("STAGE", "Stage ")
-$stageTestFiles = Get-ChildItem tests/python -Filter "test_${StageId}_*.py" | ForEach-Object { $_.FullName }
+$stageTestFiles = @(Get-ChildItem tests/python -Filter "test_${StageId}_*.py" | ForEach-Object { $_.FullName })
 $stageModulePath = "python/libreprimus/token_block/$StageId.py"
 $validateCommand = "validate-$StageId"
 $summaryCommand = "$StageId-summary"
