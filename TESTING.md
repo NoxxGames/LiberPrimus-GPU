@@ -1214,3 +1214,9 @@ Stage 6 uses focused validators first, then stale-current scanner strict mode, S
 
 Stage 6B adds regression tests for the Stage 6 probe-family mapping bug, conservative readiness classes, source traceability, partial Stage 7 menu semantics, report-only hook behavior, and Stage 6B current-stage transition. Final validation must rerun Stage 6 validation after the active Stage 6 repair.
 <!-- stage6b:end -->
+
+<!-- stage6c:start -->
+## Stage 6C Validation
+
+Stage 6C validation includes token-block Stage 6C build/validate/summary commands, focused OUROBOROS arithmetic tests, Source Browser validation, stale-current strict scanning, Stage 6/6B regression tests, ruff, and stage-fast/local-fast/full-parallel validation with 10 workers and 10 pytest workers. Full serial pytest remains opt-in only.
+<!-- stage6c:end -->

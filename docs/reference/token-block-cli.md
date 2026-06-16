@@ -234,3 +234,12 @@ Stage 6 token-block commands: `build-stage6`, `validate-stage6`, `stage6-summary
 
 Use `libreprimus token-block build-stage6b`, `validate-stage6b`, and `stage6b-summary` for the aggregate repair stage. Focused validators cover Stage 6 preservation, repair assessment, family/source/readiness maps, Stage 7 menu status, hook stabilization, current-state transition, Source Browser loadability, gate closure, and handoff.
 <!-- stage6b:end -->
+
+<!-- stage6c:start -->
+## Stage 6C Commands
+
+- `python -m libreprimus.cli token-block build-stage6c`
+- `python -m libreprimus.cli token-block validate-stage6c`
+- `python -m libreprimus.cli token-block stage6c-summary`
+- focused validators: `validate-stage6c-stage6b-preservation`, `validate-stage6c-source-lock-records`, `validate-stage6c-ouroboros-arithmetic`, `validate-stage6c-page32-3222-policy`, `validate-stage6c-number-fact-overlays`, `validate-stage6c-future-probe-registry`, `validate-stage6c-stage8-watchlist`, `validate-stage6c-source-browser-loadability`, `validate-stage6c-current-stage-transition`, `validate-stage6c-gate-closure`, and `validate-stage6c-handoff`.
+<!-- stage6c:end -->

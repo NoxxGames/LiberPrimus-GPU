@@ -4363,3 +4363,36 @@ records:
     PGP/OutGuess/F5/StegDetect execution, CUDA, scoring, benchmarks, target selection,
     canonical-corpus activation, page-boundary finalisation, Stage 7 archive creation,
     or solve claim.
+- record_type: stage_summary_record
+  stage_id: stage-6c
+  title: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock
+    addendum, without execution
+  status: complete
+  category: source_lock_addendum
+  summary: Source-locked the OUROBOROS/I31 circumference/Page32 3222 bridge as review-only
+    metadata, preserved Stage 6B repairs, and routed final finite Stage 7 manifest
+    work to Stage 6D.
+  key_outputs:
+  - Recorded the exact solved quote THE I IS THE VOICE OF THE CIRCUMFERENCE as source-layered
+    context.
+  - Recorded OUROBOROS=167, vowel/voice layer 31=GP(I), consonant shell 136=T16, delta14,
+    and Page32 3222 bridge metadata.
+  - Added 12 review-only Source Browser overlays and 10 disabled future probe records
+    with control-bundle requirements.
+  - Added the Stage 6D manifest-input addendum while keeping Stage 7 execution and
+    archive creation blocked.
+  result_status: metadata_source_lock_complete
+  summary_path: data/project-state/stage6c-summary.yaml
+  recommended_next_stage_id: stage-6d
+  recommended_next_stage_title: Stage 6D - Final finite Stage 7 probe manifest and
+    archive-run contract, without execution
+  metadata_only: true
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: No probes, final Stage 7 manifest, ZIP/archive, route extraction, byte streams,
+    image/OCR/stego interpretation, CUDA, scoring, benchmarks, target selection, canonical-corpus
+    activation, page-boundary finalisation, or solve claim.
+  ouroboros_total: 167
+  future_probe_count: 10

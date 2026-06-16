@@ -766,6 +766,7 @@ from . import stage5eh as stage5eh_module
 from . import stage5ei as stage5ei_module
 from . import stage6 as stage6_module
 from . import stage6b as stage6b_module
+from . import stage6c as stage6c_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -12181,6 +12182,123 @@ def validate_stage6b_handoff_command() -> None:
     _print_stage5dv_result(
         stage6b_module.validate_stage6b_handoff(),
         "token_block_stage6b_handoff_valid=true",
+    )
+
+
+@app.command("build-stage6c")
+def build_stage6c_command() -> None:
+    records = stage6c_module.build_stage6c()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"previous_stage_id={summary.get('previous_stage_id')}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+    console.print(f"ouroboros_total={summary.get('ouroboros_total')}")
+    console.print(f"vowel_sum={summary.get('vowel_sum')}")
+    console.print(f"o_cyclic_distance_compact={summary.get('o_cyclic_distance_compact')}")
+    console.print(f"future_probe_count={summary.get('future_probe_count')}")
+    console.print(f"overlay_count={summary.get('overlay_count')}")
+    console.print(f"page32_3222_red_highlighted_status={summary.get('page32_3222_red_highlighted_status')}")
+
+
+@app.command("validate-stage6c")
+def validate_stage6c_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c(),
+        "token_block_stage6c_valid=true",
+    )
+
+
+@app.command("stage6c-summary")
+def stage6c_summary_command() -> None:
+    console.print(stage6c_module.stage6c_summary_text())
+
+
+@app.command("validate-stage6c-stage6b-preservation")
+def validate_stage6c_stage6b_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_stage6b_preservation(),
+        "token_block_stage6c_stage6b_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage6c-source-lock-records")
+def validate_stage6c_source_lock_records_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_source_lock_records(),
+        "token_block_stage6c_source_lock_records_valid=true",
+    )
+
+
+@app.command("validate-stage6c-ouroboros-arithmetic")
+def validate_stage6c_ouroboros_arithmetic_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_ouroboros_arithmetic(),
+        "token_block_stage6c_ouroboros_arithmetic_valid=true",
+    )
+
+
+@app.command("validate-stage6c-page32-3222-policy")
+def validate_stage6c_page32_3222_policy_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_page32_3222_policy(),
+        "token_block_stage6c_page32_3222_policy_valid=true",
+    )
+
+
+@app.command("validate-stage6c-number-fact-overlays")
+def validate_stage6c_number_fact_overlays_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_number_fact_overlays(),
+        "token_block_stage6c_number_fact_overlays_valid=true",
+    )
+
+
+@app.command("validate-stage6c-future-probe-registry")
+def validate_stage6c_future_probe_registry_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_future_probe_registry(),
+        "token_block_stage6c_future_probe_registry_valid=true",
+    )
+
+
+@app.command("validate-stage6c-stage8-watchlist")
+def validate_stage6c_stage8_watchlist_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_stage8_watchlist(),
+        "token_block_stage6c_stage8_watchlist_valid=true",
+    )
+
+
+@app.command("validate-stage6c-source-browser-loadability")
+def validate_stage6c_source_browser_loadability_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_source_browser_loadability(),
+        "token_block_stage6c_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage6c-current-stage-transition")
+def validate_stage6c_current_stage_transition_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_current_stage_transition(),
+        "token_block_stage6c_current_stage_transition_valid=true",
+    )
+
+
+@app.command("validate-stage6c-gate-closure")
+def validate_stage6c_gate_closure_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_gate_closure(),
+        "token_block_stage6c_gate_closure_valid=true",
+    )
+
+
+@app.command("validate-stage6c-handoff")
+def validate_stage6c_handoff_command() -> None:
+    _print_stage5dv_result(
+        stage6c_module.validate_stage6c_handoff(),
+        "token_block_stage6c_handoff_valid=true",
     )
 
 

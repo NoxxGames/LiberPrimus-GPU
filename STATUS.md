@@ -2,10 +2,10 @@
 
 ## Current Stage
 
-- Latest completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
-- Current next stage: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-- Next recommended prompt: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-- Stage 6B repairs Stage 6 probe-family/source/readiness metadata and project-local hooks, then routes final finite Stage 7 manifest work to Stage 6C.
+- Latest completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+- Current next stage: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Next recommended prompt: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 6C source-locks the OUROBOROS/I31 circumference bridge as review-only metadata, preserves Stage 6B probe-map and hook repairs, and routes final finite Stage 7 manifest work to Stage 6D.
 - Stage 6 and Stage 5EI remain historical readiness/transition metadata and did not run probes or generate route streams.
 - No probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, or solve work is authorized.
 
@@ -1493,11 +1493,19 @@ Stage 5EH records Lag5 29/28/57 event context, M-sum 479 over claimed N=12,956, 
 <!-- stage6:end -->
 
 <!-- stage6b:start -->
-## Stage 6B Status
+## Historical Stage 6B Status
 
-- Latest completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
-- Current next stage: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- At the time of Stage 6B, Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution was the latest completed stage.
+- The routed follow-up at that time was Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Stage 7 execution allowed next: false.
 - Stage 7 ZIP archive creation allowed next: false.
 - Stage 6B repaired mappings and hooks only; final finite Stage 7 manifest work is deferred to Stage 6C.
 <!-- stage6b:end -->
+
+<!-- stage6c:start -->
+## Stage 6C Status
+
+Latest completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+
+Next routed stage: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6C added review-only OUROBOROS/I31 source-lock records, Source Browser overlays, and Stage 6D manifest-input addendum records. All execution, target-selection, image/OCR/stego, CUDA/scoring, archive, and solve gates remain closed.
+<!-- stage6c:end -->

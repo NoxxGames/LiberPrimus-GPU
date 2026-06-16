@@ -1,0 +1,557 @@
+record_type: stage6c_source_browser_number_fact_enrichment_overlay_collection
+schema: schemas/operator-console/stage6c-number-fact-overlays-v0.schema.json
+stage_id: stage-6c
+stage_title: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock
+  addendum, without execution
+prompt_type: codex_plan_mode_source_lock_addendum
+metadata_only: true
+reviewability_stage: true
+source_lock_addendum_stage: true
+probe_diagnostic_readiness_stage: true
+number_fact_review_batch_stage: false
+source_lock_only: false
+source_lock_component_present: true
+puzzle_execution_allowed: false
+solve_claim: false
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+alberti_cipher_execution_performed_now: false
+alberti_html_executed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+combined_approval_gate_satisfied_now: false
+community_code_executed_now: false
+cuda_execution_performed: false
+cuda_triage_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+diagnostic_execution_performed_now: false
+diagnostic_probe_run_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+hidden_content_image_forensics_performed: false
+historical_source_lock_records_rewritten: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+lossy_filtering_performed: false
+machine_code_execution_performed_now: false
+mayfly_route_extraction_performed_now: false
+midi_route_extraction_performed_now: false
+mp3stego_execution_performed: false
+music_route_extraction_performed_now: false
+native_code_execution_performed_now: false
+network_target_validation_performed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+number_fact_backfill_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_target_priority_decision_created_now: false
+outguess_execution_performed: false
+page13_f5_payload_claim_accepted_now: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+page_boundaries_final: false
+page_boundaries_finalized: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+pivot_target_selected_now: false
+pgp_private_key_operation_performed: false
+pgp_signature_verified_now: false
+pgp_verification_performed_now: false
+probe_execution_performed_now: false
+raw_source_files_committed: false
+raw_third_party_files_committed: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+scoring_performed: false
+scoring_triage_performed: false
+semantic_image_interpretation_performed: false
+spectrogram_stego_performed: false
+stegdetect_execution_performed_now: false
+stego_tool_execution_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+token_block_variant_byte_streams_generated: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+triangular_transposition_readouts_generated_now: false
+triangular_transposition_route_stream_generated_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+vm_bytecode_execution_performed_now: false
+website_expansion_performed: false
+stage6_probe_execution_allowed: false
+stage6_probe_execution_performed_now: false
+stage6_result_archive_created_now: false
+stage6_zip_result_bundle_created_now: false
+stage6_runs_bigrams_py_now: false
+stage6_recomputes_canonical_bigram_matrix_now: false
+stage6_runs_lag5_probe_now: false
+stage6_runs_diskcipher_probe_now: false
+stage6_runs_music_probe_now: false
+stage6_runs_triangle_probe_now: false
+stage6_runs_stego_probe_now: false
+stage6_selects_stage7_probe_outputs_now: false
+stage6_discards_outputs_by_score_now: false
+stage6c_final_finite_stage7_manifest_created_now: false
+stage6c_archive_run_contract_finalized_now: false
+stage6c_creates_stage7_result_archive_now: false
+stage6c_generates_stage7_outputs_now: false
+stage6c_routes_to_stage7_now: false
+stage6c_runs_any_probe_now: false
+stage6c_generates_spiral_readouts_now: false
+stage6c_generates_triangle_readouts_now: false
+stage6c_confirms_3222_red_highlight_now: false
+stage6c_uses_image_interpretation_now: false
+stage7_execution_allowed_next: false
+stage7_zip_archive_creation_allowed_next: false
+stage8_triangle_readiness_started_now: false
+stage9_experiments_started_now: false
+spiral_route_readouts_generated_now: false
+review_batch_id: stage6c_ouroboros_i31_circumference_review_only
+review_batch_selection_policy: source_lock_addendum_not_number_fact_review_batch
+overlay_count: 12
+usable_for_decision_now: false
+overlays:
+- overlay_id: stage6c_ouroboros_gp167_total_overlay
+  source_record_path: data/historical-route/stage6c-ouroboros-i31-vowel-voice-circumference-candidate-v0.yaml
+  source_fact_id: stage6c_ouroboros_i31_vowel_voice_circumference_candidate_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: OUROBOROS = 167
+  short_label: OUROBOROS = 167
+  value: 167
+  values:
+  - 167
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: OUROBOROS = 167
+  relation: Existing cycle/self-reference GP fact, now crosslinked to I31 voice/circumference
+    structure.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths: &id001
+  - data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+  - data/historical-route/stage5dn-circumference-single-i-spiral-anchor-crosslink-v0.yaml
+  - data/historical-route/stage5dn-solved-i-voice-of-circumference-precedent-v0.yaml
+  - data/historical-route/stage5ds-ouroboros-gp-167-music-cycle-candidate-v0.yaml
+  - data/historical-route/stage5ds-ouroboros-see-also-gp-arithmetic-scan-v0.yaml
+  - data/historical-route/stage5ds-ouroboros-see-also-transform-context-v0.yaml
+  - data/historical-route/stage5ds-pdd153-56311-ouroboric-cycle-candidate-v0.yaml
+  - data/historical-route/stage5ds-pdd153-ouroboros-167-mod153-offset14-candidate-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks: &id002
+    gp_profile:
+    - data/profiles/gematria/gematria-primus-v0.json
+    solved_i_voice_circumference_quote:
+    - data/historical-route/stage5dn-solved-i-voice-of-circumference-precedent-v0.yaml
+    - data/historical-route/stage5dn-circumference-single-i-spiral-anchor-crosslink-v0.yaml
+    ouroboros_gp167_and_transform_context:
+    - data/historical-route/stage5ds-ouroboros-gp-167-music-cycle-candidate-v0.yaml
+    - data/historical-route/stage5ds-ouroboros-see-also-transform-context-v0.yaml
+    - data/historical-route/stage5ds-ouroboros-see-also-gp-arithmetic-scan-v0.yaml
+    pdd153_and_56311:
+    - data/historical-route/stage5ds-pdd153-ouroboros-167-mod153-offset14-candidate-v0.yaml
+    - data/historical-route/stage5ds-pdd153-56311-ouroboric-cycle-candidate-v0.yaml
+    - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+    page32_3222:
+    - data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: &id003
+  - spelling_variant_controls
+  - same_length_gp_phrase_controls
+  - logged_loop_self_reference_term_controls
+  - shuffled_gp_label_order_controls
+  - random_same_multiset_controls
+  - page32_grid_hit_multiple_comparison_controls
+  - alternate_o_gap_conventions
+  - pdd153_offset_controls
+  - circumference_neighbor_controls_29_30_32_41
+  - no_plaintext_required_output_policy
+  not_allowed_as: &id004
+  - proof
+  - route_seed
+  - target_selection
+  - activation_decision
+  - execution_seed
+  - solve_claim
+  usable_for_decision_now: false
+- overlay_id: stage6c_ouroboros_vowel_voice_i31_overlay
+  source_record_path: data/historical-route/stage6c-ouroboros-i31-vowel-voice-circumference-candidate-v0.yaml
+  source_fact_id: stage6c_ouroboros_i31_vowel_voice_circumference_candidate_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: O+U+O+O+O = 31 = GP(I)
+  short_label: O+U+O+O+O = 31 = GP(I)
+  value: 31
+  values:
+  - 31
+  - 7
+  - 3
+  - 7
+  - 7
+  - 7
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: O+U+O+O+O = 31 = GP(I)
+  relation: The vowel/voice layer of OUROBOROS lands on I=31 and crosslinks to THE
+    I IS THE VOICE OF THE CIRCUMFERENCE.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false
+- overlay_id: stage6c_ouroboros_consonant_shell_t16_overlay
+  source_record_path: data/historical-route/stage6c-ouroboros-t16-consonant-shell-pdd153-bridge-v0.yaml
+  source_fact_id: stage6c_ouroboros_t16_consonant_shell_pdd153_bridge_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: R+B+R+S = 136 = T16
+  short_label: R+B+R+S = 136 = T16
+  value: 136
+  values:
+  - 136
+  - 16
+  - 17
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: R+B+R+S = 136 = T16
+  relation: OUROBOROS consonant shell equals the triangular number immediately before
+    PDD T17.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false
+- overlay_id: stage6c_ouroboros_t16_i_pdd153_delta14_overlay
+  source_record_path: data/historical-route/stage6c-ouroboros-t16-consonant-shell-pdd153-bridge-v0.yaml
+  source_fact_id: stage6c_ouroboros_t16_consonant_shell_pdd153_bridge_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: OUROBOROS = T16 + I = 136 + 31 = 167; PDD153 = T16 + 17 = 153; delta
+    = 14.
+  short_label: OUROBOROS = T16 + I; delta 14
+  value: 14
+  values:
+  - 167
+  - 136
+  - 31
+  - 153
+  - 14
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: OUROBOROS = T16 + I = 136 + 31 = 167; PDD153 = T16 + 17 = 153; delta
+    = 14.
+  relation: Rewrites OUROBOROS-PDD153 as I-17 and crosslinks to the 56311 cumulative
+    offset 14.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false
+- overlay_id: stage6c_ouroboros_o_ring_3222_page32_overlay
+  source_record_path: data/historical-route/stage6c-ouroboros-o-ring-3222-page32-spiral-bridge-v0.yaml
+  source_fact_id: stage6c_ouroboros_o_ring_3222_page32_spiral_bridge_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: O positions in OUROBOROS are [1,4,6,8]; cyclic distances are [3,2,2,2]
+    -> 3222.
+  short_label: O-ring 3222
+  value: 3222
+  values:
+  - 1
+  - 4
+  - 6
+  - 8
+  - 3
+  - 2
+  - 2
+  - 2
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: O positions in OUROBOROS are [1,4,6,8]; cyclic distances are [3,2,2,2]
+    -> 3222.
+  relation: 3222 may be source-locked as a Page32 grid/spiral value only. Do not source-lock
+    red/highlighted status unless an existing committed record proves it.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false
+- overlay_id: stage6c_i31_circumference_radius5_diameter10_overlay
+  source_record_path: data/historical-route/stage6c-i31-circumference-radius5-diameter10-geometry-candidate-v0.yaml
+  source_fact_id: stage6c_i31_circumference_radius5_diameter10_geometry_candidate_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: If C=31, r=31/(2*pi)=4.93 and d=9.87.
+  short_label: C31 radius5 diameter10
+  value: 31
+  values:
+  - 31
+  - 4.93
+  - 9.87
+  - 5
+  - 10
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: If C=31, r=31/(2*pi)=4.93 and d=9.87.
+  relation: Radius about 5 / diameter about 10 is approximate geometric candidate
+    context only.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false
+- overlay_id: stage6c_i31_56311_phase_ring_overlay
+  source_record_path: data/historical-route/stage6c-ouroboros-pdd153-offset14-56311-phase-bridge-v0.yaml
+  source_fact_id: stage6c_ouroboros_pdd153_offset14_56311_phase_bridge_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: 56311 cumulative offsets [5,11,14,25] can be viewed as candidate
+    phases [0,5,11,14,25] on a 31-unit ring; closure arc is 6.
+  short_label: I31 56311 phase ring
+  value: 31
+  values:
+  - 0
+  - 5
+  - 11
+  - 14
+  - 25
+  - 6
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: 56311 cumulative offsets [5,11,14,25] can be viewed as candidate phases
+    [0,5,11,14,25] on a 31-unit ring; closure arc is 6.
+  relation: No route readout generated.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false
+- overlay_id: stage6c_ouroboros_variant_control_overlay
+  source_record_path: data/historical-route/stage6c-ouroboros-variant-spelling-control-candidates-v0.yaml
+  source_fact_id: stage6c_ouroboros_variant_spelling_control_candidates_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: OUROBOROS has vowel layer 31; UROBOROS and OROBOROS preserve consonant
+    shell 136 but change the vowel layer.
+  short_label: variant controls
+  value: 31
+  values:
+  - 167
+  - 160
+  - 164
+  - 31
+  - 24
+  - 28
+  - 136
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: OUROBOROS has vowel layer 31; UROBOROS and OROBOROS preserve consonant
+    shell 136 but change the vowel layer.
+  relation: Variant controls for the voice/I31 claim; UROBOROS is not an O/U alias.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false
+- overlay_id: stage6c_pdd153_mod31_gp29_overlay
+  source_record_path: data/historical-route/stage6c-i31-circumference-radius5-diameter10-geometry-candidate-v0.yaml
+  source_fact_id: stage6c_i31_circumference_radius5_diameter10_geometry_candidate_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: 153 = 4*31 + 29.
+  short_label: PDD153 mod31 GP29
+  value: 153
+  values:
+  - 153
+  - 4
+  - 31
+  - 29
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: 153 = 4*31 + 29.
+  relation: Selection-risk warning required.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: low
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false
+- overlay_id: stage6c_ouroboros_palindromic_core_overlay
+  source_record_path: data/historical-route/stage6c-ouroboros-palindromic-core-97-and-oro25-candidate-v0.yaml
+  source_fact_id: stage6c_ouroboros_palindromic_core_97_and_oro25_candidate_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: ROBOR = 97 = GP(A); ORO = 25.
+  short_label: ROBOR97 ORO25
+  value: 97
+  values:
+  - 97
+  - 25
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: ROBOR = 97 = GP(A); ORO = 25.
+  relation: Control scan required before assigning significance.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false
+- overlay_id: stage6c_ouroboros_inter_o_segments_offset14_overlay
+  source_record_path: data/historical-route/stage6c-ouroboros-palindromic-core-97-and-oro25-candidate-v0.yaml
+  source_fact_id: stage6c_ouroboros_palindromic_core_97_and_oro25_candidate_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: O[UR]O[B]O[R]O[S]; inter-O segment sums are [14,61,11,53]; UR=14.
+  short_label: inter-O UR14
+  value: 14
+  values:
+  - 14
+  - 61
+  - 11
+  - 53
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: O[UR]O[B]O[R]O[S]; inter-O segment sums are [14,61,11,53]; UR=14.
+  relation: UR=14 crosslinks to OUROBOROS 167 - PDD153 153 = 14 and the 56311 cumulative
+    offset 14. Review-only bridge, not a route rule.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false
+- overlay_id: stage6c_ouroboros_index_checksum_overlay
+  source_record_path: data/historical-route/stage6c-ouroboros-index-checksum-candidates-v0.yaml
+  source_fact_id: stage6c_ouroboros_index_checksum_candidates_v0
+  fact_class: stage6c_ouroboros_i31_review_fact
+  display_label: OUROBOROS zero-based GP profile indices sum to 53=GP(S), final rune
+    S; one-based indices sum to 62=2*31.
+  short_label: index checksum
+  value: 53
+  values:
+  - 53
+  - 62
+  - 31
+  value_type: gp_arithmetic_or_geometry_candidate
+  operation_type: review_only_source_lock_addendum
+  expression: OUROBOROS zero-based GP profile indices sum to 53=GP(S), final rune
+    S; one-based indices sum to 62=2*31.
+  relation: Candidate self-terminal checksum and I31/vowel-layer double relation.
+    Control scan required before assigning significance.
+  why_stored: Preserve the OUROBOROS/I31 circumference bridge as review-only Stage
+    6D input context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: low
+  source_paths: *id001
+  crosslinks: *id002
+  risk_notes:
+  - not_proof
+  - not_route_seed
+  - requires_controls
+  - no_execution_now
+  controls_required: *id003
+  not_allowed_as: *id004
+  usable_for_decision_now: false

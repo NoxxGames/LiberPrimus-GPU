@@ -336,6 +336,7 @@ def validate_stage5ef_current_truth() -> ValidationResult:
         ("stage-5ei", "stage-6"): Path("data/project-state/stage5ei-summary.yaml"),
         ("stage-6", "stage-6b"): Path("data/project-state/stage6-summary.yaml"),
         ("stage-6b", "stage-6c"): Path("data/project-state/stage6b-summary.yaml"),
+        ("stage-6c", "stage-6d"): Path("data/project-state/stage6c-summary.yaml"),
     }
     if current_pair in later_stage_pairs and later_stage_pairs[current_pair].exists():
         return _result(errors, authority_count=len(record.get("authoritative_current_truth", [])))

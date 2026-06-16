@@ -1,0 +1,85 @@
+{
+  "$id": "https://liberprimus-gpu.local/schemas/stage6c/future_probe_registry",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "benchmark_performed": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "const": false
+    },
+    "future_probe_ids": {
+      "const": [
+        "ouroboros_vowel_voice_i31_probe_v0",
+        "ouroboros_consonant_t16_triangle_shell_probe_v0",
+        "ouroboros_variant_voice_layer_control_probe_v0",
+        "ouroboros_o_ring_3222_page32_control_probe_v0",
+        "i31_circumference_radius5_diameter10_pdd_center_probe_v0",
+        "i31_56311_phase_ring_probe_v0",
+        "pdd153_mod31_gp29_decomposition_probe_v0",
+        "page32_spiral_mod31_residue_probe_v0",
+        "multi_spiral_same_center_phase_offset_probe_v0",
+        "ouroboros_output_watchlist_for_stage8_stage9_v0"
+      ]
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "puzzle_execution_allowed": {
+      "const": false
+    },
+    "raw_source_files_committed": {
+      "const": false
+    },
+    "raw_third_party_files_committed": {
+      "const": false
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "record_type": {
+      "type": "string"
+    },
+    "route_stream_generated_now": {
+      "const": false
+    },
+    "schema": {
+      "type": "string"
+    },
+    "scoring_performed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage6c_routes_to_stage7_now": {
+      "const": false
+    },
+    "stage6c_runs_any_probe_now": {
+      "const": false
+    },
+    "stage7_execution_allowed_next": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-6c"
+    },
+    "stage_title": {
+      "const": "Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution"
+    }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "stage_title",
+    "metadata_only",
+    "puzzle_execution_allowed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

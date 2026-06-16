@@ -9526,6 +9526,14 @@ stage_records:
     registry_repair_ledger: data/project-state/stage6b-stage6-registry-repair-ledger.yaml
     hook_stabilization: data/project-state/stage6b-hook-stabilization-summary.yaml
     next_stage: stage-6c
+  stage-6c:
+    stage_id: stage-6c
+    summary: data/project-state/stage6c-summary.yaml
+    current_stage_transition: data/project-state/stage6c-current-stage-transition.yaml
+    future_probe_registry: data/token-block/stage6c-ouroboros-future-probe-registry.yaml
+    stage6d_manifest_input_addendum: data/token-block/stage6c-stage6d-manifest-input-addendum.yaml
+    number_fact_overlays: data/operator-console/source-browser/number-fact-overlays/stage6c-ouroboros-i31-circumference-overlays.yaml
+    next_stage: stage-6d
 stage6_summary_record: data/project-state/stage6-summary.yaml
 stage6_diagnostic_backlog_census: data/project-state/stage6-diagnostic-backlog-census.yaml
 stage6_discovery_probe_manifest_registry: data/token-block/stage6-discovery-probe-manifest-registry.yaml

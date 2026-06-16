@@ -220,3 +220,9 @@ Stage 6 records live under `data/project-state/stage6-*`, `data/source-harvester
 
 Stage 6B operational records live under `data/project-state/stage6b-*`, `data/token-block/stage6b-*`, and `data/source-harvester/stage6b-*`. Hook reports are ignored local output under `experiments/results/doc-drift/` and must not be staged.
 <!-- stage6b:end -->
+
+<!-- stage6c:start -->
+## Stage 6C Operational Files
+
+Stage 6C primary records live under `data/project-state/`, `data/historical-route/`, `data/token-block/`, `data/source-harvester/`, and `data/operator-console/source-browser/number-fact-overlays/`. The local handoff lives under ignored `codex-output/`.
+<!-- stage6c:end -->

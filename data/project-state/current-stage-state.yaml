@@ -1,7 +1,7 @@
-stage_id: stage-6b
-stage_title: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization,
-  without execution
-prompt_type: codex_plan_mode_stage6_triage_repair
+stage_id: stage-6c
+stage_title: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock
+  addendum, without execution
+prompt_type: codex_plan_mode_source_lock_addendum
 metadata_only: true
 source_lock_only: false
 reviewability_stage: true
@@ -87,15 +87,15 @@ raw_third_party_files_committed: false
 record_type: current_stage_state
 schema: schemas/project-state/current-stage-state-v0.schema.json
 status: complete
-latest_completed_stage_id: stage-6b
-latest_completed_stage_title: Stage 6B - Stage 6 diagnostic-readiness triage repair
-  and hook stabilization, without execution
+latest_completed_stage_id: stage-6c
+latest_completed_stage_title: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral
+  geometry source-lock addendum, without execution
 latest_completed_stage_commit_recording_policy: external_post_push_handoff
 latest_completed_stage_ci_status_recording_policy: external_post_push_handoff
 latest_completed_stage_commit_in_committed_registry: not_applicable_self_referential
 latest_completed_stage_ci_status_in_committed_registry: not_applicable_pre_push
-recommended_next_stage_id: stage-6c
-recommended_next_stage_title: Stage 6C - Final finite Stage 7 probe manifest and archive-run
+recommended_next_stage_id: stage-6d
+recommended_next_stage_title: Stage 6D - Final finite Stage 7 probe manifest and archive-run
   contract, without execution
 recommended_next_prompt_type: codex_plan_mode_probe_manifest_finalization
 stage_registry_is_source_of_truth: true
@@ -105,7 +105,7 @@ self_referential_commit_hash_not_required_in_committed_registry: true
 final_commit_and_ci_recorded_externally: true
 post_push_handoff_required: true
 post_push_handoff_locations:
-- codex-output/stage6b-codex-completion.md
+- codex-output/stage6c-codex-completion.md
 - GitHub issue comment
 plan_mode_policy_stage: true
 stage5ee_recommended_stage5ef_number_fact_batch_006: true
@@ -144,15 +144,15 @@ f5_extraction_performed_now: false
 f5_password_search_performed_now: false
 future_probe_manifest_count: 23
 latest_completed_stage:
-  stage_id: stage-6b
-  stage_title: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization,
-    without execution
+  stage_id: stage-6c
+  stage_title: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry
+    source-lock addendum, without execution
   completed_commit: ''
   completed_date: '2026-06-15'
   status: complete
 next_stage:
-  stage_id: stage-6c
-  stage_title: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract,
+  stage_id: stage-6d
+  stage_title: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract,
     without execution
   prompt_type: codex_plan_mode_probe_manifest_finalization
 current_stage_authority: data/project-state/current-stage-state.yaml
@@ -169,7 +169,7 @@ hook_execution_relies_on_deterministic_scanner: true
 custom_agents_invoked_by_hooks: false
 operator_hook_trust_source: local_codex_trust_state_or_explicit_operator_action
 probe_diagnostic_readiness_stage: true
-previous_completed_stage_id: stage-6
+previous_completed_stage_id: stage-6b
 diagnostic_execution_performed_now: false
 stego_tool_execution_performed: false
 cuda_triage_performed: false
@@ -223,3 +223,26 @@ stage6c_required_for_final_finite_manifest: true
 stage6b_runs_any_probe_now: false
 stage8_triangle_readiness_started_now: false
 stage9_experiments_started_now: false
+source_lock_addendum_stage: true
+stage6b_preserved: true
+stage6b_probe_mapping_repairs_preserved: true
+stage6b_hook_report_only_default_preserved: true
+stage6b_default_hook_exit_zero_preserved: true
+stage6b_strict_hook_mode_preserved: true
+stage6d_final_manifest_required: true
+exact_quote: THE I IS THE VOICE OF THE CIRCUMFERENCE
+ouroboros_total: 167
+vowel_sum: 31
+o_cyclic_distance_compact: '3222'
+page32_3222_red_highlighted_status: not_source_confirmed
+stage6c_final_finite_stage7_manifest_created_now: false
+stage6c_archive_run_contract_finalized_now: false
+stage6c_creates_stage7_result_archive_now: false
+stage6c_generates_stage7_outputs_now: false
+stage6c_routes_to_stage7_now: false
+stage6c_runs_any_probe_now: false
+stage6c_generates_spiral_readouts_now: false
+stage6c_generates_triangle_readouts_now: false
+stage6c_confirms_3222_red_highlight_now: false
+stage6c_uses_image_interpretation_now: false
+spiral_route_readouts_generated_now: false

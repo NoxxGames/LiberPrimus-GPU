@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
+Current completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
 
-Current work: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6B preserves Stage 6 and repairs active Stage 6 probe-family/source/readiness metadata and project-local hooks without execution.
+Current work: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6C source-locked the OUROBOROS/I31 circumference bridge as review-only metadata, preserved Stage 6B probe-map and hook repairs, and did not create a final Stage 7 manifest or execute probes.
 
 No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
 
@@ -1241,9 +1241,17 @@ The routed follow-up at that time was Stage 6B. Stage 6 is diagnostic-backlog an
 <!-- stage6:end -->
 
 <!-- stage6b:start -->
-## Stage 6B Current Boundary
+## Historical Stage 6B Boundary
 
-Current completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
+At the time of Stage 6B, Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution was the latest completed stage.
 
-Current work: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6B repaired Stage 6 probe-family/source/readiness metadata and made project-local Codex hooks report-only by default. It did not run probes, create the final Stage 7 manifest, create archives, execute tooling, generate route or byte streams, run CUDA/scoring/benchmarks, or make a solve claim.
+The routed follow-up at that time was Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6B repaired Stage 6 probe-family/source/readiness metadata and made project-local Codex hooks report-only by default. It did not run probes, create the final Stage 7 manifest, create archives, execute tooling, generate route or byte streams, run CUDA/scoring/benchmarks, or make a solve claim.
 <!-- stage6b:end -->
+
+<!-- stage6c:start -->
+## Stage 6C Current Boundary
+
+Current completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+
+Current work: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6C source-locked the OUROBOROS/I31 circumference bridge as review-only metadata and preserved Stage 6B probe-map and hook repairs. It did not run probes, finalize Stage 7, create archives, generate route or byte streams, inspect images, run OCR/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6c:end -->

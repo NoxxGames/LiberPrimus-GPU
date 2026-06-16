@@ -378,9 +378,15 @@ are evidence, not current truth.
 <!-- stage6:end -->
 
 <!-- stage6b:start -->
-## Stage 6B Source Of Truth
+## Historical Stage 6B Source Of Truth
 
-- Latest completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
-- Next routed stage: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- At the time of Stage 6B, Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution was the latest completed stage.
+- The routed follow-up at that time was Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Stage 6B repair ledger: `data/project-state/stage6b-stage6-registry-repair-ledger.yaml`.
 <!-- stage6b:end -->
+
+<!-- stage6c:start -->
+## Stage 6C Source Of Truth
+
+`data/project-state/current-stage-state.yaml` is authoritative for the latest completed stage. Stage 6C records are committed metadata only and must not be treated as proof, route seeds, or execution authorization.
+<!-- stage6c:end -->

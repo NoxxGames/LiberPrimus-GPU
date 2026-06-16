@@ -8,17 +8,18 @@
 
 ## Current boundaries and deferred work
 
-Current completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
+Current completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
 
-Current next prompt: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current next prompt: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
-Stage 6B repaired Stage 6 probe-family/source/readiness metadata and project-local hooks only. It did not create the final Stage 7 manifest, generate result archives, execute probes, perform image/stego/OCR work, run CUDA/scoring/benchmarks, activate the canonical corpus, finalize page boundaries, or claim a solve.
+Stage 6C source-locked the OUROBOROS/I31 circumference bridge as review-only metadata, preserved Stage 6B probe-map and hook repairs, and added Stage 6D manifest-input addendum records only. It did not create the final Stage 7 manifest, generate result archives, execute probes, perform image/stego/OCR work, run CUDA/scoring/benchmarks, activate the canonical corpus, finalize page boundaries, or claim a solve.
 
 - Stage 5EG installed deterministic stale-current guardians and kept hooks scanner-based.
 - Stage 5EH added Lag5/outguess/byte-string/red-number/F5 source-lock context and review-only overlays without execution.
 - Stage 5EI closed Stage 5 as a triangle-transposition and diagnostics-transition metadata stage, routing next work to Stage 6 readiness without execution.
 - Stage 6 completed diagnostic-backlog readiness metadata.
-- Stage 6B repaired Stage 6 mappings and hook behavior, routing final manifest work to Stage 6C.
+- Stage 6B repaired Stage 6 mappings and hook behavior.
+- Stage 6C added review-only OUROBOROS/I31 source-lock metadata and routed final manifest work to Stage 6D.
 
 These are not permanent project exclusions. CUDA and broad campaigns are deferred, not permanently excluded.
 
@@ -234,6 +235,9 @@ These are not permanent project exclusions. CUDA and broad campaigns are deferre
 - Stage 5EG post-edit doc-staleness guardians with tracked-file stale-current scanner, scanner-backed project hooks, read-only custom-agent configs, report-only automation setup, Stage 5EF preservation, and no puzzle/source-lock/execution work.
 - Stage 5EH Lag5/outguess/byte-string/red-number/F5 source-lock addendum with 23 future probe manifests, 36 review-only overlays, Stage 5EG scanner preservation, and no route/decode/stego/image/CUDA/scoring execution.
 - Stage 5EI final Stage 5 triangle-transposition and diagnostics-transition metadata with PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, route-fingerprint policy, 7 review-only overlays, Stage 5EH preservation, and Stage 6 readiness routing without execution.
+- Stage 6 diagnostic-backlog readiness metadata with bounded source-root census, discovery-probe registry, Stage 7 archive policy, and Stage 8/9 handoff without execution.
+- Stage 6B deterministic repair metadata for Stage 6 probe-family/source/readiness mappings, partial Stage 7 menu semantics, and report-only hook stabilization.
+- Stage 6C OUROBOROS/I31 circumference source-lock addendum with Page32 3222 grid/spiral policy, 12 review-only overlays, 10 disabled future probes, and Stage 6D routing without execution.
 
 ## Architecture summary
 
@@ -396,6 +400,9 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Stage 5EG: Post-edit doc-staleness guardians complete with the stale-current scanner, scanner-backed project hooks, read-only custom-agent configs, daily report-only automation setup, Source Browser loadability preservation, and zero strict stale-current errors.
 - Stage 5EH: Lag5/outguess/byte-string/red-number/F5 context source-lock addendum complete with 5 Lag5 files inventoried, 8 lp_outguessed signed outputs, 23 future probe manifests, 36 review-only overlays, zero Source Browser errors, and no execution.
 - Stage 5EI: Final Stage 5 triangle-transposition and diagnostics transition complete with 25 records, PDD153/T17 geometry, 22/24 triangular-transposition taxonomy ambiguity, no-plaintext route-fingerprint policy, 7 review-only overlays, Stage 5EH preservation, stale-current strict errors `0`, and Stage 6 readiness routing.
+- Stage 6: Diagnostic backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff complete without execution.
+- Stage 6B: Diagnostic-readiness repair and hook stabilization complete; Stage 6 mappings are repaired, the Stage 7 menu is partial/non-executable, and hooks default to report-only.
+- Stage 6C: OUROBOROS/I31 circumference source-lock addendum complete with 9 historical-route records, 12 review-only overlays, 10 disabled future probes, Page32 3222 red/highlight status not source-confirmed, and Stage 6D routing.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -696,3 +703,11 @@ Stage 6 is complete as metadata-only diagnostic readiness. The project now has a
 
 Stage 6B is complete as deterministic repair metadata. It fixes Stage 6 probe-family/source/readiness planning records, marks the Stage 7 menu as partial and non-executable, and stabilizes project-local hooks as report-only by default. Stage 6C remains the next planning stage for the final finite Stage 7 manifest and archive-run contract.
 <!-- stage6b:end -->
+
+<!-- stage6c:start -->
+## Stage 6C Current Status
+
+Current completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+
+Current next prompt: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. The OUROBOROS/I31 bridge is review-only metadata: OUROBOROS=167, the vowel/voice layer is 31=GP(I), and Page32 3222 remains source-backed only as a grid/spiral value unless separately source-confirmed as highlighted.
+<!-- stage6c:end -->

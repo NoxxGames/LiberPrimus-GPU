@@ -316,6 +316,7 @@ def validate_stage5ea_current_stage_registry() -> Stage5EAValidationResult:
         "stage-5ei",
         "stage-6",
         "stage-6b",
+        "stage-6c",
     }:
         errors.append(f"{path.as_posix()}: unexpected latest_completed_stage_id {latest_stage!r}")
     return _result("current_stage_registry", payload, errors)
@@ -887,13 +888,52 @@ def _object_schema(required: list[str], key: str) -> dict[str, Any]:
             {
                 "record_type": {"const": "current_stage_state"},
                 "stage_id": {
-                    "enum": ["stage-5ea", "stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee", "stage-5ef", "stage-5eg"]
+                    "enum": [
+                        "stage-5ea",
+                        "stage-5eb",
+                        "stage-5ec",
+                        "stage-5ed",
+                        "stage-5ee",
+                        "stage-5ef",
+                        "stage-5eg",
+                        "stage-5eh",
+                        "stage-5ei",
+                        "stage-6",
+                        "stage-6b",
+                        "stage-6c",
+                    ]
                 },
                 "latest_completed_stage_id": {
-                    "enum": ["stage-5ea", "stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee", "stage-5ef", "stage-5eg"]
+                    "enum": [
+                        "stage-5ea",
+                        "stage-5eb",
+                        "stage-5ec",
+                        "stage-5ed",
+                        "stage-5ee",
+                        "stage-5ef",
+                        "stage-5eg",
+                        "stage-5eh",
+                        "stage-5ei",
+                        "stage-6",
+                        "stage-6b",
+                        "stage-6c",
+                    ]
                 },
                 "recommended_next_stage_id": {
-                    "enum": ["stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee", "stage-5ef", "stage-5eg", "stage-5eh"]
+                    "enum": [
+                        "stage-5eb",
+                        "stage-5ec",
+                        "stage-5ed",
+                        "stage-5ee",
+                        "stage-5ef",
+                        "stage-5eg",
+                        "stage-5eh",
+                        "stage-5ei",
+                        "stage-6",
+                        "stage-6b",
+                        "stage-6c",
+                        "stage-6d",
+                    ]
                 },
                 "stage_registry_is_source_of_truth": {"const": True},
             }

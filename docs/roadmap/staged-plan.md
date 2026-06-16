@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution.
-- Current planning focus: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Latest completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+- Current planning focus: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -160,16 +160,19 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 5EG: completed post-edit doc-staleness guardian setup with deterministic stale-current scanning, scanner-backed project hooks, read-only custom-agent definitions, report-only automation setup, Stage 5EF preservation, and no puzzle/source-lock execution.
 - Stage 5EH: completed Lag5/outguess/byte-string/red-number/F5 source-lock context with 23 future probe manifests, 36 review-only overlays, Stage 5EG scanner preservation, and no route/decode/stego/image/CUDA/scoring execution.
 - Stage 5EI: completed the final Stage 5 triangle-transposition and diagnostics transition with PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, route-diagnostic fingerprint policy, 7 review-only overlays, Stage 5EH preservation, and Stage 6 readiness routing without execution.
+- Stage 6: completed diagnostic-backlog census, discovery-probe readiness, result-bundle policy, and Stage 7/8/9 handoff metadata without execution.
+- Stage 6B: completed deterministic repair for Stage 6 probe-family/source/readiness mappings, partial Stage 7 menu semantics, and report-only hook stabilization.
+- Stage 6C: completed the OUROBOROS/I31 circumference source-lock addendum with Page32 3222 grid/spiral policy, 12 review-only overlays, 10 disabled future probes, and Stage 6D routing.
 
 ## Current Stage
 
-Stage 6B - Stage 6 diagnostic-readiness triage repair and hook stabilization, without execution is the latest completed stage. It repairs Stage 6 probe-family/source/readiness metadata, marks the Stage 7 menu as partial and non-executable, stabilizes project-local hooks as report-only by default, and keeps all probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, and solve gates closed.
+Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution is the latest completed stage. It source-locks the OUROBOROS/I31 circumference bridge as review-only metadata, preserves Stage 6B repair and hook posture, adds Stage 6D manifest-input addendum records, and keeps all probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, and solve gates closed.
 
-Current planning focus: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6B is a repair stage only; Stage 6C must finalize finite inputs, controls, source paths, toolchain requirements, and archive-run commands before any Stage 7 execution.
+Current planning focus: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6C is a source-lock addendum only; Stage 6D must finalize finite inputs, controls, source paths, toolchain requirements, and archive-run commands before any Stage 7 execution.
 
 ## Planned Next Stages
 
-- Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Stage 7 - Actual probes and diagnostics only after Stage 6C approval gates.
 - Stage 8 - Triangle-specific experiment readiness, without execution.
 - Stage 9 - Triangle experiments only after Stage 8 approval gates.
@@ -372,7 +375,13 @@ The routed follow-up at that time was Stage 6B - Final finite Stage 7 probe mani
 <!-- stage6b:start -->
 ## Stage 6B - Diagnostic Readiness Repair
 
-Stage 6B repairs active Stage 6 planning metadata and project-local hooks. It is complete and routes to Stage 6C.
+Historical Stage 6B boundary: Stage 6B repaired active Stage 6 planning metadata and project-local hooks. At the time of Stage 6B, it was complete and routed to Stage 6C.
 
-Current planning focus: Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+The routed follow-up at that time was Stage 6C - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 <!-- stage6b:end -->
+
+<!-- stage6c:start -->
+## Stage 6C - Complete
+
+Stage 6C is complete as a source-lock addendum for OUROBOROS / I31 / circumference / Page32 3222 review metadata. It routes to Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. No probes, Stage 7 manifest, route extraction, byte streams, image interpretation, CUDA/scoring, or solve claim were added.
+<!-- stage6c:end -->
