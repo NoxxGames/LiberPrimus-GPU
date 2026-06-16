@@ -1220,3 +1220,9 @@ Stage 6B adds regression tests for the Stage 6 probe-family mapping bug, conserv
 
 Stage 6C validation includes token-block Stage 6C build/validate/summary commands, focused OUROBOROS arithmetic tests, Source Browser validation, stale-current strict scanning, Stage 6/6B regression tests, ruff, and stage-fast/local-fast/full-parallel validation with 10 workers and 10 pytest workers. Full serial pytest remains opt-in only.
 <!-- stage6c:end -->
+
+<!-- stage6d:start -->
+## Stage 6D Validation
+
+Stage 6D validation includes token-block Stage 6D build/validate/summary commands, focused canonical doublet arithmetic tests, hook and automation triage checks, stale-current strict scanning, Source Browser validation, Stage 6/6B/6C regression tests, ruff, and stage-fast/local-fast/full-parallel validation with 10 workers and 10 pytest workers. Full serial pytest remains opt-in only.
+<!-- stage6d:end -->

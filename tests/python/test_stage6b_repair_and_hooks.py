@@ -76,13 +76,14 @@ def test_stage6b_stage7_menu_is_partial_and_not_executable() -> None:
 def test_stage6b_current_stage_transition_record() -> None:
     ensure_stage6b_built()
     current = load_yaml("data/project-state/current-stage-state.yaml")
-    if current["latest_completed_stage_id"] == "stage-6b":
-        assert current["previous_completed_stage_id"] == "stage-6"
-        assert current["recommended_next_stage_id"] == "stage-6c"
-    else:
-        assert current["latest_completed_stage_id"] == "stage-6c"
-        assert current["previous_completed_stage_id"] == "stage-6b"
-        assert current["recommended_next_stage_id"] == "stage-6d"
+    allowed_current_routes = {
+        "stage-6b": ("stage-6", "stage-6c"),
+        "stage-6c": ("stage-6b", "stage-6d"),
+        "stage-6d": ("stage-6c", "stage-6e"),
+    }
+    previous, next_stage = allowed_current_routes[current["latest_completed_stage_id"]]
+    assert current["previous_completed_stage_id"] == previous
+    assert current["recommended_next_stage_id"] == next_stage
     transition = load_yaml(stage6b.PROJECT_STATE_PATHS["current_stage_transition"])
     assert transition["latest_completed_stage_id"] == "stage-6b"
     assert transition["previous_completed_stage_id"] == "stage-6"

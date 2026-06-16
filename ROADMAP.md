@@ -2,11 +2,11 @@
 
 ## Current Direction
 
-Current completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+Current completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
 
-Next routed stage: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Next routed stage: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
-Stage 6C is a source-lock addendum only. It preserves the OUROBOROS/I31 circumference bridge as review-only metadata and routes final finite Stage 7 manifest and archive-run contract work to Stage 6D. Stage 7 execution, Stage 8 triangle readiness, and Stage 9 experiments remain blocked.
+Stage 6D is a source-lock and automation/hook triage insertion only. It preserves canonical doublet boundary profiles as bounded metadata reproduction and routes final finite Stage 7 manifest and archive-run contract work to Stage 6E. Stage 7 execution, Stage 8 triangle readiness, and Stage 9 experiments remain blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
@@ -542,9 +542,17 @@ Stage 6B completed triage repair and hook stabilization without execution. Next:
 <!-- stage6b:end -->
 
 <!-- stage6c:start -->
-## Stage 6C Roadmap Note
+## Historical Stage 6C Roadmap Note
 
-Current completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+At the time of Stage 6C, Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution was the latest completed stage.
 
-Next: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D must consume the Stage 6C source-locked facts and future-probe addendum before finalizing any finite Stage 7 manifest. Stage 7 execution is still blocked.
+Historical next route at Stage 6C closeout: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D must consume the Stage 6C source-locked facts and future-probe addendum before finalizing any finite Stage 7 manifest. Stage 7 execution is still blocked.
 <!-- stage6c:end -->
+
+<!-- stage6d:start -->
+## Stage 6D Roadmap Note
+
+Current completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+
+Next: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6E must consume both the Stage 6C OUROBOROS/I31 addendum and the Stage 6D doublet/boundary-policy addendum before any finite Stage 7 manifest can be finalized.
+<!-- stage6d:end -->

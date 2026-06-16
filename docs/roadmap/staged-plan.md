@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
-- Current planning focus: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Latest completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+- Current planning focus: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -166,14 +166,14 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Stage
 
-Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution is the latest completed stage. It source-locks the OUROBOROS/I31 circumference bridge as review-only metadata, preserves Stage 6B repair and hook posture, adds Stage 6D manifest-input addendum records, and keeps all probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, and solve gates closed.
+Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution is the latest completed stage. It source-locks canonical doublet boundary profiles as bounded metadata reproduction, preserves Stage 6C and Stage 6B records, adds Stage 6E manifest-input addendum records, and keeps all probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, and solve gates closed.
 
-Current planning focus: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6C is a source-lock addendum only; Stage 6D must finalize finite inputs, controls, source paths, toolchain requirements, and archive-run commands before any Stage 7 execution.
+Current planning focus: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D is a source-lock/triage insertion only; Stage 6E must finalize finite inputs, controls, source paths, toolchain requirements, and archive-run commands before any Stage 7 execution.
 
 ## Planned Next Stages
 
-- Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-- Stage 7 - Actual probes and diagnostics only after Stage 6C approval gates.
+- Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 7 - Actual probes and diagnostics only after Stage 6E finite-manifest approval gates.
 - Stage 8 - Triangle-specific experiment readiness, without execution.
 - Stage 9 - Triangle experiments only after Stage 8 approval gates.
 - Future unnumbered website expansion project after CUDA reporting boundaries are stable.
@@ -385,3 +385,9 @@ The routed follow-up at that time was Stage 6C - Final finite Stage 7 probe mani
 
 Stage 6C is complete as a source-lock addendum for OUROBOROS / I31 / circumference / Page32 3222 review metadata. It routes to Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. No probes, Stage 7 manifest, route extraction, byte streams, image interpretation, CUDA/scoring, or solve claim were added.
 <!-- stage6c:end -->
+
+<!-- stage6d:start -->
+## Stage 6D - Complete
+
+Stage 6D is complete as a canonical doublet boundary source-lock and automation/hook triage insertion. It routes to Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. It created no final Stage 7 manifest and performed no Stage 7 probe execution.
+<!-- stage6d:end -->

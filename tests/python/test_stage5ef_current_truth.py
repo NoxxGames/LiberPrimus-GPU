@@ -15,7 +15,10 @@ def test_stage5ef_current_truth_authority_is_single_registry() -> None:
     assert policy["authoritative_current_truth"] == ["data/project-state/current-stage-state.yaml"]
     assert policy["human_readable_docs_are_mirrors_only"] is True
     assert policy["historical_sections_can_contain_old_next_stage_claims"] is True
-    if load_yaml("data/project-state/stage6c-summary.yaml"):
+    if load_yaml("data/project-state/stage6d-summary.yaml"):
+        assert current["latest_completed_stage_id"] == "stage-6d"
+        assert current["recommended_next_stage_id"] == "stage-6e"
+    elif load_yaml("data/project-state/stage6c-summary.yaml"):
         assert current["latest_completed_stage_id"] == "stage-6c"
         assert current["recommended_next_stage_id"] == "stage-6d"
     elif load_yaml("data/project-state/stage6b-summary.yaml"):

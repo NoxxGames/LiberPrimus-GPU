@@ -2,10 +2,10 @@
 
 ## Current Stage
 
-- Latest completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
-- Current next stage: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-- Next recommended prompt: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-- Stage 6C source-locks the OUROBOROS/I31 circumference bridge as review-only metadata, preserves Stage 6B probe-map and hook repairs, and routes final finite Stage 7 manifest work to Stage 6D.
+- Latest completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+- Current next stage: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Next recommended prompt: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 6D source-locks canonical doublet boundary profiles as bounded metadata reproduction, preserves Stage 6C and Stage 6B records, and routes final finite Stage 7 manifest work to Stage 6E.
 - Stage 6 and Stage 5EI remain historical readiness/transition metadata and did not run probes or generate route streams.
 - No probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, or solve work is authorized.
 
@@ -1505,7 +1505,15 @@ Stage 5EH records Lag5 29/28/57 event context, M-sum 479 over claimed N=12,956, 
 <!-- stage6c:start -->
 ## Stage 6C Status
 
-Latest completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+At the time of Stage 6C, Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution was the latest completed stage.
 
-Next routed stage: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6C added review-only OUROBOROS/I31 source-lock records, Source Browser overlays, and Stage 6D manifest-input addendum records. All execution, target-selection, image/OCR/stego, CUDA/scoring, archive, and solve gates remain closed.
+Historical next route at Stage 6C closeout: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6C added review-only OUROBOROS/I31 source-lock records, Source Browser overlays, and Stage 6D manifest-input addendum records. All execution, target-selection, image/OCR/stego, CUDA/scoring, archive, and solve gates remain closed.
 <!-- stage6c:end -->
+
+<!-- stage6d:start -->
+## Stage 6D Status
+
+Latest completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+
+Next routed stage: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D completed bounded canonical doublet source-lock metadata and automation/hook triage while keeping Stage 7 execution and ZIP/archive creation blocked.
+<!-- stage6d:end -->

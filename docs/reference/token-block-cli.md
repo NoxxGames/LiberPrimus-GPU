@@ -243,3 +243,12 @@ Use `libreprimus token-block build-stage6b`, `validate-stage6b`, and `stage6b-su
 - `python -m libreprimus.cli token-block stage6c-summary`
 - focused validators: `validate-stage6c-stage6b-preservation`, `validate-stage6c-source-lock-records`, `validate-stage6c-ouroboros-arithmetic`, `validate-stage6c-page32-3222-policy`, `validate-stage6c-number-fact-overlays`, `validate-stage6c-future-probe-registry`, `validate-stage6c-stage8-watchlist`, `validate-stage6c-source-browser-loadability`, `validate-stage6c-current-stage-transition`, `validate-stage6c-gate-closure`, and `validate-stage6c-handoff`.
 <!-- stage6c:end -->
+
+<!-- stage6d:start -->
+## Stage 6D Commands
+
+- `python -m libreprimus.cli token-block build-stage6d`
+- `python -m libreprimus.cli token-block validate-stage6d`
+- `python -m libreprimus.cli token-block stage6d-summary`
+- focused validators: `validate-stage6d-stage6c-preservation`, `validate-stage6d-corpus-profile-policy`, `validate-stage6d-canonical-doublet-profile`, `validate-stage6d-raw-vs-collapsed-boundary`, `validate-stage6d-86-89-reconciliation`, `validate-stage6d-lag-profile`, `validate-stage6d-section-plateau`, `validate-stage6d-zero-doublet-pages`, `validate-stage6d-421-occurrence-index`, `validate-stage6d-overlays`, `validate-stage6d-future-probes`, `validate-stage6d-stage6e-addendum`, `validate-stage6d-hook-verification`, `validate-stage6d-doc-staleness-automation-triage`, `validate-stage6d-source-browser-loadability`, `validate-stage6d-current-stage-transition`, `validate-stage6d-gate-closure`, and `validate-stage6d-handoff`.
+<!-- stage6d:end -->

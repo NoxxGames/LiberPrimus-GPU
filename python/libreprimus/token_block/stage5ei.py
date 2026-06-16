@@ -367,6 +367,7 @@ def validate_stage5ei_current_mirror_repair() -> ValidationResult:
         ("stage-6", "stage-6b"): Path("data/project-state/stage6-summary.yaml"),
         ("stage-6b", "stage-6c"): Path("data/project-state/stage6b-summary.yaml"),
         ("stage-6c", "stage-6d"): Path("data/project-state/stage6c-summary.yaml"),
+        ("stage-6d", "stage-6e"): Path("data/project-state/stage6d-summary.yaml"),
     }
     if current_pair not in later_stage_pairs or not later_stage_pairs[current_pair].exists():
         if state.get("latest_completed_stage", {}).get("stage_id") != STAGE_ID:

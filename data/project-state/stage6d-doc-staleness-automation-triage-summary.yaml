@@ -1,0 +1,175 @@
+record_type: stage6d_doc_staleness_automation_triage_summary
+schema: schemas/project-state/stage6d-doc-staleness-automation-triage-summary-v0.schema.json
+stage_id: stage-6d
+stage_title: Stage 6D - Canonical doublet boundary source-lock and automation triage,
+  without execution
+prompt_type: codex_plan_mode_source_lock_automation_triage
+metadata_only: true
+reviewability_stage: true
+source_lock_addendum_stage: true
+source_lock_component_present: true
+source_lock_only: false
+puzzle_execution_allowed: false
+solve_claim: false
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+alberti_cipher_execution_performed_now: false
+alberti_html_executed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+combined_approval_gate_satisfied_now: false
+community_code_executed_now: false
+cuda_execution_performed: false
+cuda_triage_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+diagnostic_execution_performed_now: false
+diagnostic_probe_run_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+hidden_content_image_forensics_performed: false
+historical_source_lock_records_rewritten: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+lossy_filtering_performed: false
+machine_code_execution_performed_now: false
+mayfly_route_extraction_performed_now: false
+midi_route_extraction_performed_now: false
+mp3stego_execution_performed: false
+music_route_extraction_performed_now: false
+native_code_execution_performed_now: false
+network_target_validation_performed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+number_fact_backfill_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_target_priority_decision_created_now: false
+outguess_execution_performed: false
+page13_f5_payload_claim_accepted_now: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+page_boundaries_final: false
+page_boundaries_finalized: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+pivot_target_selected_now: false
+pgp_private_key_operation_performed: false
+pgp_signature_verified_now: false
+pgp_verification_performed_now: false
+probe_execution_performed_now: false
+raw_source_files_committed: false
+raw_third_party_files_committed: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+scoring_performed: false
+scoring_triage_performed: false
+semantic_image_interpretation_performed: false
+spectrogram_stego_performed: false
+stegdetect_execution_performed_now: false
+stego_tool_execution_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+token_block_variant_byte_streams_generated: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+triangular_transposition_readouts_generated_now: false
+triangular_transposition_route_stream_generated_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+vm_bytecode_execution_performed_now: false
+website_expansion_performed: false
+stage6_probe_execution_allowed: false
+stage6_probe_execution_performed_now: false
+stage6_result_archive_created_now: false
+stage6_zip_result_bundle_created_now: false
+stage6_runs_bigrams_py_now: false
+stage6_recomputes_canonical_bigram_matrix_now: false
+stage6_runs_lag5_probe_now: false
+stage6_runs_diskcipher_probe_now: false
+stage6_runs_music_probe_now: false
+stage6_runs_triangle_probe_now: false
+stage6_runs_stego_probe_now: false
+stage6_selects_stage7_probe_outputs_now: false
+stage6_discards_outputs_by_score_now: false
+stage6c_final_finite_stage7_manifest_created_now: false
+stage6c_archive_run_contract_finalized_now: false
+stage6c_creates_stage7_result_archive_now: false
+stage6c_generates_stage7_outputs_now: false
+stage6c_routes_to_stage7_now: false
+stage6c_runs_any_probe_now: false
+stage6c_generates_spiral_readouts_now: false
+stage6c_generates_triangle_readouts_now: false
+stage6c_confirms_3222_red_highlight_now: false
+stage6c_uses_image_interpretation_now: false
+stage7_execution_allowed_next: false
+stage7_zip_archive_creation_allowed_next: false
+stage8_triangle_readiness_started_now: false
+stage9_experiments_started_now: false
+spiral_route_readouts_generated_now: false
+stage6d_final_finite_stage7_manifest_created_now: false
+stage6d_archive_run_contract_finalized_now: false
+stage6d_creates_stage7_result_archive_now: false
+stage6d_generates_stage7_outputs_now: false
+stage6d_routes_to_stage7_now: false
+stage6d_runs_any_probe_now: false
+stage7_probe_execution_performed_now: false
+result_archive_created_now: false
+bigrams_py_executed_now: false
+canonical_bigram_matrix_recomputed_now: false
+exact_automation_report_found_and_triaged: true
+latest_automation_report_found: true
+latest_report_location: codex automation memory.md (outside repo; absolute path omitted)
+report_access_locations_checked:
+- local experiments/results/doc-drift
+- codex automation memory
+- Google Drive synced project snapshot if available
+- repository committed records if relevant
+local_reproduction_run: true
+local_reproduction_report_path: experiments/results/doc-drift/stage6d-local-stale-current-triage.json
+local_report_committed: false
+local_reproduction_warning_count: 206
+operator_reported_warning_unresolved_due_report_access_gap: false
+warning_count_before_fix: 191
+warning_count_after_fix: 206
+error_count_before_fix: 0
+error_count_after_fix: 0
+warnings_classified: true
+warnings_fixed: false
+warning_classification_summary:
+  real_stale_current_claim_requires_doc_fix: 0
+  historical_stage_section_expected: 0
+  stale_claim_suppression_missing_or_wrong: 0
+  scanner_false_positive: 0
+  source_of_truth_coverage_gap: 0
+  automation_environment_warning: 0
+  warning_domain_remaining: 206
+legitimate_doc_fixes_applied: false
+automation_name: LiberPrimus daily doc-staleness and current-truth drift audit
+operator_reported_latest_24h_warnings: true
+scanner_weakened: false
+historical_sections_deleted: false
+forbidden_scanner_weakening:
+  broad_docs_directory_ignore: false
+  broad_current_mirror_ignore: false
+  strict_scanner_changed_to_non_strict: false
+  real_current_stage_errors_downgraded: false
+  historical_sections_deleted_to_silence_scanner: false
+allowed_narrow_repairs_used: []
+remaining_warnings_have_reviewability_gap: true

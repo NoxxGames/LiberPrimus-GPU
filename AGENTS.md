@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+Current completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
 
-Current work: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6C source-locked the OUROBOROS/I31 circumference bridge as review-only metadata, preserved Stage 6B probe-map and hook repairs, and did not create a final Stage 7 manifest or execute probes.
+Current work: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D source-locked canonical doublet boundary profiles as bounded metadata reproduction, triaged daily doc-staleness automation warnings, and verified project hook layers. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run bigrams.py/community code/OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 
 No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
 
@@ -1249,9 +1249,17 @@ The routed follow-up at that time was Stage 6C - Final finite Stage 7 probe mani
 <!-- stage6b:end -->
 
 <!-- stage6c:start -->
-## Stage 6C Current Boundary
+## Historical Stage 6C Boundary
 
-Current completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+At the time of Stage 6C, Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution was the latest completed stage.
 
-Current work: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6C source-locked the OUROBOROS/I31 circumference bridge as review-only metadata and preserved Stage 6B probe-map and hook repairs. It did not run probes, finalize Stage 7, create archives, generate route or byte streams, inspect images, run OCR/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+Historical next routed work at Stage 6C closeout: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6C source-locked the OUROBOROS/I31 circumference bridge as review-only metadata and preserved Stage 6B probe-map and hook repairs. It did not run probes, finalize Stage 7, create archives, generate route or byte streams, inspect images, run OCR/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 <!-- stage6c:end -->
+
+<!-- stage6d:start -->
+## Stage 6D Current Boundary
+
+Current completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+
+Current work: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D source-locked canonical doublet boundary profiles as bounded metadata reproduction, triaged daily doc-staleness automation warnings, and verified project hook layers. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run bigrams.py/community code/OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6d:end -->

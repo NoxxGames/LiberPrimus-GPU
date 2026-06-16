@@ -162,9 +162,13 @@ def test_stage6c_current_state_and_guardrails() -> None:
     assert stage6c.validate_stage6c_current_stage_transition().validation_error_count == 0
     assert stage6c.validate_stage6c_gate_closure().validation_error_count == 0
     current = load_yaml("data/project-state/current-stage-state.yaml")
-    assert current["latest_completed_stage_id"] == "stage-6c"
-    assert current["previous_completed_stage_id"] == "stage-6b"
-    assert current["recommended_next_stage_id"] == "stage-6d"
+    allowed_current_routes = {
+        "stage-6c": ("stage-6b", "stage-6d"),
+        "stage-6d": ("stage-6c", "stage-6e"),
+    }
+    previous, next_stage = allowed_current_routes[current["latest_completed_stage_id"]]
+    assert current["previous_completed_stage_id"] == previous
+    assert current["recommended_next_stage_id"] == next_stage
     assert current["stage7_execution_allowed_next"] is False
     assert current["stage7_zip_archive_creation_allowed_next"] is False
     summary = load_yaml(stage6c.PROJECT_STATE_PATHS["summary"])

@@ -2,13 +2,13 @@
 
 ## Current Project State
 
-## Stage 6C Current Boundary
+## Stage 6D Current Boundary
 
-Latest completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+Latest completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
 
-Current planning focus: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current planning focus: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
-Stage 5EI is the final Stage 5 metadata transition. It records PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, Pascal/Fibonacci diagonal context, and fingerprint-based route-diagnostic policy as review-only metadata. The ordinary number-fact review batch 006 was superseded and was not performed.
+Stage 6D source-locked the canonical doublet boundary policy as review-only metadata. The pages 15-70 collapsed page-local profile has 12,956 runes, 86 lag1 adjacent doublets, vector `42442156242421632042324217223`, and lag5 equal count 479. Raw adjacency contributes 60 doublets and delimiter-collapsed bridges contribute 26, so the 421 vector depends on delimiter-stripped page-local policy. Including page 14 yields the 89-count reconciliation profile; pages 15-72 preserve lag-distance context. Stage 6D added disabled future probes and a Stage 6E input addendum only. No Stage 7 manifest, probe execution, route extraction, byte stream, archive, CUDA/scoring/benchmark, or solve claim was added.
 
 ## Stage 5DV Source Browser Repair
 
@@ -298,11 +298,21 @@ Stage 6B is a triage repair stage. It preserves Stage 6 and the post-Stage-6 aut
 <!-- stage6b:end -->
 
 <!-- stage6c:start -->
-## Stage 6C Current Boundary
+## Historical Stage 6C Boundary
 
-Latest completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+At the time of Stage 6C, Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution was the latest completed stage.
 
-Current planning focus: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Historical planning focus at Stage 6C closeout: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 6C source-locked the OUROBOROS / I31 circumference bridge as review-only metadata. OUROBOROS=167; vowel/voice layer O+U+O+O+O=31=GP(I); consonant shell R+B+R+S=136=T16. This crosslinks to the solved quote THE I IS THE VOICE OF THE CIRCUMFERENCE, PDD153=T17, delta 14, 56311 offsets, and Page32 grid/spiral value 3222. 3222 is source-backed as a Page32 grid/spiral value; red/highlighted status is not accepted unless separately source-confirmed. Stage 6C added future probes/watchlists only, no execution, no Stage 7 manifest, no route extraction, no solve claim. Stage 6D is next for final finite Stage 7 manifest and archive-run contract.
 <!-- stage6c:end -->
+
+<!-- stage6d:start -->
+## Stage 6D Current Boundary
+
+Latest completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+
+Current planning focus: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6D source-locked the canonical doublet boundary policy as review-only metadata. The pages 15-70 collapsed page-local profile has 12,956 runes, 86 lag1 adjacent doublets, vector `42442156242421632042324217223`, and lag5 equal count 479. Raw adjacency contributes 60 doublets and delimiter-collapsed bridges contribute 26, so the 421 vector depends on delimiter-stripped page-local policy. Including page 14 yields the 89-count reconciliation profile; pages 15-72 preserve lag-distance context. Stage 6D added disabled future probes and a Stage 6E input addendum only. No Stage 7 manifest, probe execution, route extraction, byte stream, archive, CUDA/scoring/benchmark, or solve claim was added.
+<!-- stage6d:end -->

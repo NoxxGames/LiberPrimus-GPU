@@ -6,8 +6,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'root=$(git rev-parse --show-toplevel 2>/dev/null || pwd); exec python3 \"$root/.codex/hooks/session_start_current_truth_context.py\"'",
-            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"$root = (git rev-parse --show-toplevel 2>$null); if (-not $root) { $root = (Get-Location).Path }; py -3 (Join-Path $root '.codex\\hooks\\session_start_current_truth_context.py')\"",
+            "command": "sh -c 'root=$(git rev-parse --show-toplevel 2>/dev/null || pwd); py=\"$root/.venv/bin/python\"; if [ ! -x \"$py\" ]; then py=python3; fi; exec \"$py\" \"$root/.codex/hooks/session_start_current_truth_context.py\"'",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"$root = (git rev-parse --show-toplevel 2>$null); if (-not $root) { $root = (Get-Location).Path }; $py = Join-Path $root '.venv\\Scripts\\python.exe'; if (Test-Path $py) { & $py (Join-Path $root '.codex\\hooks\\session_start_current_truth_context.py') } else { & py -3 (Join-Path $root '.codex\\hooks\\session_start_current_truth_context.py') }\"",
             "timeout": 30,
             "statusMessage": "Loading current truth context"
           }
@@ -19,8 +19,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'root=$(git rev-parse --show-toplevel 2>/dev/null || pwd); exec python3 \"$root/.codex/hooks/stop_doc_staleness_guard.py\"'",
-            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"$root = (git rev-parse --show-toplevel 2>$null); if (-not $root) { $root = (Get-Location).Path }; py -3 (Join-Path $root '.codex\\hooks\\stop_doc_staleness_guard.py')\"",
+            "command": "sh -c 'root=$(git rev-parse --show-toplevel 2>/dev/null || pwd); py=\"$root/.venv/bin/python\"; if [ ! -x \"$py\" ]; then py=python3; fi; exec \"$py\" \"$root/.codex/hooks/stop_doc_staleness_guard.py\"'",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"$root = (git rev-parse --show-toplevel 2>$null); if (-not $root) { $root = (Get-Location).Path }; $py = Join-Path $root '.venv\\Scripts\\python.exe'; if (Test-Path $py) { & $py (Join-Path $root '.codex\\hooks\\stop_doc_staleness_guard.py') } else { & py -3 (Join-Path $root '.codex\\hooks\\stop_doc_staleness_guard.py') }\"",
             "timeout": 120,
             "statusMessage": "Checking stale current-stage claims"
           }

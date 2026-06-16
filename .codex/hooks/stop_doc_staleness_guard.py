@@ -10,7 +10,7 @@ from hook_common import drain_stdin, python_for_repo, repo_root_from, run_hook_c
 def main() -> int:
     drain_stdin()
     root = repo_root_from(Path(__file__))
-    report = root / "experiments/results/doc-drift/stage6b-stop-hook-audit.json"
+    report = root / "experiments/results/doc-drift/codex-stop-hook-stale-current-audit.json"
     command = [
         str(python_for_repo(root)),
         "-m",

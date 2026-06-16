@@ -390,3 +390,9 @@ are evidence, not current truth.
 
 `data/project-state/current-stage-state.yaml` is authoritative for the latest completed stage. Stage 6C records are committed metadata only and must not be treated as proof, route seeds, or execution authorization.
 <!-- stage6c:end -->
+
+<!-- stage6d:start -->
+## Stage 6D Source Of Truth
+
+`data/project-state/current-stage-state.yaml` is authoritative for latest/current routing. Stage 6D records are bounded source-lock metadata and cannot be treated as proof, route seeds, activation decisions, execution authorization, or solve claims.
+<!-- stage6d:end -->

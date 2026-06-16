@@ -8,18 +8,18 @@
 
 ## Current boundaries and deferred work
 
-Current completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+Current completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
 
-Current next prompt: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current next prompt: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
-Stage 6C source-locked the OUROBOROS/I31 circumference bridge as review-only metadata, preserved Stage 6B probe-map and hook repairs, and added Stage 6D manifest-input addendum records only. It did not create the final Stage 7 manifest, generate result archives, execute probes, perform image/stego/OCR work, run CUDA/scoring/benchmarks, activate the canonical corpus, finalize page boundaries, or claim a solve.
+Stage 6D source-locked canonical doublet boundary profiles as bounded metadata reproduction, triaged daily doc-staleness automation warnings, verified project hook layers, and added Stage 6E manifest-input addendum records only. It did not create the final Stage 7 manifest, generate result archives, execute probes, run bigrams.py/community code, perform image/stego/OCR work, run CUDA/scoring/benchmarks, activate the canonical corpus, finalize page boundaries, or claim a solve.
 
 - Stage 5EG installed deterministic stale-current guardians and kept hooks scanner-based.
 - Stage 5EH added Lag5/outguess/byte-string/red-number/F5 source-lock context and review-only overlays without execution.
 - Stage 5EI closed Stage 5 as a triangle-transposition and diagnostics-transition metadata stage, routing next work to Stage 6 readiness without execution.
 - Stage 6 completed diagnostic-backlog readiness metadata.
 - Stage 6B repaired Stage 6 mappings and hook behavior.
-- Stage 6C added review-only OUROBOROS/I31 source-lock metadata and routed final manifest work to Stage 6D.
+- Stage 6C added review-only OUROBOROS/I31 source-lock metadata.
 
 These are not permanent project exclusions. CUDA and broad campaigns are deferred, not permanently excluded.
 
@@ -701,13 +701,21 @@ Stage 6 is complete as metadata-only diagnostic readiness. The project now has a
 <!-- stage6b:start -->
 ## Stage 6B Current State
 
-Stage 6B is complete as deterministic repair metadata. It fixes Stage 6 probe-family/source/readiness planning records, marks the Stage 7 menu as partial and non-executable, and stabilizes project-local hooks as report-only by default. Stage 6C remains the next planning stage for the final finite Stage 7 manifest and archive-run contract.
+Stage 6B is complete as deterministic repair metadata. It fixes Stage 6 probe-family/source/readiness planning records, marks the Stage 7 menu as partial and non-executable, and stabilizes project-local hooks as report-only by default. At the time of Stage 6B closeout, Stage 6C remained the next planning stage for OUROBOROS/I31 source-lock addendum work.
 <!-- stage6b:end -->
 
 <!-- stage6c:start -->
-## Stage 6C Current Status
+## Historical Stage 6C Current-Status Mirror
 
-Current completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+At the time of Stage 6C, Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution was the latest completed stage.
 
-Current next prompt: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. The OUROBOROS/I31 bridge is review-only metadata: OUROBOROS=167, the vowel/voice layer is 31=GP(I), and Page32 3222 remains source-backed only as a grid/spiral value unless separately source-confirmed as highlighted.
+Historical next prompt at Stage 6C closeout: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. The OUROBOROS/I31 bridge is review-only metadata: OUROBOROS=167, the vowel/voice layer is 31=GP(I), and Page32 3222 remains source-backed only as a grid/spiral value unless separately source-confirmed as highlighted.
 <!-- stage6c:end -->
+
+<!-- stage6d:start -->
+## Stage 6D Current Status
+
+Current completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+
+Current next prompt: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D records the 86/89 doublet counts as boundary-policy-specific metadata, not solve evidence or execution authorization.
+<!-- stage6d:end -->

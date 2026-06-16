@@ -8,9 +8,9 @@ LiberPrimus-GPU is a conservative research workbench for reproducible Liber Prim
 
 This project is not a solve claim, raw corpus dump, Discord scraper, live Tor crawler, image/OCR interpretation tool, broad hash-cracker, or CUDA campaign.
 
-## Stage 6C Current Boundary
+## Stage 6D Current Boundary
 
-The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution as complete and Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution as next.
+The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution as complete and Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution as next.
 
 Historical Stage 5EE, Stage 5EG, Stage 5EH, Stage 5EI, and Stage 6 sections are evidence of their time, not current routing instructions. If they mention old next prompts, read them as historical only when the section says so explicitly.
 
@@ -92,9 +92,17 @@ At the time of Stage 6B, `data/project-state/current-stage-state.yaml` recorded 
 <!-- stage6b:end -->
 
 <!-- stage6c:start -->
-## Stage 6C Current Boundary
+## Historical Stage 6C Boundary
 
-Latest completed stage: Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution.
+At the time of Stage 6C, Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution was the latest completed stage.
 
-Next routed stage: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Use `data/project-state/current-stage-state.yaml` as authoritative current truth.
+Historical next route at Stage 6C closeout: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Use `data/project-state/current-stage-state.yaml` as authoritative current truth.
 <!-- stage6c:end -->
+
+<!-- stage6d:start -->
+## Stage 6D Current Boundary
+
+Latest completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+
+Next routed stage: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Use `data/project-state/current-stage-state.yaml` as authoritative current truth.
+<!-- stage6d:end -->

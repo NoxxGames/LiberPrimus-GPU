@@ -132,7 +132,8 @@
         "stage-5ei",
         "stage-6",
         "stage-6b",
-        "stage-6c"
+        "stage-6c",
+        "stage-6d"
       ]
     },
     "local_parallel_default_pytest_workers": {
@@ -244,7 +245,8 @@
         "stage-6",
         "stage-6b",
         "stage-6c",
-        "stage-6d"
+        "stage-6d",
+        "stage-6e"
       ]
     },
     "record_type": {
@@ -290,7 +292,8 @@
         "stage-5ei",
         "stage-6",
         "stage-6b",
-        "stage-6c"
+        "stage-6c",
+        "stage-6d"
       ]
     },
     "stage_registry_is_source_of_truth": {

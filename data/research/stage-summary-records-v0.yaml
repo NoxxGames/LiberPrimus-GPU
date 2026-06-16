@@ -4396,3 +4396,38 @@ records:
     activation, page-boundary finalisation, or solve claim.
   ouroboros_total: 167
   future_probe_count: 10
+- record_type: stage_summary_record
+  stage_id: stage-6d
+  title: Stage 6D - Canonical doublet boundary source-lock and automation triage,
+    without execution
+  status: complete
+  category: source_lock_addendum
+  summary: Source-locked canonical doublet boundary profiles, triaged doc-staleness
+    automation output, verified Codex hook layers, and routed final finite Stage 7
+    manifest work to Stage 6E.
+  key_outputs:
+  - Reproduced pages 15-70 canonical collapsed doublet vector and raw/collapsed boundary
+    contribution.
+  - Recorded 86/89 boundary-policy reconciliation, lag profiles, zero-doublet page
+    list, and 421 occurrence indices.
+  - Added review-only Source Browser overlays and disabled future probe records.
+  - Preserved Stage 6C and Stage 6B records while keeping Stage 7 execution and archive
+    creation blocked.
+  result_status: metadata_source_lock_complete
+  summary_path: data/project-state/stage6d-summary.yaml
+  recommended_next_stage_id: stage-6e
+  recommended_next_stage_title: Stage 6E - Final finite Stage 7 probe manifest and
+    archive-run contract, without execution
+  metadata_only: true
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: Bounded canonical doublet reproduction was performed only as source-lock
+    metadata; no Stage 7 manifest, archive-run contract, result archive, probe execution,
+    route extraction, byte stream, OCR/image/stego tooling, CUDA, scoring, benchmark,
+    target selection, canonical corpus activation, page-boundary finalisation, or
+    solve claim was added.
+  computed_pages15_70_rune_count: 12956
+  computed_pages15_70_lag1: 86
+  computed_pages15_70_lag5: 479

@@ -1,0 +1,53 @@
+{
+  "$id": "https://liberprimus-gpu.local/schemas/stage6d/raw_source_noncommit_proof",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "metadata_only": {
+      "const": true
+    },
+    "puzzle_execution_allowed": {
+      "const": false
+    },
+    "record_type": {
+      "type": "string"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage6d_archive_run_contract_finalized_now": {
+      "const": false
+    },
+    "stage6d_creates_stage7_result_archive_now": {
+      "const": false
+    },
+    "stage6d_final_finite_stage7_manifest_created_now": {
+      "const": false
+    },
+    "stage7_execution_allowed_next": {
+      "const": false
+    },
+    "stage7_zip_archive_creation_allowed_next": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-6d"
+    },
+    "stage_title": {
+      "const": "Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution"
+    }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "stage_title",
+    "metadata_only",
+    "puzzle_execution_allowed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

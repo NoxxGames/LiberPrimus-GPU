@@ -767,6 +767,7 @@ from . import stage5ei as stage5ei_module
 from . import stage6 as stage6_module
 from . import stage6b as stage6b_module
 from . import stage6c as stage6c_module
+from . import stage6d as stage6d_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -12299,6 +12300,179 @@ def validate_stage6c_handoff_command() -> None:
     _print_stage5dv_result(
         stage6c_module.validate_stage6c_handoff(),
         "token_block_stage6c_handoff_valid=true",
+    )
+
+
+@app.command("build-stage6d")
+def build_stage6d_command() -> None:
+    records = stage6d_module.build_stage6d()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"previous_stage_id={summary.get('previous_stage_id')}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+    console.print(f"computed_pages15_70_rune_count={summary.get('computed_pages15_70_rune_count')}")
+    console.print(f"computed_pages15_70_lag1={summary.get('computed_pages15_70_lag1')}")
+    console.print(f"computed_pages15_70_lag5={summary.get('computed_pages15_70_lag5')}")
+    console.print(f"computed_pages15_70_vector={summary.get('computed_pages15_70_vector')}")
+    console.print(f"expected_value_discrepancy_count={summary.get('expected_value_discrepancy_count')}")
+    console.print(f"blocking_discrepancy_count={summary.get('blocking_discrepancy_count')}")
+
+
+@app.command("validate-stage6d")
+def validate_stage6d_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d(),
+        "token_block_stage6d_valid=true",
+    )
+
+
+@app.command("stage6d-summary")
+def stage6d_summary_command() -> None:
+    console.print(stage6d_module.stage6d_summary_text())
+
+
+@app.command("validate-stage6d-stage6c-preservation")
+def validate_stage6d_stage6c_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_stage6c_preservation(),
+        "token_block_stage6d_stage6c_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage6d-corpus-profile-policy")
+def validate_stage6d_corpus_profile_policy_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_corpus_profile_policy(),
+        "token_block_stage6d_corpus_profile_policy_valid=true",
+    )
+
+
+@app.command("validate-stage6d-canonical-doublet-profile")
+def validate_stage6d_canonical_doublet_profile_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_canonical_doublet_profile(),
+        "token_block_stage6d_canonical_doublet_profile_valid=true",
+    )
+
+
+@app.command("validate-stage6d-raw-vs-collapsed-boundary")
+def validate_stage6d_raw_vs_collapsed_boundary_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_raw_vs_collapsed_boundary(),
+        "token_block_stage6d_raw_vs_collapsed_boundary_valid=true",
+    )
+
+
+@app.command("validate-stage6d-86-89-reconciliation")
+def validate_stage6d_86_89_reconciliation_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_86_89_reconciliation(),
+        "token_block_stage6d_86_89_reconciliation_valid=true",
+    )
+
+
+@app.command("validate-stage6d-lag-profile")
+def validate_stage6d_lag_profile_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_lag_profile(),
+        "token_block_stage6d_lag_profile_valid=true",
+    )
+
+
+@app.command("validate-stage6d-section-plateau")
+def validate_stage6d_section_plateau_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_section_plateau(),
+        "token_block_stage6d_section_plateau_valid=true",
+    )
+
+
+@app.command("validate-stage6d-zero-doublet-pages")
+def validate_stage6d_zero_doublet_pages_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_zero_doublet_pages(),
+        "token_block_stage6d_zero_doublet_pages_valid=true",
+    )
+
+
+@app.command("validate-stage6d-421-occurrence-index")
+def validate_stage6d_421_occurrence_index_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_421_occurrence_index(),
+        "token_block_stage6d_421_occurrence_index_valid=true",
+    )
+
+
+@app.command("validate-stage6d-overlays")
+def validate_stage6d_overlays_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_number_fact_overlays(),
+        "token_block_stage6d_overlays_valid=true",
+    )
+
+
+@app.command("validate-stage6d-future-probes")
+def validate_stage6d_future_probes_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_future_probes(),
+        "token_block_stage6d_future_probes_valid=true",
+    )
+
+
+@app.command("validate-stage6d-stage6e-addendum")
+def validate_stage6d_stage6e_addendum_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_stage6e_addendum(),
+        "token_block_stage6d_stage6e_addendum_valid=true",
+    )
+
+
+@app.command("validate-stage6d-hook-verification")
+def validate_stage6d_hook_verification_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_hook_verification(),
+        "token_block_stage6d_hook_verification_valid=true",
+    )
+
+
+@app.command("validate-stage6d-doc-staleness-automation-triage")
+def validate_stage6d_doc_staleness_automation_triage_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_doc_staleness_automation_triage(),
+        "token_block_stage6d_doc_staleness_automation_triage_valid=true",
+    )
+
+
+@app.command("validate-stage6d-source-browser-loadability")
+def validate_stage6d_source_browser_loadability_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_source_browser_loadability(),
+        "token_block_stage6d_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage6d-current-stage-transition")
+def validate_stage6d_current_stage_transition_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_current_stage_transition(),
+        "token_block_stage6d_current_stage_transition_valid=true",
+    )
+
+
+@app.command("validate-stage6d-gate-closure")
+def validate_stage6d_gate_closure_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_gate_closure(),
+        "token_block_stage6d_gate_closure_valid=true",
+    )
+
+
+@app.command("validate-stage6d-handoff")
+def validate_stage6d_handoff_command() -> None:
+    _print_stage5dv_result(
+        stage6d_module.validate_stage6d_handoff(),
+        "token_block_stage6d_handoff_valid=true",
     )
 
 

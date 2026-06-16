@@ -472,6 +472,7 @@ def validate_stage6c_source_browser_loadability() -> ValidationResult:
 
 def validate_stage6c_current_stage_transition() -> ValidationResult:
     current = read_yaml(CURRENT_STAGE_STATE_PATH)
+    transition = read_yaml(PROJECT_STATE_PATHS["current_stage_transition"])
     errors = []
     expected = {
         "latest_completed_stage_id": STAGE_ID,
@@ -481,8 +482,18 @@ def validate_stage6c_current_stage_transition() -> ValidationResult:
         "stage7_zip_archive_creation_allowed_next": False,
     }
     for key, value in expected.items():
-        if current.get(key) != value:
-            errors.append(f"current-stage {key} expected {value!r}")
+        if transition.get(key) != value:
+            errors.append(f"stage6c transition {key} expected {value!r}")
+    current_pair = (current.get("latest_completed_stage_id"), current.get("recommended_next_stage_id"))
+    allowed_current_pairs = {
+        (STAGE_ID, NEXT_STAGE_ID),
+        ("stage-6d", "stage-6e"),
+    }
+    if current_pair not in allowed_current_pairs:
+        errors.append(f"current-stage pair mismatch: {current_pair}")
+    for key in ["stage7_execution_allowed_next", "stage7_zip_archive_creation_allowed_next"]:
+        if current.get(key) is not False:
+            errors.append(f"current-stage {key} must remain false")
     return _result(errors, recommended_next_stage_id=current.get("recommended_next_stage_id"))
 
 
