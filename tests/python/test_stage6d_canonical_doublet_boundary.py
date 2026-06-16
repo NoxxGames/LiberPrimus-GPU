@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import subprocess
 from pathlib import Path
 
 from libreprimus.token_block import stage6d
@@ -11,26 +12,7 @@ def ensure_stage6d_built() -> None:
         stage6d.build_stage6d()
 
 
-def test_stage6d_summary_routes_to_stage6e_with_explicit_archive_false_fields() -> None:
-    ensure_stage6d_built()
-    summary = load_yaml(stage6d.PROJECT_STATE_PATHS["summary"])
-    current = load_yaml("data/project-state/current-stage-state.yaml")
-    assert summary["stage_id"] == "stage-6d"
-    assert summary["previous_stage_id"] == "stage-6c"
-    assert summary["recommended_next_stage_id"] == "stage-6e"
-    assert summary["stage7_manifest_created_now"] is False
-    assert summary["stage7_execution_allowed_next"] is False
-    assert summary["stage7_zip_archive_creation_allowed_next"] is False
-    assert current["latest_completed_stage_id"] == "stage-6d"
-    assert current["previous_completed_stage_id"] == "stage-6c"
-    assert current["recommended_next_stage_id"] == "stage-6e"
-    assert current["stage7_zip_archive_creation_allowed_next"] is False
-    assert current["stage6d_archive_run_contract_finalized_now"] is False
-    assert current["stage6d_creates_stage7_result_archive_now"] is False
-
-
-def test_stage6d_bounded_reproduction_matches_exact_profiles() -> None:
-    reproduction = stage6d.compute_doublet_reproduction()
+def assert_exact_profile_values_from_reproduction(reproduction: dict) -> None:
     p15 = reproduction["profiles"]["pages15_70"]
     raw = reproduction["raw_vs_collapsed"]
     p14 = reproduction["profiles"]["pages14_70"]
@@ -57,6 +39,61 @@ def test_stage6d_bounded_reproduction_matches_exact_profiles() -> None:
     assert p72["lag_counts"][11] == 395
     assert p72["lag_counts"][99] == 520
     assert p72["average_lag2_to_lag110_approx"] == 451
+
+
+def assert_exact_profile_values_from_committed_records() -> None:
+    p15 = load_yaml(stage6d.HISTORICAL_ROUTE_PATHS["canonical_doublet_profile_pages15_70"])
+    raw = load_yaml(stage6d.HISTORICAL_ROUTE_PATHS["raw_vs_collapsed_doublet_boundary_contribution"])
+    p14 = load_yaml(stage6d.HISTORICAL_ROUTE_PATHS["instruction_page14_doublet_delta"])
+    p72 = load_yaml(stage6d.HISTORICAL_ROUTE_PATHS["lag_distance_profile_pages15_72"])
+    assert p15["rune_count"] == 12956
+    assert p15["doublet_lag1_total"] == 86
+    assert p15["lag5_equal_count"] == 479
+    assert p15["adjacent_doublet_compact_vector"] == "42442156242421632042324217223"
+    assert p15["adjacent_doublet_vector"] == stage6d.EXPECTED_PAGES15_70_VECTOR
+    assert raw["raw_adjacent_doublets"] == 60
+    assert raw["delimiter_bridged_doublets"] == 26
+    assert raw["collapsed_total"] == 86
+    assert raw["delimiter_bridge_breakdown"] == {
+        "word_delimiter_minus": 21,
+        "line_delimiter_slash": 3,
+        "slash_minus_mixed_boundary": 1,
+        "clause_delimiter_period": 1,
+    }
+    assert p14["rune_count"] == 13045
+    assert p14["lag1_adjacent_doublets"] == 89
+    assert p14["delta_from_pages15_70"] == {"F": 1, "L": 2}
+    assert p72["rune_count"] == 13136
+    assert p72["lag1"] == 89
+    assert p72["lag11"] == 395
+    assert p72["lag99"] == 520
+    assert p72["average_lag2_to_lag110_approx"] == 451
+
+
+def test_stage6d_summary_routes_to_stage6e_with_explicit_archive_false_fields() -> None:
+    ensure_stage6d_built()
+    summary = load_yaml(stage6d.PROJECT_STATE_PATHS["summary"])
+    current = load_yaml("data/project-state/current-stage-state.yaml")
+    assert summary["stage_id"] == "stage-6d"
+    assert summary["previous_stage_id"] == "stage-6c"
+    assert summary["recommended_next_stage_id"] == "stage-6e"
+    assert summary["stage7_manifest_created_now"] is False
+    assert summary["stage7_execution_allowed_next"] is False
+    assert summary["stage7_zip_archive_creation_allowed_next"] is False
+    assert current["latest_completed_stage_id"] == "stage-6d"
+    assert current["previous_completed_stage_id"] == "stage-6c"
+    assert current["recommended_next_stage_id"] == "stage-6e"
+    assert current["stage7_zip_archive_creation_allowed_next"] is False
+    assert current["stage6d_archive_run_contract_finalized_now"] is False
+    assert current["stage6d_creates_stage7_result_archive_now"] is False
+
+
+def test_stage6d_bounded_reproduction_matches_exact_profiles() -> None:
+    ensure_stage6d_built()
+    if stage6d.MASTER_TRANSCRIPTION_PATH.exists():
+        assert_exact_profile_values_from_reproduction(stage6d.compute_doublet_reproduction())
+    else:
+        assert_exact_profile_values_from_committed_records()
 
 
 def test_stage6d_policy_records_include_delimiters_vector_order_and_lists() -> None:
@@ -149,7 +186,13 @@ def test_stage6d_protected_paths_are_not_outputs_and_handoff_is_ignored() -> Non
     outputs = {path.as_posix() for path in stage6d.DATA_PATHS.values()}
     outputs.update(path.as_posix() for path in stage6d.SCHEMA_PATHS.values())
     assert not outputs.intersection(stage6d.stage6.PROTECTED_LOCAL_PATHS)
-    assert Path("codex-output/stage6d-codex-completion.md").exists()
+    handoff_path = Path("codex-output/stage6d-codex-completion.md")
+    check_ignore = subprocess.run(
+        ["git", "check-ignore", "-q", handoff_path.as_posix()],
+        check=False,
+        cwd=Path.cwd(),
+    )
+    assert check_ignore.returncode == 0
     proof = load_yaml(stage6d.SOURCE_HARVESTER_PATHS["raw_source_noncommit_proof"])
     assert proof["protected_local_paths_staged"] is False
     assert proof["generated_outputs_staged"] is False
