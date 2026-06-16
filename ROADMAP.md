@@ -2,9 +2,9 @@
 
 ## Current Direction
 
-Current completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
 
-Next routed stage: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Next routed stage: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 6D is a source-lock and automation/hook triage insertion only. It preserves canonical doublet boundary profiles as bounded metadata reproduction and routes final finite Stage 7 manifest and archive-run contract work to Stage 6E. Stage 7 execution, Stage 8 triangle readiness, and Stage 9 experiments remain blocked.
 
@@ -552,7 +552,19 @@ Historical next route at Stage 6C closeout: Stage 6D - Final finite Stage 7 prob
 <!-- stage6d:start -->
 ## Stage 6D Roadmap Note
 
-Current completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
 
-Next: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6E must consume both the Stage 6C OUROBOROS/I31 addendum and the Stage 6D doublet/boundary-policy addendum before any finite Stage 7 manifest can be finalized.
+Next: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6E must consume both the Stage 6C OUROBOROS/I31 addendum and the Stage 6D doublet/boundary-policy addendum before any finite Stage 7 manifest can be finalized.
 <!-- stage6d:end -->
+
+<!-- stage6e:start -->
+## Stage 6E Current Boundary
+
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+
+Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
+
+Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6e:end -->

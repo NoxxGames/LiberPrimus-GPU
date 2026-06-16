@@ -4431,3 +4431,15 @@ records:
   computed_pages15_70_rune_count: 12956
   computed_pages15_70_lag1: 86
   computed_pages15_70_lag5: 479
+stages:
+- stage_id: stage-6e
+  stage_title: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness
+    repair, and Stage 6F manifest inputs, without execution
+  status: complete
+  summary: Classified doc-staleness warnings, installed bounded preprompt hook behavior,
+    source-locked bridge facts, and built Stage 6F traceability inputs without execution.
+  recommended_next_stage_id: stage-6f
+  recommended_next_stage_title: Stage 6F - Final finite Stage 7 probe manifest and
+    archive-run contract, without execution
+  guardrails: No Stage 7 manifest, archive, probe execution, route stream, byte stream,
+    CUDA/scoring/benchmark, or solve claim.

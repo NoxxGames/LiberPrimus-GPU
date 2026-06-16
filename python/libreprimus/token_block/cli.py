@@ -768,6 +768,7 @@ from . import stage6 as stage6_module
 from . import stage6b as stage6b_module
 from . import stage6c as stage6c_module
 from . import stage6d as stage6d_module
+from . import stage6e as stage6e_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -12473,6 +12474,148 @@ def validate_stage6d_handoff_command() -> None:
     _print_stage5dv_result(
         stage6d_module.validate_stage6d_handoff(),
         "token_block_stage6d_handoff_valid=true",
+    )
+
+
+@app.command("build-stage6e")
+def build_stage6e_command() -> None:
+    records = stage6e_module.build_stage6e()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"previous_stage_id={summary.get('previous_stage_id')}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+    console.print(
+        f"stage6f_manifest_finalization_blocker_count={summary.get('stage6f_manifest_finalization_blocker_count')}"
+    )
+    console.print(f"doc_staleness_warning_count_after={summary.get('doc_staleness_warning_count_after')}")
+    console.print(f"probe_traceability_actual_row_count={summary.get('probe_traceability_actual_row_count')}")
+    console.print(f"source_root_crosswalk_row_count={summary.get('source_root_crosswalk_row_count')}")
+    console.print(f"source_browser_validation_error_count={summary.get('source_browser_validation_error_count')}")
+
+
+@app.command("validate-stage6e")
+def validate_stage6e_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e(),
+        "token_block_stage6e_valid=true",
+    )
+
+
+@app.command("stage6e-summary")
+def stage6e_summary_command() -> None:
+    console.print(stage6e_module.stage6e_summary_text())
+
+
+@app.command("validate-stage6e-current-stage-transition")
+def validate_stage6e_current_stage_transition_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_current_stage_transition(),
+        "token_block_stage6e_current_stage_transition_valid=true",
+    )
+
+
+@app.command("validate-stage6e-stage6d-preservation")
+def validate_stage6e_stage6d_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_stage6d_preservation(),
+        "token_block_stage6e_stage6d_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage6e-bridge-arithmetic")
+def validate_stage6e_bridge_arithmetic_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_bridge_arithmetic(),
+        "token_block_stage6e_bridge_arithmetic_valid=true",
+    )
+
+
+@app.command("validate-stage6e-source-paths")
+def validate_stage6e_source_paths_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_source_paths(),
+        "token_block_stage6e_source_paths_valid=true",
+    )
+
+
+@app.command("validate-stage6e-warning-classification")
+def validate_stage6e_warning_classification_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_warning_classification(),
+        "token_block_stage6e_warning_classification_valid=true",
+    )
+
+
+@app.command("validate-stage6e-scanner-nonweakening")
+def validate_stage6e_scanner_nonweakening_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_scanner_nonweakening(),
+        "token_block_stage6e_scanner_nonweakening_valid=true",
+    )
+
+
+@app.command("validate-stage6e-hooks")
+def validate_stage6e_hooks_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_hooks(),
+        "token_block_stage6e_hooks_valid=true",
+    )
+
+
+@app.command("validate-stage6e-stage6b-precondition-supersession")
+def validate_stage6e_stage6b_precondition_supersession_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_stage6b_precondition_supersession(),
+        "token_block_stage6e_stage6b_precondition_supersession_valid=true",
+    )
+
+
+@app.command("validate-stage6e-source-root-crosswalk")
+def validate_stage6e_source_root_crosswalk_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_source_root_crosswalk(),
+        "token_block_stage6e_source_root_crosswalk_valid=true",
+    )
+
+
+@app.command("validate-stage6e-probe-traceability")
+def validate_stage6e_probe_traceability_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_probe_traceability(),
+        "token_block_stage6e_probe_traceability_valid=true",
+    )
+
+
+@app.command("validate-stage6e-stage6f-addendum")
+def validate_stage6e_stage6f_addendum_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_stage6f_addendum(),
+        "token_block_stage6e_stage6f_addendum_valid=true",
+    )
+
+
+@app.command("validate-stage6e-source-browser-loadability")
+def validate_stage6e_source_browser_loadability_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_source_browser_loadability(),
+        "token_block_stage6e_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage6e-gate-closure")
+def validate_stage6e_gate_closure_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_gate_closure(),
+        "token_block_stage6e_gate_closure_valid=true",
+    )
+
+
+@app.command("validate-stage6e-handoff")
+def validate_stage6e_handoff_command() -> None:
+    _print_stage5dv_result(
+        stage6e_module.validate_stage6e_handoff(),
+        "token_block_stage6e_handoff_valid=true",
     )
 
 

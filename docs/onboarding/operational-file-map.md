@@ -232,3 +232,15 @@ Stage 6C primary records live under `data/project-state/`, `data/historical-rout
 
 Stage 6D primary records live under `data/project-state/`, `data/historical-route/`, `data/token-block/`, `data/source-harvester/`, and `data/operator-console/source-browser/number-fact-overlays/`. Hook/automation reports under `experiments/results/doc-drift/` and the completion handoff under `codex-output/` are ignored local outputs.
 <!-- stage6d:end -->
+
+<!-- stage6e:start -->
+## Stage 6E Current Boundary
+
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+
+Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
+
+Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6e:end -->

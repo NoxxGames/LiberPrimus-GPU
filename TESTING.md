@@ -1226,3 +1226,15 @@ Stage 6C validation includes token-block Stage 6C build/validate/summary command
 
 Stage 6D validation includes token-block Stage 6D build/validate/summary commands, focused canonical doublet arithmetic tests, hook and automation triage checks, stale-current strict scanning, Source Browser validation, Stage 6/6B/6C regression tests, ruff, and stage-fast/local-fast/full-parallel validation with 10 workers and 10 pytest workers. Full serial pytest remains opt-in only.
 <!-- stage6d:end -->
+
+<!-- stage6e:start -->
+## Stage 6E Current Boundary
+
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+
+Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
+
+Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6e:end -->

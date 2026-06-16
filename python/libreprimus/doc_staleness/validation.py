@@ -71,6 +71,7 @@ def validate_stage5ah_doc_staleness_records(
         "stage-6b",
         "stage-6c",
         "stage-6d",
+        "stage-6e",
     }:
         errors.append(f"stage_id_expected_'stage-5ah'_or_successor_got_{source_stage_id!r}")
     _expect(records["summary"], "stage_id", "stage-5ah", errors)

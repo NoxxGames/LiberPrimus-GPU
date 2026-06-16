@@ -8,9 +8,9 @@ LiberPrimus-GPU is a conservative research workbench for reproducible Liber Prim
 
 This project is not a solve claim, raw corpus dump, Discord scraper, live Tor crawler, image/OCR interpretation tool, broad hash-cracker, or CUDA campaign.
 
-## Stage 6D Current Boundary
+## Historical Stage 6D Boundary
 
-The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution as complete and Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution as next.
+The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution as complete and Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution as next.
 
 Historical Stage 5EE, Stage 5EG, Stage 5EH, Stage 5EI, and Stage 6 sections are evidence of their time, not current routing instructions. If they mention old next prompts, read them as historical only when the section says so explicitly.
 
@@ -100,9 +100,21 @@ Historical next route at Stage 6C closeout: Stage 6D - Final finite Stage 7 prob
 <!-- stage6c:end -->
 
 <!-- stage6d:start -->
-## Stage 6D Current Boundary
+## Historical Stage 6D Boundary
 
-Latest completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+Latest completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
 
-Next routed stage: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Use `data/project-state/current-stage-state.yaml` as authoritative current truth.
+Historical next route at Stage 6D closeout: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Use `data/project-state/current-stage-state.yaml` as authoritative current truth.
 <!-- stage6d:end -->
+
+<!-- stage6e:start -->
+## Stage 6E Current Boundary
+
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+
+Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
+
+Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6e:end -->

@@ -80,6 +80,7 @@ def test_stage6b_current_stage_transition_record() -> None:
         "stage-6b": ("stage-6", "stage-6c"),
         "stage-6c": ("stage-6b", "stage-6d"),
         "stage-6d": ("stage-6c", "stage-6e"),
+        "stage-6e": ("stage-6d", "stage-6f"),
     }
     previous, next_stage = allowed_current_routes[current["latest_completed_stage_id"]]
     assert current["previous_completed_stage_id"] == previous

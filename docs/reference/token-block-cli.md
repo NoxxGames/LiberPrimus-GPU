@@ -252,3 +252,15 @@ Use `libreprimus token-block build-stage6b`, `validate-stage6b`, and `stage6b-su
 - `python -m libreprimus.cli token-block stage6d-summary`
 - focused validators: `validate-stage6d-stage6c-preservation`, `validate-stage6d-corpus-profile-policy`, `validate-stage6d-canonical-doublet-profile`, `validate-stage6d-raw-vs-collapsed-boundary`, `validate-stage6d-86-89-reconciliation`, `validate-stage6d-lag-profile`, `validate-stage6d-section-plateau`, `validate-stage6d-zero-doublet-pages`, `validate-stage6d-421-occurrence-index`, `validate-stage6d-overlays`, `validate-stage6d-future-probes`, `validate-stage6d-stage6e-addendum`, `validate-stage6d-hook-verification`, `validate-stage6d-doc-staleness-automation-triage`, `validate-stage6d-source-browser-loadability`, `validate-stage6d-current-stage-transition`, `validate-stage6d-gate-closure`, and `validate-stage6d-handoff`.
 <!-- stage6d:end -->
+
+<!-- stage6e:start -->
+## Stage 6E Current Boundary
+
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+
+Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
+
+Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6e:end -->

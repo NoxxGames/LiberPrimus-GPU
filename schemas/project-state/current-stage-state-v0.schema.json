@@ -68,6 +68,9 @@
     "decryption_attempt_performed_now": {
       "const": false
     },
+    "diagnostic_probe_run_now": {
+      "const": false
+    },
     "disk_cipher_execution_performed_now": {
       "const": false
     },
@@ -133,8 +136,10 @@
         "stage-6",
         "stage-6b",
         "stage-6c",
-        "stage-6d"
-      ]
+        "stage-6d",
+        "stage-6e"
+      ],
+      "type": "string"
     },
     "local_parallel_default_pytest_workers": {
       "const": 10
@@ -223,6 +228,9 @@
     "probability_claim_accepted_as_validated": {
       "const": false
     },
+    "probe_execution_performed_now": {
+      "const": false
+    },
     "puzzle_execution_allowed": {
       "const": false
     },
@@ -230,6 +238,9 @@
       "const": false
     },
     "raw_third_party_files_committed": {
+      "const": false
+    },
+    "real_byte_stream_generated": {
       "const": false
     },
     "recommended_next_stage_id": {
@@ -246,11 +257,16 @@
         "stage-6b",
         "stage-6c",
         "stage-6d",
-        "stage-6e"
-      ]
+        "stage-6e",
+        "stage-6f"
+      ],
+      "type": "string"
     },
     "record_type": {
       "const": "current_stage_state"
+    },
+    "result_archive_created_now": {
+      "const": false
     },
     "route_extraction_performed_now": {
       "const": false
@@ -279,6 +295,30 @@
     "spreadsheet_macro_execution_performed": {
       "const": false
     },
+    "stage6e_archive_run_contract_finalized_now": {
+      "const": false
+    },
+    "stage6e_creates_stage7_result_archive_now": {
+      "const": false
+    },
+    "stage6e_final_finite_stage7_manifest_created_now": {
+      "const": false
+    },
+    "stage6e_generates_stage7_outputs_now": {
+      "const": false
+    },
+    "stage6e_routes_to_stage7_now": {
+      "const": false
+    },
+    "stage6e_runs_any_probe_now": {
+      "const": false
+    },
+    "stage7_execution_allowed_next": {
+      "const": false
+    },
+    "stage7_zip_archive_creation_allowed_next": {
+      "const": false
+    },
     "stage_id": {
       "enum": [
         "stage-5ea",
@@ -293,11 +333,16 @@
         "stage-6",
         "stage-6b",
         "stage-6c",
-        "stage-6d"
-      ]
+        "stage-6d",
+        "stage-6e"
+      ],
+      "type": "string"
     },
     "stage_registry_is_source_of_truth": {
       "const": true
+    },
+    "stego_tool_execution_performed": {
+      "const": false
     },
     "target_class_validation_implemented": {
       "const": false

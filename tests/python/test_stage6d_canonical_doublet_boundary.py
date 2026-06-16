@@ -80,9 +80,13 @@ def test_stage6d_summary_routes_to_stage6e_with_explicit_archive_false_fields() 
     assert summary["stage7_manifest_created_now"] is False
     assert summary["stage7_execution_allowed_next"] is False
     assert summary["stage7_zip_archive_creation_allowed_next"] is False
-    assert current["latest_completed_stage_id"] == "stage-6d"
-    assert current["previous_completed_stage_id"] == "stage-6c"
-    assert current["recommended_next_stage_id"] == "stage-6e"
+    assert current["latest_completed_stage_id"] in {"stage-6d", "stage-6e"}
+    if current["latest_completed_stage_id"] == "stage-6d":
+        assert current["previous_completed_stage_id"] == "stage-6c"
+        assert current["recommended_next_stage_id"] == "stage-6e"
+    else:
+        assert current["previous_completed_stage_id"] == "stage-6d"
+        assert current["recommended_next_stage_id"] == "stage-6f"
     assert current["stage7_zip_archive_creation_allowed_next"] is False
     assert current["stage6d_archive_run_contract_finalized_now"] is False
     assert current["stage6d_creates_stage7_result_archive_now"] is False

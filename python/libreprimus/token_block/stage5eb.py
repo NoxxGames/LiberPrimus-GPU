@@ -364,6 +364,7 @@ def validate_stage5eb_current_stage_registry_policy() -> Stage5EBValidationResul
         ("stage-6b", "stage-6c"),
         ("stage-6c", "stage-6d"),
         ("stage-6d", "stage-6e"),
+        ("stage-6e", "stage-6f"),
     }
     current_pair = (state.get("latest_completed_stage_id"), state.get("recommended_next_stage_id"))
     if current_pair not in allowed_current_states:
@@ -1031,6 +1032,8 @@ def _object_schema(required: list[str], key: str) -> dict[str, Any]:
                         "stage-6",
                         "stage-6b",
                         "stage-6c",
+                        "stage-6d",
+                        "stage-6e",
                     ]
                 },
                 "latest_completed_stage_id": {
@@ -1047,6 +1050,8 @@ def _object_schema(required: list[str], key: str) -> dict[str, Any]:
                         "stage-6",
                         "stage-6b",
                         "stage-6c",
+                        "stage-6d",
+                        "stage-6e",
                     ]
                 },
                 "recommended_next_stage_id": {
@@ -1063,6 +1068,8 @@ def _object_schema(required: list[str], key: str) -> dict[str, Any]:
                         "stage-6b",
                         "stage-6c",
                         "stage-6d",
+                        "stage-6e",
+                        "stage-6f",
                     ]
                 },
                 "stage_registry_is_source_of_truth": {"const": True},

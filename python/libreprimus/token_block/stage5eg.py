@@ -352,6 +352,7 @@ def validate_stage5eg_post_edit_doc_audit() -> ValidationResult:
         ("stage-6b", "stage-6c"): Path("data/project-state/stage6b-summary.yaml"),
         ("stage-6c", "stage-6d"): Path("data/project-state/stage6c-summary.yaml"),
         ("stage-6d", "stage-6e"): Path("data/project-state/stage6d-summary.yaml"),
+        ("stage-6e", "stage-6f"): Path("data/project-state/stage6e-summary.yaml"),
     }
     if current_pair in later_stage_pairs and later_stage_pairs[current_pair].exists():
         return _result(errors, stale_current_claim_validation_error_count=report.error_count)

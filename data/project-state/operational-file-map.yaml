@@ -9543,6 +9543,13 @@ stage_records:
     stage6e_manifest_input_addendum: data/token-block/stage6d-stage6e-manifest-input-addendum.yaml
     number_fact_overlays: data/operator-console/source-browser/number-fact-overlays/stage6d-canonical-doublet-boundary-policy-overlays.yaml
     next_stage: stage-6e
+  stage-6e:
+    stage_id: stage-6e
+    summary: data/project-state/stage6e-summary.yaml
+    warning_classification: data/project-state/stage6e-doc-staleness-warning-classification.yaml
+    probe_traceability_matrix: data/token-block/stage6e-probe-source-traceability-matrix.yaml
+    source_root_crosswalk: data/token-block/stage6e-source-root-crosswalk.yaml
+    stage6f_manifest_input_addendum: data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
 stage6_summary_record: data/project-state/stage6-summary.yaml
 stage6_diagnostic_backlog_census: data/project-state/stage6-diagnostic-backlog-census.yaml
 stage6_discovery_probe_manifest_registry: data/token-block/stage6-discovery-probe-manifest-registry.yaml

@@ -488,6 +488,7 @@ def validate_stage6c_current_stage_transition() -> ValidationResult:
     allowed_current_pairs = {
         (STAGE_ID, NEXT_STAGE_ID),
         ("stage-6d", "stage-6e"),
+        ("stage-6e", "stage-6f"),
     }
     if current_pair not in allowed_current_pairs:
         errors.append(f"current-stage pair mismatch: {current_pair}")

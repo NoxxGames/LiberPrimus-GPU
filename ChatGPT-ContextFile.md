@@ -2,11 +2,11 @@
 
 ## Current Project State
 
-## Stage 6D Current Boundary
+## Historical Stage 6D Boundary
 
-Latest completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+Latest completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
 
-Current planning focus: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current planning focus: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 6D source-locked the canonical doublet boundary policy as review-only metadata. The pages 15-70 collapsed page-local profile has 12,956 runes, 86 lag1 adjacent doublets, vector `42442156242421632042324217223`, and lag5 equal count 479. Raw adjacency contributes 60 doublets and delimiter-collapsed bridges contribute 26, so the 421 vector depends on delimiter-stripped page-local policy. Including page 14 yields the 89-count reconciliation profile; pages 15-72 preserve lag-distance context. Stage 6D added disabled future probes and a Stage 6E input addendum only. No Stage 7 manifest, probe execution, route extraction, byte stream, archive, CUDA/scoring/benchmark, or solve claim was added.
 
@@ -308,11 +308,23 @@ Stage 6C source-locked the OUROBOROS / I31 circumference bridge as review-only m
 <!-- stage6c:end -->
 
 <!-- stage6d:start -->
-## Stage 6D Current Boundary
+## Historical Stage 6D Boundary
 
-Latest completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+Latest completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
 
-Current planning focus: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current planning focus: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 6D source-locked the canonical doublet boundary policy as review-only metadata. The pages 15-70 collapsed page-local profile has 12,956 runes, 86 lag1 adjacent doublets, vector `42442156242421632042324217223`, and lag5 equal count 479. Raw adjacency contributes 60 doublets and delimiter-collapsed bridges contribute 26, so the 421 vector depends on delimiter-stripped page-local policy. Including page 14 yields the 89-count reconciliation profile; pages 15-72 preserve lag-distance context. Stage 6D added disabled future probes and a Stage 6E input addendum only. No Stage 7 manifest, probe execution, route extraction, byte stream, archive, CUDA/scoring/benchmark, or solve claim was added.
 <!-- stage6d:end -->
+
+<!-- stage6e:start -->
+## Stage 6E Current Boundary
+
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+
+Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
+
+Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6e:end -->

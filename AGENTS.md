@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
 
-Current work: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D source-locked canonical doublet boundary profiles as bounded metadata reproduction, triaged daily doc-staleness automation warnings, and verified project hook layers. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run bigrams.py/community code/OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6D source-locked canonical doublet boundary profiles as bounded metadata reproduction, triaged daily doc-staleness automation warnings, and verified project hook layers. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run bigrams.py/community code/OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 
 No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
 
@@ -1257,9 +1257,21 @@ Historical next routed work at Stage 6C closeout: Stage 6D - Final finite Stage 
 <!-- stage6c:end -->
 
 <!-- stage6d:start -->
-## Stage 6D Current Boundary
+## Historical Stage 6D Boundary
 
-Current completed stage: Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution.
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
 
-Current work: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D source-locked canonical doublet boundary profiles as bounded metadata reproduction, triaged daily doc-staleness automation warnings, and verified project hook layers. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run bigrams.py/community code/OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6E consolidated Stage 6F readiness after Stage 6D source-locked canonical doublet boundary profiles as bounded metadata reproduction, triaged daily doc-staleness automation warnings, and verified project hook layers. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run bigrams.py/community code/OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 <!-- stage6d:end -->
+
+<!-- stage6e:start -->
+## Stage 6E Current Boundary
+
+Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+
+Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
+
+Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6e:end -->
