@@ -9550,6 +9550,13 @@ stage_records:
     probe_traceability_matrix: data/token-block/stage6e-probe-source-traceability-matrix.yaml
     source_root_crosswalk: data/token-block/stage6e-source-root-crosswalk.yaml
     stage6f_manifest_input_addendum: data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  stage-6f:
+    stage_id: stage-6f
+    summary: data/project-state/stage6f-summary.yaml
+    edited_document_integrity_review: data/project-state/stage6f-edited-document-integrity-review.yaml
+    chatgpt_context_validation: data/project-state/stage6f-chatgpt-context-validation.yaml
+    traceability_semantics_repair: data/token-block/stage6f-probe-source-traceability-semantics-repair.yaml
+    acceptance_policy: docs/onboarding/codex-acceptance-criteria.md
 stage6_summary_record: data/project-state/stage6-summary.yaml
 stage6_diagnostic_backlog_census: data/project-state/stage6-diagnostic-backlog-census.yaml
 stage6_discovery_probe_manifest_registry: data/token-block/stage6-discovery-probe-manifest-registry.yaml

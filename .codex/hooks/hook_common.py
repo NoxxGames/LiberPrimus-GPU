@@ -77,6 +77,14 @@ def write_report(path: Path, payload: dict[str, Any]) -> None:
 def run_hook_command(command: list[str], *, root: Path, report_path: Path, timeout: int) -> int:
     strict = strict_mode()
     payload: dict[str, Any] = {
+        "report_kind": "codex_stop_doc_staleness_guard"
+        if "stop" in report_path.name
+        else "codex_hook_report",
+        "report_producer": ".codex/hooks/stop_doc_staleness_guard.py"
+        if "stop" in report_path.name
+        else ".codex/hooks",
+        "authoritative_automation_report": False,
+        "may_be_used_as_latest_automation_report": False,
         "strict_mode": strict,
         "scanner_command_failed": False,
         "hook_environment_failure": False,

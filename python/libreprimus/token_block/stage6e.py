@@ -329,7 +329,8 @@ def validate_stage6e_files_and_schemas() -> ValidationResult:
 
 def validate_stage6e_current_stage_transition() -> ValidationResult:
     current = read_yaml(CURRENT_STAGE_STATE_PATH)
-    expected = {
+    transition = read_yaml(PROJECT_STATE_PATHS["current_stage_transition"])
+    expected_transition = {
         "latest_completed_stage_id": STAGE_ID,
         "previous_completed_stage_id": PREVIOUS_STAGE_ID,
         "recommended_next_stage_id": NEXT_STAGE_ID,
@@ -338,7 +339,21 @@ def validate_stage6e_current_stage_transition() -> ValidationResult:
         "stage7_execution_allowed_next": False,
         "stage7_zip_archive_creation_allowed_next": False,
     }
-    errors = [f"current stage {key} mismatch" for key, value in expected.items() if current.get(key) != value]
+    errors = [
+        f"stage6e transition {key} mismatch"
+        for key, value in expected_transition.items()
+        if transition.get(key) != value
+    ]
+    current_pair = (current.get("latest_completed_stage_id"), current.get("recommended_next_stage_id"))
+    allowed_current_pairs = {
+        (STAGE_ID, NEXT_STAGE_ID),
+        ("stage-6f", "stage-6g"),
+    }
+    if current_pair not in allowed_current_pairs:
+        errors.append(f"current-stage pair mismatch: {current_pair}")
+    for key in ["stage7_execution_allowed_next", "stage7_zip_archive_creation_allowed_next"]:
+        if current.get(key) is not False:
+            errors.append(f"current-stage {key} must remain false")
     return _result(errors, latest_completed_stage_id=current.get("latest_completed_stage_id"))
 
 

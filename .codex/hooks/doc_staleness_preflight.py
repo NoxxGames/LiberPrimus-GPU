@@ -21,6 +21,11 @@ from hook_common import (
 REPORT_RELATIVE = Path("experiments/results/doc-drift/codex-preprompt-doc-staleness-preflight.json")
 SCANNER_TIMEOUT_SECONDS = 120
 MAX_WARNING_EXAMPLES = 5
+AUTHORITATIVE_REPORT_KINDS = {"daily_doc_staleness_automation", "local_stale_current_reproduction"}
+NONAUTHORITATIVE_REPORT_KINDS = {
+    "codex_preprompt_doc_staleness_preflight",
+    "codex_stop_doc_staleness_guard",
+}
 
 
 def main() -> int:
@@ -32,6 +37,7 @@ def main() -> int:
         status = _latest_report_status(root)
         if status is None:
             status = _run_local_reproduction(root, report_path)
+        _annotate_preflight_report(status)
         _emit_status(status)
         exit_code = _strict_exit_code(status) if strict else 0
         status["strict_mode"] = strict
@@ -50,6 +56,7 @@ def main() -> int:
             "strict_mode": strict,
             "exit_code": 1 if strict else 0,
         }
+        _annotate_preflight_report(payload)
         _emit_status(payload)
         write_report(report_path, payload)
         return 1 if strict else 0
@@ -69,6 +76,8 @@ def _latest_report_status(root: Path) -> dict[str, Any] | None:
             payload = json.loads(candidate.read_text(encoding="utf-8"))
         except Exception:
             continue
+        if not _may_use_as_latest_report(candidate, payload):
+            continue
         warning_count = _int_value(payload, "warning_count", "stale_current_warning_count")
         error_count = _int_value(payload, "error_count", "stale_current_error_count")
         if warning_count is None and isinstance(payload.get("findings"), list):
@@ -84,6 +93,7 @@ def _latest_report_status(root: Path) -> dict[str, Any] | None:
             "error_count": error_count,
             "report_path": REPORT_RELATIVE.as_posix(),
             "source_report_path": candidate.relative_to(root).as_posix(),
+            "source_report_kind": payload.get("report_kind", "legacy_filename_classified"),
             "source": "latest_doc_staleness_report_within_24h",
             "timeout_recorded": False,
             "warning_examples": _warning_examples(payload),
@@ -162,6 +172,36 @@ def _emit_status(status: dict[str, Any]) -> None:
         )
         for example in (status.get("warning_examples") or [])[:MAX_WARNING_EXAMPLES]:
             print(f"LIBERPRIMUS_PREFLIGHT_WARNING_EXAMPLE={example}")
+
+
+def _annotate_preflight_report(payload: dict[str, Any]) -> None:
+    payload.update(
+        {
+            "report_kind": "codex_preprompt_doc_staleness_preflight",
+            "report_producer": ".codex/hooks/doc_staleness_preflight.py",
+            "authoritative_automation_report": False,
+            "may_be_used_as_latest_automation_report": False,
+        }
+    )
+
+
+def _may_use_as_latest_report(path: Path, payload: dict[str, Any]) -> bool:
+    report_kind = payload.get("report_kind")
+    if report_kind in AUTHORITATIVE_REPORT_KINDS:
+        return True
+    if report_kind in NONAUTHORITATIVE_REPORT_KINDS:
+        return False
+    if payload.get("may_be_used_as_latest_automation_report") is False:
+        return False
+    name = path.name.lower()
+    if name in {
+        "codex-preprompt-doc-staleness-preflight.json",
+        "codex-stop-hook-stale-current-audit.json",
+    }:
+        return False
+    if "preprompt" in name or "stop-hook" in name or "stop" in name:
+        return False
+    return "local-stale-current-triage" in name or "daily" in name or "automation" in name or "stale-current" in name
 
 
 def _status_for_counts(warnings: int | None, errors: int | None, return_code: int = 0) -> str:

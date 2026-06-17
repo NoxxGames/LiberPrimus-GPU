@@ -4,9 +4,9 @@
 
 ## Historical Stage 6D Boundary
 
-Latest completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+Latest completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
 
-Current planning focus: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current planning focus: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 6D source-locked the canonical doublet boundary policy as review-only metadata. The pages 15-70 collapsed page-local profile has 12,956 runes, 86 lag1 adjacent doublets, vector `42442156242421632042324217223`, and lag5 equal count 479. Raw adjacency contributes 60 doublets and delimiter-collapsed bridges contribute 26, so the 421 vector depends on delimiter-stripped page-local policy. Including page 14 yields the 89-count reconciliation profile; pages 15-72 preserve lag-distance context. Stage 6D added disabled future probes and a Stage 6E input addendum only. No Stage 7 manifest, probe execution, route extraction, byte stream, archive, CUDA/scoring/benchmark, or solve claim was added.
 
@@ -310,21 +310,42 @@ Stage 6C source-locked the OUROBOROS / I31 circumference bridge as review-only m
 <!-- stage6d:start -->
 ## Historical Stage 6D Boundary
 
-Latest completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+Latest completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
 
-Current planning focus: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current planning focus: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 6D source-locked the canonical doublet boundary policy as review-only metadata. The pages 15-70 collapsed page-local profile has 12,956 runes, 86 lag1 adjacent doublets, vector `42442156242421632042324217223`, and lag5 equal count 479. Raw adjacency contributes 60 doublets and delimiter-collapsed bridges contribute 26, so the 421 vector depends on delimiter-stripped page-local policy. Including page 14 yields the 89-count reconciliation profile; pages 15-72 preserve lag-distance context. Stage 6D added disabled future probes and a Stage 6E input addendum only. No Stage 7 manifest, probe execution, route extraction, byte stream, archive, CUDA/scoring/benchmark, or solve claim was added.
 <!-- stage6d:end -->
 
 <!-- stage6e:start -->
-## Stage 6E Current Boundary
+## Historical Stage 6E Boundary
 
-Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
 
-Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
 Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 <!-- stage6e:end -->
+
+<!-- stage6f:start -->
+## Stage 6F Current Boundary
+
+Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+
+Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
+
+Stage 6F did not create a final Stage 7 manifest, finalize an archive-run contract, create result archives, run probes, add new theory records, add overlays, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6f:end -->
+<!-- stage6e-durable-summary:start -->
+## Stage 6E and Stage 6F Durable Context
+
+Stage 6E preserved Stage 6C OUROBOROS/I31 and Stage 6D doublet/boundary addenda while adding readiness bridge records. It recorded CIRCUMFERENCE = 398 = 2 * GP(I AM), the C-to-F finite mask family with base 398, one-mask 387, two-mask 376, and all-three FIRFUMFERENFE = 365, plus the DIUINITY/DIVINITY source surface caveat around GP376.
+
+Stage 6E also recorded AN END = FIVE DOTS = 311 = prime(64) with Page56 hash byte length 64, the big-gap one-based sum 569 = prime(104) with Mayfly terminal 104, Page32 3222 = 18 * 179 where 179 is reverse(971), and the crosslink from THE I IS THE VOICE OF THE CIRCUMFERENCE to WE MUST SHED OUR OWN CIRCUMFERENCES = 1031. The dju bei / dju bei ae remains an exact-span source gap unless later source-locked. Stage 6E did not run probes, create a final Stage 7 manifest, generate route or byte streams, create archives, select targets, or make a solve claim.
+
+Stage 6F performed current-doc integrity repair, malformed/stale current mirror repair, preflight self-report exclusion, metadata-only probe traceability semantic cleanup, Ciada/Cicada alias policy creation, dju-bei backlog crosslinking, and strict acceptance-criteria policy installation. Stage 6G routing is blocker-driven; Stage 6F routes next to Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+<!-- stage6e-durable-summary:end -->

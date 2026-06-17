@@ -1,0 +1,1750 @@
+record_type: stage6f_probe_source_traceability_semantics_repair
+stage_id: stage-6f
+stage_title: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening,
+  without execution
+metadata_only: true
+reviewability_stage: true
+readiness_repair_stage: true
+source_lock_only: false
+source_lock_component_present: true
+solve_claim: false
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+alberti_cipher_execution_performed_now: false
+alberti_html_executed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+combined_approval_gate_satisfied_now: false
+community_code_executed_now: false
+cuda_execution_performed: false
+cuda_triage_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+diagnostic_execution_performed_now: false
+diagnostic_probe_run_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+f5_extraction_performed_now: false
+f5_password_search_performed_now: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+hidden_content_image_forensics_performed: false
+historical_source_lock_records_rewritten: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+lossy_filtering_performed: false
+machine_code_execution_performed_now: false
+mayfly_route_extraction_performed_now: false
+midi_route_extraction_performed_now: false
+mp3stego_execution_performed: false
+music_route_extraction_performed_now: false
+native_code_execution_performed_now: false
+network_target_validation_performed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+number_fact_backfill_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_target_priority_decision_created_now: false
+outguess_execution_performed: false
+page13_f5_payload_claim_accepted_now: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+page_boundaries_final: false
+page_boundaries_finalized: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+pivot_target_selected_now: false
+pgp_private_key_operation_performed: false
+pgp_signature_verified_now: false
+pgp_verification_performed_now: false
+probe_execution_performed_now: false
+raw_source_files_committed: false
+raw_third_party_files_committed: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+scoring_performed: false
+scoring_triage_performed: false
+semantic_image_interpretation_performed: false
+spectrogram_stego_performed: false
+stegdetect_execution_performed_now: false
+stego_tool_execution_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+token_block_variant_byte_streams_generated: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+triangular_transposition_readouts_generated_now: false
+triangular_transposition_route_stream_generated_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+vm_bytecode_execution_performed_now: false
+website_expansion_performed: false
+stage6_probe_execution_allowed: false
+stage6_probe_execution_performed_now: false
+stage6_result_archive_created_now: false
+stage6_zip_result_bundle_created_now: false
+stage6_runs_bigrams_py_now: false
+stage6_recomputes_canonical_bigram_matrix_now: false
+stage6_runs_lag5_probe_now: false
+stage6_runs_diskcipher_probe_now: false
+stage6_runs_music_probe_now: false
+stage6_runs_triangle_probe_now: false
+stage6_runs_stego_probe_now: false
+stage6_selects_stage7_probe_outputs_now: false
+stage6_discards_outputs_by_score_now: false
+stage6b_final_finite_stage7_manifest_created_now: false
+stage6b_archive_run_contract_finalized_now: false
+stage6b_creates_stage7_result_archive_now: false
+stage6b_generates_stage7_outputs_now: false
+stage6b_routes_to_stage7_now: false
+stage7_execution_allowed_next: false
+stage7_zip_archive_creation_allowed_next: false
+stage8_triangle_readiness_started_now: false
+stage9_experiments_started_now: false
+stage6c_final_finite_stage7_manifest_created_now: false
+stage6c_archive_run_contract_finalized_now: false
+stage6c_creates_stage7_result_archive_now: false
+stage6c_generates_stage7_outputs_now: false
+stage6c_routes_to_stage7_now: false
+stage6c_runs_any_probe_now: false
+stage6c_generates_spiral_readouts_now: false
+stage6c_generates_triangle_readouts_now: false
+stage6c_confirms_3222_red_highlight_now: false
+stage6c_uses_image_interpretation_now: false
+spiral_route_readouts_generated_now: false
+stage6d_final_finite_stage7_manifest_created_now: false
+stage6d_archive_run_contract_finalized_now: false
+stage6d_creates_stage7_result_archive_now: false
+stage6d_generates_stage7_outputs_now: false
+stage6d_routes_to_stage7_now: false
+stage6d_runs_any_probe_now: false
+stage7_probe_execution_performed_now: false
+result_archive_created_now: false
+bigrams_py_executed_now: false
+canonical_bigram_matrix_recomputed_now: false
+stage6e_final_finite_stage7_manifest_created_now: false
+stage6e_archive_run_contract_finalized_now: false
+stage6e_creates_stage7_result_archive_now: false
+stage6e_generates_stage7_outputs_now: false
+stage6e_routes_to_stage7_now: false
+stage6e_runs_any_probe_now: false
+stage6f_final_finite_stage7_manifest_created_now: false
+stage6f_archive_run_contract_finalized_now: false
+stage6f_creates_stage7_result_archive_now: false
+stage6f_generates_stage7_outputs_now: false
+stage6f_routes_to_stage7_now: false
+stage6f_runs_any_probe_now: false
+new_theory_source_locks_created_now: false
+new_future_probe_ids_created_now: false
+new_number_fact_overlays_created_now: false
+stage6e_bridge_payloads_rewritten_now: false
+stage6e_source_lock_payloads_rewritten_now: false
+stage6e_bridge_source_lock_records_mutated_now: false
+stage7_manifest_created_now: false
+stage7_archive_created_now: false
+record_family: token_block_stage6f
+preferred_traceability_cleanup_mode: stage6f_supersession_layer
+stage6e_traceability_records_patched_now: false
+stage6e_traceability_patch_ledger_present_if_patched: false
+source_dependency_type_allowed_values:
+- committed_metadata_only
+- local_ignored_source_root_required
+- mixed_committed_metadata_and_local_source
+- source_gap
+traceability_rows:
+- source_group: stage5eh_future_probes
+  probe_id: lag5_reproduction_probe_candidate_v0
+  source_family: lag5_copy_null_doublet_diagnostics
+  source_roots: &id001
+  - third_party/Lag5-phenomenon
+  source_records: &id002
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  required_local_files: *id001
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: lag5_doublet_suppressed_null_probe_candidate_v0
+  source_family: lag5_copy_null_doublet_diagnostics
+  source_roots: &id003
+  - third_party/Lag5-phenomenon
+  source_records: *id002
+  required_local_files: *id003
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: lag5_page_section_event_overlay_probe_candidate_v0
+  source_family: lag5_copy_null_doublet_diagnostics
+  source_roots: &id004
+  - third_party/Lag5-phenomenon
+  source_records: *id002
+  required_local_files: *id004
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: lag5_token_block_neighborhood_probe_candidate_v0
+  source_family: lag5_copy_null_doublet_diagnostics
+  source_roots: &id005
+  - third_party/Lag5-phenomenon
+  source_records:
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/token-block/stage5eh-token-block-static-context-preservation.yaml
+  required_local_files: *id005
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: lag5_pdd153_56311_route_overlay_probe_candidate_v0
+  source_family: lag5_copy_null_doublet_diagnostics
+  source_roots: &id006
+  - third_party/Lag5-phenomenon
+  source_records:
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/historical-route/stage6-stage8-triangle-readiness-handoff.yaml
+  required_local_files: *id006
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage8_triangle_readiness
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: lag5_page32_route_stream_fingerprint_probe_candidate_v0
+  source_family: lag5_copy_null_doublet_diagnostics
+  source_roots: &id007
+  - third_party/Lag5-phenomenon
+  source_records:
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/historical-route/stage6-stage8-triangle-readiness-handoff.yaml
+  required_local_files: *id007
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage8_triangle_readiness
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: lag5_disk_doublet_suppression_model_constraint_probe_candidate_v0
+  source_family: lag5_copy_null_doublet_diagnostics
+  source_roots: &id008
+  - third_party/Lag5-phenomenon
+  - third_party/DiskCipherStuff
+  source_records:
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/project-state/stage6-source-lock-family-census.yaml
+  required_local_files: *id008
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_reimplementation_metric_definition
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: lag5_negative_space_null_marker_bridge_probe_candidate_v0
+  source_family: lag5_copy_null_doublet_diagnostics
+  source_roots: &id009
+  - third_party/Lag5-phenomenon
+  - third_party/BigGapsFoundInLiberPrimus
+  source_records:
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/project-state/stage6-source-lock-family-census.yaml
+  required_local_files: *id009
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: outguess_pgp_signature_verification_probe_candidate_v0
+  source_family: outguess_pgp_xor_byte_string_detector_diagnostics
+  source_roots: &id010
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_records: &id011
+  - data/source-harvester/stage5eh-lp-outguessed-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lp-outguessed-pgp-signed-output-inventory.yaml
+  - data/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk.yaml
+  - data/source-harvester/stage5eh-byte-strings-context-crosswalk.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  required_local_files: *id010
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_toolchain
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: outguess_00_01_02_xor_reconstruction_probe_candidate_v0
+  source_family: outguess_pgp_xor_byte_string_detector_diagnostics
+  source_roots: &id012
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_records: *id011
+  required_local_files: *id012
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_source_and_fixture_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: outguess_03_jpeg_extraction_metadata_probe_candidate_v0
+  source_family: outguess_pgp_xor_byte_string_detector_diagnostics
+  source_roots: &id013
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_records: *id011
+  required_local_files: *id013
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_toolchain
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: outguess_03_jpeg_human_transcription_verification_probe_candidate_v0
+  source_family: outguess_pgp_xor_byte_string_detector_diagnostics
+  source_roots: &id014
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_records: *id011
+  required_local_files: *id014
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_source_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: xor_txt_29_symbol_alphabet_classification_probe_candidate_v0
+  source_family: outguess_pgp_xor_byte_string_detector_diagnostics
+  source_roots: &id015
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_records: *id011
+  required_local_files: *id015
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: requires xor.txt source boundary if local file remains
+    absent
+  blocking_source_gap: false
+  source_dependency_type: source_gap
+- source_group: stage5eh_future_probes
+  probe_id: outguess_magic_square_route_mask_probe_candidate_v0
+  source_family: outguess_pgp_xor_byte_string_detector_diagnostics
+  source_roots: &id016
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_records: *id011
+  required_local_files: *id016
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_source_and_fixture_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: byte_strings_outguess_xor_precedent_comparison_probe_candidate_v0
+  source_family: outguess_pgp_xor_byte_string_detector_diagnostics
+  source_roots: &id017
+  - third_party/CiadaSolversIddqd_v2/byte-strings
+  source_records: *id011
+  required_local_files: *id017
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: byte_strings_03_control_key_probe_candidate_v0
+  source_family: outguess_pgp_xor_byte_string_detector_diagnostics
+  source_roots: &id018
+  - third_party/CiadaSolversIddqd_v2/byte-strings
+  source_records: *id011
+  required_local_files: *id018
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_source_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: byte_strings_16x16_matrix_route_mask_probe_candidate_v0
+  source_family: outguess_pgp_xor_byte_string_detector_diagnostics
+  source_roots: &id019
+  - third_party/CiadaSolversIddqd_v2/byte-strings
+  source_records: *id011
+  required_local_files: *id019
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: byte_strings_token_block_matrix_comparison_probe_candidate_v0
+  source_family: outguess_pgp_xor_byte_string_detector_diagnostics
+  source_roots: &id020
+  - third_party/CiadaSolversIddqd_v2/byte-strings
+  source_records:
+  - data/source-harvester/stage5eh-lp-outguessed-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lp-outguessed-pgp-signed-output-inventory.yaml
+  - data/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk.yaml
+  - data/source-harvester/stage5eh-byte-strings-context-crosswalk.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  - data/project-state/stage6-source-lock-family-census.yaml
+  required_local_files: *id020
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: page54_55_red_numbered_line_block_transcript_alignment_probe_candidate_v0
+  source_family: page54_55_red_number_alignment_readiness
+  source_roots: &id021
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/source-harvester/stage5eh-page54-55-red-number-source-crosswalk.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  required_local_files: *id021
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_image_or_transcript
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: lp_pages_stegdetect_baseline_probe_manifest_v0
+  source_family: stego_positive_control_toolchain_readiness
+  source_roots: &id022
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  - third_party/StegoPositiveControls
+  source_records: &id023
+  - data/source-harvester/stage5eh-page13-stegdetect-operator-result-lock.yaml
+  - data/source-harvester/stage5eh-cicada-solvers-iddqd-v2-crosswalk.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  required_local_files: *id022
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: known_outguessed_pages_stegdetect_comparison_probe_manifest_v0
+  source_family: stego_positive_control_toolchain_readiness
+  source_roots: &id024
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  - third_party/StegoPositiveControls
+  source_records: *id023
+  required_local_files: *id024
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: star_artifact_mod8_dct_residue_probe_manifest_v0
+  source_family: stego_positive_control_toolchain_readiness
+  source_roots: &id025
+  - third_party/StarArtifactsInLPPageImages
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  source_records: *id023
+  required_local_files: *id025
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage5eh_future_probes
+  probe_id: page13_canonical_image_hash_and_detector_reproduction_probe_manifest_v0
+  source_family: stego_positive_control_toolchain_readiness
+  source_roots: &id026
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  - third_party/StegoPositiveControls
+  source_records: *id023
+  required_local_files: *id026
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_toolchain_and_canonical_image
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: observation_on_rune_frequency_attachment_context_reconstruction_v0
+  source_family: adjacent_doublet_frequency_signature_421_fibonacci
+  source_roots: &id027
+  - third_party/ObservationOnRuneFrequency
+  source_records: &id028
+  - data/source-harvester/stage6-observation-rune-frequency-source-lock-register.yaml
+  - data/source-harvester/stage6-observation-rune-frequency-file-inventory.yaml
+  - data/source-harvester/stage6-observation-rune-frequency-attachment-context-map.yaml
+  - data/historical-route/stage6-observation-rune-frequency-adjacent-doublet-signature.yaml
+  - data/historical-route/stage6-observation-rune-frequency-421-bridge-candidates.yaml
+  - data/historical-route/stage6-observation-rune-frequency-disk-lag5-crosslink.yaml
+  - data/historical-route/stage6-observation-rune-frequency-blake-orc-context.yaml
+  - data/historical-route/stage6-observation-rune-frequency-probe-readiness.yaml
+  required_local_files: *id027
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: adjacent_doublet_diagonal_vector_reproduction_v0
+  source_family: adjacent_doublet_frequency_signature_421_fibonacci
+  source_roots: &id029
+  - third_party/ObservationOnRuneFrequency
+  source_records: *id028
+  required_local_files: *id029
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: adjacent_doublet_86_89_boundary_reconciliation_v0
+  source_family: adjacent_doublet_frequency_signature_421_fibonacci
+  source_roots: &id030
+  - third_party/ObservationOnRuneFrequency
+  source_records: *id028
+  required_local_files: *id030
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: diagonal_421_delimiter_alphabet_order_control_v0
+  source_family: adjacent_doublet_frequency_signature_421_fibonacci
+  source_roots: &id031
+  - third_party/ObservationOnRuneFrequency
+  source_records: *id028
+  required_local_files: *id031
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: lag1_lag5_joint_copy_null_fingerprint_v0
+  source_family: adjacent_doublet_frequency_signature_421_fibonacci
+  source_roots: &id032
+  - third_party/ObservationOnRuneFrequency
+  - third_party/Lag5-phenomenon
+  source_records:
+  - data/source-harvester/stage6-observation-rune-frequency-source-lock-register.yaml
+  - data/source-harvester/stage6-observation-rune-frequency-file-inventory.yaml
+  - data/source-harvester/stage6-observation-rune-frequency-attachment-context-map.yaml
+  - data/historical-route/stage6-observation-rune-frequency-adjacent-doublet-signature.yaml
+  - data/historical-route/stage6-observation-rune-frequency-421-bridge-candidates.yaml
+  - data/historical-route/stage6-observation-rune-frequency-disk-lag5-crosslink.yaml
+  - data/historical-route/stage6-observation-rune-frequency-blake-orc-context.yaml
+  - data/historical-route/stage6-observation-rune-frequency-probe-readiness.yaml
+  - data/source-harvester/stage5eh-lag5-local-source-lock-register.yaml
+  - data/source-harvester/stage5eh-lag5-file-inventory.yaml
+  - data/project-state/stage5eh-diagnostic-probe-manifest-index.yaml
+  - data/token-block/stage5eh-diagnostic-probe-manifest-records.yaml
+  required_local_files: *id032
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: diskcipher_doublet_metric_reimplementation_preflight_v0
+  source_family: diskcipher_alberti_doublet_56311_readiness
+  source_roots: &id033
+  - third_party/ObservationOnRuneFrequency
+  - third_party/DiskCipherStuff
+  source_records:
+  - data/historical-route/stage6-observation-rune-frequency-disk-lag5-crosslink.yaml
+  - data/project-state/stage6-source-lock-family-census.yaml
+  required_local_files: *id033
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_reimplementation_metric_definition
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: doublet_421_numeric_bridge_verification_v0
+  source_family: adjacent_doublet_frequency_signature_421_fibonacci
+  source_roots: &id034
+  - third_party/ObservationOnRuneFrequency
+  source_records: *id028
+  required_local_files: *id034
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: diagonal_421_blake_orc_control_v0
+  source_family: adjacent_doublet_frequency_signature_421_fibonacci
+  source_roots: &id035
+  - third_party/ObservationOnRuneFrequency
+  source_records: *id028
+  required_local_files: *id035
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: diagonal_421_occurrence_index_prime_emirp_probe_v0
+  source_family: adjacent_doublet_frequency_signature_421_fibonacci
+  source_roots: &id036
+  - third_party/ObservationOnRuneFrequency
+  source_records: *id028
+  required_local_files: *id036
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: adjacent_doublet_music_29_note_projection_control_v0
+  source_family: cicada_music_score_metadata_and_number_diagnostics
+  source_roots: &id037
+  - third_party/ObservationOnRuneFrequency
+  - third_party/CicadaMusic
+  - third_party/CicadaMusic/community-theory
+  source_records:
+  - data/project-state/stage6-source-lock-family-census.yaml
+  required_local_files: *id037
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_score_or_music_metadata
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6_observation_on_rune_frequency_probes
+  probe_id: adjacent_doublet_token_block_29_symbol_projection_control_v0
+  source_family: token_block_static_primary60_matrix_readiness
+  source_roots: &id038
+  - third_party/ObservationOnRuneFrequency
+  source_records:
+  - data/project-state/stage6-source-lock-family-census.yaml
+  required_local_files: *id038
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_deterministic_no_toolchain
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: requires Stage 6C to bind finite token-block projection
+    input set
+  blocking_source_gap: false
+  source_dependency_type: source_gap
+- source_group: stage6c_ouroboros_i31_probes
+  probe_id: ouroboros_vowel_voice_i31_probe_v0
+  source_family: ouroboros_i31_circumference_readiness
+  source_roots: &id039 []
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id039
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6c_ouroboros_i31_probes
+  probe_id: ouroboros_consonant_t16_triangle_shell_probe_v0
+  source_family: ouroboros_i31_circumference_readiness
+  source_roots: &id040 []
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id040
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6c_ouroboros_i31_probes
+  probe_id: ouroboros_variant_voice_layer_control_probe_v0
+  source_family: ouroboros_i31_circumference_readiness
+  source_roots: &id041 []
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id041
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6c_ouroboros_i31_probes
+  probe_id: ouroboros_o_ring_3222_page32_control_probe_v0
+  source_family: ouroboros_i31_circumference_readiness
+  source_roots: &id042 []
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id042
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6c_ouroboros_i31_probes
+  probe_id: i31_circumference_radius5_diameter10_pdd_center_probe_v0
+  source_family: ouroboros_i31_circumference_readiness
+  source_roots: &id043 []
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id043
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6c_ouroboros_i31_probes
+  probe_id: i31_56311_phase_ring_probe_v0
+  source_family: ouroboros_i31_circumference_readiness
+  source_roots: &id044 []
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id044
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6c_ouroboros_i31_probes
+  probe_id: pdd153_mod31_gp29_decomposition_probe_v0
+  source_family: ouroboros_i31_circumference_readiness
+  source_roots: &id045 []
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id045
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6c_ouroboros_i31_probes
+  probe_id: page32_spiral_mod31_residue_probe_v0
+  source_family: ouroboros_i31_circumference_readiness
+  source_roots: &id046 []
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id046
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6c_ouroboros_i31_probes
+  probe_id: multi_spiral_same_center_phase_offset_probe_v0
+  source_family: ouroboros_i31_circumference_readiness
+  source_roots: &id047 []
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id047
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6c_ouroboros_i31_probes
+  probe_id: ouroboros_output_watchlist_for_stage8_stage9_v0
+  source_family: ouroboros_i31_circumference_readiness
+  source_roots: &id048 []
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id048
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: canonical_doublet_profile_pages15_70_reproduction_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id049
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id049
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: raw_vs_collapsed_doublet_boundary_contribution_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id050
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id050
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: doublet_86_89_boundary_policy_reconciliation_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id051
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id051
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: instruction_page14_doublet_delta_probe_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id052
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id052
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: lag_distance_scan_pages15_72_reproduction_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id053
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id053
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: lag1_specific_suppression_control_probe_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id054
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id054
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: early_section_doublet_suppression_plateau_probe_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id055
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id055
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: zero_doublet_page_count14_control_probe_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id056
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id056
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: doublet_421_occurrence_index_canonical_rebuild_v1
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id057
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id057
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: doublet_421_boundary_dependency_control_probe_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id058
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id058
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: codeword_vs_cipher_doublet_policy_probe_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id059
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id059
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6d_canonical_doublet_boundary_probes
+  probe_id: doublet_count_group_size_sequence_control_v0
+  source_family: canonical_doublet_boundary_readiness
+  source_roots: &id060
+  - third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master
+  source_records:
+  - data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  required_local_files: *id060
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_transcript_or_boundary
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6e_bridge_probes
+  probe_id: circumference_398_two_i_am_bridge_control_v0
+  source_family: circumference_divinity_bridge_readiness
+  source_roots: &id061 []
+  source_records:
+  - data/historical-route/stage6e-circumference-398-two-i-am-bridge-v0.yaml
+  required_local_files: *id061
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6e_bridge_probes
+  probe_id: circumference_c_to_f_mask_family_control_v0
+  source_family: circumference_divinity_bridge_readiness
+  source_roots: &id062 []
+  source_records:
+  - data/historical-route/stage6e-circumference-c-to-f-gp376-mask-family-v0.yaml
+  required_local_files: *id062
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6e_bridge_probes
+  probe_id: divinity_diuinity_source_surface_bridge_control_v0
+  source_family: circumference_divinity_bridge_readiness
+  source_roots: &id063 []
+  source_records:
+  - data/historical-route/stage6e-circumference-c-to-f-gp376-mask-family-v0.yaml
+  required_local_files: *id063
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6e_bridge_probes
+  probe_id: page56_prime64_hash64_bridge_control_v0
+  source_family: page56_hash_contract_readiness
+  source_roots: &id064
+  - third_party/CiadaSolversIddqd_v2
+  - third_party/NumberFactsCollection
+  source_records:
+  - data/historical-route/stage6e-page56-prime64-hash64-bridge-v0.yaml
+  required_local_files: *id064
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6e_bridge_probes
+  probe_id: big_gap_569_prime104_mayfly_axis_control_v0
+  source_family: circumference_divinity_bridge_readiness
+  source_roots: &id065 []
+  source_records:
+  - data/historical-route/stage6e-big-gap-569-prime104-mayfly-bridge-v0.yaml
+  required_local_files: *id065
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6e_bridge_probes
+  probe_id: page32_3222_factor179_truth_bridge_control_v0
+  source_family: page32_numberfacts_pixel_colour_diagnostics
+  source_roots: &id066
+  - third_party/PotentialHint-3301-on-Page32
+  - third_party/NumberFactsCollection
+  source_records:
+  - data/historical-route/stage6e-page32-3222-factor179-truth-bridge-v0.yaml
+  required_local_files: *id066
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6e_bridge_probes
+  probe_id: music_circumference_1031_control_v0
+  source_family: cicada_music_score_metadata_and_number_diagnostics
+  source_roots: &id067
+  - third_party/CicadaMusic
+  - third_party/CicadaMusic/community-theory
+  source_records:
+  - data/historical-route/stage6e-music-circumference-1031-bridge-v0.yaml
+  required_local_files: *id067
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+- source_group: stage6e_bridge_probes
+  probe_id: dju_bei_exact_span_source_lock_precondition_v0
+  source_family: dju_bei_exact_span_readiness
+  source_roots: &id068
+  - third_party/CommunityObservations
+  - third_party/UsefulFilesAndIdeas
+  source_records: []
+  required_local_files: *id068
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_conditional_requires_canonical_source_boundary
+  stage6f_manifest_eligible: false
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: exact dju bei / dju bei ae span required before manifest
+    inclusion
+  blocking_source_gap: true
+  source_dependency_type: source_gap
+- source_group: stage6e_bridge_probes
+  probe_id: stage6b_token_block_projection_precondition_supersession_v0
+  source_family: token_block_static_primary60_matrix_readiness
+  source_roots: &id069 []
+  source_records:
+  - data/project-state/stage6e-stage6b-precondition-supersession.yaml
+  required_local_files: *id069
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6e_bridge_probes
+  probe_id: gp491_prime94_low_priority_control_v0
+  source_family: circumference_divinity_bridge_readiness
+  source_roots: &id070 []
+  source_records:
+  - data/historical-route/stage6e-optional-low-priority-prime-index-watchlist-controls-v0.yaml
+  required_local_files: *id070
+  local_source_presence_required_before_stage7_execution: false
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: committed_metadata_only
+  source_root_present_precondition_not_applicable: true
+- source_group: stage6e_bridge_probes
+  probe_id: page32_mod31_grid_value_watchlist_control_v0
+  source_family: page32_numberfacts_pixel_colour_diagnostics
+  source_roots: &id071
+  - third_party/PotentialHint-3301-on-Page32
+  - third_party/NumberFactsCollection
+  source_records:
+  - data/historical-route/stage6e-optional-low-priority-prime-index-watchlist-controls-v0.yaml
+  required_local_files: *id071
+  local_source_presence_required_before_stage7_execution: true
+  committed_metadata_sufficient_for_stage6f_manifest_planning: true
+  stage7_execution_preconditions:
+  - source_root_present
+  - source_record_crosslink_present
+  - local_raw_source_not_committed
+  - output_archive_contract_present
+  - no_lossy_policy_present
+  - controls_present
+  readiness_class: stage7_ready_metadata_only
+  stage6f_manifest_eligible: true
+  stage7_execution_enabled_now: false
+  source_gap_or_precondition: null
+  blocking_source_gap: false
+  source_dependency_type: mixed_committed_metadata_and_local_source
+metadata_only_rows_with_fake_source_root_present_precondition_after_repair: 0

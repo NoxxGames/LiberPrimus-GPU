@@ -769,6 +769,7 @@ from . import stage6b as stage6b_module
 from . import stage6c as stage6c_module
 from . import stage6d as stage6d_module
 from . import stage6e as stage6e_module
+from . import stage6f as stage6f_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -12616,6 +12617,150 @@ def validate_stage6e_handoff_command() -> None:
     _print_stage5dv_result(
         stage6e_module.validate_stage6e_handoff(),
         "token_block_stage6e_handoff_valid=true",
+    )
+
+
+@app.command("build-stage6f")
+def build_stage6f_command() -> None:
+    records = stage6f_module.build_stage6f()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"previous_stage_id={summary.get('previous_stage_id')}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+    console.print(f"stage6g_blocker_count={summary.get('stage6g_blocker_count')}")
+    console.print(
+        "stage6g_can_attempt_final_manifest_without_prior_repair="
+        f"{summary.get('stage6g_can_attempt_final_manifest_without_prior_repair')}"
+    )
+    console.print(f"edited_document_error_count={summary.get('edited_document_error_count')}")
+    console.print(f"chatgpt_context_error_count={summary.get('chatgpt_context_error_count')}")
+    console.print(f"hook_default_exit_zero_verified={summary.get('hook_default_exit_zero_verified')}")
+    console.print(f"source_browser_validation_error_count={summary.get('source_browser_validation_error_count')}")
+
+
+@app.command("validate-stage6f")
+def validate_stage6f_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f(),
+        "token_block_stage6f_valid=true",
+    )
+
+
+@app.command("stage6f-summary")
+def stage6f_summary_command() -> None:
+    console.print(stage6f_module.stage6f_summary_text())
+
+
+@app.command("validate-stage6f-edited-document-integrity")
+def validate_stage6f_edited_document_integrity_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_edited_document_integrity(),
+        "token_block_stage6f_edited_document_integrity_valid=true",
+    )
+
+
+@app.command("validate-stage6f-current-mirror-consistency")
+def validate_stage6f_current_mirror_consistency_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_current_mirror_consistency(),
+        "token_block_stage6f_current_mirror_consistency_valid=true",
+    )
+
+
+@app.command("validate-stage6f-chatgpt-context")
+def validate_stage6f_chatgpt_context_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_chatgpt_context(),
+        "token_block_stage6f_chatgpt_context_valid=true",
+    )
+
+
+@app.command("validate-stage6f-preflight-report-selection")
+def validate_stage6f_preflight_report_selection_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_preflight_report_selection(),
+        "token_block_stage6f_preflight_report_selection_valid=true",
+    )
+
+
+@app.command("validate-stage6f-hook-verification")
+def validate_stage6f_hook_verification_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_hook_verification(),
+        "token_block_stage6f_hook_verification_valid=true",
+    )
+
+
+@app.command("validate-stage6f-traceability-cleanup")
+def validate_stage6f_traceability_cleanup_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_traceability_cleanup(),
+        "token_block_stage6f_traceability_cleanup_valid=true",
+    )
+
+
+@app.command("validate-stage6f-alias-policy")
+def validate_stage6f_alias_policy_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_alias_policy(),
+        "token_block_stage6f_alias_policy_valid=true",
+    )
+
+
+@app.command("validate-stage6f-dju-bei-crosslink")
+def validate_stage6f_dju_bei_crosslink_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_dju_bei_crosslink(),
+        "token_block_stage6f_dju_bei_crosslink_valid=true",
+    )
+
+
+@app.command("validate-stage6f-acceptance-policy")
+def validate_stage6f_acceptance_policy_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_acceptance_policy(),
+        "token_block_stage6f_acceptance_policy_valid=true",
+    )
+
+
+@app.command("validate-stage6f-stage6g-blocker-routing")
+def validate_stage6f_stage6g_blocker_routing_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_stage6g_blocker_routing(),
+        "token_block_stage6f_stage6g_blocker_routing_valid=true",
+    )
+
+
+@app.command("validate-stage6f-stage7-artifact-absence")
+def validate_stage6f_stage7_artifact_absence_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_stage7_artifact_absence(),
+        "token_block_stage6f_stage7_artifact_absence_valid=true",
+    )
+
+
+@app.command("validate-stage6f-source-browser-loadability")
+def validate_stage6f_source_browser_loadability_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_source_browser_loadability(),
+        "token_block_stage6f_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage6f-gate-closure")
+def validate_stage6f_gate_closure_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_gate_closure(),
+        "token_block_stage6f_gate_closure_valid=true",
+    )
+
+
+@app.command("validate-stage6f-handoff")
+def validate_stage6f_handoff_command() -> None:
+    _print_stage5dv_result(
+        stage6f_module.validate_stage6f_handoff(),
+        "token_block_stage6f_handoff_valid=true",
     )
 
 

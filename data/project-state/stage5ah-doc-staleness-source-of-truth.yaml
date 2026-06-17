@@ -1,14 +1,14 @@
 record_type: doc_staleness_source_of_truth_record
 schema: schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json
-stage_id: stage-6e
+stage_id: stage-6f
 status: complete
 latest_completed_stage_before_stage5ah: stage-5ag
-latest_completed_stage_after_this_stage: Stage 6E - Readiness consolidation, bridge
-  source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution
-latest_completed_stage_prefix: Stage 6E
-next_stage_after_this_stage: Stage 6F - Final finite Stage 7 probe manifest and archive-run
+latest_completed_stage_after_this_stage: Stage 6F - Current-doc integrity, hook traceability,
+  and acceptance hardening, without execution
+latest_completed_stage_prefix: Stage 6F
+next_stage_after_this_stage: Stage 6G - Final finite Stage 7 probe manifest and archive-run
   contract, without execution
-expected_next_stage_prefix: Stage 6F
+expected_next_stage_prefix: Stage 6G
 latest_previous_stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics
   transition, without execution
 stage5ah_role: operational_doc_staleness_coverage_repair
@@ -43,8 +43,8 @@ current_stage_state_authoritative: true
 human_readable_docs_are_mirrors_only: true
 historical_sections_can_contain_old_next_stage_claims: true
 historical_sections_may_retain_old_stage_claims_if_clearly_historical: true
-latest_completed_stage_id: stage-6e
-recommended_next_stage_id: stage-6f
+latest_completed_stage_id: stage-6f
+recommended_next_stage_id: stage-6g
 current_truth_mirrors:
 - STATUS.md
 - ROADMAP.md
@@ -67,3 +67,5 @@ recommended_next_stage_after_this_stage: Stage 6F - Final finite Stage 7 probe m
 stage6e_warning_classification_record: data/project-state/stage6e-doc-staleness-warning-classification.yaml
 stage6e_scanner_nonweakening_record: data/project-state/stage6e-scanner-nonweakening-evidence.yaml
 stage6e_current_truth_refresh: true
+stage6f_edited_document_integrity_record: data/project-state/stage6f-edited-document-integrity-review.yaml
+stage6f_acceptance_policy_record: data/project-state/stage6f-strict-acceptance-policy.yaml

@@ -4443,3 +4443,15 @@ stages:
     archive-run contract, without execution
   guardrails: No Stage 7 manifest, archive, probe execution, route stream, byte stream,
     CUDA/scoring/benchmark, or solve claim.
+- stage_id: stage-6f
+  stage_title: Stage 6F - Current-doc integrity, hook traceability, and acceptance
+    hardening, without execution
+  status: complete
+  summary: Repaired current-doc integrity, hook report selection, traceability source-dependency
+    semantics, Ciada/Cicada alias policy, dju-bei gap crosslink, and acceptance criteria
+    without execution.
+  recommended_next_stage_id: stage-6g
+  recommended_next_stage_title: Stage 6G - Final finite Stage 7 probe manifest and
+    archive-run contract, without execution
+  guardrails: No Stage 7 manifest, archive, probe execution, route stream, byte stream,
+    new theory records, overlays, or solve claim.

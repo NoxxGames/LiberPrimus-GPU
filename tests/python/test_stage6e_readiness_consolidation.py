@@ -21,8 +21,13 @@ def test_stage6e_summary_routes_to_stage6f_without_manifest_archive_or_execution
     assert summary["recommended_next_stage_id"] == "stage-6f"
     assert summary["stage6f_manifest_finalization_blocker_count"] == 0
     assert summary["stage6f_can_attempt_final_manifest_without_prior_repair"] is True
-    assert current["latest_completed_stage_id"] == "stage-6e"
-    assert current["recommended_next_stage_id"] == "stage-6f"
+    allowed_current_routes = {
+        "stage-6e": ("stage-6d", "stage-6f"),
+        "stage-6f": ("stage-6e", "stage-6g"),
+    }
+    previous, next_stage = allowed_current_routes[current["latest_completed_stage_id"]]
+    assert current["previous_completed_stage_id"] == previous
+    assert current["recommended_next_stage_id"] == next_stage
     for key in [
         "stage7_execution_allowed_next",
         "stage7_zip_archive_creation_allowed_next",

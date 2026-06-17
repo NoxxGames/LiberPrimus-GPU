@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
-- Current planning focus: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Latest completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+- Current planning focus: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -166,14 +166,14 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Stage
 
-Stage 6D - Canonical doublet boundary source-lock and automation triage, without execution is the latest completed stage. It source-locks canonical doublet boundary profiles as bounded metadata reproduction, preserves Stage 6C and Stage 6B records, adds Stage 6E manifest-input addendum records, and keeps all probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, and solve gates closed.
+Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution is the latest completed stage. It repairs current-doc integrity, hook/preflight report selection, traceability source-dependency semantics, Ciada/Cicada source-root aliasing, dju-bei gap crosslinking, and strict acceptance criteria while keeping all execution and Stage 7 artifact gates closed.
 
-Current planning focus: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D is a source-lock/triage insertion only; Stage 6E must finalize finite inputs, controls, source paths, toolchain requirements, and archive-run commands before any Stage 7 execution.
+Current planning focus: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6F completed the current-doc and acceptance hardening pass; Stage 6G must consume the repaired traceability and hook evidence before any later Stage 7 execution can be authorized.
 
 ## Planned Next Stages
 
-- Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-- Stage 7 - Actual probes and diagnostics only after Stage 6E finite-manifest approval gates.
+- Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 7 - Actual probes and diagnostics only after Stage 6G finite-manifest approval gates.
 - Stage 8 - Triangle-specific experiment readiness, without execution.
 - Stage 9 - Triangle experiments only after Stage 8 approval gates.
 - Future unnumbered website expansion project after CUDA reporting boundaries are stable.
@@ -393,13 +393,25 @@ Stage 6D is complete as a canonical doublet boundary source-lock and automation/
 <!-- stage6d:end -->
 
 <!-- stage6e:start -->
-## Stage 6E Current Boundary
+## Historical Stage 6E Boundary
 
-Current completed stage: Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution.
+Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
 
-Current work: Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
 Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 <!-- stage6e:end -->
+
+<!-- stage6f:start -->
+## Stage 6F Current Boundary
+
+Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+
+Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
+
+Stage 6F did not create a final Stage 7 manifest, finalize an archive-run contract, create result archives, run probes, add new theory records, add overlays, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+<!-- stage6f:end -->
