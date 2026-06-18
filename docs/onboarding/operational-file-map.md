@@ -1,6 +1,12 @@
-# Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5ED adds the fourth Source Browser number-fact review batch and preserves Stage 5EC overlays plus Stage 5EB's 10-worker validation policy while keeping the YAML map as the machine-readable source; this page is the human-readable guide.
+
+## Stage 6H Operational Files
+
+- `data/project-state/stage6h-summary.yaml`: Stage 6H repair/source-lock summary.
+- `data/token-block/stage6h-stage6i-manifest-input-addendum.yaml`: explicit Stage 6I handoff input addendum.
+- `data/operator-console/source-browser/number-fact-overlays/stage6h-dot-angle-right-triangle-source-lock-overlays.yaml`: required review-only Source Browser overlays.
+- `data/token-block/stage6h-future-diagnostic-registry.yaml`: disabled future diagnostics.
+- `codex-output/stage6h-codex-completion.md`: ignored local completion handoff path after Stage 6H.
 
 ## Strict Files
 
@@ -43,14 +49,14 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5ED" `
-  --expected-next-stage "Stage 5EE"
+  --expected-latest-stage "Stage 6H" `
+  --expected-next-stage "Stage 6I"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5ED" `
-  --expected-next-stage "Stage 5EE"
+  --expected-latest-stage "Stage 6H" `
+  --expected-next-stage "Stage 6I"
 ```
 
 ## Stage 5EC Coverage
@@ -238,7 +244,7 @@ Stage 6D primary records live under `data/project-state/`, `data/historical-rout
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
@@ -250,7 +256,7 @@ Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contra
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
 

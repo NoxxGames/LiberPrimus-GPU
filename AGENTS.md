@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
+Current completed stage: Stage 6H - Current-state integrity repair and dot-angle / right-triangle number-triangle source-lock addendum, without execution.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6H is source-lock/readiness addendum work because recent dot-angle/right-triangle number-triangle material remains chat-only pending source-lock. It is not final Stage 7 manifest work.
+Next routed stage: Stage 6I - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6I receives explicit Stage 6C/6D/6E/6F/6G/6H handoff inputs and remains without execution until a later prompt explicitly authorizes any Stage 7 work.
 
 No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
 
@@ -956,7 +956,7 @@ Historical next routed work at Stage 6C closeout: Stage 6D - Final finite Stage 
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6F repairs current-facing document integrity, hardens hook/preflight traceability, supersedes metadata-only traceability source dependency semantics, and keeps Stage 7 manifest work blocked until Stage 6G. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run image/stego/OCR/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6F repairs current-facing document integrity, hardens hook/preflight traceability, supersedes metadata-only traceability source dependency semantics, and keeps Stage 7 manifest work blocked until Stage 6G. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run image/stego/OCR/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 <!-- stage6d:end -->
 
 <!-- stage6e:start -->
@@ -964,7 +964,7 @@ Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridg
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
@@ -976,7 +976,7 @@ Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contra
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
 
@@ -984,11 +984,11 @@ Stage 6F did not create a final Stage 7 manifest, finalize an archive-run contra
 <!-- stage6f:end -->
 
 <!-- stage6g:start -->
-## Stage 6G Current Boundary
+## Historical Stage 6G Boundary
 
-Current completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
+Historical completed stage at Stage 6G closeout: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6H is a dot-angle/right-triangle source-lock addendum because recent material remains chat-only pending source-lock. It is not final Stage 7 manifest work.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6H is a dot-angle/right-triangle source-lock addendum because recent material remains chat-only pending source-lock. It is not final Stage 7 manifest work.
 
 Future Codex work must apply `docs/onboarding/codex-acceptance-criteria.md`, review edited current-facing documents as whole final files, and keep all no-execution gates closed unless a later prompt explicitly opens them.
 <!-- stage6g:end -->

@@ -25,6 +25,7 @@ def test_stage6e_summary_routes_to_stage6f_without_manifest_archive_or_execution
         "stage-6e": ("stage-6d", "stage-6f"),
         "stage-6f": ("stage-6e", "stage-6g"),
         "stage-6g": ("stage-6f", "stage-6h"),
+        "stage-6h": ("stage-6g", "stage-6i"),
     }
     previous, next_stage = allowed_current_routes[current["latest_completed_stage_id"]]
     assert current["previous_completed_stage_id"] == previous

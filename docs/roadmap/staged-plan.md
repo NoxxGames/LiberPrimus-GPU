@@ -6,19 +6,17 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
-- Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
-- Stage 6H is source-lock/readiness addendum work because recent dot-angle/right-triangle number-triangle material remains chat-only pending source-lock.
+- Latest completed stage: Stage 6H - Current-state integrity repair and dot-angle / right-triangle number-triangle source-lock addendum, without execution.
+- Next routed stage: Stage 6I - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 6H repairs current-state integrity and source-locks dot-angle/right-triangle/PDD153 review metadata.
+- Stage 6I receives explicit handoff input paths and remains without execution.
+- Stage 7 manifest/archive/probe execution: not created and not allowed now.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
-- CUDA: deferred.
-- CPU batch transform API: active infrastructure with expanded adapter coverage and future CUDA parity expectations.
-- Scoring contract: active infrastructure and future CUDA score-summary parity contract.
 - Solve claims: none.
-- Raw and generated outputs: ignored and not committed.
-- Discord raw logs: local, private, ignored research material.
-- Local Liber Primus page images: local third-party material, ignored and not committed.
-- Observation promotion ledger policy: future candidate rows must distinguish `ready_for_manifest` from `control-only` and historical context.
+- Update policy: `data/project-state/current-stage-state.yaml` is authoritative; human-readable docs are mirrors and must be refreshed after current-stage changes.
+- Observation promotion remains gated by a promotion ledger; entries require `ready_for_manifest` status and `control-only` rows stay non-executable.
+- Discord raw logs remain local, private, ignored, and uncommitted.
 
 ## Completed Stage Timeline
 
@@ -167,14 +165,14 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Stage
 
-Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution is the latest completed stage. It repairs current-doc integrity, hook/preflight report selection, traceability source-dependency semantics, Ciada/Cicada source-root aliasing, dju-bei gap crosslinking, and strict acceptance criteria while keeping all execution and Stage 7 artifact gates closed.
+Stage 6H - Current-state integrity repair and dot-angle / right-triangle number-triangle source-lock addendum, without execution is the latest completed stage. It repairs Stage 6G current-state/doc-staleness misses, adds review-only dot-angle/right-triangle/PDD153 source-lock metadata, creates required overlays, and keeps all execution and Stage 7 artifact gates closed.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6F completed the current-doc and acceptance hardening pass; Stage 6G must consume the repaired traceability and hook evidence before any later Stage 7 execution can be authorized.
+Next routed stage: Stage 6I - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6I receives the explicit path-based handoff addendum and remains without execution unless a later prompt explicitly opens execution gates.
 
 ## Planned Next Stages
 
-- Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
-- Stage 7 - Actual probes and diagnostics only after Stage 6G finite-manifest approval gates.
+- Stage 6I - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 7 - Actual probes and diagnostics only after a later final manifest/archive-run contract stage explicitly opens execution gates.
 - Stage 8 - Triangle-specific experiment readiness, without execution.
 - Stage 9 - Triangle experiments only after Stage 8 approval gates.
 - Future unnumbered website expansion project after CUDA reporting boundaries are stable.
@@ -398,7 +396,7 @@ Stage 6D is complete as a canonical doublet boundary source-lock and automation/
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
@@ -410,7 +408,7 @@ Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contra
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
 

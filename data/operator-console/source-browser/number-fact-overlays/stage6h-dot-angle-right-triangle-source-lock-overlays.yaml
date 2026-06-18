@@ -1,0 +1,614 @@
+record_type: stage6h_dot_angle_right_triangle_source_lock_overlay_collection
+schema: schemas/operator-console/stage6h-number-fact-overlays-v0.schema.json
+stage_id: stage-6h
+stage_title: Stage 6H - Current-state integrity repair and dot-angle / right-triangle
+  number-triangle source-lock addendum, without execution
+metadata_only: true
+reviewability_stage: true
+source_lock_addendum_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+stage7_execution_allowed_next: false
+stage7_zip_archive_creation_allowed_next: false
+stage7_manifest_created_now: false
+stage7_archive_created_now: false
+probe_execution_performed_now: false
+diagnostic_probe_run_now: false
+diagnostic_execution_performed_now: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+byte_stream_generation_authorized_now: false
+ocr_performed: false
+image_forensics_performed: false
+hidden_content_image_forensics_performed: false
+semantic_image_interpretation_performed: false
+cuda_execution_performed: false
+scoring_performed: false
+benchmark_performed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+raw_source_files_committed: false
+raw_third_party_files_committed: false
+generated_outputs_committed: false
+stage6h_final_finite_stage7_manifest_created_now: false
+stage6h_archive_run_contract_finalized_now: false
+stage6h_creates_stage7_result_archive_now: false
+stage6h_generates_stage7_outputs_now: false
+stage6h_routes_to_stage7_now: false
+stage6h_runs_any_probe_now: false
+stage6h_generates_spiral_readouts_now: false
+stage6h_generates_triangle_readouts_now: false
+usable_for_decision_now: false
+review_batch_id: stage6h_dot_angle_right_triangle_review_only
+stage6h_number_fact_overlays_required: true
+source_browser_overlay_deferment_allowed_only_as_blocker: true
+overlay_count: 15
+required_overlay_ids:
+- stage6h_three_dot_7_8_angle41_overlay
+- stage6h_branch_right_11111_31_overlay
+- stage6h_branch_left_01110_14_inverse17_overlay
+- stage6h_branch_concat_479_lag5_overlay
+- stage6h_branch_concat_447_primepi86_overlay
+- stage6h_pdd153_right_angle_transform_overlay
+- stage6h_pdd153_vertical_split_72_9_72_overlay
+- stage6h_pdd153_shared_spine_81_81_overlay
+- stage6h_pdd153_7_8_ray_133_d4_overlay
+- stage6h_pdd153_folded_7_8_8_7_hits_50_51_overlay
+- stage6h_pdd153_row10_seam_49_52_50_51_overlay
+- stage6h_pdd153_word52_way_overlay
+- stage6h_pdd153_word55_read_prefix_overlay
+- stage6h_i_am_circumference_mod153_overlay
+- stage6h_ouroboros_variant_mod153_offsets_overlay
+overlays:
+- overlay_id: stage6h_three_dot_7_8_angle41_overlay
+  source_record_path: data/historical-route/stage6h-three-dot-dinkus-scaled-7-8-angle41-bridge-v0.yaml
+  source_fact_id: stage6h_three_dot_7_8_angle41_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: three-dot 7:8 angle 41.1859
+  short_label: three-dot 7:8 angle 41.1859
+  value: angle approximately 41 degrees bridges to PDD153 center index 41
+  values:
+  - angle approximately 41 degrees bridges to PDD153 center index 41
+  value_type: sum
+  operation_type: source_observation
+  expression: atan(7/8) = 41.1859 degrees
+  relation: angle approximately 41 degrees bridges to PDD153 center index 41
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-three-dot-dinkus-scaled-7-8-angle41-bridge-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-three-dot-dinkus-scaled-7-8-angle41-bridge-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: &id001
+  - proof
+  - route_seed
+  - execution_seed
+  - target_selection
+  - solve_claim
+  display_order: 1
+- overlay_id: stage6h_branch_right_11111_31_overlay
+  source_record_path: data/historical-route/stage6h-branch-dot-right-cluster-11111-gp31-bridge-v0.yaml
+  source_fact_id: stage6h_branch_right_11111_31_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: branch right 11111 = 31
+  short_label: branch right 11111 = 31
+  value: 31 review-only branch-dot candidate
+  values:
+  - 31 review-only branch-dot candidate
+  value_type: sum
+  operation_type: source_observation
+  expression: right branch bits 11111 = 31
+  relation: 31 review-only branch-dot candidate
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-branch-dot-right-cluster-11111-gp31-bridge-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-branch-dot-right-cluster-11111-gp31-bridge-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 2
+- overlay_id: stage6h_branch_left_01110_14_inverse17_overlay
+  source_record_path: data/historical-route/stage6h-branch-dot-left-yx-01110-14-inverse17-candidate-v0.yaml
+  source_fact_id: stage6h_branch_left_01110_14_inverse17_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: branch left 01110 = 14, inverse 17
+  short_label: branch left 01110 = 14, inverse 17
+  value: 14/17 review-only branch ordering context
+  values:
+  - 14/17 review-only branch ordering context
+  value_type: sum
+  operation_type: source_observation
+  expression: left y/x black bits 01110 = 14; white inverse 10001 = 17
+  relation: 14/17 review-only branch ordering context
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-branch-dot-left-yx-01110-14-inverse17-candidate-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-branch-dot-left-yx-01110-14-inverse17-candidate-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 3
+- overlay_id: stage6h_branch_concat_479_lag5_overlay
+  source_record_path: data/historical-route/stage6h-branch-dot-left-right-concat-479-lag5-bridge-v0.yaml
+  source_fact_id: stage6h_branch_concat_479_lag5_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: branch concat 479 and Lag5
+  short_label: branch concat 479 and Lag5
+  value: 479 crosslinks to Stage 6D Lag5 equal count
+  values:
+  - 479 crosslinks to Stage 6D Lag5 equal count
+  value_type: sum
+  operation_type: source_observation
+  expression: 01110 + 11111 -> 0111011111 = 479
+  relation: 479 crosslinks to Stage 6D Lag5 equal count
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-branch-dot-left-right-concat-479-lag5-bridge-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-branch-dot-left-right-concat-479-lag5-bridge-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 4
+- overlay_id: stage6h_branch_concat_447_primepi86_overlay
+  source_record_path: data/historical-route/stage6h-branch-dot-geometric-concat-primepi86-control-v0.yaml
+  source_fact_id: stage6h_branch_concat_447_primepi86_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: branch concat 447 and pi(447)=86
+  short_label: branch concat 447 and pi(447)=86
+  value: 86 crosslinks to Stage 6D lag1 count as a weak control
+  values:
+  - 86 crosslinks to Stage 6D lag1 count as a weak control
+  value_type: sum
+  operation_type: source_observation
+  expression: 01101 + 11111 -> 0110111111 = 447; pi(447)=86
+  relation: 86 crosslinks to Stage 6D lag1 count as a weak control
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage6h-branch-dot-geometric-concat-primepi86-control-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-branch-dot-geometric-concat-primepi86-control-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 5
+  prime_count_policy:
+    pi_447_means_number_of_primes_less_than_or_equal_to_447: true
+    pi_447_expected_value: 86
+    not_prime_86: true
+    not_one_indexed_prime_lookup: true
+- overlay_id: stage6h_pdd153_right_angle_transform_overlay
+  source_record_path: data/historical-route/stage6h-pdd153-right-angle-coordinate-transform-v0.yaml
+  source_fact_id: stage6h_pdd153_right_angle_transform_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: PDD153 right-angle transform
+  short_label: PDD153 right-angle transform
+  value: review-only coordinate transform
+  values:
+  - review-only coordinate transform
+  value_type: sequence
+  operation_type: source_observation
+  expression: x=c-1, y=r-c, x+y<=16
+  relation: review-only coordinate transform
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-pdd153-right-angle-coordinate-transform-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-pdd153-right-angle-coordinate-transform-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 6
+- overlay_id: stage6h_pdd153_vertical_split_72_9_72_overlay
+  source_record_path: data/historical-route/stage6h-pdd153-folded-triangle-72-9-72-spine-split-candidate-v0.yaml
+  source_fact_id: stage6h_pdd153_vertical_split_72_9_72_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: PDD153 vertical split 72|9|72
+  short_label: PDD153 vertical split 72|9|72
+  value: central spine split candidate
+  values:
+  - central spine split candidate
+  value_type: sequence
+  operation_type: source_observation
+  expression: 153 = 72 + 9 + 72
+  relation: central spine split candidate
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-pdd153-folded-triangle-72-9-72-spine-split-candidate-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-pdd153-folded-triangle-72-9-72-spine-split-candidate-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 7
+- overlay_id: stage6h_pdd153_shared_spine_81_81_overlay
+  source_record_path: data/historical-route/stage6h-pdd153-shared-spine-two-81-cell-surfaces-candidate-v0.yaml
+  source_fact_id: stage6h_pdd153_shared_spine_81_81_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: PDD153 shared spine 81/81
+  short_label: PDD153 shared spine 81/81
+  value: 9x9 surface candidate
+  values:
+  - 9x9 surface candidate
+  value_type: sequence
+  operation_type: source_observation
+  expression: 72+9 = 81 on each shared-spine side
+  relation: 9x9 surface candidate
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-pdd153-shared-spine-two-81-cell-surfaces-candidate-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-pdd153-shared-spine-two-81-cell-surfaces-candidate-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 8
+- overlay_id: stage6h_pdd153_7_8_ray_133_d4_overlay
+  source_record_path: data/historical-route/stage6h-pdd153-dot-angle41-center-to-d4-position133-bridge-v0.yaml
+  source_fact_id: stage6h_pdd153_7_8_ray_133_d4_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: PDD153 7:8 ray to 133/d4
+  short_label: PDD153 7:8 ray to 133/d4
+  value: review-only angle/ray bridge
+  values:
+  - review-only angle/ray bridge
+  value_type: sequence
+  operation_type: source_observation
+  expression: position 41 + delta row 7 col 8 -> position 133 on d4
+  relation: review-only angle/ray bridge
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-pdd153-dot-angle41-center-to-d4-position133-bridge-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-pdd153-dot-angle41-center-to-d4-position133-bridge-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 9
+- overlay_id: stage6h_pdd153_folded_7_8_8_7_hits_50_51_overlay
+  source_record_path: data/historical-route/stage6h-pdd153-folded-7-8-8-7-seam-50-51-candidate-v0.yaml
+  source_fact_id: stage6h_pdd153_folded_7_8_8_7_hits_50_51_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: folded 7:8/8:7 hits 50/51
+  short_label: folded 7:8/8:7 hits 50/51
+  value: row10 seam candidate
+  values:
+  - row10 seam candidate
+  value_type: sequence
+  operation_type: source_observation
+  expression: folded endpoints 50 and 51
+  relation: row10 seam candidate
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-pdd153-folded-7-8-8-7-seam-50-51-candidate-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-pdd153-folded-7-8-8-7-seam-50-51-candidate-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 10
+- overlay_id: stage6h_pdd153_row10_seam_49_52_50_51_overlay
+  source_record_path: data/historical-route/stage6h-pdd153-row10-seam-49-52-50-51-way-candidate-v0.yaml
+  source_fact_id: stage6h_pdd153_row10_seam_49_52_50_51_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: PDD153 row10 seam 49/52 and 50/51
+  short_label: PDD153 row10 seam 49/52 and 50/51
+  value: review-only seam context
+  values:
+  - review-only seam context
+  value_type: sequence
+  operation_type: source_observation
+  expression: row10 seam around WAY/READ candidate anchors
+  relation: review-only seam context
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-pdd153-row10-seam-49-52-50-51-way-candidate-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-pdd153-row10-seam-49-52-50-51-way-candidate-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 11
+- overlay_id: stage6h_pdd153_word52_way_overlay
+  source_record_path: data/historical-route/stage6h-pdd153-pdd-minus-reversed-word52-way-verified-v0.yaml
+  source_fact_id: stage6h_pdd153_word52_way_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: word52 PDD transform gives WAY
+  short_label: word52 PDD transform gives WAY
+  value: verified fragment only
+  values:
+  - verified fragment only
+  value_type: sequence
+  operation_type: source_observation
+  expression: PDD - reversed word52 mod29 = WAY
+  relation: verified fragment only
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-pdd153-pdd-minus-reversed-word52-way-verified-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-pdd153-pdd-minus-reversed-word52-way-verified-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 12
+- overlay_id: stage6h_pdd153_word55_read_prefix_overlay
+  source_record_path: data/historical-route/stage6h-pdd153-pdd-minus-reversed-word55-read-prefix-candidate-v0.yaml
+  source_fact_id: stage6h_pdd153_word55_read_prefix_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: word55 PDD transform gives READ prefix
+  short_label: word55 PDD transform gives READ prefix
+  value: prefix only, not full plaintext
+  values:
+  - prefix only, not full plaintext
+  value_type: sequence
+  operation_type: source_observation
+  expression: PDD - reversed word55 mod29 starts READ
+  relation: prefix only, not full plaintext
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-pdd153-pdd-minus-reversed-word55-read-prefix-candidate-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-pdd153-pdd-minus-reversed-word55-read-prefix-candidate-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 13
+- overlay_id: stage6h_i_am_circumference_mod153_overlay
+  source_record_path: data/historical-route/stage6h-pdd153-i-am-circumference-mod153-left-edge-bridge-v0.yaml
+  source_fact_id: stage6h_i_am_circumference_mod153_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: I AM/CIRCUMFERENCE mod153 bridge
+  short_label: I AM/CIRCUMFERENCE mod153 bridge
+  value: left-edge/56311 review bridge
+  values:
+  - left-edge/56311 review bridge
+  value_type: sum
+  operation_type: source_observation
+  expression: 199 mod153=46; 398 mod153=92=2*46
+  relation: left-edge/56311 review bridge
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-pdd153-i-am-circumference-mod153-left-edge-bridge-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-pdd153-i-am-circumference-mod153-left-edge-bridge-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 14
+- overlay_id: stage6h_ouroboros_variant_mod153_offsets_overlay
+  source_record_path: data/historical-route/stage6h-ouroboros-variant-mod153-offset-bridge-v0.yaml
+  source_fact_id: stage6h_ouroboros_variant_mod153_offsets_fact
+  fact_class: stage6h_review_only_number_fact
+  display_label: OUROBOROS variant offsets 7/11/14
+  short_label: OUROBOROS variant offsets 7/11/14
+  value: review-only offset context
+  values:
+  - review-only offset context
+  value_type: sum
+  operation_type: source_observation
+  expression: UROBOROS +7, OROBOROS +11, OUROBOROS +14 over PDD153
+  relation: review-only offset context
+  why_stored: Preserve Stage 6H dot-angle/right-triangle source-lock context as review-only
+    metadata.
+  verification_status: operator_assistant_observed
+  review_state: overlay_enriched_fact
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage6h-ouroboros-variant-mod153-offset-bridge-v0.yaml
+  - data/historical-route/stage5ei-pdd153-geometry-candidates.yaml
+  - data/profiles/gematria/gematria-primus-v0.json
+  crosslinks:
+  - data/historical-route/stage6h-ouroboros-variant-mod153-offset-bridge-v0.yaml
+  risk_notes:
+  - review_only
+  - not_route_evidence
+  - canonical_source_crosscheck_required
+  controls_required:
+  - canonical_source_crosscheck
+  - selection_bias_controls
+  - wrong_route_negative_controls
+  - no_plaintext_required_output_policy
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  display_order: 15

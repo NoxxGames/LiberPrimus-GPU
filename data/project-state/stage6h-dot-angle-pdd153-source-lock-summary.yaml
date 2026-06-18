@@ -1,0 +1,83 @@
+record_type: stage6h_dot_angle_pdd153_source_lock_summary
+schema: schemas/project-state/stage6h-dot-angle-pdd153-source-lock-summary-v0.schema.json
+stage_id: stage-6h
+stage_title: Stage 6H - Current-state integrity repair and dot-angle / right-triangle
+  number-triangle source-lock addendum, without execution
+metadata_only: true
+reviewability_stage: true
+source_lock_addendum_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+stage7_execution_allowed_next: false
+stage7_zip_archive_creation_allowed_next: false
+stage7_manifest_created_now: false
+stage7_archive_created_now: false
+probe_execution_performed_now: false
+diagnostic_probe_run_now: false
+diagnostic_execution_performed_now: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+byte_stream_generation_authorized_now: false
+ocr_performed: false
+image_forensics_performed: false
+hidden_content_image_forensics_performed: false
+semantic_image_interpretation_performed: false
+cuda_execution_performed: false
+scoring_performed: false
+benchmark_performed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+raw_source_files_committed: false
+raw_third_party_files_committed: false
+generated_outputs_committed: false
+stage6h_final_finite_stage7_manifest_created_now: false
+stage6h_archive_run_contract_finalized_now: false
+stage6h_creates_stage7_result_archive_now: false
+stage6h_generates_stage7_outputs_now: false
+stage6h_routes_to_stage7_now: false
+stage6h_runs_any_probe_now: false
+stage6h_generates_spiral_readouts_now: false
+stage6h_generates_triangle_readouts_now: false
+visual_dot_source_lock_record_count: 13
+pdd153_geometry_source_lock_record_count: 10
+pdd_transform_record_count: 3
+residue_bridge_record_count: 3
+route_cipher_policy_record_count: 3
+center_anchor_gp41_claim_policy:
+  center_position_41_source_locked: true
+  center_word_index_41_source_locked: true
+  center_rune_gp_value_41_source_locked_now: false
+  operator_claim_pending_source_confirmation: true
+  do_not_assert_as_source_locked_fact: true
+visual_measurement_boundary:
+  allowed_now:
+  - dimensions
+  - hashes
+  - centroids
+  - bounding_boxes
+  - dot_areas
+  - pairwise_distances
+  - pairwise_angles
+  - affine_reflection_scale_fit
+  forbidden_now:
+  - OCR
+  - hidden_content_detection
+  - semantic_image_interpretation
+  - generated_masks_committed
+  - route_extraction_from_pixels
+  - pixel_stream_generation
+  - target_selection
+canonical_measurement_discrepancy_policy:
+  if_canonical_measurement_differs_from_chat_value:
+    commit_computed_value: true
+    create_discrepancy_record: true
+    do_not_force_chat_value: true
+current_state_repair_blocker_count: 0
+doc_staleness_repair_blocker_count: 0
+source_lock_record_blocker_count: 0
+source_browser_overlay_blocker_count: 0
+future_diagnostic_blocker_count: 0
+canonical_source_crosscheck_blocker_count: 0
+stage6i_final_manifest_blocker_count: 0

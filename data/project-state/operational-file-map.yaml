@@ -9563,6 +9563,13 @@ stage_records:
     next_stage_decision: data/project-state/stage6g-next-stage-decision.yaml
     stage6h_source_lock_addendum: data/token-block/stage6g-stage6h-manifest-input-addendum.yaml
     acceptance_policy: docs/onboarding/codex-acceptance-criteria.md
+  stage-6h:
+    stage_id: stage-6h
+    summary: data/project-state/stage6h-summary.yaml
+    next_stage_decision: data/project-state/stage6h-next-stage-decision.yaml
+    stage6i_manifest_input_addendum: data/token-block/stage6h-stage6i-manifest-input-addendum.yaml
+    number_fact_overlays: data/operator-console/source-browser/number-fact-overlays/stage6h-dot-angle-right-triangle-source-lock-overlays.yaml
+    future_diagnostic_registry: data/token-block/stage6h-future-diagnostic-registry.yaml
 stage6_summary_record: data/project-state/stage6-summary.yaml
 stage6_diagnostic_backlog_census: data/project-state/stage6-diagnostic-backlog-census.yaml
 stage6_discovery_probe_manifest_registry: data/token-block/stage6-discovery-probe-manifest-registry.yaml

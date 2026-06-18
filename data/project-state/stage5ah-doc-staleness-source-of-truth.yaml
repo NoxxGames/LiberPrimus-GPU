@@ -1,23 +1,21 @@
 record_type: doc_staleness_source_of_truth_record
 schema: schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json
-stage_id: stage-6g
+stage_id: stage-6h
 status: complete
 latest_completed_stage_before_stage5ah: stage-5ag
-latest_completed_stage_after_this_stage: Stage 6F - Current-doc integrity, hook traceability,
-  and acceptance hardening, without execution
-latest_completed_stage_prefix: Stage 6G
-next_stage_after_this_stage: Stage 6H - Dot-angle and right-triangle number-triangle
-  bridge source-lock addendum, without execution
-expected_next_stage_prefix: Stage 6H
+latest_completed_stage_after_this_stage: Stage 6H - Current-state integrity repair
+  and dot-angle / right-triangle number-triangle source-lock addendum, without execution
+latest_completed_stage_prefix: Stage 6H
+next_stage_after_this_stage: Stage 6I - Final finite Stage 7 probe manifest and archive-run
+  contract, without execution
+expected_next_stage_prefix: Stage 6I
 latest_previous_stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics
   transition, without execution
 stage5ah_role: operational_doc_staleness_coverage_repair
 user_override_reason: README stage ledger stale, one section only goes to Stage 5N,
   other docs may be missed
-expected_latest_after_stage5ah: Stage 6E - Readiness consolidation, bridge source-locks,
-  hook/doc-staleness repair, and Stage 6F manifest inputs, without execution
-expected_next_after_stage5ah: Stage 6F - Final finite Stage 7 probe manifest and archive-run
-  contract, without execution
+expected_latest_after_stage5ah: historical; superseded by Stage 6H current truth
+expected_next_after_stage5ah: historical; superseded by Stage 6H current truth
 website_expansion_status: deferred_future_unnumbered_project
 scored_experiments_status: deferred_manifest_gate_required
 unsolved_page_cuda_status: blocked
@@ -43,8 +41,8 @@ current_stage_state_authoritative: true
 human_readable_docs_are_mirrors_only: true
 historical_sections_can_contain_old_next_stage_claims: true
 historical_sections_may_retain_old_stage_claims_if_clearly_historical: true
-latest_completed_stage_id: stage-6g
-recommended_next_stage_id: stage-6h
+latest_completed_stage_id: stage-6h
+recommended_next_stage_id: stage-6i
 current_truth_mirrors:
 - STATUS.md
 - ROADMAP.md
@@ -62,19 +60,21 @@ stage6_current_truth_refresh: true
 stage6b_current_truth_refresh: true
 stage6c_current_truth_refresh: true
 stage6d_current_truth_refresh: true
-recommended_next_stage_after_this_stage: Stage 6F - Final finite Stage 7 probe manifest
+recommended_next_stage_after_this_stage: Stage 6I - Final finite Stage 7 probe manifest
   and archive-run contract, without execution
 stage6e_warning_classification_record: data/project-state/stage6e-doc-staleness-warning-classification.yaml
 stage6e_scanner_nonweakening_record: data/project-state/stage6e-scanner-nonweakening-evidence.yaml
 stage6e_current_truth_refresh: true
 stage6f_edited_document_integrity_record: data/project-state/stage6f-edited-document-integrity-review.yaml
 stage6f_acceptance_policy_record: data/project-state/stage6f-strict-acceptance-policy.yaml
-latest_completed_stage_title: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock
-  handoff repair, hook confirmation, and acceptance-policy hardening, without execution
-recommended_next_stage_title: Stage 6H - Dot-angle and right-triangle number-triangle
-  bridge source-lock addendum, without execution
-recommended_next_stage_prefix: Stage 6H
+latest_completed_stage_title: Stage 6H - Current-state integrity repair and dot-angle
+  / right-triangle number-triangle source-lock addendum, without execution
+recommended_next_stage_title: Stage 6I - Final finite Stage 7 probe manifest and archive-run
+  contract, without execution
+recommended_next_stage_prefix: Stage 6I
 current_stage_state_path: data/project-state/current-stage-state.yaml
-current_handoff_path: codex-output/stage6g-codex-completion.md
+current_handoff_path: codex-output/stage6h-codex-completion.md
 stage6h_source_lock_addendum_required: true
 stage6h_final_manifest_required: false
+historical_stage5ah_fields_superseded_by_stage6h_current_truth: true
+stage6h_current_truth_refresh: true

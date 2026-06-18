@@ -1,0 +1,198 @@
+record_type: stage6h_prior_stage_repair_ledger
+schema: schemas/project-state/stage6h-prior-stage-repair-ledger-v0.schema.json
+stage_id: stage-6h
+stage_title: Stage 6H - Current-state integrity repair and dot-angle / right-triangle
+  number-triangle source-lock addendum, without execution
+metadata_only: true
+reviewability_stage: true
+source_lock_addendum_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+stage7_execution_allowed_next: false
+stage7_zip_archive_creation_allowed_next: false
+stage7_manifest_created_now: false
+stage7_archive_created_now: false
+probe_execution_performed_now: false
+diagnostic_probe_run_now: false
+diagnostic_execution_performed_now: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+byte_stream_generation_authorized_now: false
+ocr_performed: false
+image_forensics_performed: false
+hidden_content_image_forensics_performed: false
+semantic_image_interpretation_performed: false
+cuda_execution_performed: false
+scoring_performed: false
+benchmark_performed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+raw_source_files_committed: false
+raw_third_party_files_committed: false
+generated_outputs_committed: false
+stage6h_final_finite_stage7_manifest_created_now: false
+stage6h_archive_run_contract_finalized_now: false
+stage6h_creates_stage7_result_archive_now: false
+stage6h_generates_stage7_outputs_now: false
+stage6h_routes_to_stage7_now: false
+stage6h_runs_any_probe_now: false
+stage6h_generates_spiral_readouts_now: false
+stage6h_generates_triangle_readouts_now: false
+prior_stage_files_touched:
+- touched_file: data/project-state/stage5ah-doc-staleness-source-of-truth.yaml
+  prior_stage: stage-5ah
+  old_problem: stale Stage 6F final-manifest current-ish fields survived Stage 6G
+  new_value_or_policy: Stage 6H current truth fields plus historical/superseded labeling
+  why_patch_was_required: active doc-staleness source-of-truth record must not mislead
+    current-stage scanners
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: docs/onboarding/operational-file-map.md
+  prior_stage: current_doc_mirror
+  old_problem: Stage 5ED/Stage 5EE command examples appeared as current examples
+  new_value_or_policy: Stage 6H/Stage 6I placeholder/current examples
+  why_patch_was_required: operator called out exact stale command examples
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage6g.py
+  prior_stage: stage-6g
+  old_problem: current-stage validator assumed latest stage must remain Stage 6G
+  new_value_or_policy: validator accepts Stage 6H+ current-state while validating
+    Stage 6G records
+  why_patch_was_required: prior-stage validators must not restore stale current-state
+    fields
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage6b.py
+  prior_stage: stage-6b
+  old_problem: current-stage validator allowed later stages only through Stage 6G
+    -> Stage 6H
+  new_value_or_policy: validator also accepts Stage 6H -> Stage 6I while preserving
+    Stage 6B record checks
+  why_patch_was_required: Stage 6H must not roll back current-stage-state.yaml to
+    satisfy historical validators
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage6c.py
+  prior_stage: stage-6c
+  old_problem: current-stage validator allowed later stages only through Stage 6G
+    -> Stage 6H
+  new_value_or_policy: validator also accepts Stage 6H -> Stage 6I while preserving
+    Stage 6C record checks
+  why_patch_was_required: Stage 6H must not roll back current-stage-state.yaml to
+    satisfy historical validators
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage6d.py
+  prior_stage: stage-6d
+  old_problem: current-stage validator allowed later stages only through Stage 6G
+    -> Stage 6H
+  new_value_or_policy: validator also accepts Stage 6H -> Stage 6I while preserving
+    Stage 6D record checks
+  why_patch_was_required: Stage 6H must not roll back current-stage-state.yaml to
+    satisfy historical validators
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage6e.py
+  prior_stage: stage-6e
+  old_problem: current-stage validator allowed later stages only through Stage 6G
+    -> Stage 6H
+  new_value_or_policy: validator also accepts Stage 6H -> Stage 6I while preserving
+    Stage 6E record checks
+  why_patch_was_required: Stage 6H must not roll back current-stage-state.yaml to
+    satisfy historical validators
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage6f.py
+  prior_stage: stage-6f
+  old_problem: aggregate validator treated Stage 6H current state as unsupported later
+    state
+  new_value_or_policy: validator accepts Stage 6H as historical-successor state while
+    preserving Stage 6F record checks
+  why_patch_was_required: Stage 6H must not roll back current-stage-state.yaml to
+    satisfy Stage 6F compatibility tests
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage5ea.py
+  prior_stage: stage-5ea
+  old_problem: current-stage registry validation stopped at Stage 6G
+  new_value_or_policy: validator accepts Stage 6H as a valid successor stage
+  why_patch_was_required: full pytest validates historical Stage 5EA current-registry
+    isolation against the live Stage 6H state
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage5eb.py
+  prior_stage: stage-5eb
+  old_problem: current-stage registry policy allowed later stage pairs only through
+    Stage 6G -> Stage 6H
+  new_value_or_policy: validator accepts Stage 6H -> Stage 6I as a valid successor
+    pair
+  why_patch_was_required: full pytest validates historical Stage 5EB registry policy
+    against the live Stage 6H state
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage5ef.py
+  prior_stage: stage-5ef
+  old_problem: current-truth validator allowed later stage pairs only through Stage
+    6G -> Stage 6H
+  new_value_or_policy: validator accepts Stage 6H -> Stage 6I as a valid successor
+    pair
+  why_patch_was_required: historical current-truth validation must not require restoring
+    old Stage 5EF current state
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage5eg.py
+  prior_stage: stage-5eg
+  old_problem: current-truth validator allowed later stage pairs only through Stage
+    6G -> Stage 6H
+  new_value_or_policy: validator accepts Stage 6H -> Stage 6I as a valid successor
+    pair
+  why_patch_was_required: historical current-truth validation must not require restoring
+    old Stage 5EG current state
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/token_block/stage5ei.py
+  prior_stage: stage-5ei
+  old_problem: current-mirror validator allowed later stage pairs only through Stage
+    6G -> Stage 6H
+  new_value_or_policy: validator accepts Stage 6H -> Stage 6I as a valid successor
+    pair
+  why_patch_was_required: historical current-mirror validation must not require restoring
+    old Stage 5EI current state
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: python/libreprimus/doc_staleness/validation.py
+  prior_stage: stage-5ah
+  old_problem: doc-staleness source-of-truth validation allowed successor stage IDs
+    only through Stage 6G
+  new_value_or_policy: validator accepts Stage 6H source-of-truth repair records
+  why_patch_was_required: Stage 6H repairs the active Stage 5AH doc-staleness source-of-truth
+    current fields
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false
+- touched_file: schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json
+  prior_stage: stage-5ah
+  old_problem: shared source-of-truth schema rejected Stage 6I as recommended next
+    stage
+  new_value_or_policy: schema accepts Stage 6I as current recommended next stage
+  why_patch_was_required: committed Stage 5AH source-of-truth record is active current-mirror
+    metadata repaired by Stage 6H
+  historical_payload_changed: false
+  current_mirror_or_active_metadata_only: true
+  source_lock_payload_changed: false

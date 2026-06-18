@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "image_forensics_performed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "ocr_performed": {
+      "const": false
+    },
+    "probe_execution_performed_now": {
+      "const": false
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "record_type": {
+      "type": "string"
+    },
+    "route_stream_generated_now": {
+      "const": false
+    },
+    "schema": {
+      "type": "string"
+    },
+    "semantic_image_interpretation_performed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage7_archive_created_now": {
+      "const": false
+    },
+    "stage7_execution_allowed_next": {
+      "const": false
+    },
+    "stage7_manifest_created_now": {
+      "const": false
+    },
+    "stage7_zip_archive_creation_allowed_next": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-6h"
+    },
+    "stage_title": {
+      "const": "Stage 6H - Current-state integrity repair and dot-angle / right-triangle number-triangle source-lock addendum, without execution"
+    }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "stage_title",
+    "metadata_only",
+    "solve_claim"
+  ],
+  "type": "object"
+}

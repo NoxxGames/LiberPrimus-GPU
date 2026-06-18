@@ -60,7 +60,8 @@
     "recommended_next_stage_id": {
       "enum": [
         "stage-6g",
-        "stage-6h"
+        "stage-6h",
+        "stage-6i"
       ],
       "type": "string"
     },

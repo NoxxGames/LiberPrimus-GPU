@@ -2,12 +2,16 @@
 
 ## Current Stage
 
-- Latest completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
-- Current next stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
-- Next recommended prompt: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
-- Stage 6G current-doc/handoff repair blockers: 0.
-- Stage 6H final-manifest blockers: 1, `recent_dot_angle_triangle_material_not_source_locked`.
-- Stage 6H is routed as source-lock/readiness addendum work, not final Stage 7 manifest work.
+- Latest completed stage: Stage 6H - Current-state integrity repair and dot-angle / right-triangle number-triangle source-lock addendum, without execution.
+- Current next stage: Stage 6I - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Next recommended prompt: Stage 6I - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- Stage 6H current-state repair blockers: 0.
+- Stage 6H doc-staleness repair blockers: 0.
+- Stage 6H source-lock record blockers: 0.
+- Stage 6H Source Browser overlay blockers: 0.
+- Stage 6H future diagnostic blockers: 0.
+- Stage 6H canonical-source crosscheck blockers: 0.
+- Stage 6I final-manifest readiness blockers: 0.
 - No probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, Stage 7 manifest/archive, or solve work is authorized.
 
 ## Completed in Stage 5EG
@@ -1516,7 +1520,7 @@ Historical next route at Stage 6C closeout: Stage 6D - Final finite Stage 7 prob
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6F repairs current-facing document integrity and hook/preflight traceability while keeping Stage 7 execution and ZIP/archive creation blocked.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6F repairs current-facing document integrity and hook/preflight traceability while keeping Stage 7 execution and ZIP/archive creation blocked.
 <!-- stage6d:end -->
 
 <!-- stage6e:start -->
@@ -1524,7 +1528,7 @@ Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridg
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
@@ -1536,7 +1540,7 @@ Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contra
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
 
@@ -1546,8 +1550,8 @@ Stage 6F did not create a final Stage 7 manifest, finalize an archive-run contra
 <!-- stage6g:start -->
 ## Stage 6G Status
 
-- Latest completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
-- Current next stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+- Historical latest stage at Stage 6G closeout: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
+- Historical Stage 6G route pointed to Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 - Current-doc and handoff repair blockers: 0.
 - Stage 6H final-manifest blockers: 1, `recent_dot_angle_triangle_material_not_source_locked`.
 - Stage 6H is routed as a source-lock/readiness addendum, not final Stage 7 manifest work.

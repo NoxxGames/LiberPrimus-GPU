@@ -1,0 +1,127 @@
+record_type: stage6h_exact_constants_validation
+schema: schemas/project-state/stage6h-exact-constants-validation-v0.schema.json
+stage_id: stage-6h
+stage_title: Stage 6H - Current-state integrity repair and dot-angle / right-triangle
+  number-triangle source-lock addendum, without execution
+metadata_only: true
+reviewability_stage: true
+source_lock_addendum_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+stage7_execution_allowed_next: false
+stage7_zip_archive_creation_allowed_next: false
+stage7_manifest_created_now: false
+stage7_archive_created_now: false
+probe_execution_performed_now: false
+diagnostic_probe_run_now: false
+diagnostic_execution_performed_now: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+byte_stream_generation_authorized_now: false
+ocr_performed: false
+image_forensics_performed: false
+hidden_content_image_forensics_performed: false
+semantic_image_interpretation_performed: false
+cuda_execution_performed: false
+scoring_performed: false
+benchmark_performed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+raw_source_files_committed: false
+raw_third_party_files_committed: false
+generated_outputs_committed: false
+stage6h_final_finite_stage7_manifest_created_now: false
+stage6h_archive_run_contract_finalized_now: false
+stage6h_creates_stage7_result_archive_now: false
+stage6h_generates_stage7_outputs_now: false
+stage6h_routes_to_stage7_now: false
+stage6h_runs_any_probe_now: false
+stage6h_generates_spiral_readouts_now: false
+stage6h_generates_triangle_readouts_now: false
+stage6h_exact_constants_must_be_validated:
+  three_dot_angle:
+    ratio: 7/8
+    atan_degrees: 41.1859
+  branch_binary:
+    right_bits: '11111'
+    right_value: 31
+    y_x_black_bits: '01110'
+    y_x_black_value: 14
+    y_x_white_bits: '10001'
+    y_x_white_value: 17
+    concat_y_x_bits: '0111011111'
+    concat_y_x_value: 479
+    geometric_concat_value: 447
+    prime_count_pi_447: 86
+  pdd153:
+    total_cells: 153
+    row_count: 17
+    center_position: 41
+    path_56311:
+    - 41
+    - 46
+    - 52
+    - 55
+    - 66
+    offsets_56311:
+    - 5
+    - 11
+    - 14
+    - 25
+    d4_diagonal:
+    - 7
+    - 12
+    - 18
+    - 25
+    - 33
+    - 42
+    - 52
+    - 63
+    - 75
+    - 88
+    - 102
+    - 117
+    - 133
+    - 150
+  right_triangle:
+    visual_7_8_endpoint: 133
+    visual_8_7_endpoint: 148
+    folded_7_8_endpoint: 50
+    folded_8_7_endpoint: 51
+  vertical_split:
+    left_nonspine: 72
+    spine: 9
+    right_nonspine: 72
+    shared_spine_surface: 81
+    spine_positions:
+    - 1
+    - 5
+    - 13
+    - 25
+    - 41
+    - 61
+    - 85
+    - 113
+    - 145
+  pdd_transform:
+    word52_result: WAY
+    word55_prefix: READ
+    word55_full_plaintext_claimed: false
+  residues:
+    I_AM_gp: 199
+    I_AM_mod153: 46
+    CIRCUMFERENCE_gp: 398
+    CIRCUMFERENCE_mod153: 92
+    UROBOROS_gp: 160
+    UROBOROS_excess: 7
+    OROBOROS_gp: 164
+    OROBOROS_excess: 11
+    OUROBOROS_gp: 167
+    OUROBOROS_excess: 14
+prime_count_policy:
+  pi_447_means_number_of_primes_less_than_or_equal_to_447: true
+  pi_447_expected_value: 86
+  not_prime_86: true
+  not_one_indexed_prime_lookup: true

@@ -278,7 +278,7 @@ def validate_stage6f_files_and_schemas() -> ValidationResult:
 def validate_stage6f_current_stage_transition() -> ValidationResult:
     current = read_yaml(CURRENT_STAGE_STATE_PATH)
     if current.get("latest_completed_stage_id") != STAGE_ID:
-        allowed_later_stages = {"stage-6g"}
+        allowed_later_stages = {"stage-6g", "stage-6h"}
         errors = []
         if current.get("latest_completed_stage_id") not in allowed_later_stages:
             errors.append("current stage has advanced beyond Stage 6F to an unsupported later stage")

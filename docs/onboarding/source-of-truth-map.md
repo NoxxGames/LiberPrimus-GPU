@@ -2,13 +2,13 @@
 
 ## Current Operational Truth
 
-- The current authority is `data/project-state/current-stage-state.yaml`.
-- The latest completed stage is `stage-6g`.
-- The next stage is `stage-6h`: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
-- Stage 6H is a source-lock/readiness addendum because recent dot-angle/right-triangle number-triangle material remains chat-only pending source-lock.
-- The acceptance policy is `docs/onboarding/codex-acceptance-criteria.md`.
-- The Stage 6H handoff addendum is `data/token-block/stage6g-stage6h-manifest-input-addendum.yaml`.
-- The post-push local completion handoff path is `codex-output/stage6g-codex-completion.md`.
+- The latest completed stage is `stage-6h`.
+- The next stage is `stage-6i`: Stage 6I - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+- The authoritative current-state path is `data/project-state/current-stage-state.yaml`.
+- The acceptance policy path is `docs/onboarding/codex-acceptance-criteria.md`.
+- The Stage 6I handoff addendum is `data/token-block/stage6h-stage6i-manifest-input-addendum.yaml`.
+- The post-push local completion handoff path is `codex-output/stage6h-codex-completion.md`.
+- No Stage 5ED/5EE or Stage 6F/6G current claim is authoritative here.
 
 ## Research And Workflow Truth
 
@@ -221,7 +221,7 @@ are evidence, not current truth.
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
@@ -233,7 +233,7 @@ Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contra
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
 

@@ -4466,3 +4466,14 @@ stages:
     bridge source-lock addendum, without execution
   guardrails: No Stage 7 manifest, archive, probe execution, route stream, byte stream,
     new theory source-lock, overlay, or solve claim.
+- stage_id: stage-6h
+  stage_title: Stage 6H - Current-state integrity repair and dot-angle / right-triangle
+    number-triangle source-lock addendum, without execution
+  status: complete
+  summary: Repaired Stage 6G current-state/doc-staleness misses and added review-only
+    dot-angle/right-triangle/PDD153 source-lock metadata.
+  recommended_next_stage_id: stage-6i
+  recommended_next_stage_title: Stage 6I - Final finite Stage 7 probe manifest and
+    archive-run contract, without execution
+  guardrails: No Stage 7 manifest, archive, probe execution, route stream, byte stream,
+    image interpretation, target selection, or solve claim.

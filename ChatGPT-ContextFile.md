@@ -2,11 +2,13 @@
 
 ## Current Project State
 
-Stage 6G repaired stale current docs after Stage 6F. The source-of-truth-map Current Operational Truth, start-here current routing, and ChatGPT current/historical boundary now point to Stage 6G as latest complete and Stage 6H as the next source-lock/readiness addendum.
+Stage 6H repaired Stage 6G current-state defects and stale doc-staleness source-truth fields. The current state is Stage 6H complete with Stage 6I next, using `data/token-block/stage6h-stage6i-manifest-input-addendum.yaml` as the explicit path-based handoff input.
 
-Stage 6H handoff addendum explicitly merges Stage 6C/6D/6E/6F/6G inputs. Stage 6H is routed as a dot-angle/right-triangle source-lock addendum because recent dot-angle/right-triangle material remains chat-only pending source-lock.
+Stage 6H source-locked review-only dot-angle/right-triangle/PDD153 metadata: the three-dot 7:8 angle41 bridge, branch-dot binary 14/17/31/479 bridge, PDD153 right-angle transform, visual 7:8 ray to 133/d4, folded 7:8/8:7 hits 50/51, vertical split 72|9|72, shared spine 81/81 surfaces, row10 seam 49/52 and 50/51, word52 WAY and word55 READ prefix under PDD-minus-reversed-word, I AM/CIRCUMFERENCE mod153 edge bridge, and OUROBOROS variants 7/11/14 offsets.
 
-Stage 6G repaired acceptance-policy integration expanded coverage, preserved hook verification honesty, and created no Stage 7 manifest/archive/probe/execution created. No route streams, byte streams, target selection, source-lock payload rewrite, image interpretation, or solve claim were performed.
+The center bridge is source-locked as center position/index 41 only. Center-rune GP value 41 remains an operator claim pending source confirmation unless a committed record later proves it.
+
+All Stage 6H future diagnostics remain disabled. Stage 6H created no Stage 7 manifest, result archive, probe execution, route stream, byte stream, OCR/image/stego/CUDA/scoring/benchmark output, target selection, or solve claim.
 
 ## Historical Stage 6C
 

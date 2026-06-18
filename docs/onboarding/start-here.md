@@ -1,4 +1,10 @@
-# Start Here
+
+
+## Current State
+
+The latest completed stage is Stage 6H. The next routed stage is Stage 6I - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+
+Stage 6H repaired Stage 6G current-state/doc-staleness misses and source-locked dot-angle/right-triangle/PDD153 review metadata. The Stage 6I addendum is `data/token-block/stage6h-stage6i-manifest-input-addendum.yaml`; it is a handoff input, not a final Stage 7 manifest.
 
 ## What This Project Is
 
@@ -10,13 +16,13 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current Authority
 
-The latest completed stage is Stage 6G. The next routed stage is Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+The latest completed stage is Stage 6H. The next routed stage is Stage 6I - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
-Stage 6H is source-lock/readiness addendum work, not final Stage 7 manifest construction, because recent dot-angle/right-triangle material remains chat-only pending source-lock. Future Codex work must apply `docs/onboarding/codex-acceptance-criteria.md` and keep all execution gates closed unless a later prompt explicitly opens them.
+Stage 6I receives the explicit Stage 6H handoff addendum and remains without execution unless a later prompt explicitly opens execution gates. Future Codex work must apply `docs/onboarding/codex-acceptance-criteria.md` and keep all execution gates closed unless a later prompt explicitly opens them.
 
 ## Historical Stage 6C-6F Boundaries
 
-Stage 6C, Stage 6D, Stage 6E, and Stage 6F remain historical source-lock/readiness and repair stages. Stage 6C preserved the OUROBOROS/I31 addendum, Stage 6D preserved canonical doublet/boundary metadata, Stage 6E consolidated bridge source-lock readiness, and Stage 6F repaired current-doc, hook, traceability, alias, dju-bei, and acceptance-policy quality. Their old next-stage wording is historical only and is superseded by the current Stage 6G -> Stage 6H source-lock/readiness route above.
+Stage 6C, Stage 6D, Stage 6E, and Stage 6F remain historical source-lock/readiness and repair stages. Stage 6C preserved the OUROBOROS/I31 addendum, Stage 6D preserved canonical doublet/boundary metadata, Stage 6E consolidated bridge source-lock readiness, and Stage 6F repaired current-doc, hook, traceability, alias, dju-bei, and acceptance-policy quality. Their old next-stage wording is historical only and is superseded by the current Stage 6H -> Stage 6I route above.
 
 ## Where To Start
 

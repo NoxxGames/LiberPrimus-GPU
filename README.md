@@ -8,239 +8,35 @@
 
 ## Current boundaries and deferred work
 
-Current completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
+Current completed stage: Stage 6H - Current-state integrity repair and dot-angle / right-triangle number-triangle source-lock addendum, without execution.
 
-Current next prompt: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Current next prompt: Stage 6I - Final finite Stage 7 probe manifest and archive-run contract, without execution.
 
-Stage 6G repairs current-doc and handoff integrity and routes Stage 6H as source-lock/readiness addendum work because recent dot-angle/right-triangle number-triangle material remains chat-only pending source-lock. Stage 6G did not source-lock that new material, create probes or overlays, create a Stage 7 manifest or archive, generate route or byte streams, execute tools, select targets, or claim a solve.
-
-- Stage 5EG installed deterministic stale-current guardians and kept hooks scanner-based.
-- Stage 5EH added Lag5/outguess/byte-string/red-number/F5 source-lock context and review-only overlays without execution.
-- Stage 5EI closed Stage 5 as a triangle-transposition and diagnostics-transition metadata stage, routing next work to Stage 6 readiness without execution.
-- Stage 6 completed diagnostic-backlog readiness metadata.
-- Stage 6B repaired Stage 6 mappings and hook behavior.
-- Stage 6C added review-only OUROBOROS/I31 source-lock metadata.
-- Stage 6D added canonical doublet-boundary source-lock metadata.
-- Stage 6E consolidated bridge source-lock readiness.
-- Stage 6F repaired current-doc, hook, traceability, alias, dju-bei, and acceptance-policy quality.
+Stage 6H repairs Stage 6G current-state and doc-staleness misses, source-locks dot-angle/right-triangle/PDD153 review metadata, creates required Source Browser overlays, and hands explicit inputs to Stage 6I. Stage 6H created no final Stage 7 manifest, archive, probe execution, route stream, byte stream, target selection, image interpretation, or solve claim.
 
 These are not permanent project exclusions. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
-- No generated output is a solve by itself.
-- No Liber Primus page is claimed solved; material that is still unsolved must not receive a solve claim without a pinned corpus, manifest, transform chain, reproducible output, tests, and review.
-- Raw data must not be overwritten or committed.
-- Generated outputs and SQLite databases must not be committed.
-- Operator-console browsing is review infrastructure only and must not become puzzle execution, OCR, image forensics, scoring, route extraction, or raw-source mutation.
-- Stage 5DS music, Ouroboros/self-reference, and token-block static records are review-only source-lock context. They are not route extraction, byte-stream generation, executable machine/VM code, scoring evidence, or solve evidence.
-- Stage 5DT number-fact cards are reviewability/UI infrastructure. They do not backfill historical facts, rewrite source-lock records, select a target, authorize byte streams or execution, or make number facts solve evidence.
-- Stage 5DU community visual/red-heading/negative-space records are compact source-lock metadata only. They do not validate visual intent, run OCR/image forensics, execute community code, extract routes, select targets, authorize byte streams or execution, or make visual/number facts solve evidence.
-- Stage 5DV Source Browser repair records are GUI/index and context-hardening metadata only. They make Source Browser path handling and responsiveness safer before review, but do not review number facts, rewrite source locks, select targets, authorize byte streams or execution, or make solve evidence.
-- Stage 5DX number-fact review batch 002 records are reviewability overlays only. They add visual/red-heading/transform bridge NumberFactCard overlays and preserve overlay-only card support, but do not rewrite historical source locks, backfill facts directly, select targets, authorize byte streams or execution, or make solve evidence.
-- Stage 5DY validation repair records are infrastructure only. They add focused/stage-fast/local-fast/full-parallel/full-serial-rare/CI validation profiles, keep the parallel validation cap at 8 workers, make full serial pytest a rare fallback rather than the default local stage loop, harden stage-isolation and shared-schema policy, and require validate/summary commands to be non-mutating. They do not perform number-fact batch 3, rewrite source locks, select targets, generate byte streams, execute anything, or make solve evidence.
-- Stage 5DZ Triangle/Page32 bounded-findings records are review-only source-lock enrichment. They preserve the PDD153 heading warning, candidate-only WAY arithmetic, 56311 center-word52 bridge, Page32 red-header 3299->2472 route-selection candidate, direct-method negative-result notes, and future design notes, but do not perform number-fact batch 3, select targets, execute routes, generate route streams or bytes, run image forensics/OCR/target validation, or make solve evidence.
-- Stage 5EA validation throughput records are infrastructure only. They create the current-stage registry, verify Stage 5DZ completion without requiring Stage 5DZ to remain latest, repair hyphenated stage-id validation wrappers, add Source Browser number-fact overlay caching, preserve the 8-worker validation cap, and route the deferred third number-fact review batch to Stage 5EB. They do not add source-lock evidence, perform review batch 3, add overlays, rewrite source locks, select targets, generate bytes, execute anything, or make solve evidence.
-- Stage 5EB validation finalization records are infrastructure only. They preserve Stage 5EA, move local validation defaults/caps to 10 workers and 10 pytest workers, keep full serial pytest as the explicit `full-serial-rare` fallback, repair current-stage registry finalization handoff policy, genericize stage wrapper aliases, and route the deferred third number-fact review batch to Stage 5EC. They do not add source-lock evidence, perform review batch 3, add overlays, rewrite source locks, select targets, generate bytes, execute anything, or make solve evidence.
-- Stage 5EC number-fact review batch 003 records are reviewability overlays only. They add 25 triangle/Page32/token-static/music/self-reference NumberFactCard overlays for 20 selected source-lock entries while preserving Stage 5EB's 10-worker validation policy, but do not rewrite historical source locks, add new source-lock evidence, source-lock lag5, backfill facts directly, select targets, authorize byte streams or execution, or make solve evidence.
-- Stage 5ED number-fact review batch 004 records are reviewability overlays only. They add 25 DiskCipher/visual-method/route-context NumberFactCard overlays for 20 selected source-lock entries while preserving Stage 5EC overlays and Stage 5EB's 10-worker validation policy, but do not rewrite historical source locks, add new source-lock evidence, backfill facts directly, select targets, authorize byte streams or execution, or make solve evidence.
-- Stage 5EE number-fact review batch 005 records are reviewability overlays only. They add 25 source-register/music/Fandom/residual NumberFacts NumberFactCard overlays for 20 selected source-lock entries while preserving Stage 5ED overlays and Stage 5EB's 10-worker validation policy, but do not rewrite historical source locks, add new source-lock evidence, backfill facts directly, select targets, authorize byte streams or execution, or make solve evidence.
+No generated output is a solve by itself. No Liber Primus page is claimed solved unless a future reproducible manifest and matching output prove it. Any page still unsolved must not receive a solve claim.
 
 ### Current boundaries
 
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad unsolved-page search campaigns: not started.
-- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only, and Stage 3S applies it to the bounded 72-candidate Onion 7 explicit seed pack only. Stage 4I consolidates these score labels and calibration records as triage-only metadata, not solve evidence.
-- Visual/image-derived observations: registry and deterministic feature summaries only, plus deterministic review transforms; Stage 3K records source locks and reviewable observations, Stage 3M records deterministic local image features, and Stage 3P generates ignored review transforms/contact sheets. No image-derived text experiments are executed.
-- Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, Stage 3U tests the manifest-declared signed/public string variant pack only, and Stage 4G refreshes source-backed Stage 4B strings only. All use exact byte-string logging with no fuzzy, partial, dictionary, hashcat, GPU, or solve claims.
-- Stego/OutGuess work: Stage 3V adds a deterministic OutGuess regression harness only. Stage 4F adds fixture source-lock metadata and toolchain requirements only. Missing tools/assets are explicit skipped outcomes, generated payloads stay ignored, and no broad image scan, stego extraction, audio scan, or payload interpretation is performed.
-- Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Stage 3O promotes a bounded, public-safe subset of redacted source-discovery records. Stage 3Q builds ignored redacted topic shards for local AI/deep-research review. Stage 3R audits those leads, promotes only corroborated public/source-observation records, preserves false positives as negative controls, and queues disabled post-Discord manifests. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
-- Full Discord review bundles: Stage 4A builds redacted chronological streams, channel shards, topic shards, indexes, an LP page gallery, and an SFTP-ready static site under ignored paths for Deep Research handoff. Raw Discord logs, usernames, user IDs, message IDs, private URLs, generated static site files, copied LP page images, thumbnails, archives, and generated bundle outputs are not committed.
-- Source-lock and visual observation intake: Stage 4B promotes allowlisted public-source records only, records source-health metadata, preserves cuneiform/delimiter/dot/number-square/cookie observations as review-only and non-canonical, and stores false-positive classes as negative controls. No Stage 4B visual observation is an experiment seed.
-- Visual annotation: Stage 4C creates cuneiform, delimiter, dot-pattern, number-square-reference, and visual negative-control annotation tasks plus a generated local annotation site and blank coordinate templates. Coordinates and readings are separate; no Stage 4C visual task is verified, canonical, or usable as an experiment seed.
-- Bounded numeric verification: Stage 4D runs only no-fudge numeric and metadata audits. GP/rune batch002 skips without exact new spans, number-square routes skip without locked raw values, delimiter/dot audits infer no meaning, cuneiform seed execution remains deferred, and cookie pack v2 is deferred to a future explicit stage.
-- Source-delta audits: Stage 4E records selected `cicada-solvers/iddqd` tree metadata only. It does not blind-mirror external repositories, commit raw images/audio/fonts/binaries, run stego tools, or infer meaning from compression artefacts.
-- Public source-lock snapshots: Stage 4K locks a small allowlisted public-source subset with metadata, canonical URLs, retrieval status, hashes where fetched, copyright notes, explicit snapshot policies, and GitHub commit-addressed references. It does not broad crawl, blind-mirror repositories, commit full HTML by default, or commit binary/image/audio/font/archive artefacts.
-- Cicada source harvester: Stage 5AF adds local-only source-manifest, dry-run planning, hash/inventory/extraction, and research-bundle scaffold tooling. Stage 5AG runs that tooling against user-provided ignored `third_party/` material and commits compact local source inventory, manifest linkage, source-lock candidate, gap, research-bundle readiness, and guardrail metadata only. Stage 5AH repairs operational doc staleness coverage before extraction continues. Stage 5AI creates ignored curated research-input bundle scaffolds plus compact source-card, content-index, website-ingest, Deep-Research pack, missing-source, and guardrail metadata. Stage 5AJ integrates ignored `third_party/UsefulFilesAndIdeas/` local workbooks/text/image metadata, important-link indexes, source-card/content-index updates, extraction-fidelity policy, redaction policy, and scraper-capture profiles while keeping private Deep Research extracts minimally redacted and public website views conservative/review-gated. Stage 5AK integrates ignored `third_party/UsefulFilesAndIdeas/community-facts/` message and attachment metadata, claim records, correction logs, and arithmetic preflight checks as review-only community observations. Stage 5AL creates the committed metadata-only website-ingest package and private Deep Research export contract while keeping public website-ready at `0`. Stage 5AM renders that metadata into an ignored uploadable private static index at `website-export/stage5am/research-index/` with no raw bodies or private identifiers. Stage 5AN builds an ignored private content pack, hosted private-content export, and combined SFTP-ready webroot under `deep-research-content-packs/stage5an/` and `website-export/stage5an/` for private Deep Research handoff. Network fetching/cloning remains deferred, Google Drive must not be used as project storage, local archive/workbook/community listings and generated extracts are not source truth, and raw source files remain ignored and uncommitted.
-- Page 49-51 token block: Stage 5AP creates metadata-only source locks, canonical 32x8 token transcription, logical coordinate records, primary-60 alphabet/mapping preflight, null-control planning, Deep Web Hash context, and OutGuess positive-control guardrails. Stage 5AR adds original-image source locks, source-backed 10/13/9 page-split records, 256 original-image pixel-coordinate records, coordinate validation, and case-ambiguity policy. Stage 5AT packages the 9 active token-case ambiguity classes into 203 human-review challenges plus 212 canonical-transcription challenge records. Stage 5AU records that first pack as count-valid but not usable for decisions, then rebuilds a v2 ignored review pack with glyph-candidate crops, context crops, row context, overlays, full challenge visibility, and blank decision templates while keeping the canonical transcription unchanged. Stage 5AV integrates the filled local decision template as metadata only, confirming 126 current tokens, preserving 77 unresolved variant branches, and creating compact branch-manifest records without changing canonical transcription or generating variant byte streams. Stage 5AW repairs a Stage 5AV parser-quality issue by excluding prose fragments from reviewer-extra possible tokens, preserving visual placeholders separately, and rebuilding superseding branch metadata. Stage 5AX inserts opt-in parallel validation infrastructure. Stage 5AY consumes the repaired Stage 5AW branch metadata to design bounded future preflight manifests, branch eligibility, controls, branch budgets, result schema previews, DWH context, and execution gates without generating byte streams or executing experiments. Stage 5AZ repairs the duplicated `unresolved_as_current_only` family ID by keeping one family record with both baseline and unresolved-policy taxonomy memberships and supersedes the Stage 5AY bounded variant-family manifest for review. Stage 5BB canonicalises active-manifest precedence, validates the Stage 5AY branch-eligibility policy, blocks stale Stage 5AV/5AY active loads, and creates a no-execution runner scaffold. Stage 5BD implements deterministic dry-run plan IDs, future result-path validation, family counters, fixture-only records, archive marker policy, and validation-evidence consolidation while preserving the no-byte-stream boundary. Stage 5BF pauses deeper token-block planning to source-lock the 2012-2017 historical route corpus and technique taxonomy for Deep Research review. Stage 5BI records Fandom / Uncovering Cicada context, 2014 surfaces, spreadsheet metadata, archive crosswalk candidates, negative controls, and source gaps without changing page 49-51 active records. Stage 5BJ closes the exact 2014 surface archive crosswalks and boards/media equivalence metadata while keeping Fandom page bodies and token-block execution blocked. Stage 5BK integrates those historical-route constraints, source-locks iddqd-v2 as compact metadata, records String 4 page49-51 matrix-hex context, and keeps active token-block records unchanged. Stage 5BM integrates Stage 5BL findings and classifies String 4 as a partial branch match against Stage 5AW metadata: 249 canonical matches, 6 Stage 5AW-supported noncanonical positions, and 1 unsupported position. Stage 5BN audits that single unsupported position, records target-only local spreadsheet support for `0l`, proposes an inactive review-only addendum, and keeps active records plus all execution gates blocked. Stage 5BO source-locks the original and corrected ignored decision templates, records 8 compact operator errata, builds an inactive errata-aware planning universe, and reclassifies String 4 as a full branch match for planning only: 249 canonical matches, 6 Stage 5AW-supported noncanonical positions, 1 operator-errata-supported noncanonical position, and 0 unsupported positions. Stage 5BQ consumes the Stage 5BP review outcome, records that full-branch status as inactive planning context only, blocks String 4 active input and dry-run ingestion now, adds fail-closed future dry-run requirements, and preserves Stage 5BD dry-run records. Stage 5BS then integrates the Stage 5BR accept-with-warnings review outcome by adding a closed planning-ingestion gate, fail-closed future-runner citation policy, inactive-sidecar consumption policy, active-ingestion blocker, reviewable source-digest/validation evidence, and Stage 5BT review routing. Stage 5BU repairs the Stage 5BS preserved active-lineage path for the Stage 5AW repaired branch manifest, adds erratum/digest/validation records, and hardens Stage 5BS validation while keeping the gate closed. Stage 5BW consumes Stage 5BV findings, proposes a future inactive-sidecar planning-ingestion model, creates manifest-supersession preflight records without superseding active manifests, preserves Stage 5BD run-plan IDs, and routes the closed proposal to Stage 5BX review. Stage 5BY consumes the Stage 5BX review outcome, classifies the Stage 5BW source-digest duplicates, adds record-family filename-equivalence metadata, creates an inactive planning manifest scaffold and no-execution planning-ingestion sidecar, preserves Stage 5BD run-plan IDs, and routes the metadata to Stage 5BZ review. Stage 5CI consumes the Stage 5CH review outcome, hardens future operator approval, Deep Research acceptance, combined approval-gate, and activation-decision templates, and keeps every approval, activation, no-byte, no-execution, supersession, and String 4 gate unsatisfied or closed. Stage 5CK consumes the Stage 5CJ review outcome, creates fixture-only approval/acceptance/activation-decision validation packs and a review package, proves fixture records cannot satisfy real gates, preserves Stage 5CI/5CG/5CE/5CC/5BD records, and selects Stage 5CL review. Stage 5CM consumes the Stage 5CL review outcome, preserves Stage 5CK fixture-only packs, hardens fixture-vs-real approval boundaries, adds end-to-end readiness-boundary validation and credential-redaction policy, caps Stage 5CM-and-later local parallel validation at 8 workers, and selects Stage 5CN review. Stage 5CO consumes the Stage 5CN review outcome, packages the future real approval/acceptance/combined-gate/activation transition path as metadata, records current missing requirements, keeps real records absent, and selects Stage 5CP review. Stage 5CQ consumes the Stage 5CP review outcome, preserves the Stage 5CO readiness and transition records, creates only a future operator-decision package scaffold, restores strict `codex-output` handoff discipline, keeps real decisions absent, and selects Stage 5CR review. Stage 5DK source-locks 14 Fandom pages as compact metadata and refines the Page 56 512-bit hash contract without selecting an algorithm or preimage class. Stage 5DL source-locks the triangle/disk/Reddit/quote/koan evidence cluster as compact metadata, records `pdd_153_triangle_word_prime_route_v1` as a future operator preference only, preserves Stage 5DG approval/Stage 5BD/active-lineage gates, and selects Stage 5DM target-priority decision packaging without execution. Stage 5DM adds the Blake, Sacred Book overlay, Page6 magic-square precedent, full-page motif, Page32 Moebius/Fibonacci-prime-index, doublet-scarcity, evidence-atlas, and path-hygiene source-lock addendum as metadata only, preserves Stage 5DL, selects no target, and selects Stage 5DN review/readiness work. Stage 5DN source-locks updated DiskCipher v1 material, records triangle/circumference bridge metadata, quarantines probability claims, selects no target, and selects Stage 5DO review/readiness work. The block remains inactive, not decoded, not treated as intentional evidence, not used for hash/preimage search, and not an experiment seed.
-- Parallel validation: Stage 5AX adds an opt-in local `libreprimus parallel-validation` harness and `scripts/ci/run-parallel-validation.*` wrappers that run explicitly read-only validation commands concurrently and use pytest-xdist when available or deterministic subprocess sharding otherwise. Git, GitHub, network/remote, generated-output-writing, commit/push, issue-update, and cryptanalytic commands remain serial or blocked. The existing CI path remains conservative unless a future prompt explicitly opts into the harness.
-- Observation promotion ledger: Stage 4L joins Stage 4J review decisions with Stage 4K source locks and records ready, blocked, deferred, quarantined, rejected, source-reference-only, and control-only states. Ready does not mean executed; all future manifests remain disabled.
-- Image source-variant and compression preflight: Stage 4M scans ignored local LP page images for metadata and deterministic metric-only compression summaries, records source-variant comparison readiness, keeps star-like/compression-like artefacts review-only, and keeps the bigram/Fibonacci-421 observation blocked pending reproducible matrix and null controls. It does not commit raw images, generated visualisations, or execute image/bigram experiments.
-- Stego/audio positive-control readiness: Stage 4N records fixture readiness, cache policy, expected-output requirements, toolchain state, and synthetic controls. Historical OutGuess/OpenPuff/MP3/audio cases remain blocked until assets, exact expected outputs, and tools are ready.
-- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Later stages extend this into result-store, benchmark-planning, CUDA-contract, native-conformance, prime-minus-one, synthetic CUDA parity, Stage 5AC compact reporting/bounded-p56 preflight metadata, the Stage 5AD bounded p56 CUDA mismatch record, the Stage 5AD-fix reference-contract investigation, and Stage 5AE corrected formula-parity reporting. Stage 5AB adds a document staleness gate over those operational claims; Stage 5AH hardens it with stage-ledger truncation, operational-file-map coverage, and current/next-stage checks so README-like ledgers cannot silently stop at older stages. This is infrastructure for future native/CUDA parity, not a broad experiment runner.
-- Scoring contract: Stage 4I provides scorer inventory, finite confidence-label records, compatibility mappings, calibration-profile/report records, and CPU batch score compatibility checks. Score labels can create review leads only and cannot imply solved plaintext.
-- Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
+- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only, and Stage 3S applies it to the bounded 72-candidate Onion 7 explicit seed pack only.
+- Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only.
+- Visual/image-derived observations: registry and deterministic feature summaries only.
 - CUDA experiment campaigns: not started.
-- Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
-- Broad unsolved-page campaigns: not started.
-- Approval packets: optional/high-risk audit tooling, not the default path for policy-passing bounded CPU items.
-- Existing CUDA code and metadata are summarized by the latest staged-plan and CUDA notes; broad CUDA and unsolved-page CUDA remain blocked unless an explicit future prompt scopes them with matching CPU references, parity tests, and benchmark plans.
 
 ### Deferred future work
 
-- Stage 5DR - Source-browser GUI review and usability repair, without puzzle execution.
-- Website expansion is deferred to a future unnumbered project.
-- Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
-- Search campaigns.
-- CUDA kernels after CPU references and parity tests exist.
-- Benchmark campaigns after stable CPU/GPU baselines exist.
+CUDA kernels after CPU references and parity tests exist. Broad search/scoring/CUDA campaigns: not started.
 
 ### Already implemented since Stage 0A
 
-- Profile and corpus-candidate infrastructure.
-- Ten known solved baseline fixtures.
-- CPU transform registry.
-- Solved-baseline manifest runner.
-- JSONL/SQLite result-store foundation.
-- Raw-data-free GitHub Actions CI.
-- CI-gated consistency checks.
-- CPU exploratory experiment dry-run planner.
-- Bounded CPU execution harness for synthetic and solved-fixture-only runs.
-- Exploratory experiment proposal and human-approval workflow.
-- Approval-gated execution path for approved synthetic/solved controls.
-- First real bounded exploratory approval-readiness packet.
-- Standing bounded local CPU operator policy and queue scaffold.
-- Minimal CPU Caesar plus affine executor and triage scoring for the first `841` candidate bounded queue item.
-- Candidate lead inspection, refined triage scoring, reranking, and reverse-direction bounded comparison.
-- Scoring calibration with positive controls, null controls, negative controls, tiny crib checks, and a conservative Stage 3D queue recommendation.
-- Small explicit-key Vigenere preview for the four declared known-motif keys, with calibrated scoring and ignored generated outputs.
-- Deep Research method backlog ingestion, deterministic Stage 3E queue counts, and dry-run executor-support classification.
-- Reset/advance-aware Stage 3F LP evidence-key Vigenere pack executor and 48-candidate run.
-- Bounded Stage 3G p56-local prime-minus-one offset sweep executor and 256-candidate run, plus a queued future Mersenne/perfect-number probe.
-- Shared Stage 3H reset/advance state machine, 64-candidate ablation run, and 100 family-specific negative controls.
-- Bounded Stage 3I historical motif Vigenere pack run for 14 declared keys and 56 candidates.
-- Bounded Stage 3J Mersenne/perfect-number stream probe for the finite declared exponent sequence and 192 candidates.
-- Stage 3K historical archive/source-lock, local image metadata, visual numeric observation, and cookie/hash artefact registry.
-- Stage 3L bounded SHA-256 cookie-hash preimage packs for the two archived 2013 cookie artefacts.
-- Stage 3M deterministic local image-analysis CLI and visual-feature summaries.
-- Stage 3N admin-approved Discord HTML archive ingestion and source-discovery index.
-- Stage 3O privacy-preserving Discord source promotion, expanded tutorials, and GitHub Wiki mirror source generation.
-- Stage 3P deterministic image transform suite, contact sheets, and local visual review index.
-- Stage 3Q redacted Discord AI-review bundles and topic shards.
-- Stage 3R Discord lead promotion audit, negative controls, and first disabled post-Discord experiment manifests.
-- Stage 3S bounded Onion 7 explicit seed-pack execution.
-- Stage 3T bounded GP/rune claim verifier execution.
-- Stage 3U bounded cookie SHA-256 signed-variant pack execution.
-- Stage 3V OutGuess regression harness.
-- Stage 3W project-state consolidation and anti-drift checks.
-- Stage 3X CLI modularisation without behavior change.
-- Stage 3Y result synthesis, staged plan, and method-retirement ledger.
-- Stage 3Z source-of-truth / newcomer map.
-- Stage 4A full Discord research-bundle extraction and static review site generation.
-- Stage 4B website-derived source-lock triage and visual observation intake.
-- Stage 4C cuneiform and dot annotation pack.
-- Stage 4D bounded numeric verifier pack.
-- Stage 4E cicada-solvers/iddqd source-lock delta audit.
-- Stage 4F historical OutGuess/audio fixture source-locking.
-- Stage 4G cookie exact-candidate refresh.
-- Stage 4H CPU batch transform API extraction.
-- Stage 4I scorer consolidation and calibration report.
-- Stage 4J observation review workflow hardening.
-- Stage 4K allowlisted public source-lock snapshots.
-- Stage 4L reviewed observation promotion ledger.
-- Stage 4M image source-variant and compression preflight.
-- Stage 4N OutGuess/audio positive-control completion.
-- Stage 4O CPU batch adapter expansion.
-- Stage 4P result-store and score-summary unification.
-- Stage 4Q CPU benchmark and parity planning.
-- Stage 5A CUDA planning and parity scaffolding.
-- Stage 5B CUDA parity harness skeleton.
-- Stage 5C CUDA build and device-detection scaffold.
-- Stage 5D native C++ CPU batch backend and deterministic threading baseline.
-- Stage 5E first CUDA kernel contract and CPU/native parity adapter selection.
-- Stage 5F first synthetic-only CUDA parity kernel implementation.
-- Stage 5G-5O CUDA parity reporting, Gematria contract/preparation/kernel reporting, solved-fixture token mapping, exact solved-fixture parity, exact repeat verification, and compact result-store preflight.
-- Stage 5G shift_score CUDA parity reporting and solved-fixture-safe adapter preflight.
-- Stage 5H Gematria mod-29 shift_score contract and native parity fixture preparation.
-- Stage 5I Gematria mod-29 shift_score synthetic CUDA parity preparation.
-- Stage 5J Gematria mod-29 shift_score synthetic CUDA parity kernel implementation.
-- Stage 5K Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight.
-- Stage 5L solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation.
-- Stage 5M first solved-fixture-safe Gematria shift_score CUDA parity run.
-- Stage 5N solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate.
-- Stage 5O solved-fixture-safe Gematria CUDA repeat verification and result-store preflight.
-- Stage 5P controlled solved-fixture CUDA result-store integration.
-- Stage 5Q controlled expansion candidate mapping.
-- Stage 5R controlled expanded solved-fixture-safe Gematria CUDA parity.
-- Stage 5S expanded solved-fixture Gematria CUDA parity reporting and result-store integration.
-- Stage 5T solved-family CUDA readiness matrix.
-- Stage 5U Candidate Batch ABI contract consolidation.
-- Stage 5V native Candidate Batch ABI conformance.
-- Stage 5W prime-minus-one stream native parity contract preparation.
-- Stage 5X prime-minus-one no-GPU native parity execution.
-- Stage 5Y prime-minus-one native parity reporting and CUDA contract readiness.
-- Stage 5Z prime-minus-one CUDA contract preparation.
-- Stage 5AA prime-minus-one CUDA synthetic validation.
-- Stage 5AB operational document staleness hardening.
-- Stage 5AC prime-minus-one CUDA synthetic reporting and bounded-p56 preflight.
-- Stage 5AD bounded p56 CUDA parity mismatch record.
-- Stage 5AD-fix bounded p56 mismatch investigation.
-- Stage 5AE corrected bounded p56 formula reporting and reference-contract repair.
-- Stage 5AF Cicada source harvester and archive/visual/numeric provenance inventory tooling.
-- Stage 5AG local third-party source inventory and initial source-lock metadata.
-- Stage 5AH operational documentation staleness coverage repair and README stage-ledger audit.
-- Stage 5AI curated research bundle extraction from local source inventory.
-- Stage 5AM static research website renderer and webserver export package.
-- Stage 5AN private Deep Research content pack and SFTP-ready hosted content library.
-- Stage 5AR page 49-51 original-image pixel-coordinate and page-split source-gap closure.
-- Stage 5AU token case-review pack usability fix and glyph-tight crop rebuild.
-- Stage 5AV token case-review decision integration and compact variant-branch manifest.
-- Stage 5AW decision possible-token parser cleanup and branch-manifest repair.
-- Stage 5AX parallel validation harness and fast CI check orchestrator.
-- Stage 5AY bounded token-block preflight manifest design without execution.
-- Stage 5AZ bounded preflight manifest integrity gap closure.
-- Stage 5BB token-block preflight runner scaffold without execution.
-- Stage 5BD token-block preflight dry-run implementation without byte-stream generation.
-- Stage 5BE Deep Research review of token-block preflight dry-run implementation, archive/evidence hygiene, and execution-gate enforcement.
-- Stage 5BF historical route source-lock and technique extraction from local CicadaSolversIddqd archive metadata.
-- Stage 5BI Fandom source-lock triage and original-archive crosswalk integration.
-- Stage 5BJ original-archive crosswalk closure for high-priority Fandom-derived candidates.
-- Stage 5BK historical-route planning constraint integration and iddqd-v2 source-lock addendum.
-- Stage 5BM Deep Research findings integration and String 4 branch-crosswalk repair.
-- Stage 5BN String 4 unsupported-position source-gap closure and inactive addendum metadata.
-- Stage 5BO token-case human-review errata integration and inactive String 4 full-branch reclassification metadata.
-- Stage 5BS inactive-branch planning-ingestion gate and future-runner citation policy.
-- Stage 5BY inactive-sidecar planning manifest scaffold and no-execution planning-ingestion sidecar.
-- Stage 5CA inactive-sidecar review contract hardening with exact citation, fail-closed trigger, activation-precondition, and manifest-supersession preflight contracts.
-- Stage 5CC active-planning-input proposal preflight with Stage 5CB warning integration, Stage 5CA citation preservation, exact fail-closed trigger/precondition contracts, no-byte-stream and no-execution transition gates, Stage 5BD preservation, and active-lineage preservation.
-- Stage 5CG post-review approval-gate integration with Stage 5CF warning integration, unsatisfied operator and Deep Research decision scaffolds, Stage 5CE proposal-package preservation, Stage 5CC contract preservation, Stage 5BD plan preservation, active-lineage preservation, and closed no-byte/no-execution gates.
-- Stage 5CI approval-record template hardening with Stage 5CH warning integration, future operator approval and Deep Research acceptance templates, combined approval-gate validation preflight, activation-decision template, negative validation contract, Stage 5CG/5CE/5CC/5BD preservation, active-lineage preservation, and closed no-byte/no-execution gates.
-- Stage 5CK approval-record validation fixture pack and activation-decision review package with Stage 5CJ warning integration, fixture-only operator/Deep Research/activation validation packs, negative-validation matrix, approval-gate non-satisfaction proof, Stage 5CI/5CG/5CE/5CC/5BD preservation, active-lineage preservation, and closed no-byte/no-execution gates.
-- Stage 5CM approval-record readiness boundary and activation-decision gate hardening with Stage 5CL warning integration, fixture-vs-real boundary contracts, end-to-end readiness-boundary validation, future real approval-readiness preflight, credential-redaction policy, Stage 5CK/5CI/5CG/5CE/5CC/5BD preservation, active-lineage preservation, 8-worker validation cap, and closed no-byte/no-execution gates.
-- Stage 5CO real approval-record readiness package and activation-decision transition planning with Stage 5CN warning integration, future operator/Deep Research/combined-gate/activation preflights, transition sequence, missing-requirements register, Stage 5CM/5CK/5CI/5CG/5CE/5CC/5BD preservation, active-lineage preservation, credential-redaction preservation, review-packaging warning, 8-worker validation cap, and closed no-active/no-byte/no-execution gates.
-- Stage 5CU operator-decision option negative-fixture hardening with Stage 5CT warning integration, Stage 5CS readiness/options preservation, 41 decision-option negative fixtures, 13 option-selection misuse cases, real-record blockers, 8-worker validation cap preservation, and closed no-active/no-byte/no-execution gates.
-- Stage 5CW real-decision package preflight with Stage 5CV warning integration, Stage 5CU negative-fixture preservation, Stage 5CS six-option preservation, 24 future real-decision inputs, 24 preflight misuse cases, 8-worker validation cap preservation, and closed no-active/no-byte/no-execution gates.
-- Stage 5CY option-selection decision preflight with Stage 5CX warning integration, Stage 5CW real-decision package preflight preservation, Stage 5CW pytest-count reconciliation, Stage 5CU/5CS preservation, 6 unselected options, 8-worker validation cap preservation, and closed no-active/no-byte/no-execution gates.
-- Stage 5DA operator choice / pause decision scaffold with Stage 5CZ warning integration, Stage 5CY preservation, exact Stage 5CS option preservation, no option selected, no explicit pause selected, 8-worker validation cap preservation, and closed no-active/no-byte/no-execution gates.
-- Stage 5DE real operator approval preparation package with Stage 5DD / assistant warning integration, Stage 5DC selected option `prepare_real_operator_approval_record` preserved, 34 future approval-record requirements, no real approval/acceptance/gate/activation/active-input record created, 8-worker validation cap preservation, and closed no-active/no-byte/no-execution gates.
-- Stage 5DG real operator approval record creation with Stage 5DF assistant/operator warning integration, Stage 5DE preparation preserved, the Stage 5DC selected option preserved, one valid real operator approval record created, operator approval component satisfied, Deep Research acceptance absent, combined gate unsatisfied, activation/active input/byte streams/execution blocked, 8-worker validation cap preservation, and closed no-active/no-byte/no-execution gates.
-- Stage 5DJ CicadaMusic source-lock and music-clue pivot integration with Stage 5DG operator approval preserved, 7 local ignored music files hashed as metadata, 4 MP3 metadata records, 3 PDF metadata records, the `music_3301_instar_crab_canon_v0` family added as a seventh unselected pivot option, Deep Research acceptance absent, combined gate unsatisfied, activation/active input/byte streams/target validation/Tor/network/audio-stego/execution blocked, and Stage 5DK selected as the next target-priority decision package.
-- Stage 5DK Fandom source-lock gap closure and Page 56 hash-contract refinement with 14 Fandom sources recorded as compact metadata or reviewable gaps, corrected source-index crosswalks, speculative harmonic-key quarantine, Page 56 512-bit hash preserved with unknown algorithm/preimage, Stage 5DJ/Stage 5DG/Stage 5BD/active-lineage preservation, all pivot options unselected, no active input, no byte streams, no target validation, no Tor/network access, no DWH/hash/preimage search, no execution, and Stage 5DL selected as the next target-priority decision package.
-- Stage 5DL triangle / disk / quote / koan source-lock refresh with local NumberTriangleStuff, DiskCipherStuff, RedditStuff, quote-dialogue crib, and koan-page metadata recorded, 10 candidate families added or updated, `pdd_153_triangle_word_prime_route_v1` recorded as a future operator preference only, 8 active-lineage records preserved, 10 Stage 5BD run-plan IDs preserved, no target selected, target validation absent, Tor/network access absent, DWH/hash/preimage search absent, byte streams blocked, execution blocked, and no solve claim.
-- Stage 5DM visual-route source-lock addendum with 8 addendum families recorded, Blake visual-text context, Sacred Book overlay metadata, Page6 magic-square word/number precedent, full-page visual motif index, Page32 Moebius/Fibonacci-prime-index arithmetic, doublet-scarcity feature planning, evidence-atlas readiness, and Drive/path aliases. Stage 5DM preserves Stage 5DL, selects no target, performs no OCR/image forensics/route extraction/byte-stream generation/execution, and makes no solve claim.
-- Stage 5DN DiskCipher v1 source-lock and triangle/circumference bridge update with updated DiskCipherStuff metadata, `message_bodies.txt` and `results.png` source locks, 11 review-only DiskCipher/triangle/circumference bridge records, probability-claim quarantine, Stage 5DM preservation, Stage 5DG/Stage 5BD/active-lineage preservation, no target selected, no Alberti/disk-cipher execution, no OCR/image forensics, no byte streams, no execution, and no solve claim.
-- Stage 5DO Discord NumberFacts and pixel-colour source-lock addendum with local NumberFactsCollection and PotentialHint metadata, two `messages.txt` source locks, image-anchor line hashes, pixel-colour table metadata, 15 review-only candidate records, canonical transcript/image blockers, future source-lock browser GUI requirements, Stage 5DN preservation, Stage 5DG/Stage 5BD/active-lineage preservation, no target selected, no GUI puzzle execution, no OCR/image forensics, no byte streams, no execution, and no solve claim.
-- Stage 5DP New Reddit Mayfly / dot / cover / ISO source-lock addendum with local RedditStuff metadata, Mayfly docx/xlsx locks, bounded workbook summaries, 23 review-only candidate records, ChatGPT context-file facts, Stage 5DO preservation, Stage 5DG/Stage 5BD/active-lineage preservation, no target selected, no route extraction, no OCR/image forensics, no GUI implementation, no byte streams, no execution, and no solve claim.
-- Stage 5DQ Operator Console v0 Source-Browser GUI with a review-only source index over committed metadata, manual-entry/override/tombstone scaffolds, path aliases, column profiles, context-file navigation, optional PySide6 GUI entrypoint, CLI validation, Stage 5DP preservation, no puzzle execution, no route extraction, no OCR/image forensics, no byte streams, and no solve claim.
-- Stage 5DS expanded Music / Ouroboros / self-reference / token-block static-context source-lock addendum with 29 ignored community-theory files inventoried, 11 music candidate records, 17 Ouroboros/self-reference context records, 4 token-block static-context records, 62 Source Browser entries, Stage 5DR preservation, no target selected, no active input, no byte streams, no execution, and no solve claim.
-- Stage 5DT Operator Console number-fact card and evidence-reviewability upgrade with 1387 Source Browser entries loaded, 20 extracted number-fact cards, 13 vague facts needing enrichment, 1383 zero-fact-not-reviewed entries, seven planned 20-entry review batches, enrichment overlay schemas/loader, GUI fact-card rendering, table/filter improvements, no fact backfill, no target selected, no active input, no byte streams, no execution, and no solve claim.
-- Stage 5DU community visual/red-heading/negative-space source-lock addendum with six ignored local community-thread folders represented, 234 files inventoried as compact metadata, 75 canonical LP page images crosslinked, 72 review-only candidate records, 12 number-fact cards/overlays created or enriched, 1490 Source Browser entries validated, Stage 5DT preserved, no community code execution, no OCR/image forensics, no route extraction, no target selected, no byte streams, no execution, and no solve claim.
-- Stage 5DV Operator Console Source Browser performance/path-canonicalization repair with 1510 Source Browser entries validated, zero spurious root image/document paths, zero duplicate present+missing path pairs, source-root-relative resolution preserved, path-resolution/thumbnail/raw-preview caching policy recorded, ChatGPT context expanded, Stage 5DU/5DT/5DG/5BD preserved, no number-fact review batch, no source-lock rewrite, no target selected, no byte streams, no execution, and no solve claim.
-- Stage 5DX visual/red-heading/transform source-lock number-fact review batch 002 with 20 selected source-lock records reviewed, 23 review-only NumberFactCard overlays added, overlay-only fact cards preserved for zero-extracted-fact entries, 1546 Source Browser entries validated, zero spurious root image/document paths, zero duplicate present+missing path pairs, Stage 5DW/5DV/5DU/5DG/5BD preserved, no direct source-record fact backfill, no source-lock rewrite, no target selected, no route extraction, no byte streams, no execution, and no solve claim.
-- Stage 5DY validation-performance and stage-isolation repair with 6 validation profiles, 8-worker local cap, full serial pytest kept as rare fallback, non-mutating validator guard, shared-schema collision guard, Stage 5DX/5BD/active-lineage preservation, no number-fact batch 3, no target selected, no byte streams, no execution, and no solve claim.
-- Stage 5DZ Triangle/Page32 bounded-findings source-lock addendum with 7 PDD153 triangle findings, 8 Page32 findings, 12 review-only Source Browser overlays, direct-method negative-result notes, Stage 5DY validation-profile preservation, Stage 5EA routing, no number-fact batch 3, no target selected, no route extraction, no route streams, no byte streams, no image forensics/OCR, no execution, and no solve claim.
-- Stage 5EA validation-throughput and historical-test isolation repair with current-stage registry records, Stage 5DZ verification, Source Browser number-fact overlay caching, validation wrapper stage normalization, weighted pytest shard planning, orphan-process timeout policy, no number-fact batch 3, no source-lock mutation, no active ingestion, no byte streams, no execution, and no solve claim.
-- Stage 5EB validation finalization and 10-worker policy repair with Stage 5EA preservation, current-stage registry finalization policy, 10-worker local defaults/caps, full-serial-rare fallback policy, generic stage wrapper aliases, duration-aware pytest shard/rerun guidance, Source Browser overlay cache reuse evidence, no number-fact batch 3, no source-lock mutation, no active ingestion, no byte streams, no execution, and no solve claim.
-- Stage 5ED Source Browser number-fact review batch 004 with 20 selected DiskCipher/visual-method/route-context entries reviewed, 25 review-only NumberFactCard overlays added, Stage 5EC overlays and Stage 5EB 10-worker validation policy preserved, Source Browser loadability validated with zero errors, no historical source-lock rewrite, no source-lock evidence update, no target selected, no byte streams, no execution, and no solve claim.
-- Stage 5EE Source Browser number-fact review batch 005 with 20 selected source-register/music/Fandom/residual NumberFacts entries reviewed, 25 review-only NumberFactCard overlays added, Stage 5ED overlays and Stage 5EB 10-worker validation policy preserved, Source Browser loadability validated with zero errors, no historical source-lock rewrite, no source-lock evidence update, no target selected, no byte streams, no execution, and no solve claim.
-- Stage 5EF current-truth and drift-audit foundation with authoritative `data/project-state/current-stage-state.yaml`, doc update-policy ledger, deterministic context-pack templates, report-only automation templates, inactive advisory-hook policy, skill deferral, Stage 5EE preservation, Stage 5EB 10-worker validation policy preservation, no active hooks or scheduled automations, and no puzzle/source-lock/execution work.
-- Stage 5EG post-edit doc-staleness guardians with tracked-file stale-current scanner, scanner-backed project hooks, read-only custom-agent configs, report-only automation setup, Stage 5EF preservation, and no puzzle/source-lock/execution work.
-- Stage 5EH Lag5/outguess/byte-string/red-number/F5 source-lock addendum with 23 future probe manifests, 36 review-only overlays, Stage 5EG scanner preservation, and no route/decode/stego/image/CUDA/scoring execution.
-- Stage 5EI final Stage 5 triangle-transposition and diagnostics-transition metadata with PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, route-fingerprint policy, 7 review-only overlays, Stage 5EH preservation, and Stage 6 readiness routing without execution.
-- Stage 6 diagnostic-backlog readiness metadata with bounded source-root census, discovery-probe registry, Stage 7 archive policy, and Stage 8/9 handoff without execution.
-- Stage 6B deterministic repair metadata for Stage 6 probe-family/source/readiness mappings, partial Stage 7 menu semantics, and report-only hook stabilization.
-- Stage 6C OUROBOROS/I31 circumference source-lock addendum with Page32 3222 grid/spiral policy, 12 review-only overlays, 10 disabled future probes, and Stage 6D routing without execution.
+Stage 3X CLI modularisation completed without behavior change. Stage 5AE corrected formula-parity reporting repaired the bounded p56 hash lineage while preserving Stage 5AD as historical failed parity.
 
 ## Architecture summary
 
@@ -720,7 +516,7 @@ Historical next prompt at Stage 6C closeout: Stage 6D - Final finite Stage 7 pro
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current next prompt: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6D records the 86/89 doublet counts as boundary-policy-specific metadata, not solve evidence or execution authorization.
+Historical next prompt from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6D records the 86/89 doublet counts as boundary-policy-specific metadata, not solve evidence or execution authorization.
 <!-- stage6d:end -->
 
 <!-- stage6e:start -->
@@ -728,7 +524,7 @@ Current next prompt: Stage 6H - Dot-angle and right-triangle number-triangle bri
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
@@ -740,7 +536,7 @@ Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contra
 
 Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+Historical routed stage from that older section: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
 
@@ -748,11 +544,11 @@ Stage 6F did not create a final Stage 7 manifest, finalize an archive-run contra
 <!-- stage6f:end -->
 
 <!-- stage6g:start -->
-## Stage 6G Current Boundary
+## Historical Stage 6G Boundary
 
-Latest completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
+Historical latest stage at Stage 6G closeout: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
 
-Current next stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6H is source-lock/readiness addendum work, not final Stage 7 manifest construction, because recent dot-angle/right-triangle number-triangle material remains chat-only pending source-lock.
+Historical Stage 6G route pointed to Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6H is source-lock/readiness addendum work, not final Stage 7 manifest construction, because recent dot-angle/right-triangle number-triangle material remains chat-only pending source-lock.
 
 Stage 6G repaired current-doc and handoff integrity, expanded acceptance-policy integration, verified hooks where local direct/script launcher tests can support it, and recorded honest operator-confirmation risk for actual Codex runner semantics. It did not source-lock the new dot/triangle material, create probes or overlays, create a Stage 7 manifest or archive, generate route or byte streams, execute tools, select targets, or claim a solve.
 <!-- stage6g:end -->
