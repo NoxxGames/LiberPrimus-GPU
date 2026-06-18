@@ -8,11 +8,15 @@ LiberPrimus-GPU is a conservative research workbench for reproducible Liber Prim
 
 This project is not a solve claim, raw corpus dump, Discord scraper, live Tor crawler, image/OCR interpretation tool, broad hash-cracker, or CUDA campaign.
 
-## Historical Stage 6D Boundary
+## Current Authority
 
-The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 6E - Readiness consolidation, bridge source-locks, hook/doc-staleness repair, and Stage 6F manifest inputs, without execution as complete and Stage 6F - Final finite Stage 7 probe manifest and archive-run contract, without execution as next.
+The latest completed stage is Stage 6G. The next routed stage is Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
-Historical Stage 5EE, Stage 5EG, Stage 5EH, Stage 5EI, and Stage 6 sections are evidence of their time, not current routing instructions. If they mention old next prompts, read them as historical only when the section says so explicitly.
+Stage 6H is source-lock/readiness addendum work, not final Stage 7 manifest construction, because recent dot-angle/right-triangle material remains chat-only pending source-lock. Future Codex work must apply `docs/onboarding/codex-acceptance-criteria.md` and keep all execution gates closed unless a later prompt explicitly opens them.
+
+## Historical Stage 6C-6F Boundaries
+
+Stage 6C, Stage 6D, Stage 6E, and Stage 6F remain historical source-lock/readiness and repair stages. Stage 6C preserved the OUROBOROS/I31 addendum, Stage 6D preserved canonical doublet/boundary metadata, Stage 6E consolidated bridge source-lock readiness, and Stage 6F repaired current-doc, hook, traceability, alias, dju-bei, and acceptance-policy quality. Their old next-stage wording is historical only and is superseded by the current Stage 6G -> Stage 6H source-lock/readiness route above.
 
 ## Where To Start
 
@@ -92,41 +96,3 @@ At the time of Stage 6B, `data/project-state/current-stage-state.yaml` recorded 
 <!-- stage6b:end -->
 
 <!-- stage6c:start -->
-## Historical Stage 6C Boundary
-
-At the time of Stage 6C, Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution was the latest completed stage.
-
-Historical next route at Stage 6C closeout: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution. Use `data/project-state/current-stage-state.yaml` as authoritative current truth.
-<!-- stage6c:end -->
-
-<!-- stage6d:start -->
-## Historical Stage 6D Boundary
-
-Latest completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
-
-Historical next route at Stage 6D closeout: Stage 6E - Final finite Stage 7 probe manifest and archive-run contract, without execution. Use `data/project-state/current-stage-state.yaml` as authoritative current truth.
-<!-- stage6d:end -->
-
-<!-- stage6e:start -->
-## Historical Stage 6E Boundary
-
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
-
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-
-Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
-
-Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
-<!-- stage6e:end -->
-
-<!-- stage6f:start -->
-## Stage 6F Current Boundary
-
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
-
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-
-Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
-
-Stage 6F did not create a final Stage 7 manifest, finalize an archive-run contract, create result archives, run probes, add new theory records, add overlays, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
-<!-- stage6f:end -->

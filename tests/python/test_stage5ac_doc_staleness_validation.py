@@ -27,4 +27,7 @@ def test_operational_docs_use_current_stage_registry_latest_and_next() -> None:
     assert current["latest_completed_stage_title"].split(" - ", 1)[0] in status
     assert f"Next recommended prompt: {current['recommended_next_stage_title']}" in status
     assert f"Latest completed stage: {current['latest_completed_stage_title']}" in staged_plan
-    assert f"Current planning focus: {current['recommended_next_stage_title']}" in staged_plan
+    assert (
+        f"Current planning focus: {current['recommended_next_stage_title']}" in staged_plan
+        or f"Next routed stage: {current['recommended_next_stage_title']}" in staged_plan
+    )

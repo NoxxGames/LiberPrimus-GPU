@@ -1,0 +1,236 @@
+stage_id: stage-6g
+stage_title: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff
+  repair, hook confirmation, and acceptance-policy hardening, without execution
+metadata_only: true
+reviewability_stage: true
+readiness_repair_stage: true
+source_lock_only: false
+source_lock_component_present: false
+solve_claim: false
+midi_route_extraction_performed_now: false
+network_target_validation_performed_now: false
+triangular_transposition_readouts_generated_now: false
+alberti_cipher_execution_performed_now: false
+new_theory_source_locks_created_now: false
+stage6e_source_lock_payloads_rewritten_now: false
+canonical_bigram_matrix_recomputed_now: false
+execution_authorized_now: false
+stage6d_final_finite_stage7_manifest_created_now: false
+f5_password_search_performed_now: false
+page_boundaries_final: false
+diagnostic_probe_run_now: false
+stage6f_final_finite_stage7_manifest_created_now: false
+triangle_route_extraction_performed_now: false
+stage6g_archive_run_contract_finalized_now: false
+stage6b_routes_to_stage7_now: false
+pivot_target_selected_now: false
+stage6e_routes_to_stage7_now: false
+stage6c_generates_stage7_outputs_now: false
+stage6e_runs_any_probe_now: false
+stage6c_runs_any_probe_now: false
+stage6g_creates_stage7_result_archive_now: false
+music_route_extraction_performed_now: false
+stage6_runs_bigrams_py_now: false
+stage6f_runs_any_probe_now: false
+stego_tool_execution_performed: false
+stage6g_routes_to_stage7_now: false
+stage6b_creates_stage7_result_archive_now: false
+page56_hash_preimage_tested_now: false
+scoring_triage_performed: false
+html_tool_executed_now: false
+stage7_archive_created_now: false
+pgp_signature_verified_now: false
+vm_bytecode_execution_performed_now: false
+stage6d_creates_stage7_result_archive_now: false
+disk_cipher_execution_performed_now: false
+variant_byte_streams_generated: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+token_block_experiment_executed: false
+stage6_selects_stage7_probe_outputs_now: false
+right_triangle_source_lock_created_now: false
+mayfly_route_extraction_performed_now: false
+stage6_recomputes_canonical_bigram_matrix_now: false
+stage7_manifest_created_now: false
+stage6b_archive_run_contract_finalized_now: false
+stage6c_routes_to_stage7_now: false
+stage6c_final_finite_stage7_manifest_created_now: false
+target_class_validation_implemented: false
+raw_third_party_files_committed: false
+route_stream_generated_now: false
+result_archive_created_now: false
+tor_network_access_performed: false
+activation_decision_valid_now: false
+triangular_transposition_route_stream_generated_now: false
+stage6d_routes_to_stage7_now: false
+page13_f5_payload_claim_accepted_now: false
+stage6_probe_execution_allowed: false
+pgp_verification_performed_now: false
+stage6d_runs_any_probe_now: false
+operator_target_priority_decision_created_now: false
+stage6_runs_stego_probe_now: false
+stage6f_routes_to_stage7_now: false
+stage6c_archive_run_contract_finalized_now: false
+dot_angle_source_lock_created_now: false
+known_plaintext_attack_performed_now: false
+stage6d_generates_stage7_outputs_now: false
+audio_stego_performed: false
+stage6e_archive_run_contract_finalized_now: false
+stage6e_bridge_payloads_rewritten_now: false
+target_priority_decision_created_now: false
+stage6b_generates_stage7_outputs_now: false
+cuda_execution_performed: false
+stage9_experiments_started_now: false
+native_code_execution_performed_now: false
+stage6d_archive_run_contract_finalized_now: false
+raw_source_files_committed: false
+active_token_block_manifest_changed: false
+real_byte_stream_generated: false
+stage6c_generates_spiral_readouts_now: false
+stage6c_uses_image_interpretation_now: false
+stage6_probe_execution_performed_now: false
+outguess_execution_performed: false
+stage6f_creates_stage7_result_archive_now: false
+spiral_route_readouts_generated_now: false
+token_block_variant_byte_streams_generated: false
+mp3stego_execution_performed: false
+stage8_triangle_readiness_started_now: false
+stage6g_generates_triangle_readouts_now: false
+cuda_triage_performed: false
+number_fact_backfill_performed_now: false
+website_expansion_performed: false
+stage6e_final_finite_stage7_manifest_created_now: false
+branch_enumeration_performed: false
+community_code_executed_now: false
+canonical_corpus_active: false
+stage6c_confirms_3222_red_highlight_now: false
+stage6e_bridge_source_lock_records_mutated_now: false
+stage6h_final_manifest_required: false
+benchmark_performed: false
+new_future_probe_ids_created_now: false
+hidden_content_image_forensics_performed: false
+stage7_probe_execution_performed_now: false
+ocr_performed: false
+stage6c_creates_stage7_result_archive_now: false
+byte_stream_generation_authorized_now: false
+openpuff_execution_performed: false
+stage6_result_archive_created_now: false
+stage7_zip_archive_creation_allowed_next: false
+machine_code_execution_performed_now: false
+stage6e_creates_stage7_result_archive_now: false
+scoring_performed: false
+stage6c_generates_triangle_readouts_now: false
+stage6f_generates_stage7_outputs_now: false
+stegdetect_execution_performed_now: false
+alberti_html_executed_now: false
+new_source_lock_evidence_added_as_raw_body: false
+stage7_execution_allowed_next: false
+combined_approval_gate_satisfied_now: false
+active_planning_input_authorized_now: false
+decode_attempt_performed: false
+stage6_zip_result_bundle_created_now: false
+historical_source_lock_records_rewritten: false
+active_manifest_registry_updated: false
+hash_preimage_search_performed: false
+spectrogram_stego_performed: false
+active_ingestion_performed: false
+stage6g_generates_spiral_readouts_now: false
+semantic_image_interpretation_performed: false
+page32_route_extraction_performed_now: false
+activation_authorized_now: false
+image_forensics_performed: false
+stage6_runs_music_probe_now: false
+stage6_discards_outputs_by_score_now: false
+stage6b_final_finite_stage7_manifest_created_now: false
+f5_extraction_performed_now: false
+generated_outputs_committed: false
+new_number_fact_overlays_created_now: false
+stage6g_generates_stage7_outputs_now: false
+stage6g_runs_any_probe_now: false
+stage6_runs_triangle_probe_now: false
+stage6g_final_finite_stage7_manifest_created_now: false
+probe_execution_performed_now: false
+diagnostic_execution_performed_now: false
+decryption_attempt_performed_now: false
+variant_materialisation_performed: false
+dwh_hash_search_performed: false
+execution_performed: false
+lossy_filtering_performed: false
+stage6_runs_lag5_probe_now: false
+full_cartesian_product_enumerated: false
+pgp_private_key_operation_performed: false
+stage6_runs_diskcipher_probe_now: false
+bigrams_py_executed_now: false
+stage6f_archive_run_contract_finalized_now: false
+active_planning_input_selected_now: false
+route_extraction_performed_now: false
+stage6e_generates_stage7_outputs_now: false
+page_boundaries_finalized: false
+stage6h_source_lock_addendum_required: true
+recent_dot_angle_triangle_material_known_from_chat: true
+recent_dot_angle_triangle_material_committed_in_stage6g: false
+recent_dot_angle_triangle_material_requires_source_lock_before_final_manifest: true
+record_type: stage6g_stage6h_manifest_input_addendum
+record_family: token_block_stage6g
+not_final_stage7_manifest: true
+stage7_execution_allowed_from_this_addendum: false
+stage7_zip_archive_creation_allowed_from_this_addendum: false
+stage6h_input_addendum:
+  includes_stage6c_ouroboros_i31_input_addendum: true
+  stage6c_ouroboros_i31_input_addendum_path: data/token-block/stage6c-stage6d-manifest-input-addendum.yaml
+  includes_stage6d_doublet_boundary_input_addendum: true
+  stage6d_doublet_boundary_input_addendum_path: data/token-block/stage6d-stage6e-manifest-input-addendum.yaml
+  includes_stage6e_bridge_source_lock_addendum: true
+  stage6e_bridge_source_lock_addendum_path: data/token-block/stage6e-stage6f-manifest-input-addendum.yaml
+  includes_stage6e_probe_source_traceability_matrix: true
+  stage6e_probe_source_traceability_matrix_path: data/token-block/stage6e-probe-source-traceability-matrix.yaml
+  includes_stage6e_source_root_crosswalk: true
+  stage6e_source_root_crosswalk_path: data/token-block/stage6e-source-root-crosswalk.yaml
+  includes_stage6f_traceability_cleanup: true
+  stage6f_traceability_cleanup_path: data/token-block/stage6f-probe-source-traceability-semantics-repair.yaml
+  includes_stage6f_hook_and_doc_integrity_repairs: true
+  includes_stage6f_acceptance_criteria_policy: true
+  stage6f_acceptance_criteria_policy_path: docs/onboarding/codex-acceptance-criteria.md
+  includes_stage6g_current_doc_handoff_repairs: true
+  stage6g_current_doc_handoff_repair_path: data/project-state/stage6g-current-doc-acceptance-repair.yaml
+  includes_stage6g_acceptance_policy_expansion: true
+  stage6g_acceptance_policy_evidence_path: data/project-state/stage6g-acceptance-policy-integration-evidence.yaml
+  includes_stage6g_hook_status: true
+  stage6g_hook_status_path: data/project-state/stage6g-hook-runner-confirmation.yaml
+  acknowledges_recent_dot_angle_triangle_material_not_yet_committed: true
+  recent_dot_angle_triangle_material_source_lock_required_next: true
+  not_final_stage7_manifest: true
+  stage7_execution_allowed_from_this_addendum: false
+  stage7_zip_archive_creation_allowed_from_this_addendum: false
+pre_final_manifest_source_lock_backlog:
+- backlog_id: dot_angle41_triangle_anchor_bridge
+  source_status: chat_only_pending_source_lock
+  blocks_final_manifest: true
+- backlog_id: branch_dot_binary_parameter_bridge
+  source_status: chat_only_pending_source_lock
+  blocks_final_manifest: true
+- backlog_id: pdd153_right_triangle_coordinate_transform
+  source_status: chat_only_pending_source_lock
+  blocks_final_manifest: true
+- backlog_id: ouroboros_variant_mod153_offset_bridge
+  source_status: chat_only_pending_source_lock
+  blocks_final_manifest: true
+stage6h_route_reason:
+  current_doc_blocker_count: 0
+  hook_runner_blocker_count: 0
+  recent_dot_angle_triangle_material_source_lock_required: true
+  stage6h_routed_as_final_manifest: false
+  stage6h_routed_as_source_lock_addendum: true
+stage6g_current_doc_repair_blocker_count: 0
+stage6h_final_manifest_blocker_count: 1
+stage6h_final_manifest_blockers:
+- blocker_id: recent_dot_angle_triangle_material_not_source_locked
+  blocker_type: chat_only_source_lock_backlog
+  affected_material:
+  - dot_angle41_triangle_anchor_bridge
+  - branch_dot_binary_parameter_bridge
+  - pdd153_right_triangle_coordinate_transform
+  - ouroboros_variant_mod153_offset_bridge
+  required_action: Stage 6H must source-lock or explicitly defer the recent dot-angle/right-triangle
+    number-triangle material before any final Stage 7 manifest stage.
+  blocks_final_manifest: true
+stage6h_can_attempt_final_manifest_without_prior_repair: false

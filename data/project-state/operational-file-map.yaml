@@ -9557,6 +9557,12 @@ stage_records:
     chatgpt_context_validation: data/project-state/stage6f-chatgpt-context-validation.yaml
     traceability_semantics_repair: data/token-block/stage6f-probe-source-traceability-semantics-repair.yaml
     acceptance_policy: docs/onboarding/codex-acceptance-criteria.md
+  stage-6g:
+    stage_id: stage-6g
+    summary: data/project-state/stage6g-summary.yaml
+    next_stage_decision: data/project-state/stage6g-next-stage-decision.yaml
+    stage6h_source_lock_addendum: data/token-block/stage6g-stage6h-manifest-input-addendum.yaml
+    acceptance_policy: docs/onboarding/codex-acceptance-criteria.md
 stage6_summary_record: data/project-state/stage6-summary.yaml
 stage6_diagnostic_backlog_census: data/project-state/stage6-diagnostic-backlog-census.yaml
 stage6_discovery_probe_manifest_registry: data/token-block/stage6-discovery-probe-manifest-registry.yaml

@@ -8,11 +8,11 @@
 
 ## Current boundaries and deferred work
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Current completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
 
-Current next prompt: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Current next prompt: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
-Stage 6D source-locked canonical doublet boundary profiles as bounded metadata reproduction, triaged daily doc-staleness automation warnings, verified project hook layers, and added Stage 6E manifest-input addendum records only. It did not create the final Stage 7 manifest, generate result archives, execute probes, run bigrams.py/community code, perform image/stego/OCR work, run CUDA/scoring/benchmarks, activate the canonical corpus, finalize page boundaries, or claim a solve.
+Stage 6G repairs current-doc and handoff integrity and routes Stage 6H as source-lock/readiness addendum work because recent dot-angle/right-triangle number-triangle material remains chat-only pending source-lock. Stage 6G did not source-lock that new material, create probes or overlays, create a Stage 7 manifest or archive, generate route or byte streams, execute tools, select targets, or claim a solve.
 
 - Stage 5EG installed deterministic stale-current guardians and kept hooks scanner-based.
 - Stage 5EH added Lag5/outguess/byte-string/red-number/F5 source-lock context and review-only overlays without execution.
@@ -20,6 +20,9 @@ Stage 6D source-locked canonical doublet boundary profiles as bounded metadata r
 - Stage 6 completed diagnostic-backlog readiness metadata.
 - Stage 6B repaired Stage 6 mappings and hook behavior.
 - Stage 6C added review-only OUROBOROS/I31 source-lock metadata.
+- Stage 6D added canonical doublet-boundary source-lock metadata.
+- Stage 6E consolidated bridge source-lock readiness.
+- Stage 6F repaired current-doc, hook, traceability, alias, dju-bei, and acceptance-policy quality.
 
 These are not permanent project exclusions. CUDA and broad campaigns are deferred, not permanently excluded.
 
@@ -713,19 +716,19 @@ Historical next prompt at Stage 6C closeout: Stage 6D - Final finite Stage 7 pro
 <!-- stage6c:end -->
 
 <!-- stage6d:start -->
-## Stage 6D Current Status
+## Historical Stage 6D Current Status
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current next prompt: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6D records the 86/89 doublet counts as boundary-policy-specific metadata, not solve evidence or execution authorization.
+Current next prompt: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6D records the 86/89 doublet counts as boundary-policy-specific metadata, not solve evidence or execution authorization.
 <!-- stage6d:end -->
 
 <!-- stage6e:start -->
 ## Historical Stage 6E Boundary
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
@@ -733,13 +736,23 @@ Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contra
 <!-- stage6e:end -->
 
 <!-- stage6f:start -->
-## Stage 6F Current Boundary
+## Historical Stage 6F Boundary
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
 
 Stage 6F did not create a final Stage 7 manifest, finalize an archive-run contract, create result archives, run probes, add new theory records, add overlays, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 <!-- stage6f:end -->
+
+<!-- stage6g:start -->
+## Stage 6G Current Boundary
+
+Latest completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
+
+Current next stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6H is source-lock/readiness addendum work, not final Stage 7 manifest construction, because recent dot-angle/right-triangle number-triangle material remains chat-only pending source-lock.
+
+Stage 6G repaired current-doc and handoff integrity, expanded acceptance-policy integration, verified hooks where local direct/script launcher tests can support it, and recorded honest operator-confirmation risk for actual Codex runner semantics. It did not source-lock the new dot/triangle material, create probes or overlays, create a Stage 7 manifest or archive, generate route or byte streams, execute tools, select targets, or claim a solve.
+<!-- stage6g:end -->

@@ -4455,3 +4455,14 @@ stages:
     archive-run contract, without execution
   guardrails: No Stage 7 manifest, archive, probe execution, route stream, byte stream,
     new theory records, overlays, or solve claim.
+- stage_id: stage-6g
+  stage_title: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff
+    repair, hook confirmation, and acceptance-policy hardening, without execution
+  status: complete
+  summary: Repaired current-doc handoff integrity and routed Stage 6H as source-lock/readiness
+    addendum for chat-only dot-angle/right-triangle material.
+  recommended_next_stage_id: stage-6h
+  recommended_next_stage_title: Stage 6H - Dot-angle and right-triangle number-triangle
+    bridge source-lock addendum, without execution
+  guardrails: No Stage 7 manifest, archive, probe execution, route stream, byte stream,
+    new theory source-lock, overlay, or solve claim.

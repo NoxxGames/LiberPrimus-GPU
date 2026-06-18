@@ -29,6 +29,13 @@
       "pattern": "Stage (5[A-Z]+(-fix)?|6[A-Z]?)",
       "type": "string"
     },
+    "latest_completed_stage_id": {
+      "enum": [
+        "stage-6g",
+        "stage-6h"
+      ],
+      "type": "string"
+    },
     "latest_completed_stage_prefix": {
       "pattern": "Stage (5[A-Z]+(-fix)?|6[A-Z]?)",
       "type": "string"
@@ -49,6 +56,13 @@
     },
     "raw_data_processed": {
       "const": false
+    },
+    "recommended_next_stage_id": {
+      "enum": [
+        "stage-6g",
+        "stage-6h"
+      ],
+      "type": "string"
     },
     "record_type": {
       "const": "doc_staleness_source_of_truth_record"
@@ -80,7 +94,9 @@
         "stage-6c",
         "stage-6d",
         "stage-6e",
-        "stage-6f"
+        "stage-6f",
+        "stage-6g",
+        "stage-6h"
       ]
     },
     "unsolved_page_cuda_status": {

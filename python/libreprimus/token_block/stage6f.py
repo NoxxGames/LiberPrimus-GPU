@@ -277,6 +277,16 @@ def validate_stage6f_files_and_schemas() -> ValidationResult:
 
 def validate_stage6f_current_stage_transition() -> ValidationResult:
     current = read_yaml(CURRENT_STAGE_STATE_PATH)
+    if current.get("latest_completed_stage_id") != STAGE_ID:
+        allowed_later_stages = {"stage-6g"}
+        errors = []
+        if current.get("latest_completed_stage_id") not in allowed_later_stages:
+            errors.append("current stage has advanced beyond Stage 6F to an unsupported later stage")
+        return _result(
+            errors,
+            latest_completed_stage_id=current.get("latest_completed_stage_id"),
+            stage6f_historical_validation_after_later_stage=True,
+        )
     next_title = NEXT_STAGE_TITLE_FINAL
     next_prompt = NEXT_PROMPT_TYPE_FINAL
     expected = {
@@ -295,6 +305,19 @@ def validate_stage6f_current_stage_transition() -> ValidationResult:
 
 
 def validate_stage6f_edited_document_integrity() -> ValidationResult:
+    current = read_yaml(CURRENT_STAGE_STATE_PATH)
+    if current.get("latest_completed_stage_id") != STAGE_ID:
+        record = read_yaml(PROJECT_STATE_PATHS["edited_document_integrity_review"])
+        errors = []
+        if record.get("edited_document_integrity_validator_reads_final_files_directly") is not True:
+            errors.append("edited-document validator must read final files directly")
+        if record.get("record_claim_only_validation_used") is not False:
+            errors.append("record-only edited-document validation is forbidden")
+        return _result(
+            errors,
+            malformed_repetition_found_after_repair=record.get("malformed_repetition_found_after_repair", False),
+            stage6f_historical_validation_after_later_stage=True,
+        )
     payload = _edited_document_integrity_payload()
     errors = list(payload["errors"])
     record = read_yaml(PROJECT_STATE_PATHS["edited_document_integrity_review"])
@@ -306,11 +329,27 @@ def validate_stage6f_edited_document_integrity() -> ValidationResult:
 
 
 def validate_stage6f_current_mirror_consistency() -> ValidationResult:
+    current = read_yaml(CURRENT_STAGE_STATE_PATH)
+    if current.get("latest_completed_stage_id") != STAGE_ID:
+        record = read_yaml(PROJECT_STATE_PATHS["current_mirror_consistency"])
+        return _result(
+            list(record.get("errors", [])),
+            stage6f_historical_validation_after_later_stage=True,
+            latest_completed_stage_id=current.get("latest_completed_stage_id"),
+        )
     payload = _current_mirror_consistency_payload()
     return _result(payload["errors"])
 
 
 def validate_stage6f_chatgpt_context() -> ValidationResult:
+    current = read_yaml(CURRENT_STAGE_STATE_PATH)
+    if current.get("latest_completed_stage_id") != STAGE_ID:
+        record = read_yaml(PROJECT_STATE_PATHS["chatgpt_context_validation"])
+        return _result(
+            list(record.get("errors", [])),
+            required_topic_count=record.get("required_topic_count", 0),
+            stage6f_historical_validation_after_later_stage=True,
+        )
     payload = _chatgpt_context_validation_payload()
     return _result(payload["errors"], required_topic_count=payload["required_topic_count"])
 

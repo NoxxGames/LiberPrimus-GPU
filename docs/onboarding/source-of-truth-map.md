@@ -2,194 +2,13 @@
 
 ## Current Operational Truth
 
-- `STATUS.md`: latest completed stage, current boundaries, and no-solve/no-CUDA/no-corpus-activation posture.
-- `ROADMAP.md`: short and medium-term plan.
-- `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
-- `AGENTS.md`: Codex operating rules and non-negotiable policies.
-- `README.md`: public project overview and where-to-start summary.
-- `data/project-state/current-stage-state.yaml`: active current-stage registry. Stage 5ED makes this the current source for latest/next-stage validation defaults and uses external post-push handoff fields instead of self-referential final commit placeholders.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; current operational docs now name Stage 5ED as latest complete and Stage 5EE as next.
-- `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
-- `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
-- `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
-- `data/source-harvester/stage5ag-source-harvester-summary.yaml`: Stage 5AG local source inventory aggregate summary.
-- `data/source-harvester/stage5ai-curated-research-bundle-summary.yaml`: Stage 5AI curated research-bundle extraction aggregate summary.
-- `data/source-harvester/stage5aj-summary.yaml`: Stage 5AJ UsefulFilesAndIdeas integration aggregate summary.
-- `data/source-harvester/stage5ak-summary.yaml`: Stage 5AK community-facts claim-record integration aggregate summary.
-- `data/source-harvester/stage5al-summary.yaml`: Stage 5AL website-ingest staging and Deep Research export aggregate summary.
-- `data/website-ingest/stage5al/`: committed metadata-only website-ingest package.
-- `data/website-render/stage5am-summary.yaml`: Stage 5AM static research website renderer aggregate summary.
-- `data/website-render/stage5am-*.yaml`: committed Stage 5AM render policy, input, manifest, validation, privacy, upload, guardrail, and next-stage decision records.
-- `data/deep-research-export/stage5an-summary.yaml`: Stage 5AN private content-pack and hosted private-content aggregate summary.
-- `data/deep-research-export/stage5an-*.yaml`: committed Stage 5AN content-pack, hosted export, combined webroot, file-selection, publication-gate, upload, consumption-guide, guardrail, and next-stage records.
-- `data/token-block/stage5ap-*.yaml`: committed Stage 5AP page 49-51 source-lock, image-provenance, transcription, coordinate, alphabet, mapping, null-control, and DWH records.
-- `data/token-block/stage5ar-*.yaml`: committed Stage 5AR original-image source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, source-lock/null-control update, DWH coordinate context, and guardrail records.
-- `data/token-block/stage5at-*.yaml`: committed Stage 5AT token case-review policy, challenge, crop-manifest, decision-template, review-pack manifest, variant-classifier repair, doc-drift repair, null-control update, DWH context, and guardrail records.
-- `data/token-block/stage5au-*.yaml`: committed Stage 5AU usability-audit, crop-geometry, crop-quality, v2 challenge, v2 decision-template, review-pack v2 manifest, UI coverage, null-control, DWH context, and guardrail records.
-- `data/token-block/stage5av-*.yaml`: committed Stage 5AV decision ingest, validation, human decision, confirmed-token, unresolved-variant, reviewer-extra-token, primary-60 impact, branch-manifest, canonical non-update, null-control, DWH context, and guardrail records.
-- `data/token-block/stage5aw-*.yaml`: committed Stage 5AW decision-parser audit, parser policy, repaired decision/variant/reviewer-extra records, malformed-fragment audit, repaired primary-60 impact, repaired compact branch-manifest, canonical non-update, null-control, DWH context, and guardrail records.
-- `data/stego/stage5ap-outguess-*.yaml`: committed Stage 5AP OutGuess policy, toolchain, positive-control matrix, historical fixture readiness, and guardrail records.
-- `data/project-state/stage5ap-summary.yaml`: Stage 5AP aggregate summary and guardrail state.
-- `data/project-state/stage5ar-summary.yaml`: Stage 5AR aggregate summary and guardrail state.
-- `data/project-state/stage5at-summary.yaml`: Stage 5AT aggregate summary and guardrail state.
-- `data/project-state/stage5au-summary.yaml`: Stage 5AU aggregate summary, guardrail state, and historical Stage 5AV next-stage decision.
-- `data/project-state/stage5av-summary.yaml`: Stage 5AV aggregate summary, guardrail state, and Stage 5AW next-stage decision.
-- `data/project-state/stage5aw-summary.yaml`: Stage 5AW parser-repair aggregate summary, guardrail state, and Stage 5AX next-stage decision.
-- `data/ci/stage5ax-*.yaml`: Stage 5AX parallel validation plan, command registry, run policy, run summary, safety audit, pytest shard plan, and guardrail records.
-- `data/project-state/stage5ax-summary.yaml`: Stage 5AX aggregate summary, guardrail state, and Stage 5AY next-stage decision.
-- `data/token-block/stage5ay-*.yaml`: Stage 5AY bounded token-block preflight design records, branch eligibility, control manifests, branch budget, DWH context, execution gates, and guardrails.
-- `data/project-state/stage5ay-summary.yaml`: Stage 5AY aggregate summary, guardrail state, and Stage 5AZ next-stage decision.
-- `data/token-block/stage5az-*.yaml`: Stage 5AZ repaired bounded preflight manifest integrity records, taxonomy membership policy, repaired variant-family manifest, repaired execution gates, Deep Research readiness, DWH context, and guardrails.
-- `data/project-state/stage5az-summary.yaml`: Stage 5AZ aggregate summary, guardrail state, and Stage 5BA next-stage decision.
-- `data/token-block/stage5bb-*.yaml`: Stage 5BB active-manifest registry, precedence policy, legacy pointer audit, branch-eligibility validation, runner scaffold, dry-run, counter, execution-gate, fixture-schema, validation, no-execution, DWH context, and guardrail records.
-- `data/token-block/stage5bd-*.yaml`: Stage 5BD dry-run policy, active-manifest lock, run-plan ID, future-path, counter, fixture-only, execution-gate, no-byte-stream, validation-evidence consolidation, archive marker, DWH context, and guardrail records.
-- `data/historical-route/stage5bf-*.yaml`: Stage 5BF local archive source-lock, inventory, trust-classification, specialized artifact, technique-taxonomy, token-block impact, source-gap, Deep Research readiness, DWH context, and guardrail records.
-- `data/historical-route/stage5bi-*.yaml`: Stage 5BI Fandom page triage, item source-lock candidate, original/archive crosswalk candidate, media policy, 2014 surface context, source-gap, negative-control, and guardrail records.
-- `data/source-harvester/stage5bi-*.yaml`: Stage 5BI local spreadsheet source-lock and Fandom/archive crosswalk source summary records.
-- `data/token-block/stage5bi-*.yaml`: Stage 5BI token-block external context, 2014 surface context, and spreadsheet/Stage 5AW reconciliation records that preserve active token-block records unchanged.
-- `data/project-state/stage5bb-summary.yaml`: Stage 5BB aggregate summary, guardrail state, and Stage 5BC historical next-stage decision.
-- `data/project-state/stage5bd-summary.yaml`: Stage 5BD aggregate summary, guardrail state, archive marker state, and Stage 5BE next-stage decision.
-- `data/project-state/stage5bf-summary.yaml`: Stage 5BF aggregate summary, guardrail state, and historical Stage 5BG next-stage decision.
-- `data/project-state/stage5bi-summary.yaml`: Stage 5BI aggregate summary, guardrail state, Fandom/source-lock counts, spreadsheet status, and Stage 5BJ next-stage decision.
-- `data/historical-route/stage5bj-*.yaml`: Stage 5BJ crosswalk closure plan, original/archive closure, exact 2014 surface source locks, Fandom page-body crosswalk, boards-thread crosswalk, high-priority candidate status, media-equivalence closure, source-gap update, and guardrail records.
-- `data/source-harvester/stage5bj-*.yaml`: Stage 5BJ local archive and source-snapshot inspection summaries.
-- `data/token-block/stage5bj-*.yaml`: Stage 5BJ token-block lineage preservation and 2014 surface context closure records that preserve active token-block records unchanged.
-- `data/project-state/stage5bj-summary.yaml`: Stage 5BJ aggregate summary, guardrail state, closure counts, local archive/source status, and Stage 5BK next-stage decision.
-- `data/project-state/stage5bj-next-stage-decision.yaml`: Stage 5BJ next-stage decision selecting Stage 5BK historical-route planning constraint integration without execution.
-- `data/source-harvester/stage5dk-*.yaml`: Stage 5DK Fandom source-lock register, classification, existing source-index crosswalk, web-fetch evidence, Codex handoff policy, and credential-redaction preservation records. These are compact metadata records only; raw Fandom bodies and images are not committed.
-- `data/historical-route/stage5dk-*.yaml`: Stage 5DK historical-route source-lock context, Page 56 DWH hash contract, and speculative-source quarantine records.
-- `data/token-block/stage5dk-*.yaml`: Stage 5DK Stage 5DJ/5DG/5BD preservation, active-lineage preservation, no-active-ingestion proof, no-byte-stream gate, and no-execution gate records.
-- `data/project-state/stage5dk-*.yaml`: Stage 5DK summary, next-stage decision, Fandom gap assessment, Page 56 hash-contract refinement, pivot readiness, validation evidence, reviewability gap register, stage marker, and source-digest index records.
-- `data/source-harvester/stage5ds-*.yaml`: Stage 5DS expanded CicadaMusic community-theory source locks, file inventory, message anchors, audio/PDF/image metadata locks, original-music crosslink, Ouroboros web-source candidates, noncommit proof, handoff, and credential-redaction records. These are compact metadata records only; raw community files are not committed.
-- `data/historical-route/stage5ds-*.yaml`: Stage 5DS review-only Music/Instar/Interconnectedness, Ouroboros/self-reference/Quine, and token-block static-context candidate records.
-- `data/token-block/stage5ds-*.yaml`: Stage 5DS Stage 5DG/Stage 5BD/active-lineage preservation, no-active/no-byte/no-execution proofs, operator-console preservation, and token-block static machine-code scope-control records.
-- `data/project-state/stage5ds-*.yaml`: Stage 5DS summary, next-stage decision, Stage 5DR preservation, validation evidence, gap register, scope control, ChatGPT context update, source-browser loadability, evidence-status policy, and routing records.
-- `data/operator-console/source-browser/number-fact-*.yaml` and `data/operator-console/source-browser/number-fact-*/`: Stage 5DT NumberFactCard configuration, review states, enrichment overlay scaffold, and review-batch plan records.
-- `data/project-state/stage5dt-*.yaml`: Stage 5DT summary, next-stage decision, Stage 5DS preservation, number-fact reviewability audit, review-batch summary, GUI fact-card summary, validation evidence, gap register, scope control, and ChatGPT context update records.
-- `data/source-harvester/stage5dt-*.yaml`: Stage 5DT Codex handoff, credential-redaction preservation, and raw-source noncommit proof records.
-- `data/token-block/stage5dt-*.yaml`: Stage 5DT Stage 5DG/Stage 5BD/active-lineage preservation and no-active/no-byte/no-execution proof records.
-- `data/source-harvester/stage5du-*.yaml`: Stage 5DU community-thread source-lock registers, file inventories, message/image/code/table metadata locks, canonical LP page-image crosslink, noncommit proof, handoff, and credential-redaction records.
-- `data/historical-route/stage5du-*.yaml`: Stage 5DU review-only visual/red-heading/negative-space/star/Mobius/Gateless Gate/cross-family candidate records.
-- `data/token-block/stage5du-*.yaml`: Stage 5DU Stage 5DT/Stage 5DG/Stage 5BD/active-lineage preservation and no-active/no-byte/no-execution proof records.
-- `data/project-state/stage5du-*.yaml`: Stage 5DU summary, next-stage decision, source-lock plan, family indexes, number-fact readiness, Source Browser loadability, validation evidence, gap register, scope control, and ChatGPT context update records.
-- `data/operator-console/source-browser/number-fact-overlays/stage5du-community-visual-fact-overlays.yaml`: Stage 5DU review-only NumberFactCard enrichment overlays for the Source Browser.
-- `data/project-state/stage5dv-*.yaml`: Stage 5DV Source Browser performance/path-canonicalization repair summaries, loadability evidence, ChatGPT context hardening, preservation, gap, and governance records.
-- `data/operator-console/source-browser/path-canonicalization-policy.yaml`, `performance-policy.yaml`, `cache-policy.yaml`, and `stage5dv-path-repair-validation-cases.yaml`: Stage 5DV key-aware path policy, UI/cache performance policy, and validation-case records.
-- `data/source-harvester/stage5dv-*.yaml` and `data/token-block/stage5dv-*.yaml`: Stage 5DV handoff/noncommit proofs plus Stage 5DG/5BD/active-lineage/no-active/no-byte/no-execution preservation records.
-- `data/operator-console/source-browser/number-fact-overlays/stage5dw-review-batch-001-high-signal-overlays.yaml`: Stage 5DW high-signal review-only NumberFactCard enrichment overlays for 20 selected source-lock/candidate records.
-- `data/operator-console/source-browser/number-fact-review-batches/stage5dw-*.yaml`: Stage 5DW review-batch result and entry-status records.
-- `data/project-state/stage5dw-*.yaml`, `data/source-harvester/stage5dw-*.yaml`, and `data/token-block/stage5dw-*.yaml`: Stage 5DW reviewability summary, overlay-only support, loadability, validation evidence, preservation, no-active/no-byte/no-execution, handoff, credential-redaction, and noncommit proof records.
-- `data/operator-console/source-browser/number-fact-overlays/stage5dx-review-batch-002-visual-transform-overlays.yaml`: Stage 5DX visual/red-heading/transform review-only NumberFactCard enrichment overlays for 20 selected source-lock/candidate records.
-- `data/operator-console/source-browser/number-fact-review-batches/stage5dx-*.yaml`: Stage 5DX review-batch result and entry-status records.
-- `data/project-state/stage5dx-*.yaml`, `data/source-harvester/stage5dx-*.yaml`, and `data/token-block/stage5dx-*.yaml`: Stage 5DX reviewability summary, Source Browser loadability, validation evidence, preservation, no-active/no-byte/no-execution, handoff, credential-redaction, and noncommit proof records.
-- `data/operator-console/source-browser/number-fact-overlays/stage5ec-review-batch-003-triangle-page32-token-music-overlays.yaml`: Stage 5EC triangle/Page32/token-static/music/self-reference review-only NumberFactCard enrichment overlays for 20 selected source-lock/candidate records.
-- `data/operator-console/source-browser/number-fact-review-batches/stage5ec-*.yaml`: Stage 5EC review-batch result records for number-fact review batch 003.
-- `data/project-state/stage5ec-*.yaml`, `data/source-harvester/stage5ec-*.yaml`, and `data/token-block/stage5ec-*.yaml`: Stage 5EC reviewability summary, Source Browser loadability, validation evidence, Stage 5EB/5DX/5DW/5DV/5DU/5DG/5BD preservation, no-active/no-byte/no-execution, handoff, credential-redaction, and noncommit proof records.
-- `data/operator-console/source-browser/number-fact-overlays/stage5ed-review-batch-004-disk-visual-method-overlays.yaml`: Stage 5ED DiskCipher/visual-method/route-context review-only NumberFactCard enrichment overlays for 20 selected source-lock/candidate records.
-- `data/operator-console/source-browser/number-fact-review-batches/stage5ed-*.yaml`: Stage 5ED review-batch result records for number-fact review batch 004.
-- `data/project-state/stage5ed-*.yaml`, `data/source-harvester/stage5ed-*.yaml`, and `data/token-block/stage5ed-*.yaml`: Stage 5ED reviewability summary, Source Browser loadability, validation evidence, Stage 5EC/5EB preservation, older historical preservation, no-active/no-byte/no-execution, handoff, credential-redaction, and noncommit proof records.
-- `data/source-harvester/stage5dl-*.yaml`: Stage 5DL local source-lock register, Reddit image register, number-triangle crosswalk, disk-cipher crosswalk, and koan-page lock records. These are compact metadata records only; raw local files are not committed.
-- `data/historical-route/stage5dl-*.yaml`: Stage 5DL triangle, disk-cipher, quote-dialogue crib, koan visual-parallel, and cross-family evidence-index records.
-- `data/token-block/stage5dl-*.yaml`: Stage 5DL Stage 5DG/5BD preservation, active-lineage preservation, no-active-ingestion proof, no-byte-stream gate, and no-execution gate records.
-- `data/project-state/stage5dl-*.yaml`: Stage 5DL summary, next-stage decision, pivot-readiness, candidate-family priority, validation evidence, reviewability gaps, path aliases, and source-digest index records.
-- `data/source-harvester/stage5dm-*.yaml`: Stage 5DM Blake web-source gap metadata and local visual source-lock records. These are compact metadata records only; raw web bodies and local third-party images are not committed.
-- `data/historical-route/stage5dm-*.yaml`: Stage 5DM Blake visual-text, Sacred Book overlay, Page6 magic-square precedent, full-page visual motif, Page32 Moebius/Fibonacci-prime-index, and doublet-scarcity candidate records.
-- `data/token-block/stage5dm-*.yaml`: Stage 5DM Stage 5BD/active-lineage preservation, no-active-ingestion proof, no-byte-stream gate, and no-execution gate records.
-- `data/project-state/stage5dm-*.yaml`: Stage 5DM summary, source-lock addendum register, pivot-readiness update, Drive/path hygiene, evidence-atlas readiness, and validation-evidence records.
-- `data/historical-route/stage5bk-*.yaml`: Stage 5BK iddqd-v2 source-root/tree/byte-string/transcription/translation/positive-control metadata, planning constraints, family planning statuses, source-gap severity records, Stage 5BJ errata, and guardrail records.
-- `data/token-block/stage5bk-*.yaml`: Stage 5BK token-block historical constraint, 2014 surface/page49 context, String 4 page49-51 crosswalk, lineage preservation, and future dry-run planning impact records.
-- `data/source-harvester/stage5bk-*.yaml`: Stage 5BK iddqd-v2 local-source integration summary and Codex handoff policy correction.
-- `data/project-state/stage5bk-summary.yaml`: Stage 5BK aggregate summary, guardrail state, source-lock counts, planning-constraint counts, and Stage 5BL next-stage decision.
-- `data/project-state/stage5bk-next-stage-decision.yaml`: Stage 5BK next-stage decision selecting Stage 5BL Deep Research review without execution.
-- `data/project-state/stage5bm-stage5bl-findings-integration.yaml`: Stage 5BM integration record for the Stage 5BL review findings.
-- `data/token-block/stage5bm-*.yaml`: Stage 5BM String 4 source restatement, inverse policy, mismatch analysis, branch-membership, ambiguity coverage, planning constraint, lineage, and future dry-run planning-impact records.
-- `data/historical-route/stage5bm-*.yaml`: Stage 5BM source-gap severity, family granularity, DWH quarantine, Stage 5BJ errata supersession, and guardrail records.
-- `data/source-harvester/stage5bm-*.yaml`: Stage 5BM review-packaging warning and Codex handoff policy records.
-- `data/project-state/stage5bm-summary.yaml`: Stage 5BM aggregate summary, String 4 partial branch-match counts, guardrail state, and validation state.
-- `data/project-state/stage5bm-next-stage-decision.yaml`: Stage 5BM next-stage decision selecting Stage 5BN String 4 unsupported-position source-gap closure and human-review pack preparation without execution.
-- `data/token-block/stage5bn-*.yaml`: Stage 5BN target, option-gap, spreadsheet target-cell, coordinate-context, source-evidence, human-review manifest, inactive addendum, source-gap closure, planning-constraint, and lineage records.
-- `data/historical-route/stage5bn-*.yaml`: Stage 5BN source-gap severity, DWH quarantine, and guardrail records.
-- `data/source-harvester/stage5bn-codex-handoff-policy.yaml`: Stage 5BN Codex handoff policy using `codex-output`.
-- `data/project-state/stage5bn-summary.yaml`: Stage 5BN aggregate summary, spreadsheet-supported `0l` closure, inactive addendum status, and validation state.
-- `data/project-state/stage5bn-next-stage-decision.yaml`: Stage 5BN next-stage decision selecting Stage 5BO inactive addendum integration without execution.
-- `data/token-block/stage5bo-*.yaml`: Stage 5BO decision-template source lock, token-case errata, errata-aware inactive option universe, String 4 after-errata branch membership, Stage 5BN addendum integration, source-gap closure, planning constraint, lineage, and future dry-run impact records.
-- `data/historical-route/stage5bo-*.yaml`: Stage 5BO source-gap severity, DWH quarantine, and guardrail records.
-- `data/source-harvester/stage5bo-codex-handoff-policy.yaml`: Stage 5BO Codex handoff policy using `codex-output`.
-- `data/project-state/stage5bo-summary.yaml`: Stage 5BO aggregate summary, operator-errata counts, String 4 full-branch reclassification, and validation state.
-- `data/project-state/stage5bo-next-stage-decision.yaml`: Stage 5BO next-stage decision selecting Stage 5BP Deep Research review before dry-run ingestion.
-- `data/token-block/stage5bq-*.yaml`: Stage 5BQ inactive String 4 planning context, no-active-ingestion proof, future dry-run requirements, active-manifest preservation, Stage 5BD lineage preservation, and dry-run planning impact records.
-- `data/historical-route/stage5bq-*.yaml`: Stage 5BQ source-gap severity update, DWH quarantine reaffirmation, and guardrail records.
-- `data/source-harvester/stage5bq-codex-handoff-policy.yaml`: Stage 5BQ Codex handoff policy using `codex-output`.
-- `data/project-state/stage5bq-summary.yaml`: Stage 5BQ aggregate summary, Stage 5BP verdict, inactive planning context state, and validation state.
-- `data/project-state/stage5bq-next-stage-decision.yaml`: Stage 5BQ next-stage decision selecting Stage 5BR Deep Research review before any execution-capable stage.
-- `data/token-block/stage5bs-*.yaml`: Stage 5BS closed planning-ingestion gate, future-runner citation policy, inactive-sidecar policy, active blocker, no-active-ingestion proof, readiness matrix, manifest requirements, Stage 5BD plan preservation, active-manifest preservation, and future planning impact records.
-- `data/token-block/stage5ci-*.yaml`: Stage 5CI future approval/acceptance templates, combined approval-gate validation preflight, activation-decision template, negative validation contract, no-byte/no-execution gates, Stage 5CG/5CE/5CC/5BD preservation, active-lineage preservation, and future planning impact records.
-- `data/project-state/stage5bs-*.yaml`: Stage 5BS findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, summary, and next-stage decision records.
-- `data/project-state/stage5ci-*.yaml`: Stage 5CI findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, filename-equivalence map, summary, and Stage 5CJ next-stage decision records.
-- `data/token-block/stage5ck-*.yaml`: Stage 5CK fixture-only operator approval, Deep Research acceptance, activation-decision, negative-validation, review-package, no-byte/no-execution, Stage 5CI/5CG/5CE/5CC/5BD preservation, active-lineage preservation, and future planning impact records.
-- `data/project-state/stage5ck-*.yaml`: Stage 5CK findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, filename-equivalence map, summary, and Stage 5CL next-stage decision records.
-- `data/token-block/stage5cm-*.yaml`: Stage 5CM approval-record readiness-boundary, fixture-vs-real boundary, end-to-end boundary validation, real approval-readiness preflight, activation-decision gate, Stage 5CK/5CI/5CG/5CE/5CC/5BD preservation, active-lineage preservation, sidecar blocker, no-byte/no-execution, and future planning impact records.
-- `data/project-state/stage5cm-*.yaml`: Stage 5CM findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, filename-equivalence map, summary, and Stage 5CN next-stage decision records.
-- `data/token-block/stage5co-*.yaml`: Stage 5CO real approval-record readiness package, real operator approval readiness, real Deep Research acceptance readiness, combined-gate readiness, activation-decision transition, future transition sequence, missing-requirements, real-record blocker, Stage 5CM/5CK/5CI/5CG/5CE/5CC/5BD preservation, active-lineage preservation, no-active/no-byte/no-execution, sidecar blocker, and nonauthorization records.
-- `data/project-state/stage5co-*.yaml`: Stage 5CO Stage 5CN findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, filename-equivalence map, summary, and Stage 5CP next-stage decision records.
-- `data/token-block/stage5cq-*.yaml`: Stage 5CQ operator-decision package scaffold, operator-decision nonauthorization, combined-gate non-satisfaction, activation nonauthorization, real-record blocker, Stage 5CO/Stage 5CM/Stage 5CK/Stage 5CI/Stage 5CG/Stage 5CE/Stage 5CC/Stage 5BD preservation, active-lineage preservation, no-active/no-byte/no-execution, sidecar blocker, and nonauthorization records.
-- `data/project-state/stage5cq-*.yaml`: Stage 5CQ Stage 5CP findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, filename-equivalence map, summary, and Stage 5CR next-stage decision records.
-- `data/token-block/stage5cs-*.yaml`: Stage 5CS operator-decision readiness package, real-approval decision-options scaffold, option-nonselection proof, operator-decision nonauthorization, combined-gate non-satisfaction, activation nonauthorization, real-record blocker, Stage 5CQ/Stage 5CO/Stage 5CM/Stage 5CK/Stage 5CI/Stage 5CG/Stage 5CE/Stage 5CC/Stage 5BD preservation, active-lineage preservation, no-active/no-byte/no-execution, sidecar blocker, and nonauthorization records.
-- `data/project-state/stage5cs-*.yaml`: Stage 5CS Stage 5CR findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, filename-equivalence map, summary, and Stage 5CT next-stage decision records.
-- `data/token-block/stage5cu-*.yaml`: Stage 5CU Stage 5CS option preservation, decision-option negative fixtures, real-decision negative fixtures, option-selection misuse matrix, option-fixture isolation policy, option-nonselection proof, real-record blocker, combined-gate non-satisfaction, activation nonauthorization, Stage 5CQ/Stage 5CO/Stage 5CM/Stage 5CK/Stage 5CI/Stage 5CG/Stage 5CE/Stage 5CC/Stage 5BD preservation, active-lineage preservation, no-active/no-byte/no-execution, sidecar blocker, and nonauthorization records.
-- `data/project-state/stage5cu-*.yaml`: Stage 5CU Stage 5CT findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, filename-equivalence map, summary, and Stage 5CV next-stage decision records.
-- `data/token-block/stage5cw-*.yaml`: Stage 5CW real-decision package preflight, future real-decision requirements, future option-selection preflight, preflight misuse validation, Stage 5CU negative-fixture preservation, Stage 5CS option preservation, Stage 5CQ/Stage 5CO/Stage 5CM/Stage 5CK/Stage 5CI/Stage 5CG/Stage 5CE/Stage 5CC/Stage 5BD preservation, active-lineage preservation, no-active/no-byte/no-execution, sidecar blocker, and nonauthorization records.
-- `data/project-state/stage5cw-*.yaml`: Stage 5CW Stage 5CV findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, filename-equivalence map, summary, and Stage 5CX next-stage decision records.
-- `data/historical-route/stage5cw-*.yaml`: Stage 5CW guardrail, DWH quarantine reaffirmation, and source-gap severity records.
-- `data/source-harvester/stage5cw-*.yaml`: Stage 5CW Codex handoff, completion-summary continuity, credential-redaction policy preservation, and review-packaging warning records.
-- `data/token-block/stage5cy-*.yaml`: Stage 5CY operator-facing option-selection decision preflight, option-selection requirements, misuse validation, options nonselection proof, Stage 5CW/5CU/5CS preservation, real-record blockers, combined-gate and activation nonauthorization, Stage 5BD plan preservation, active-lineage preservation, no-active/no-byte/no-execution gates, sidecar blocker, and nonauthorization records.
-- `data/project-state/stage5cy-*.yaml`: Stage 5CY Stage 5CX findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, filename-equivalence map, validation-count reconciliation, governance-scope control, summary, and Stage 5CZ next-stage decision records.
-- `data/historical-route/stage5cy-*.yaml`: Stage 5CY guardrail, DWH quarantine reaffirmation, and source-gap severity records.
-- `data/source-harvester/stage5cy-*.yaml`: Stage 5CY Codex handoff, completion-summary continuity, credential-redaction policy preservation, and review-packaging warning records.
-- `data/token-block/stage5da-*.yaml`: Stage 5DA operator choice / pause scaffold, nonselection proof, explicit-pause nonactivation proof, real-record blocker, Stage 5CY preservation, Stage 5BD plan preservation, active-lineage preservation, no-active/no-byte/no-execution gates, and sidecar gate records.
-- `data/project-state/stage5da-*.yaml`: Stage 5DA Stage 5CZ findings integration, governance scope-control, reviewable validation evidence, reviewability gap register, summary, and Stage 5DB next-stage decision records.
-- `data/source-harvester/stage5da-*.yaml`: Stage 5DA Codex handoff and credential-redaction policy preservation records.
-- `data/token-block/stage5dc-*.yaml`: Stage 5DC operator choice decision, selected-option record, unselected-options preservation, explicit-pause nonselection, real-approval noncreation, combined-gate non-satisfaction, activation nonauthorization, real-record boundary, Stage 5CY/5DA/5BD preservation, active-lineage preservation, and no-active/no-byte/no-execution gate records.
-- `data/project-state/stage5dc-*.yaml`: Stage 5DC Stage 5DB findings integration, governance scope-control, reviewable validation evidence, reviewability gap register, summary, and Stage 5DD next-stage decision records.
-- `data/source-harvester/stage5dc-*.yaml`: Stage 5DC Codex handoff and credential-redaction policy preservation records.
-- `data/token-block/stage5dg-*.yaml`: Stage 5DG real operator approval record, approval scope, nonactivation proof, Stage 5DE/5DC/5BD/active-lineage preservation, Deep Research absence, combined-gate and activation nonauthorization, target-context preservation, and no-active/no-byte/no-execution gate records.
-- `data/project-state/stage5dg-*.yaml`: Stage 5DG Stage 5DF findings integration, governance scope-control, reviewable validation evidence, reviewability gap register, summary, and Stage 5DH next-stage decision records.
-- `data/source-harvester/stage5dg-*.yaml`: Stage 5DG Codex handoff and credential-redaction policy preservation records.
-- `data/project-state/stage5di-*.yaml`: Stage 5DI source-lock plan, recent clue source-lock register, pivot-readiness package, pivot-priority matrix, route-candidate family index, validation evidence, reviewability gaps, filename equivalence map, summary, and Stage 5DJ next-stage decision records.
-- `data/historical-route/stage5di-*.yaml`: Stage 5DI route/clue candidate metadata for the 2016 message, page32 tree/polar route, PDD 153 triangle claim, page56 DWH target contract, dinkus visual delimiter, Boxentriq synthesis, Reddit page32 thread, magic-square context, source gaps, DWH quarantine, and no-execution guardrail.
-- `data/source-harvester/stage5di-*.yaml`: Stage 5DI public web source-lock register, local archive source-lock register, iddqd-v2 crosswalk, number-triangle bundle crosswalk, Codex handoff policy, credential-redaction policy, and review-packaging warning records.
-- `data/token-block/stage5di-*.yaml`: Stage 5DI preservation and no-active/no-byte/no-execution records for Stage 5DG approval, Stage 5BD plan IDs, active lineage, and target-class context.
-- `data/project-state/stage5dj-*.yaml`: Stage 5DJ CicadaMusic source-lock register, file-hash inventory, music candidate-family index, pivot-readiness integration, pivot-priority update, Stage 5DI integration, validation evidence, reviewability gaps, governance-scope control, authenticity caution, summary, and Stage 5DK next-stage decision records.
-- `data/historical-route/stage5dj-*.yaml`: Stage 5DJ local CicadaMusic MP3/PDF metadata locks, 761 parable metadata, music-number metadata, route-clue context, target-class caution, and source-lock records.
-- `data/source-harvester/stage5dj-*.yaml`: Stage 5DJ CicadaMusic local-source crosswalk, Codex handoff policy, credential-redaction policy, and review-packaging warning records.
-- `data/token-block/stage5dj-*.yaml`: Stage 5DJ preservation and no-active/no-byte/no-execution records for Stage 5DG approval, Stage 5BD plan IDs, and active lineage.
-- `data/historical-route/stage5bs-*.yaml`: Stage 5BS source-gap update, DWH quarantine reaffirmation, and guardrail records.
-- `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
-- `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
-- `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
-- `docs/onboarding/deep-research-ingest-format.md`: Stage 5AJ Deep Research ingest metadata and fidelity policy.
-- `docs/onboarding/community-observation-ingest-workflow.md`: Stage 5AK community observation ingest and claim-record policy.
-- `docs/onboarding/static-research-index-workflow.md`: Stage 5AM static research index renderer and upload workflow.
-- `docs/onboarding/private-deep-research-content-workflow.md`: Stage 5AN private content-pack and SFTP webroot workflow.
-- `docs/onboarding/token-block-source-lock-workflow.md`: Stage 5AP page 49-51 token-block source-lock workflow.
-- `docs/onboarding/page49-51-coordinate-source-lock-workflow.md`: Stage 5AR original-image coordinate-lock workflow.
-- `docs/onboarding/token-case-human-review-workflow.md`: Stage 5AU/5AV token case human-review workflow.
-- `docs/onboarding/token-case-review-pack-v2-workflow.md`: Stage 5AU v2 review-pack usage workflow.
-- `docs/onboarding/token-case-decision-integration-workflow.md`: Stage 5AV decision integration workflow.
-- `docs/onboarding/decision-parser-repair-workflow.md`: Stage 5AW decision parser repair workflow.
-- `docs/onboarding/parallel-validation-workflow.md`: Stage 5AX local parallel validation workflow.
-- `docs/onboarding/bounded-token-block-preflight-workflow.md`: Stage 5AY design, Stage 5AZ repaired bounded preflight manifest workflow, Stage 5BB no-execution runner scaffold boundary, and Stage 5BD dry-run planning boundary.
-- `docs/onboarding/token-block-preflight-runner-scaffold-workflow.md`: Stage 5BB active-manifest and runner-scaffold workflow, with Stage 5BD validation-evidence supersession notes.
-- `docs/onboarding/token-block-preflight-dry-run-workflow.md`: Stage 5BD dry-run planning workflow.
-- `docs/onboarding/stage5bo-token-case-human-review-errata-workflow.md`: Stage 5BO operator-errata workflow.
-- `docs/onboarding/stage5bq-inactive-branch-dry-run-planning-workflow.md`: Stage 5BQ inactive-branch dry-run planning workflow.
-- `docs/onboarding/stage5cw-real-decision-package-preflight-workflow.md`: Stage 5CW real-decision package preflight workflow.
-- `docs/onboarding/stage5cy-option-selection-decision-preflight-workflow.md`: Stage 5CY option-selection decision preflight workflow.
-- `docs/onboarding/stage5da-operator-choice-pause-scaffold-workflow.md`: Stage 5DA operator choice / pause scaffold workflow.
-- `docs/onboarding/stage5dc-operator-choice-record-workflow.md`: Stage 5DC selected operator choice record workflow.
-- `docs/onboarding/stage5dg-real-operator-approval-record-workflow.md`: Stage 5DG real operator approval record workflow.
-- `docs/onboarding/historical-route-source-lock-workflow.md`: Stage 5BF local archive source-lock workflow.
-- `docs/onboarding/local-source-inventory-workflow.md`: local `third_party/` source inventory workflow and raw-data guardrails.
+- The current authority is `data/project-state/current-stage-state.yaml`.
+- The latest completed stage is `stage-6g`.
+- The next stage is `stage-6h`: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
+- Stage 6H is a source-lock/readiness addendum because recent dot-angle/right-triangle number-triangle material remains chat-only pending source-lock.
+- The acceptance policy is `docs/onboarding/codex-acceptance-criteria.md`.
+- The Stage 6H handoff addendum is `data/token-block/stage6g-stage6h-manifest-input-addendum.yaml`.
+- The post-push local completion handoff path is `codex-output/stage6g-codex-completion.md`.
 
 ## Research And Workflow Truth
 
@@ -400,9 +219,9 @@ are evidence, not current truth.
 <!-- stage6e:start -->
 ## Historical Stage 6E Boundary
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
@@ -410,11 +229,11 @@ Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contra
 <!-- stage6e:end -->
 
 <!-- stage6f:start -->
-## Stage 6F Current Boundary
+## Historical Stage 6F Boundary
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
 

@@ -256,9 +256,9 @@ Use `libreprimus token-block build-stage6b`, `validate-stage6b`, and `stage6b-su
 <!-- stage6e:start -->
 ## Historical Stage 6E Boundary
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
@@ -266,13 +266,24 @@ Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contra
 <!-- stage6e:end -->
 
 <!-- stage6f:start -->
-## Stage 6F Current Boundary
+## Historical Stage 6F Boundary
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
 
 Stage 6F did not create a final Stage 7 manifest, finalize an archive-run contract, create result archives, run probes, add new theory records, add overlays, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 <!-- stage6f:end -->
+
+<!-- stage6g:start -->
+## Stage 6G Token-Block CLI
+
+- `python -m libreprimus.cli token-block build-stage6g`
+- `python -m libreprimus.cli token-block validate-stage6g`
+- `python -m libreprimus.cli token-block stage6g-summary`
+- Focused validators include `validate-stage6g-current-doc-acceptance`, `validate-stage6g-start-here-repair`, `validate-stage6g-source-of-truth-map-repair`, `validate-stage6g-chatgpt-context-boundary`, `validate-stage6g-acceptance-policy-integration`, `validate-stage6g-stage6h-addendum`, and `validate-stage6g-gate-closure`.
+
+Future Codex stages must apply `docs/onboarding/codex-acceptance-criteria.md` and keep Stage 7 execution/archive gates closed unless explicitly authorized.
+<!-- stage6g:end -->

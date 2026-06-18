@@ -27,6 +27,7 @@ def test_stage5eb_current_stage_registry_uses_external_post_push_handoff_policy(
         ("stage-6d", "stage-6e"),
         ("stage-6e", "stage-6f"),
         ("stage-6f", "stage-6g"),
+        ("stage-6g", "stage-6h"),
     }
     assert current["latest_completed_stage_commit_recording_policy"] == "external_post_push_handoff"
     assert current["latest_completed_stage_ci_status_recording_policy"] == "external_post_push_handoff"

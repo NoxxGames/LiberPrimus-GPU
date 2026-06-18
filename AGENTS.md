@@ -58,324 +58,19 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Current completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
 
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6F repairs current-facing document integrity, hardens hook/preflight traceability, supersedes metadata-only traceability source dependency semantics, and keeps Stage 7 manifest work blocked until Stage 6G. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run image/stego/OCR/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6H is source-lock/readiness addendum work because recent dot-angle/right-triangle number-triangle material remains chat-only pending source-lock. It is not final Stage 7 manifest work.
 
 No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
 
-Discord raw logs are not committed. Raw page images, raw historical stego artefacts, generated outputs, SQLite databases, and local reports remain ignored and uncommitted.
-
-Current project state:
+Future Codex work must apply `docs/onboarding/codex-acceptance-criteria.md`.
 
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
-- Broad unsolved-page campaigns: not started.
-- CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-- Existing CUDA code and metadata are summarized by the latest staged-plan and CUDA notes; broad CUDA and unsolved-page CUDA remain blocked unless an explicit future prompt scopes them with CPU references, parity tests, result records, and benchmark plans.
-- Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
-- Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
-- Do not let C++ launch Python worker scripts.
-- Stage 5E first-kernel contract records are selection infrastructure only; they do not authorize broad CUDA implementation, GPU benchmarking, or generated-output publication.
-- Stage 5F synthetic-only kernel records are parity infrastructure only; the kernel matches the Stage 5D uppercase Latin synthetic shift fixture and is not production Gematria mod-29 CUDA.
-- Stage 5G CUDA parity-reporting records are reporting and hardening infrastructure only; they preserve the Stage 5F hash, enforce conservative CUDA-C style in `.cu`/`.cuh` paths, and keep solved-fixture CUDA execution blocked.
-- Stage 5H Gematria contract records define numeric token semantics only; they do not authorize CUDA execution.
-- Stage 5I preparation is not kernel implementation.
-- Stage 5J kernel records are synthetic numeric parity only, not production Gematria CUDA readiness.
-- Stage 5K reporting/preflight records are not CUDA execution permission.
-- Stage 5L solved-fixture token mappings are not CUDA execution permission.
-- Stage 5M solved-fixture CUDA parity is exact-scope correctness metadata only; it does not authorize broad solved-fixture expansion or unsolved-page CUDA.
-- Stage 5N controlled expansion gates are not execution permission unless the next stage explicitly scopes execution.
-- Stage 5O repeat verification records are exact-scope correctness and result-store preflight metadata only; they do not authorize broad solved-fixture expansion, unsolved-page CUDA, GPU benchmarking, generated result-body publication, or website expansion.
-- Stage 5P result-store integration records are compact reporting metadata only; they do not publish generated CUDA result bodies, upgrade method families to solved, authorize CUDA execution, or widen solved-fixture/unsolved-page CUDA scope.
-- Stage 5Q candidate mapping cites Stage 5P controlled expansion records and keeps CUDA execution disabled. Future Stage 5R parity must use only Stage 5Q mapped candidates unless a later prompt explicitly scopes additional records.
-- Stage 5Q mapped candidates are not solve evidence and do not authorize unsolved-page CUDA, broad solved-fixture expansion, GPU benchmarking, generated-body publication, method-status upgrades, or website expansion.
-- Stage 5R may execute only the three mapped Stage 5Q direct-translation candidates: `p57-parable`, `some-wisdom`, and `the-loss-of-divinity`.
-- Stage 5R must not execute Stage 5L/5M/5O consumed controls as new candidates, blocked original-family fixtures, unsolved pages, raw page text, canonical corpus input, benchmarks, or broad solved-fixture campaigns.
-- Stage 5R parity is correctness metadata only, not performance evidence or solve evidence, and must not publish generated CUDA result bodies.
-- Stage 5R completion summaries must include run counts, hash tables, boundary/guardrail status, and next-stage rationale.
-- Stage 5S is compact result-store integration, not CUDA execution.
-- Stage 5S must not publish generated CUDA result bodies.
-- Stage 5S must not upgrade any method family to solved.
-- Stage 5S must not treat Stage 5R parity as performance evidence.
-- Stage 5S must keep consumed controls and blocked original-family fixtures distinct from the three Stage 5R expanded direct-translation fixtures.
-- Stage 5S must not run unsolved pages, raw page text, canonical corpus input, benchmarks, or broad solved-fixture campaigns.
-- Stage 5S completion summaries must include integration counts, per-fixture hash table, boundary/guardrail status, and next-stage rationale.
-- Stage 5T is a readiness/matrix stage, not CUDA execution.
-- Stage 5T must not add kernels, modify CUDA source, run CUDA, benchmark, or widen solved/unsolved scope.
-- Stage 5T must distinguish `gematria_shift_score_only` parity from original transform-family semantics.
-- Stage 5T must not describe solved-fixture parity as solve evidence.
-- Stage 5T must keep unsolved-page CUDA blocked.
-- Stage 5T must keep generated result bodies ignored.
-- Stage 5T completion summaries must include per-family readiness, kernel ranking, ABI gaps, guardrail status, and next-stage rationale.
-- Stage 5U is a contract-only ABI stage, not CUDA/native execution.
-- Stage 5AE is corrected reporting and reference-contract repair only; it does not rewrite Stage 5AD as passed.
-- Stage 5AE formula parity pass applies only to corrected formula-output hash material `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`.
-- Stage 5AE keeps Stage 5AD historical expected/reference hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87` in the candidate-major reference lineage.
-- Stage 5AF source-harvester work is local-only provenance tooling. It must not use Google Drive as a storage location, and Google/Dropbox/Colab exports must be copied into local ignored output roots.
-- Stage 5AF generated reports and research-bundle previews under `experiments/results/source-harvester/stage5af/` are generated outputs and must not be staged except README/.gitkeep scaffolds.
-- Stage 5AG local source inventory records are compact metadata only. They may hash/list user-provided ignored `third_party/` files and archives, but raw bytes, extracted bodies, archives, images, PDFs, audio/video, generated full inventories, and generated bundles remain ignored and uncommitted.
-- Stage 5AG did not use Google Drive storage, network fetching, online cloning, Deep Research, hypothesis generation, CUDA, benchmarks, scored experiments, website expansion, or solve claims.
-- Stage 5AH doc-staleness repair records are process-quality metadata only. Stage-ledger checks, operational-file-map coverage, and current/next-stage reports must pass before curated extraction resumes.
-- Stage 5AI curated extraction records are source-provenance metadata only. Generated bundle bodies under `research-inputs/stage5ai/` and reports under `experiments/results/research-bundles/stage5ai/` remain ignored except README/.gitkeep scaffolds.
-- Stage 5AI website-ingest records are metadata only and do not authorize website expansion.
-- Stage 5AI Deep Research pack records are private handoff metadata only; later Deep Research prompts must consume bundle manifests/cards/indexes rather than raw `third_party/` paths.
-- Stage 5AJ UsefulFilesAndIdeas records are compact local-source integration metadata only. Raw workbooks, images, text files, generated workbook-cell indexes, generated bundle bodies, and generated UsefulFiles reports remain ignored and uncommitted.
-- Stage 5AJ extraction-fidelity policy protects technical content for private Deep Research: do not redact runes, numbers, hashes, tables, cell coordinates, highlights, formulas, workbook sheet names, or technical links from private extracts except for minimal logged privacy/safety redaction.
-- Stage 5AJ scraper-capture profiles are future capture policy only. They do not authorize live scraping, online cloning, network fetches, Google Drive storage, website expansion, Deep Research execution, OCR/AI/ML interpretation, image/stego/audio tooling, CUDA, benchmarks, scored experiments, or solve claims.
-- Stage 5AK community-facts records are claim metadata only. Raw message logs, WebP attachments, generated private body files, generated source-harvester reports, and `codex-output/**` remain ignored and uncommitted.
-- Stage 5AK claim records preserve formulas, inputs, claimed values, correction status, risk level, source-lock requirements, and null-control requirements; they are not truth records, execution-ready manifests, source truth, or solve evidence.
-- Stage 5AK public website publication is blocked/review-gated. Private Deep Research addenda may preserve technical context in ignored `research-inputs/stage5ak/` files.
-- Stage 5AL website-ingest records are committed metadata only. They do not publish raw or review-blocked content, private identifiers, generated extract bodies, or public website pages.
-- Stage 5AM static website-render records are committed metadata only; generated HTML/JSON exports remain ignored under `website-export/stage5am/`.
-- Stage 5AN private content-pack records are committed metadata only; generated content-pack files, hosted private content, combined webroots, ZIP archives, and safe extracts remain ignored under `deep-research-content-packs/stage5an/` and `website-export/stage5an/`.
-- Stage 5AS external review has been consumed by Stage 5AT as review context. Future token-case work must consume Stage 5AT review-pack policy and challenge records, Stage 5AR original-image coordinate-lock records, Stage 5AP token-block records, the Stage 5AL/5AM metadata package, Stage 5AN content-pack metadata, private hosted content URLs, and publication gates, not raw `third_party/` paths or raw page images as source truth.
-- Stage 5AP page 49-51 token-block records are source-lock/preflight metadata only. The 32x8 token grid, logical coordinates, primary-60 mapping, DWH context, null controls, and OutGuess controls are not decoded plaintext, not canonical corpus activation, not experiment seeds, and not solve evidence.
-- Stage 5AP generated reports under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/` remain ignored and must not be staged.
-- Stage 5AR page 49-51 original-image coordinate records are coordinate source-lock/review-preflight metadata only. Pixel boxes are original-image anchors, not decoded text, OCR output, image semantics, canonical corpus activation, page-boundary finalisation, experiment seeds, CUDA inputs, or solve evidence.
-- Stage 5AR generated reports under `experiments/results/token-block/stage5ar/` remain ignored and must not be staged.
-- Stage 5AT token-case review-pack records are human-review packaging metadata only. The generated review pack under `human-review-packs/stage5at/token-case-review/` and generated reports under `experiments/results/token-block/stage5at/` remain ignored and must not be staged except allowed scaffolds.
-- Stage 5AT active ambiguity classes are exactly `I/l`, `O/0`, `1/I/l`, `S/5`, `Z/2`, `B/8`, `G/6`, `o/0`, and `q/g/p`; stale example classes such as `f/F`, `A/4`, and `C/G` are non-active examples only.
-- Stage 5AU token-case review-pack v2 records are usability-repair metadata only. The generated review pack under `human-review-packs/stage5au/token-case-review-v2/` and generated reports under `experiments/results/token-block/stage5au/` remain ignored and must not be staged except allowed scaffolds.
-- Stage 5AU derived glyph-candidate crops, context crops, row crops, and overlays are review aids only, not source truth, OCR output, token decisions, image interpretation, experiment seeds, or solve evidence.
-- Stage 5AV token-case decision records are integration metadata only. They preserve 126 keep-current decisions and 77 unresolved branches, keep the filled decision template ignored, and do not change canonical transcription.
-- Stage 5AW token-case parser repair records supersede Stage 5AV branch metadata for future planning. They preserve valid reviewer extras, preserve visual placeholders as review-only unmappable options, exclude prose fragments from reviewer-extra token variants, and do not change canonical transcription.
-- Stage 5AX generated validation outputs are ignored under `experiments/results/ci/parallel-validation/stage5ax/`; commit only compact metadata under `data/ci/` and `data/project-state/`.
-- Stage 5AX parallel validation is local infrastructure only, not cryptanalytic benchmark evidence.
-- Stage 5AY bounded token-block preflight manifest records are design-only metadata. They consume Stage 5AW repaired branch metadata, keep Stage 5AV branch metadata superseded for planning, define controls and execution gates, and do not authorize byte-stream generation, DWH/hash search, decoding, scoring, CUDA, benchmarks, method-status upgrades, canonical corpus activation, page-boundary finalisation, or solve claims.
-- Stage 5AZ repaired preflight manifest records supersede the Stage 5AY bounded variant-family manifest for Deep Research review only. They preserve Stage 5AY as the design source stage, use unique family records plus taxonomy memberships, add manifest-integrity gate coverage, and do not authorize execution.
-- Stage 5BB active-manifest registry is now the loader entrypoint for future token-block preflight runner work. Future code must use Stage 5AW repaired branch metadata, Stage 5AZ repaired variant-family/design/budget/gate records, and Stage 5AY branch-eligibility policy through that registry.
-- Stage 5BB blocks stale active loads of `data/token-block/stage5av-token-variant-branch-manifest.yaml` and `data/token-block/stage5ay-bounded-variant-family-manifest.yaml`; those files may be used only for explicit historical diagnostics.
-- Stage 5BB dry-run previews and fixture-only result schema records are not execution, not DWH/hash search, not scoring, and not solve evidence.
-- Stage 5BS planning-ingestion gate and citation policy records are fail-closed metadata only. They do not authorize String 4 active ingestion, dry-run ingestion, byte-stream generation, variant materialisation, token-block execution, DWH/hash search, decoding, scoring, CUDA, benchmarks, website expansion, method-status upgrades, or solve claims. Future token-block runners must cite `data/token-block/stage5bs-string4-planning-ingestion-gate.yaml` and `data/token-block/stage5bs-future-runner-citation-policy.yaml` or fail closed.
-- Stage 5BD dry-run plan IDs, future result-path validation, family counters, fixture-only records, archive marker policy, and Stage 5BB validation-evidence consolidation are dry-run planning metadata only.
-- Stage 5BU lineage-path repair records are metadata-only reviewability hardening. They correct the Stage 5BS preserved active-lineage path, harden validators, and do not authorize active ingestion, byte-stream generation, token experiments, DWH/hash search, CUDA, scoring, benchmarks, website expansion, method-status upgrades, or solve claims.
-- Stage 5BW inactive-sidecar planning-ingestion records are metadata-only preflight. They propose a future inactive-sidecar consumption path and manifest-supersession checklist while keeping String 4 inactive, active manifests unchanged, Stage 5BD run-plan IDs preserved, and byte-stream generation/execution blocked.
-- Stage 5BY inactive-sidecar planning manifest records are metadata-only scaffold records. They consume Stage 5BX warnings, classify Stage 5BW source-digest duplicates, map Stage 5BW filename drift to record families, create only an inactive no-execution String 4 planning sidecar, keep manifest supersession unperformed, and preserve Stage 5BD run-plan IDs.
-- Stage 5CA inactive-sidecar review-contract records are metadata-only hardening records. They consume Stage 5BZ warnings, require exact future-runner citations, fail-closed triggers, activation preconditions, and deterministic manifest-supersession preflight checks, keep String 4 inactive, keep manifest supersession unperformed, preserve Stage 5BD run-plan IDs, and preserve active lineage.
-- Stage 5CC active-planning-input preflight records are metadata-only hardening records. They consume Stage 5CB warnings, preserve Stage 5CA exact citations, require exact-set fail-closed triggers and activation preconditions, create no-byte-stream and no-execution transition gates, keep active-planning input unauthorized, keep String 4 inactive, keep manifest supersession unperformed, preserve Stage 5BD run-plan IDs, and preserve active lineage.
-- Stage 5CE active-planning-input proposal package records are metadata-only review packaging and gate-design records. They consume Stage 5CD warnings, preserve Stage 5CC exact citation/fail-closed/activation contracts, require future operator and Deep Research approval before any activation-capable stage, keep the proposal package review-only, keep active-planning input unauthorized, keep String 4 inactive, keep manifest supersession unperformed, preserve Stage 5BD run-plan IDs, preserve active lineage, and keep no-byte/no-execution gates closed.
-- Stage 5CG approval-gate decision scaffold records are metadata-only post-review integration records. They consume Stage 5CF warnings, create future operator and Deep Research decision scaffolds without satisfying either approval, preserve Stage 5CE proposal/gate records, record Stage 5CE wording review as a non-gate-opener, keep active-planning input unauthorized and unselected, keep String 4 inactive, keep manifest supersession unperformed, preserve Stage 5BD run-plan IDs, preserve active lineage, and keep no-byte/no-execution gates closed.
-- Stage 5CI approval-record template hardening records are metadata-only validation-preflight records. They consume Stage 5CH warnings, harden future operator approval, Deep Research acceptance, combined approval-gate, negative-validation, and activation-decision templates without creating actual approval or activation records, keep the combined approval gate unsatisfied, keep active planning input unauthorized and unselected, keep String 4 inactive, keep manifest supersession unperformed, preserve Stage 5BD run-plan IDs, preserve active lineage, and keep no-byte/no-execution gates closed.
-- Stage 5CK approval-record fixture-pack records are metadata-only validation-fixture and review-package records. They consume Stage 5CJ warnings, create only synthetic negative fixture records for future operator approval, Deep Research acceptance, and activation-decision validation, keep fixture records from satisfying real gates, create no actual approval/acceptance/activation records, keep the combined approval gate unsatisfied, keep activation invalid, keep active planning input unauthorized and unselected, keep String 4 inactive, keep manifest supersession unperformed, preserve Stage 5BD run-plan IDs, preserve active lineage, and keep no-byte/no-execution gates closed.
-- Stage 5CM approval-record readiness-boundary records are metadata-only boundary-hardening records. They consume Stage 5CL warnings, preserve Stage 5CK fixture-only records, harden fixture/template/scaffold/review-package versus real-record validation boundaries, add end-to-end readiness validation and credential-redaction/no-secret handoff policy, create no actual approval/acceptance/activation records, keep the combined approval gate unsatisfied, keep activation invalid, keep active planning input unauthorized and unselected, keep String 4 inactive, keep manifest supersession unperformed, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-byte/no-execution gates closed, and set the Stage 5CM-and-later parallel validation cap to 8 workers.
-- Stage 5CO real approval-readiness records are metadata-only transition-planning records. They consume Stage 5CN warnings, preserve Stage 5CM boundaries and prior fixture/template/scaffold/review-package layers, define future real approval/acceptance/combined-gate/activation-decision record requirements, keep the real-record creation blocker active, keep the combined gate unsatisfied, keep activation invalid, keep active planning input unauthorized and unselected, keep String 4 inactive, keep manifest supersession unperformed, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-active/no-byte/no-execution gates closed, and keep the Stage 5CM-and-later 8-worker validation cap.
-- Stage 5CQ operator-decision package scaffold records are metadata-only review-integration records. They consume Stage 5CP warnings, preserve Stage 5CO readiness and transition records, restore strict `codex-output` completion-summary handoff discipline, create only a future operator-decision package scaffold, create no real operator decision or approval record, keep the combined gate unsatisfied, keep activation invalid, keep active planning input unauthorized and unselected, keep String 4 inactive, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-active/no-byte/no-execution gates closed, and keep the Stage 5CM-and-later 8-worker validation cap.
-- Stage 5CS operator-decision readiness/options records are metadata-only review-integration records. They consume Stage 5CR warnings, preserve Stage 5CQ operator-decision scaffold records and Stage 5CO/5CM/5CK/5CI/5CG/5CE/5CC/5BD approval-readiness layers, create only a future operator-decision readiness package and real-approval decision options scaffold, keep all six options unselected, create no real operator decision, approval, acceptance, combined-gate, activation, active-input, byte-stream, or execution record, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-active/no-byte/no-execution gates closed, and keep the Stage 5CM-and-later 8-worker validation cap.
-- Stage 5CU option negative-fixture hardening records are metadata-only review-integration records. They consume Stage 5CT warnings, preserve Stage 5CS readiness/options records, create only adversarial negative fixtures, real-decision negative fixtures, option-selection misuse rows, and isolation-policy metadata, keep all six options unselected, create no real operator decision, approval, acceptance, combined-gate, activation, active-input, byte-stream, or execution record, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-active/no-byte/no-execution gates closed, keep `codex-output` handoff summaries non-placeholder, and keep the Stage 5CM-and-later 8-worker validation cap.
-- Stage 5CW real-decision package preflight records are metadata-only review-integration records. They consume Stage 5CV warnings, preserve Stage 5CU negative fixtures and Stage 5CS readiness/options records, create only review-only future real-decision package preflight requirements plus preflight misuse validation, keep all six options unselected, create no real decision package, no real operator decision, no approval, acceptance, combined-gate, activation, active-input, byte-stream, or execution record, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-active/no-byte/no-execution gates closed, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, and keep the Stage 5CM-and-later 8-worker validation cap.
-- Stage 5CY option-selection decision preflight records are metadata-only review-integration records. They consume Stage 5CX warnings, preserve Stage 5CW real-decision package preflight as `review_preflight_only`, preserve Stage 5CU negative fixtures and Stage 5CS readiness/options records, create only review-only operator-facing option-selection preflight metadata, reconcile the Stage 5CW pytest-count mismatch as non-gate-opening reviewability metadata, keep all six options unselected, create no real decision package, no real operator decision, no approval, acceptance, combined-gate, activation, active-input, byte-stream, or execution record, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-active/no-byte/no-execution gates closed, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, keep the Stage 5CM-and-later 8-worker validation cap, and require Stage 5CZ review before any future explicit operator choice or pause.
-- Stage 5DA operator choice / pause scaffold records are metadata-only review-integration records. They consume Stage 5CZ warnings, preserve Stage 5CY option-selection preflight, preserve the Stage 5CS six unselected options exactly, create only a future explicit-choice/explicit-pause scaffold, select no option, select no explicit pause, create no real choice/pause/decision/approval/acceptance/combined-gate/activation/active-input/byte-stream/execution record, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-active/no-byte/no-execution gates closed, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, keep the Stage 5CM-and-later 8-worker validation cap, and require Stage 5DB review before any future actual operator choice, pause record, approval, activation, active-input selection, byte-stream stage, or execution-adjacent stage.
-- Stage 5DC operator choice decision records are metadata-only review-integration records. They consume Stage 5DB warnings, preserve Stage 5DA, Stage 5CY option-selection preflight, preserve the Stage 5CS six-option scaffold exactly, select only `prepare_real_operator_approval_record`, preserve the other five options unselected, select no explicit pause, create no real operator approval, Deep Research acceptance, combined-gate validation, activation-decision, active-input, byte-stream, or execution record, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-active/no-byte/no-execution gates closed, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, keep the Stage 5CM-and-later 8-worker validation cap, and require Stage 5DD review before any future real operator approval record stage, activation, active-input selection, byte-stream stage, or execution-adjacent stage.
-- Stage 5DE real operator approval preparation records are metadata-only preparation records. They consume Stage 5DD / assistant warnings, preserve Stage 5DC selected-option and choice records, record the review-label anomaly as non-gate-opening, list 34 future real operator approval-record requirements, create no real operator approval, Deep Research acceptance, combined-gate validation, activation-decision, active-input, byte-stream, or execution record, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-active/no-byte/no-execution gates closed, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, keep the Stage 5CM-and-later 8-worker validation cap, and require Stage 5DF review before any future real operator approval record creation stage.
-- Stage 5DG real operator approval records are metadata-only governance records. They consume Stage 5DF assistant/operator warnings, preserve Stage 5DE preparation and Stage 5DC selected-option/choice records, create exactly one valid real operator approval record, mark only the operator-approval component satisfied, create no Deep Research acceptance, combined-gate validation, activation-decision, active-input, byte-stream, target-validation, Tor/network, or execution record, preserve Stage 5BD run-plan IDs, preserve active lineage, keep no-active/no-byte/no-execution gates closed, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, keep the Stage 5CM-and-later 8-worker validation cap, and require Stage 5DH review before any future Deep Research acceptance or combined-gate stage.
-- Stage 5DI recent clue source-lock records are metadata-only pivot-readiness records. They preserve Stage 5DG operator approval, create no Deep Research acceptance, keep the combined gate unsatisfied, select no pivot target, authorize no target-priority decision, active input, byte stream, target validation, Tor/network, route extraction, token-block transform, DWH/hash search, CUDA, benchmark, website expansion, or execution, preserve Stage 5BD run-plan IDs at 10, preserve active lineage at 8, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, keep the Stage 5CM-and-later 8-worker validation cap, and require Stage 5DJ review before any future target-priority selection or Deep Research acceptance stage.
-- Stage 5DJ CicadaMusic source-lock records are metadata-only pivot-readiness records. They may hash and read safe MP3/PDF header metadata from ignored `third_party/CicadaMusic/`, but raw music files, generated reports, and `codex-output` handoffs remain ignored and uncommitted. They preserve Stage 5DG operator approval, create no Deep Research acceptance, keep the combined gate unsatisfied, select no pivot target, authorize no target-priority decision, active input, byte stream, target validation, Tor/network, route extraction, audio stego, MP3Stego/OpenPuff, spectrogram/waveform analysis, sheet-music OCR/rendering, token-block transform, DWH/hash search, CUDA, benchmark, website expansion, or execution, preserve Stage 5BD run-plan IDs at 10, preserve active lineage at 8, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, keep the Stage 5CM-and-later 8-worker validation cap, and require Stage 5DK target-priority decision packaging before any future pivot target selection or Deep Research acceptance stage.
-- Stage 5DK Fandom source-lock records are metadata-only gap-closure and Page 56 hash-contract refinement records. They may fetch Fandom MediaWiki API content only for compact in-memory hashes/metadata, but raw page bodies, images, generated reports, and `codex-output` handoffs remain ignored and uncommitted. They preserve Stage 5DG operator approval, create no Deep Research acceptance, keep the combined gate unsatisfied, keep the Page 56 512-bit hash algorithm/preimage unknown, select no pivot target, authorize no target-priority decision, active input, byte stream, target validation, Tor/network route access, route extraction, token-block transform, DWH/hash/preimage search, CUDA, benchmark, website expansion, or execution, preserve Stage 5BD run-plan IDs at 10, preserve active lineage at 8, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, and keep the Stage 5CM-and-later 8-worker validation cap.
-- Stage 5DL triangle / disk / quote / koan source-lock records are metadata-only pivot-readiness refresh records. They may hash and read safe metadata from ignored local `third_party/NumberTriangleStuff`, `third_party/DiskCipherStuff`, `third_party/RedditStuff`, and `third_party/koan_page.png`, but raw files, generated reports, and `codex-output` handoffs remain ignored and uncommitted. They preserve Stage 5DG operator approval, create no Deep Research acceptance, keep the combined gate unsatisfied, record `pdd_153_triangle_word_prime_route_v1` as a future-priority operator preference only, select no pivot target, authorize no target-priority decision, active input, byte stream, target validation, Tor/network route access, triangle/disk/quote/koan route extraction, token-block transform, DWH/hash/preimage search, OCR/image forensics/AI interpretation, CUDA, benchmark, website expansion, or execution, preserve Stage 5BD run-plan IDs at 10, preserve active lineage at 8, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, keep the Stage 5CM-and-later 8-worker validation cap, and require Stage 5DM target-priority decision packaging before any future pivot target selection or Deep Research acceptance stage.
-- Stage 5DM Blake / Sacred Book / Page32 / full-page visual / doublet / evidence-atlas source-lock records are metadata-only addendum records. They may hash safe metadata from ignored local visual sources and record web-source metadata gaps, but raw third-party images, generated reports, and `codex-output` handoffs remain ignored and uncommitted. They preserve Stage 5DL, create no Deep Research acceptance, keep the combined gate unsatisfied, select no pivot target, authorize no target-priority decision, active input, byte stream, target validation, Tor/network route access, Blake/Page32/triangle/disk/quote/koan route extraction, token-block transform, DWH/hash/preimage search, OCR/image forensics/AI interpretation, evidence-atlas app/tool building, CUDA, benchmark, website expansion, or execution, preserve Stage 5BD run-plan IDs at 10, preserve active lineage at 8, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, keep the Stage 5CM-and-later 8-worker validation cap, and require Stage 5DN source/evidence review before any future pivot target selection or Deep Research acceptance stage.
-- Stage 5DN DiskCipher v1 source-lock and triangle/circumference bridge records are metadata-only addendum records. They may hash and read safe metadata from ignored local `third_party/DiskCipherStuff/**` files, but raw DiskCipher files, images, generated reports, and `codex-output` handoffs remain ignored and uncommitted. They source-lock `message_bodies.txt` and `results.png` as metadata, record Alberti/disk, 56311/WYNN/WAY, p39 row-1, Rule 4 Mobius-trip, doublet-suppression, RUTH/root/route/WAY, 2015 eclipse/167, pdd-153, circumference precedent, and single-I spiral crosslink candidates as review-only context, quarantine probability claims, preserve Stage 5DG approval, preserve Stage 5BD run-plan IDs at 10, preserve active lineage at 8, keep `codex-output` handoff summaries non-placeholder, keep `codex_output` absent, keep the Stage 5CM-and-later 8-worker validation cap, and require Stage 5DO source/evidence review before any future target-priority decision, Deep Research acceptance, active input, byte stream, target validation, route extraction, DWH/hash search, execution, CUDA, benchmark, method-status upgrade, or solve claim.
-- Stage 5DO Discord NumberFacts and pixel-colour source-lock records are metadata-only addendum records. They may hash ignored local `third_party/NumberFactsCollection/**` and `third_party/PotentialHint-3301-on-Page32/**` files, read `messages.txt` only for source-lock and line-hash anchors, and read frequency tables only for compact metadata. Raw Discord-derived files, images, frequency-table bodies, generated reports, and `codex-output` handoffs remain ignored and uncommitted. They record Page32 red-header arithmetic facts, NO-F section-flow arithmetic, doublet/word-count/GP-fact/pixel-colour/9901 candidates, 1033-vs-185th-prime correction, canonical transcript/image verification blockers, probability quarantine, Stage 5DN preservation, Stage 5DG approval, Stage 5BD run-plan IDs at 10, active lineage at 8, `codex-output` handoff continuity, `codex_output` absence, and the Stage 5CM-and-later 8-worker validation cap. They do not implement the future source-lock browser GUI, select a pivot target, create Deep Research acceptance, satisfy the combined gate, authorize active input, generate byte streams, validate target classes, run route extraction, run DWH/hash/preimage search, run OCR/image forensics/AI interpretation, execute token-block work, run CUDA, benchmark, upgrade method status, or make solve claims.
-- Stage 5DP New Reddit Mayfly / dot / cover / ISO source-lock records are metadata-only addendum records. They may hash ignored local `third_party/RedditStuff/**` files, read `url.txt`/`info.txt` only for source-lock metadata, extract compact docx/xlsx metadata, and verify bounded workbook/arithmetic facts. Raw RedditStuff files, docx/xlsx bodies, images, generated reports, and `codex-output` handoffs remain ignored and uncommitted. Mayfly grid/workbook facts, dot-marker observations, front-cover measurement candidates, ISO palindrome-prime size candidates, and 2012 Problems autostereogram-source context are candidate-only and not active routes. Stage 5DP preserves Stage 5DO GUI deferral, Stage 5DG approval, Stage 5BD run-plan IDs at 10, active lineage at 8, `codex-output` handoff continuity, `codex_output` absence, and the 8-worker validation cap. It must not implement source-browser puzzle execution, select a target, create Deep Research acceptance, satisfy the combined gate, authorize active input, generate byte streams, validate target classes, run Mayfly/Page32/triangle route extraction, run DWH/hash/preimage search, run OCR/image forensics/AI interpretation, execute token-block work, run CUDA, benchmark, upgrade method status, or make solve claims.
-- Stage 5DQ Operator Console v0 Source-Browser GUI records are review-infrastructure records. The operator-console shell and source browser may index committed metadata, expose explicit file/URL/context navigation, and manage manual-entry/override/tombstone scaffolds, but must not execute puzzle logic, run source files, follow URLs automatically, mutate raw third-party material, create target decisions, authorize activation, generate byte streams, run OCR/image forensics/AI interpretation, score, run CUDA, benchmark, upgrade method status, or make solve claims. PySide6 remains optional; CLI validation must work without GUI dependencies. Generated caches under `.cache/operator-console/**` and local handoffs under `codex-output/**` remain ignored and uncommitted.
-- Stage 5DR Operator Console detail-panel records and follow-up GUI fixes are review-infrastructure only. The right-side details panel, thumbnails, file/URL actions, row selection, and path resolution must not become automatic URL following, source-file execution, OCR/image forensics, raw-source mutation, score generation, route extraction, or solve evidence.
-- Stage 5DS expanded Music / Ouroboros / self-reference / token-block static-context records are metadata-only source-lock addendum records. They may hash and read safe metadata from ignored `third_party/CicadaMusic/community-theory/**`, but raw MP3/PDF/image/message files and `codex-output` handoffs remain ignored and uncommitted. Music GP/product, guitar-prime, Ouroboros, Quine, Mobius, and token-block primary60 static facts are review-only context; they do not authorize music route extraction, audio/stego/OCR/image forensics, byte-stream generation, machine-code or VM execution, target selection, DWH/hash/preimage search, CUDA, benchmarks, method-status upgrades, or solve claims. Stage 5DT completed the follow-on number-fact card reviewability layer; Stage 5DU completed the inserted community visual/red-heading/negative-space source-lock addendum.
-- Stage 5DT number-fact card records are Operator Console reviewability infrastructure only. They normalize existing number facts for display, mark vague value-only facts for enrichment, mark older zero-fact entries as not reviewed, and plan review batches. They do not backfill facts, rewrite historical source-lock records, select a target, authorize active input, generate byte streams, execute token-block work, run OCR/image/audio/stego/CUDA/scoring/benchmarks, or make solve claims. Stage 5DW preserved the Stage 5DT stable batch plan while implementing a high-signal first batch as overlays.
-- Stage 5DU community visual/red-heading/negative-space source-lock records are metadata-only addendum records. They may hash and list safe metadata from ignored local community-thread folders, but raw thread images, messages, Python/source files, spreadsheets, generated masks, OCR output, forensic outputs, route outputs, and `codex-output` handoffs remain ignored and uncommitted. Red-heading, negative-space, star-artifact, Mobius/totient, Gateless Gate, and related number facts are review-only context; they do not authorize OCR/image forensics, semantic image interpretation, community code execution, route extraction, target selection, byte-stream generation, active ingestion, DWH/hash/preimage search, CUDA, benchmarks, method-status upgrades, or solve claims.
-- Stage 5DV Operator Console Source Browser repair records are GUI/index repair and context-hardening records only. Key-aware path collection, source-root-relative resolution, bare filename suppression, duplicate present+missing path suppression, path-resolution caching, thumbnail/raw-preview laziness, and expanded `ChatGPT-ContextFile.md` are reviewability infrastructure, not puzzle execution, route evidence, target selection, byte generation, or solve evidence.
-- Stage 5DW number-fact review batch 001 records are reviewability overlays only. They add 37 NumberFactCard overlays for 20 high-signal records, support overlay-only fact cards for older zero-extracted-fact entries, keep facts usable_for_decision_now=false, and do not rewrite historical source-lock records, select targets, generate bytes, execute routes/tools, run OCR/image/audio/stego/CUDA/scoring/benchmarks, or make solve claims. Stage 5DX preserved this layer.
-- Stage 5DX number-fact review batch 002 records are reviewability overlays only. They add 23 NumberFactCard overlays for 20 selected visual/red-heading/transform bridge records, preserve overlay-only fact cards for older zero-extracted-fact entries, keep facts usable_for_decision_now=false, and do not rewrite historical source-lock records, directly backfill facts, select targets, extract routes, generate bytes, execute routes/tools, run OCR/image/audio/stego/CUDA/scoring/benchmarks, or make solve claims. Stage 5DY preserved this layer.
-- Stage 5DY validation repair records are infrastructure only. They define focused, stage-fast, local-fast, full-parallel, full-serial-rare, and CI validation profiles; keep the local parallel worker cap at 8; mark full serial pytest as rare fallback rather than a default per-stage loop; require historical validators to avoid mutable global Source Browser counts; require shared schemas to remain stage-neutral; require stage-specific schemas to use stage-specific names; and require validate/summary commands to be non-mutating for committed records. Stage 5DY did not perform number-fact batch 3, select a target, generate bytes, execute anything, or make a solve claim.
-- Stage 5DZ Triangle/Page32 bounded-findings records are source-lock enrichment only. They preserve candidate-only PDD153 WAY arithmetic, heading canonicalization warnings, 56311/period612 review facts, Page32 red-header 3299->2472 route-selection context, 12+4 Mobius fold design context, direct-method negative-result notes, and future experiment design notes. Stage 5DZ does not perform number-fact batch 3, select a target, extract routes, generate route streams or bytes, run image forensics/OCR/target validation, rewrite historical source locks, execute anything, or make a solve claim.
-- Stage 5EA validation-throughput records are infrastructure only. They create `data/project-state/current-stage-state.yaml`, verify Stage 5DZ without requiring it to remain latest, normalize hyphenated validation stage IDs, define doc-ledger tier policy, cache Source Browser number-fact overlays for table/filter/detail rendering, preserve the 8-worker cap and timeout cleanup policy, and route deferred number-fact batch 3 to Stage 5EB. Stage 5EA does not add source-lock evidence or overlays, perform number-fact batch 3, select a target, generate bytes, execute anything, or make a solve claim.
-- Stage 5EB validation-finalization records are infrastructure only. They supersede the older local 8-worker validation cap with 10-worker and 10-pytest-worker defaults/caps, keep full serial pytest as the explicit `full-serial-rare` fallback, repair current-stage registry post-push handoff semantics, genericize stage-wrapper aliases, add shard/rerun guidance, validate Source Browser overlay-cache reuse, and routed deferred number-fact batch 3 to Stage 5EC. Stage 5EC has since completed that batch as overlay-only review metadata. Stage 5EB does not add source-lock evidence or overlays, perform number-fact batch 3, select a target, generate bytes, execute anything, or make a solve claim.
-- Stage 5EC number-fact review batch 003 records are reviewability overlays only. They add 25 triangle/Page32/token-static/music/self-reference NumberFactCard overlays for 20 selected source-lock entries, preserve Stage 5EB's 10-worker validation policy, rewrite no source locks, add no source-lock evidence, backfill no source records, select no target, generate no bytes, execute nothing, and make no solve claim.
-- Stage 5ED number-fact review batch 004 records are reviewability overlays only. They add 25 DiskCipher/visual-method/route-context NumberFactCard overlays for 20 selected source-lock entries, preserve Stage 5EC overlays and Stage 5EB's 10-worker validation policy, rewrite no source locks, add no source-lock evidence, backfill no source records, select no target, generate no bytes, execute nothing, and make no solve claim.
-- Stage 5BD must not be treated as authorization for byte-stream generation, variant materialisation, Cartesian enumeration, DWH/hash/preimage search, decoding, scoring, CUDA, benchmarks, website expansion, method-status upgrades, or solve claims.
-- Future Stage 5BE review must inspect Stage 5BD dry-run implementation, archive/evidence hygiene, no-byte-stream proof, future result-path validation, and execution-gate enforcement before any execution-capable runner stage.
-- Stage 5BF historical route records are source-lock and taxonomy metadata only.
-- Stage 5BF consumes ignored local `third_party/CicadaSolversIddqd` files by hash/path metadata only; do not commit raw archive bytes.
-- Stage 5BF does not execute historical techniques, PGP network verification, stego tools, OutGuess/OpenPuff/MP3Stego, DWH/hash search, token-block experiments, byte-stream generation, CUDA, benchmarks, website expansion, method-status upgrades, or solve claims.
-- Historical Stage 5BG review consumed Stage 5BF archive location, inventory, trust-classification, technique-taxonomy, source-gap, DWH context, token-block planning-impact, and guardrail records before Stage 5BI narrowed the follow-up to Fandom/source-lock crosswalk closure.
-- Stage 5BI Fandom source-lock triage records are metadata-only provenance and planning records.
-- Fandom pages are secondary route context unless future page-body source locks explicitly promote exact bodies.
-- Fandom images/media are secondary copies, not original artefacts; prefer `third_party/CicadaSolversIddqd`, Stage 5BF archive/hash metadata, and commit-addressed public refs for original/source-equivalent crosswalks.
-- Stage 5BI 2014 256-byte surfaces are context only and must not be combined with page 49-51 or used as experiment inputs without a future explicit source-lock/execution stage.
-- Stage 5BI local spreadsheet records are non-canonical local analysis metadata only; do not commit the workbook or cell bodies, and do not change canonical transcription from them.
-- Stage 5BJ original/archive crosswalk closure records remain metadata-only provenance and planning records.
-- Stage 5BK historical-route planning constraints are metadata-only planning records, not execution permission.
-- Stage 5BK iddqd-v2 source locks are compact metadata over ignored local files; raw iddqd-v2 bodies, fonts, media, images, archives, and full byte strings must not be committed.
-- Stage 5BK String 4 is page49-51 matrix-hex context only and must not replace Stage 5AP transcription or authorize byte-stream generation.
-- Stage 5BJ exact 2014 512-hex source locks and Stage 5BK byte-string locks are not experiment inputs, not DWH/hash targets, and must not be combined with page 49-51 without a future explicit execution-gated stage.
-- Stage 5BK keeps `codex-output/**` as the canonical ignored Codex handoff root; `codex_output/**` is deprecated historical context and must not be created or used for current handoffs.
-- Stage 5BM String 4 branch-crosswalk repair is metadata-only review integration, not execution permission.
-- Stage 5BM String 4 branch membership is `partial_branch_match`; the one unsupported position blocks active use pending Stage 5BN source-gap closure or human-review packaging.
-- Stage 5BM must not be used to commit full String 4 hex bodies, decoded bytes, reconstructed token streams, generated diagnostics, raw iddqd-v2/archive/Fandom/spreadsheet files, or full surface bodies.
-- Stage 5BM preserves Stage 5AP canonical transcription, Stage 5AW branch metadata, Stage 5AZ active manifest policy, and Stage 5BD dry-run records unchanged.
-- Stage 5BN String 4 unsupported-position closure is target-only metadata, not execution permission.
-- Stage 5BN found local spreadsheet support for `0l` at token index 199, but Stage 5AW active possible tokens remain `0I`, `0j`, `OI`, and `Oj`.
-- Stage 5BN proposed an inactive review-only `0l` addendum; it did not mutate Stage 5AW/5AY/5AZ records, canonical transcription, or active token-block manifests.
-- Stage 5BO token-case operator errata records are compact metadata over ignored local templates, not committed template bodies.
-- Stage 5BO's errata-aware option universe is inactive planning metadata only and does not mutate Stage 5AW/5AY/5AZ/5BD active records.
-- Stage 5BO reclassifies String 4 as `full_branch_match` for planning only; it is not active input, not a byte stream, not DWH/hash evidence, and not solve evidence.
-- Stage 5BQ consumes the Stage 5BP review outcome as `accept_with_warnings` metadata and records String 4 as `inactive_branch_context_only`.
-- Stage 5BQ keeps `string4_active_input_allowed=false` and `string4_dry_run_ingestion_allowed_now=false`; String 4 is not ingested into Stage 5BD dry-run plans.
-- Stage 5BQ's operator-errata sidecar is inactive planning metadata only; it is not a canonical transcription change, active manifest change, DWH/hash target, byte stream, or solve evidence.
-- Future Stage 5BR review must inspect Stage 5BQ inactive-branch dry-run planning constraints before any execution-capable token-block stage, and must not execute token-block experiments, generate byte streams, materialise variants, run DWH/hash search, decode, run stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, publish website content, upgrade method status, or make solve claims.
-- Stage 5BS consumes the Stage 5BR accept-with-warnings review as compact metadata and records a closed String 4 planning-ingestion gate.
-- Stage 5BS keeps `string4_active_input_allowed=false`, `string4_dry_run_ingestion_allowed_now=false`, and `future_token_block_execution_remains_blocked=true`.
-- Stage 5BS future runners must cite the Stage 5BS planning-ingestion gate and citation policy or fail closed.
-- Stage 5BS reviewability metadata is committed, but the Stage 5BR Deep Research body and Codex completion summary remain ignored and uncommitted.
-- Future Stage 5BZ review must inspect Stage 5BY findings integration, duplicate source-digest classification, filename-equivalence map, inactive-sidecar planning manifest scaffold, no-execution planning-ingestion sidecar, manifest-supersession preflight carry-forward, active-lineage preservation, Stage 5BD plan preservation, no-active-ingestion proof, no-byte-stream gate, and no-execution records before any planning-ingestion or execution-capable token-block stage.
-- Stage 5AX keeps git, GitHub, network/remote, generated-output-writing, issue-update, commit, and push operations serial.
-- Stage 5AX uses pytest-xdist only when available and otherwise falls back to deterministic subprocess sharding.
-- Stage 5AY preflight design cites Stage 5AW repaired branch metadata and the Stage 5AX next-stage decision, does not use ignored review-pack bodies as committed input, and does not execute token experiments or DWH/hash searches. Future Stage 5BE review must consume Stage 5BD dry-run records, Stage 5BB active-manifest registry, no-execution runner scaffold, and Stage 5AZ repaired manifest-design/execution-gate records before any execution-stage decision.
-- Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
-- Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
-- Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
-- Stage 5V implements/records native no-GPU Candidate Batch ABI conformance only.
-- Stage 5V may modify native/Python no-GPU reference code but must not modify CUDA source.
-- Stage 5V must not run CUDA, add CUDA kernels, benchmark, or widen solved/unsolved scope.
-- Stage 5V generated result bodies remain ignored; commit only compact conformance metadata.
-- Stage 5V keeps `gematria_shift_score_only` parity distinct from original transform-family semantics.
-- Stage 5V does not mark unresolved family-specific formulas as implemented.
-- Stage 5V completion summaries must include native adapter counts, fixture counts, output hashes, gap implementation status, guardrails, and next-stage rationale.
-- Future Stage 5W work must prepare prime-minus-one stream native parity contracts before family-specific CUDA contracts, top-k reducers, or benchmark planning.
-- Stage 5W prepares prime-minus-one native parity contracts only.
-- Stage 5W must not run CUDA or modify CUDA source.
-- Stage 5W must not invent p56 token values, plaintext, ciphertext, or stream formulas.
-- Stage 5W may generate deterministic prime schedules only from an explicit committed contract.
-- Stage 5W must keep generated bodies ignored and commit compact metadata only.
-- Stage 5W must keep p56 solved-fixture parity distinct from unsolved-page execution.
-- Stage 5W must not treat source-backed p56 readiness as a new solve.
-- Stage 5W completion summaries must include source inventory, stream formula, schedule policy, p56 readiness, guardrails, and next-stage rationale.
-- Stage 5X executes only no-GPU native parity scoped by Stage 5W records.
-- Stage 5X may execute only `stage5w-mapping-synthetic-prime-control-v0` and `stage5w-mapping-p56-stage4o-bounded-v0`.
-- Stage 5X must keep `stage5w-mapping-p56-full-fixture-blocked-v0` blocked until a full committed p56 cipher token buffer is explicitly scoped.
-- Stage 5X native parity is no-GPU Python-reference execution, not CUDA execution and not native C++ execution.
-- Stage 5X bounded p56 parity is not full p56 parity, not performance evidence, and not solve evidence.
-- Stage 5Y integrated compact Stage 5X reporting and CUDA contract readiness metadata, but did not execute CUDA, modify CUDA source, add kernels, run benchmarks, publish generated bodies, upgrade methods, or make solve claims.
-- Stage 5AA implemented and ran only the Stage 5Z synthetic prime-minus-one validation vector; p56/full-p56, unsolved pages, benchmarks, scored experiments, generated-body publication, method-status upgrades, website expansion, and solve claims remain blocked.
-- Do not stage `codex-output/**`.
-- Do not report CUDA parity records as speedup/performance evidence.
-- Do not stage `codex-output/**`.
-- Completion summaries must be detailed and include parity counts, gate decisions, guardrail status, and next-stage rationale.
-- Do not invent Gematria token values, token kinds, separator metadata, score-summary fields, or output hashes.
-- Future solved-fixture-safe CUDA expansion requires explicit future-stage approval and no-unsolved guardrails.
-- Stage 5J synthetic parity does not authorize solved-page CUDA.
-- Solved-fixture-safe CUDA requires explicit token mapping, score-summary parity, no-unsolved guardrails, and future-stage approval.
-- Future Gematria CUDA kernel work must use raw numeric token buffers and transformable masks.
-- Separator placeholders must not be transformed.
-- Stage 5J implementation must compare the CUDA token-output hash against the Stage 5H native fixture hash.
-- Stage 5F synthetic A-Z kernel behavior remains separate from Stage 5H/5I numeric Gematria records.
-- The Stage 5F uppercase Latin synthetic hash must not be treated as a Gematria mod-29 fixture hash.
-- Solved-fixture CUDA expansion remains blocked until Stage 5M parity records, separator handling, score-summary parity, and explicit future-stage approval are cited.
-- Future Gematria CUDA parity must use numeric tokens `0..28`, preserve separators unshifted, and keep Stage 4I confidence labels triage-only.
-- CUDA device/kernel code must use conservative CUDA-C style.
-- Do not use STL, std::array, std::vector, std::string, exceptions, RTTI, lambdas, or dynamic allocation in `.cu` / `.cuh` kernel/device paths.
-- Host-side C++ convenience code belongs outside CUDA kernel/device-facing files.
-- Future CUDA implementation work must cite the Stage 5E selected contract, Stage 5D native output hashes, Stage 5F synthetic parity records, Stage 5G parity/device-code audit records, Stage 5H Gematria contract records, and deterministic threading records before adding or widening any kernel target.
-- CUDA detection must be no-GPU-safe by default.
-- The local 16GB GPU profile is optional and must not become a CI requirement.
-- Do not use device detection or smoke-build results as performance evidence.
-- Do not add or widen CUDA kernels outside an explicit implementation stage.
-- Do not stage `codex-output/**`.
-- Local CUDA tool paths are optional local hints only, never CI requirements.
-- Raw data, generated outputs, SQLite databases, raw Discord logs, raw page images, raw historical stego artefacts, extracted payloads, and local deep-research reports are not committed.
-- No solve claims are present.
-- Stage 4A generated Discord full-review site, redacted streams, channel shards, topic shards, indexes, copied LP page images, thumbnails, contact sheets, and upload archives are generated outputs and must not be committed.
-- Future Deep Research handoffs should use the Stage 4A redacted bundle/site, not raw Discord logs.
-- Public or semi-public hosting of Stage 4A output must use `redacted_public` mode and should consider noindex headers, private URLs, or basic access controls.
-- Stage 4D bounded numeric verifier outputs are generated and ignored under `experiments/results/bounded-numeric/stage4d/`.
-- Numeric verifier stages must follow the no-fudge policy: keep raw and derived values separate, record formulas/sources for derived values, and reject nearest-prime, arbitrary +/-n, post-hoc row/column arithmetic, route expansion, and fuzzy matching.
-- Cuneiform-derived seeds require accepted coordinate/readout annotations before execution; current cuneiform records remain deferred.
-- Dot and delimiter ambiguity remains noncanonical unless reviewed and explicitly promoted; delimiter audits must not infer reset-boundary meaning.
-- Stage 4E source-delta outputs are generated and ignored under `experiments/results/source-delta/stage4e/`.
-- `third_party/CicadaSolversIddqd/` is an ignored local cache for optional cicada-solvers/iddqd audit material; commit only README and `.gitkeep`.
-- Do not blind-mirror external repositories. Source-delta audits commit metadata/records, not raw binary/image/audio/font artefacts.
-- Font binaries must not be committed or shared.
-- Compression artefact observations are preflight/control-only and not solve evidence; star-like compression/noise features require source variants and negative controls before interpretation.
-- Source-lock delta candidates such as `https://github.com/cicada-solvers/iddqd` must be handled by an explicit source-lock stage, not opportunistically processed.
-- Stage 4F generated stego/audio fixture diagnostics are generated and ignored under `experiments/results/stego-fixtures/stage4f/`.
-- Historical stego/audio fixture records are metadata/source-locks only unless a later explicit execution stage enables a bounded manifest.
-- Do not run stego/audio tools during source-locking stages.
-- OpenPuff and MP3Stego tool requirements must be documented before any execution stage.
-- No raw binary, audio, image, font, archive, or extracted payload artefacts may be committed.
-- Stage 4G generated cookie refresh records are generated and ignored under `experiments/results/cookie-refresh/stage4g/`.
-- Cookie refreshes must remain exact-source-backed. Do not add arbitrary strings, Discord-only strings, dictionary words, fuzzy matching, partial matching, hashcat, GPU/CUDA, or broad cracking.
-- If Stage 4G returns zero exact matches, do not rerun cookie work without newly source-locked exact candidate strings.
-- Stage 4H generated CPU batch records are generated and ignored under `experiments/results/cpu-batch/stage4h/`.
-- Future CUDA work must use the Stage 4H CPU batch parity contract.
-- Future CUDA work must cite Stage 5B parity harness, parity fixture, backend capability, and future-kernel matrix records before implementation.
-- Stage 5B backend capability records are planning metadata; the local 16GB profile is optional and must not be required by CI.
-- Stage 5B future-kernel matrix rows are planned or blocked only. They do not mean CUDA kernels exist.
-- Do not implement GPU code until CPU batch and scorer APIs are stable and parity tests exist.
-- Any new transform adapter must include a synthetic batch test and deterministic output hash expectation.
-- CLI behavior for `libreprimus cpu-batch` must remain stable unless a future stage updates docs, schemas, tests, and the parity contract together.
-- Stage 4I generated scoring-consolidation records are generated and ignored under `experiments/results/scoring-consolidation/stage4i/`.
-- Scoring is triage metadata, not solve evidence.
-- New scorers require scorer records, confidence-label mapping, tests, and calibration notes.
-- Future CUDA must preserve score-summary semantics before any GPU score is trusted.
-- Score labels cannot imply `solved` or `plaintext_verified`.
-- Stage 4J generated observation-review reports are generated and ignored under `experiments/results/observation-review/stage4j/`.
-- Observation promotion requires review-state checks and explicit promotion records.
-- Review-only observations cannot be used as experiment seeds.
-- Visual observations require page/image references and coordinate/region evidence before seed promotion.
-- Absolute local machine paths must not be committed in operational records; use repository-relative generated-output paths or mark troubleshooting examples as `example_path`.
-- Current-state text should be centralized through `STATUS.md` and `docs/roadmap/staged-plan.md` rather than copied into volatile paragraphs.
-- Stage 4K generated source-lock snapshot reports are generated and ignored under `experiments/results/source-lock-snapshots/stage4k/`.
-- `third_party/SourceSnapshots/` is an ignored local cache for allowlisted public source snapshots; commit only README and `.gitkeep`.
-- Public source locks must be allowlisted and declare explicit snapshot policy.
-- Prefer commit-addressed GitHub references over branch URLs.
-- Network use for source-lock snapshots must be explicit via `--allow-network`.
-- Source locks do not imply canonical truth or solve evidence.
-- Do not commit binaries, images, audio, fonts, PDFs, archives, raw Discord artefacts, raw page images, or broad mirrored repository content.
-- Stage 4L generated observation-promotion reports are generated and ignored under `experiments/results/observation-promotion/stage4l/`.
-- The promotion ledger is the gate between review decisions and future manifests.
-- Future manifests must cite promotion-readiness records.
-- Ready_for_manifest does not mean execution.
-- Control-only observations must not be treated as true claims.
-- Stage 4M generated image-preflight reports are generated and ignored under `experiments/results/image-preflight/stage4m/`.
-- Image preflight metrics are not hidden-message evidence.
-- Compression/star-like artefacts require source variants and controls.
-- Do not promote image artefact observations to seeds.
-- Bigram/Fibonacci-421 audit requires reproducible matrix and null controls before execution.
-- Stage 4N generated stego/audio positive-control reports are generated and ignored under `experiments/results/stego-positive-controls/stage4n/`.
-- Positive-control readiness is not tool execution.
-- Historical stego/audio cases require cached or immutable assets plus expected output hashes before execution.
-- Synthetic controls can be ready without historical artefacts.
-- Do not run stego/audio tools in source-lock/readiness stages.
-- Stage 4O generated CPU batch adapter outputs are generated and ignored under `experiments/results/cpu-batch/stage4o/`.
-- CPU batch adapters must keep transform semantics unchanged and must not alter solved-baseline expected outputs.
-- Missing CPU batch adapters require explicit deferred or unsupported-by-design reasons.
-- Future CUDA must satisfy Stage 4O parity expectations before trust.
-- Stage 4P generated result-store unification outputs are generated and ignored under `experiments/results/result-store-unification/stage4p/`.
-- Result-store unification is read-only reporting infrastructure, not experiment execution.
-- Score-summary unification must use Stage 4I labels and must not invent scorer semantics.
-- Missing optional generated outputs must be recorded explicitly, not silently ignored.
-- Cross-stage reports are triage/comparison aids only and cannot make solve claims.
-- Do not commit generated result records, generated score-summary records, SQLite databases, or local reports.
-- Future CUDA planning must reference Stage 4O parity expectations and Stage 4P unified result surfaces.
-- Stage 4Q generated benchmark planning outputs are generated and ignored under `experiments/results/benchmarks/stage4q/`.
-- CPU smoke timings are diagnostic only and must not be reported as performance evidence.
-- Future CUDA planning must cite Stage 4Q benchmark plan and parity readiness records.
-- `codex-output/**` is a local ignored completion-handoff area and must not be staged.
-- `ready_for_manifest` means planning readiness only; it does not mean execution.
-- Control-only observations must not be treated as true claims.
-- Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
-- Upload only generated `site/` contents, never raw `third_party/` inputs.
-- Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.
-- Stage 4B source triage must not mirror noisy public-link indexes blindly.
-- Public-link promotion requires an allowlisted domain, source class, evidence strength, false-positive risk, and recommended action.
-- Visual observations must preserve ambiguity; cuneiform, dot, braille, constellation, and star readings must not be treated as facts.
-- Dot/binary/braille/constellation claims must not become experiment seeds without annotation records, exact coordinates, alternate readings, and controls.
-- Stage 4B disabled manifests stay disabled until a later explicit execution stage.
-- Deep Research reports that change project direction must update `docs/roadmap/staged-plan.md` and the research synthesis records under `data/research/`.
-- Stage 4C generated annotation sites, copied review images, grid overlays, and blank annotation templates are generated outputs and must not be committed.
-- Visual annotation must not infer meaning; coordinates and readings are separate evidence layers.
-- Empty/blank annotation templates are generated and ignored unless a later stage explicitly commits a schema fixture.
-- Visual observations remain noncanonical and `usable_as_experiment_seed=false` until reviewed and promoted in a later explicit stage.
-- Future stages changing visual-observation status must update `docs/roadmap/staged-plan.md` and the method-family/retirement ledgers under `data/research/`.
+- CUDA: deferred.
+
+Discord raw logs are not committed. Raw page images, raw historical stego artefacts, generated outputs, SQLite databases, and local reports remain ignored and uncommitted.
 
 ## Source-of-truth files
 
@@ -1259,17 +954,17 @@ Historical next routed work at Stage 6C closeout: Stage 6D - Final finite Stage 
 <!-- stage6d:start -->
 ## Historical Stage 6D Boundary
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution. Stage 6F repairs current-facing document integrity, hardens hook/preflight traceability, supersedes metadata-only traceability source dependency semantics, and keeps Stage 7 manifest work blocked until Stage 6G. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run image/stego/OCR/CUDA/scoring/benchmarks, select targets, or make a solve claim.
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6F repairs current-facing document integrity, hardens hook/preflight traceability, supersedes metadata-only traceability source dependency semantics, and keeps Stage 7 manifest work blocked until Stage 6G. It did not create a final Stage 7 manifest, run probes, generate result archives, execute routes or byte streams, run image/stego/OCR/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 <!-- stage6d:end -->
 
 <!-- stage6e:start -->
 ## Historical Stage 6E Boundary
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
 
@@ -1277,13 +972,23 @@ Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contra
 <!-- stage6e:end -->
 
 <!-- stage6f:start -->
-## Stage 6F Current Boundary
+## Historical Stage 6F Boundary
 
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Historical prior-stage note: Stage 6F was the latest completed stage when this old section was written.
 
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution.
 
 Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
 
 Stage 6F did not create a final Stage 7 manifest, finalize an archive-run contract, create result archives, run probes, add new theory records, add overlays, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
 <!-- stage6f:end -->
+
+<!-- stage6g:start -->
+## Stage 6G Current Boundary
+
+Current completed stage: Stage 6G - Current-doc acceptance repair, Stage 6H source-lock handoff repair, hook confirmation, and acceptance-policy hardening, without execution.
+
+Next routed stage: Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution. Stage 6H is a dot-angle/right-triangle source-lock addendum because recent material remains chat-only pending source-lock. It is not final Stage 7 manifest work.
+
+Future Codex work must apply `docs/onboarding/codex-acceptance-criteria.md`, review edited current-facing documents as whole final files, and keep all no-execution gates closed unless a later prompt explicitly opens them.
+<!-- stage6g:end -->

@@ -2,13 +2,27 @@
 
 ## Current Project State
 
-## Historical Stage 6D Boundary
+Stage 6G repaired stale current docs after Stage 6F. The source-of-truth-map Current Operational Truth, start-here current routing, and ChatGPT current/historical boundary now point to Stage 6G as latest complete and Stage 6H as the next source-lock/readiness addendum.
 
-Latest completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
+Stage 6H handoff addendum explicitly merges Stage 6C/6D/6E/6F/6G inputs. Stage 6H is routed as a dot-angle/right-triangle source-lock addendum because recent dot-angle/right-triangle material remains chat-only pending source-lock.
 
-Current planning focus: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
+Stage 6G repaired acceptance-policy integration expanded coverage, preserved hook verification honesty, and created no Stage 7 manifest/archive/probe/execution created. No route streams, byte streams, target selection, source-lock payload rewrite, image interpretation, or solve claim were performed.
 
-Stage 6D source-locked the canonical doublet boundary policy as review-only metadata. The pages 15-70 collapsed page-local profile has 12,956 runes, 86 lag1 adjacent doublets, vector `42442156242421632042324217223`, and lag5 equal count 479. Raw adjacency contributes 60 doublets and delimiter-collapsed bridges contribute 26, so the 421 vector depends on delimiter-stripped page-local policy. Including page 14 yields the 89-count reconciliation profile; pages 15-72 preserve lag-distance context. Stage 6D added disabled future probes and a Stage 6E input addendum only. No Stage 7 manifest, probe execution, route extraction, byte stream, archive, CUDA/scoring/benchmark, or solve claim was added.
+## Historical Stage 6C
+
+Stage 6C source-locked the OUROBOROS / I31 circumference bridge as review-only metadata. It preserved OUROBOROS=167, O+U+O+O+O=31=GP(I), R+B+R+S=136=T16, Page32 3222 policy, and future-only watchlists without execution.
+
+## Historical Stage 6D
+
+Stage 6D source-locked the canonical doublet boundary policy as review-only metadata. The pages 15-70 collapsed page-local profile has 12,956 runes, 86 lag1 adjacent doublets, vector `42442156242421632042324217223`, and lag5 equal count 479. Stage 6D added disabled future probes and a Stage 6E input addendum only. Its old routing is historical and no longer current project truth.
+
+## Historical Stage 6E
+
+Stage 6E preserved Stage 6C OUROBOROS/I31 and Stage 6D doublet/boundary addenda while adding readiness bridge records. It recorded CIRCUMFERENCE = 398 = 2 * GP(I AM), the C-to-F finite mask family, DIUINITY/DIVINITY source surface caveat, AN END = FIVE DOTS = 311 = prime(64), big-gap one-based sum 569 = prime(104), Page32 3222 = 18 * 179, and WE MUST SHED OUR OWN CIRCUMFERENCES = 1031. The dju bei / dju bei ae remains an exact-span source gap. Stage 6E did not run probes, create a Stage 7 manifest, generate route or byte streams, create archives, select targets, or make a solve claim.
+
+## Historical Stage 6F
+
+Stage 6F repaired current-doc integrity, preflight self-report exclusion, metadata-only probe traceability semantic cleanup, Ciada/Cicada alias policy, dju-bei backlog crosslinking, and strict acceptance criteria. Stage 6F is historical; Stage 6G routing supersedes its old current route and sends Stage 6H to source-lock/readiness addendum work.
 
 ## Stage 5DV Source Browser Repair
 
@@ -298,54 +312,3 @@ Stage 6B is a triage repair stage. It preserves Stage 6 and the post-Stage-6 aut
 <!-- stage6b:end -->
 
 <!-- stage6c:start -->
-## Historical Stage 6C Boundary
-
-At the time of Stage 6C, Stage 6C - OUROBOROS / I=31 circumference / Page32 spiral geometry source-lock addendum, without execution was the latest completed stage.
-
-Historical planning focus at Stage 6C closeout: Stage 6D - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-
-Stage 6C source-locked the OUROBOROS / I31 circumference bridge as review-only metadata. OUROBOROS=167; vowel/voice layer O+U+O+O+O=31=GP(I); consonant shell R+B+R+S=136=T16. This crosslinks to the solved quote THE I IS THE VOICE OF THE CIRCUMFERENCE, PDD153=T17, delta 14, 56311 offsets, and Page32 grid/spiral value 3222. 3222 is source-backed as a Page32 grid/spiral value; red/highlighted status is not accepted unless separately source-confirmed. Stage 6C added future probes/watchlists only, no execution, no Stage 7 manifest, no route extraction, no solve claim. Stage 6D is next for final finite Stage 7 manifest and archive-run contract.
-<!-- stage6c:end -->
-
-<!-- stage6d:start -->
-## Historical Stage 6D Boundary
-
-Latest completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
-
-Current planning focus: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-
-Stage 6D source-locked the canonical doublet boundary policy as review-only metadata. The pages 15-70 collapsed page-local profile has 12,956 runes, 86 lag1 adjacent doublets, vector `42442156242421632042324217223`, and lag5 equal count 479. Raw adjacency contributes 60 doublets and delimiter-collapsed bridges contribute 26, so the 421 vector depends on delimiter-stripped page-local policy. Including page 14 yields the 89-count reconciliation profile; pages 15-72 preserve lag-distance context. Stage 6D added disabled future probes and a Stage 6E input addendum only. No Stage 7 manifest, probe execution, route extraction, byte stream, archive, CUDA/scoring/benchmark, or solve claim was added.
-<!-- stage6d:end -->
-
-<!-- stage6e:start -->
-## Historical Stage 6E Boundary
-
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
-
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-
-Stage 6E classified all stale-current warning-domain findings into named buckets, installed bounded report-only preprompt doc-staleness advisory behavior, source-locked finite bridge facts, superseded the stale Stage 6B Stage 6C token-block projection precondition, and built Stage 6F source-root/probe traceability inputs.
-
-Stage 6E did not create a final Stage 7 manifest, finalize an archive-run contract, create a result archive, run probes, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
-<!-- stage6e:end -->
-
-<!-- stage6f:start -->
-## Stage 6F Current Boundary
-
-Current completed stage: Stage 6F - Current-doc integrity, hook traceability, and acceptance hardening, without execution.
-
-Current work: Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-
-Stage 6F repaired malformed/stale current mirrors, added file-content validators for high-risk docs, preserved Stage 6E source-lock payloads through a supersession layer, added preflight self-report exclusion, verified report-only hook behavior where local launcher tests can support it, recorded the Ciada/Cicada source-root alias policy, crosslinked the dju-bei backlog gap, and installed strict Codex acceptance criteria.
-
-Stage 6F did not create a final Stage 7 manifest, finalize an archive-run contract, create result archives, run probes, add new theory records, add overlays, generate route or byte streams, run OCR/image/stego/CUDA/scoring/benchmarks, select targets, or make a solve claim.
-<!-- stage6f:end -->
-<!-- stage6e-durable-summary:start -->
-## Stage 6E and Stage 6F Durable Context
-
-Stage 6E preserved Stage 6C OUROBOROS/I31 and Stage 6D doublet/boundary addenda while adding readiness bridge records. It recorded CIRCUMFERENCE = 398 = 2 * GP(I AM), the C-to-F finite mask family with base 398, one-mask 387, two-mask 376, and all-three FIRFUMFERENFE = 365, plus the DIUINITY/DIVINITY source surface caveat around GP376.
-
-Stage 6E also recorded AN END = FIVE DOTS = 311 = prime(64) with Page56 hash byte length 64, the big-gap one-based sum 569 = prime(104) with Mayfly terminal 104, Page32 3222 = 18 * 179 where 179 is reverse(971), and the crosslink from THE I IS THE VOICE OF THE CIRCUMFERENCE to WE MUST SHED OUR OWN CIRCUMFERENCES = 1031. The dju bei / dju bei ae remains an exact-span source gap unless later source-locked. Stage 6E did not run probes, create a final Stage 7 manifest, generate route or byte streams, create archives, select targets, or make a solve claim.
-
-Stage 6F performed current-doc integrity repair, malformed/stale current mirror repair, preflight self-report exclusion, metadata-only probe traceability semantic cleanup, Ciada/Cicada alias policy creation, dju-bei backlog crosslinking, and strict acceptance-criteria policy installation. Stage 6G routing is blocker-driven; Stage 6F routes next to Stage 6G - Final finite Stage 7 probe manifest and archive-run contract, without execution.
-<!-- stage6e-durable-summary:end -->

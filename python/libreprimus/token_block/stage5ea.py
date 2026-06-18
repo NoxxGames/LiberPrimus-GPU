@@ -320,6 +320,7 @@ def validate_stage5ea_current_stage_registry() -> Stage5EAValidationResult:
         "stage-6d",
         "stage-6e",
         "stage-6f",
+        "stage-6g",
     }:
         errors.append(f"{path.as_posix()}: unexpected latest_completed_stage_id {latest_stage!r}")
     return _result("current_stage_registry", payload, errors)

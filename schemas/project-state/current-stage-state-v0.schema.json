@@ -38,10 +38,16 @@
     "benchmark_performed": {
       "const": false
     },
+    "bigrams_py_executed_now": {
+      "const": false
+    },
     "branch_enumeration_performed": {
       "const": false
     },
     "byte_stream_generation_authorized_now": {
+      "const": false
+    },
+    "canonical_bigram_matrix_recomputed_now": {
       "const": false
     },
     "canonical_codex_handoff_root": {
@@ -62,16 +68,25 @@
     "cuda_execution_performed": {
       "const": false
     },
+    "cuda_triage_performed": {
+      "const": false
+    },
     "decode_attempt_performed": {
       "const": false
     },
     "decryption_attempt_performed_now": {
       "const": false
     },
+    "diagnostic_execution_performed_now": {
+      "const": false
+    },
     "diagnostic_probe_run_now": {
       "const": false
     },
     "disk_cipher_execution_performed_now": {
+      "const": false
+    },
+    "dot_angle_source_lock_created_now": {
       "const": false
     },
     "dwh_hash_search_performed": {
@@ -81,6 +96,12 @@
       "const": false
     },
     "execution_performed": {
+      "const": false
+    },
+    "f5_extraction_performed_now": {
+      "const": false
+    },
+    "f5_password_search_performed_now": {
       "const": false
     },
     "full_cartesian_product_enumerated": {
@@ -102,6 +123,9 @@
       "const": false
     },
     "historical_source_lock_records_rewritten": {
+      "const": false
+    },
+    "html_tool_executed_now": {
       "const": false
     },
     "image_forensics_performed": {
@@ -138,7 +162,9 @@
         "stage-6c",
         "stage-6d",
         "stage-6e",
-        "stage-6f"
+        "stage-6f",
+        "stage-6g",
+        "stage-6h"
       ],
       "type": "string"
     },
@@ -147,6 +173,9 @@
     },
     "local_parallel_default_workers": {
       "const": 10
+    },
+    "lossy_filtering_performed": {
+      "const": false
     },
     "machine_code_execution_performed_now": {
       "const": false
@@ -190,6 +219,9 @@
     "new_number_fact_overlays_created_now": {
       "const": false
     },
+    "new_source_lock_evidence_added_as_raw_body": {
+      "const": false
+    },
     "new_source_lock_evidence_added_now": {
       "const": false
     },
@@ -217,7 +249,16 @@
     "operator_readiness_decision_created_now": {
       "const": false
     },
+    "operator_target_priority_decision_created_now": {
+      "const": false
+    },
+    "outguess_execution_performed": {
+      "const": false
+    },
     "page0_plaintext_accepted_now": {
+      "const": false
+    },
+    "page13_f5_payload_claim_accepted_now": {
       "const": false
     },
     "page32_route_extraction_performed_now": {
@@ -226,14 +267,34 @@
     "page56_hash_preimage_tested_now": {
       "const": false
     },
+    "page_boundaries_final": {
+      "const": false
+    },
     "page_boundaries_finalized": {
       "const": false
     },
     "pdf_ocr_or_hidden_content_rendering_performed": {
       "const": false
     },
+    "pgp_private_key_operation_performed": {
+      "const": false
+    },
+    "pgp_signature_verified_now": {
+      "const": false
+    },
+    "pgp_verification_performed_now": {
+      "const": false
+    },
     "pivot_target_selected_now": {
       "const": false
+    },
+    "previous_completed_stage_id": {
+      "enum": [
+        "stage-6f",
+        "stage-6g",
+        "stage-6h"
+      ],
+      "type": "string"
     },
     "probability_claim_accepted_as_validated": {
       "const": false
@@ -253,6 +314,12 @@
     "real_byte_stream_generated": {
       "const": false
     },
+    "recommended_next_prompt_type": {
+      "enum": [
+        "codex_plan_mode_source_lock_addendum"
+      ],
+      "type": "string"
+    },
     "recommended_next_stage_id": {
       "enum": [
         "stage-5eb",
@@ -269,7 +336,14 @@
         "stage-6d",
         "stage-6e",
         "stage-6f",
-        "stage-6g"
+        "stage-6g",
+        "stage-6h"
+      ],
+      "type": "string"
+    },
+    "recommended_next_stage_title": {
+      "enum": [
+        "Stage 6H - Dot-angle and right-triangle number-triangle bridge source-lock addendum, without execution"
       ],
       "type": "string"
     },
@@ -279,6 +353,9 @@
     "result_archive_created_now": {
       "const": false
     },
+    "right_triangle_source_lock_created_now": {
+      "const": false
+    },
     "route_extraction_performed_now": {
       "const": false
     },
@@ -286,6 +363,9 @@
       "const": false
     },
     "scoring_performed": {
+      "const": false
+    },
+    "scoring_triage_performed": {
       "const": false
     },
     "semantic_image_interpretation_performed": {
@@ -303,7 +383,112 @@
     "spectrogram_stego_performed": {
       "const": false
     },
+    "spiral_route_readouts_generated_now": {
+      "const": false
+    },
     "spreadsheet_macro_execution_performed": {
+      "const": false
+    },
+    "stage6_discards_outputs_by_score_now": {
+      "const": false
+    },
+    "stage6_probe_execution_allowed": {
+      "const": false
+    },
+    "stage6_probe_execution_performed_now": {
+      "const": false
+    },
+    "stage6_recomputes_canonical_bigram_matrix_now": {
+      "const": false
+    },
+    "stage6_result_archive_created_now": {
+      "const": false
+    },
+    "stage6_runs_bigrams_py_now": {
+      "const": false
+    },
+    "stage6_runs_diskcipher_probe_now": {
+      "const": false
+    },
+    "stage6_runs_lag5_probe_now": {
+      "const": false
+    },
+    "stage6_runs_music_probe_now": {
+      "const": false
+    },
+    "stage6_runs_stego_probe_now": {
+      "const": false
+    },
+    "stage6_runs_triangle_probe_now": {
+      "const": false
+    },
+    "stage6_selects_stage7_probe_outputs_now": {
+      "const": false
+    },
+    "stage6_zip_result_bundle_created_now": {
+      "const": false
+    },
+    "stage6b_archive_run_contract_finalized_now": {
+      "const": false
+    },
+    "stage6b_creates_stage7_result_archive_now": {
+      "const": false
+    },
+    "stage6b_final_finite_stage7_manifest_created_now": {
+      "const": false
+    },
+    "stage6b_generates_stage7_outputs_now": {
+      "const": false
+    },
+    "stage6b_routes_to_stage7_now": {
+      "const": false
+    },
+    "stage6c_archive_run_contract_finalized_now": {
+      "const": false
+    },
+    "stage6c_confirms_3222_red_highlight_now": {
+      "const": false
+    },
+    "stage6c_creates_stage7_result_archive_now": {
+      "const": false
+    },
+    "stage6c_final_finite_stage7_manifest_created_now": {
+      "const": false
+    },
+    "stage6c_generates_spiral_readouts_now": {
+      "const": false
+    },
+    "stage6c_generates_stage7_outputs_now": {
+      "const": false
+    },
+    "stage6c_generates_triangle_readouts_now": {
+      "const": false
+    },
+    "stage6c_routes_to_stage7_now": {
+      "const": false
+    },
+    "stage6c_runs_any_probe_now": {
+      "const": false
+    },
+    "stage6c_uses_image_interpretation_now": {
+      "const": false
+    },
+    "stage6d_archive_run_contract_finalized_now": {
+      "const": false
+    },
+    "stage6d_creates_stage7_result_archive_now": {
+      "const": false
+    },
+    "stage6d_final_finite_stage7_manifest_created_now": {
+      "const": false
+    },
+    "stage6d_generates_stage7_outputs_now": {
+      "const": false
+    },
+    "stage6d_routes_to_stage7_now": {
+      "const": false
+    },
+    "stage6d_runs_any_probe_now": {
       "const": false
     },
     "stage6e_archive_run_contract_finalized_now": {
@@ -351,6 +536,42 @@
     "stage6f_runs_any_probe_now": {
       "const": false
     },
+    "stage6g_archive_run_contract_finalized_now": {
+      "const": false
+    },
+    "stage6g_creates_stage7_result_archive_now": {
+      "const": false
+    },
+    "stage6g_current_doc_repair_blocker_count": {
+      "type": "integer"
+    },
+    "stage6g_final_finite_stage7_manifest_created_now": {
+      "const": false
+    },
+    "stage6g_generates_spiral_readouts_now": {
+      "const": false
+    },
+    "stage6g_generates_stage7_outputs_now": {
+      "const": false
+    },
+    "stage6g_generates_triangle_readouts_now": {
+      "const": false
+    },
+    "stage6g_routes_to_stage7_now": {
+      "const": false
+    },
+    "stage6g_runs_any_probe_now": {
+      "const": false
+    },
+    "stage6h_final_manifest_blocker_count": {
+      "type": "integer"
+    },
+    "stage6h_final_manifest_required": {
+      "const": false
+    },
+    "stage6h_source_lock_addendum_required": {
+      "type": "boolean"
+    },
     "stage7_archive_created_now": {
       "const": false
     },
@@ -360,7 +581,16 @@
     "stage7_manifest_created_now": {
       "const": false
     },
+    "stage7_probe_execution_performed_now": {
+      "const": false
+    },
     "stage7_zip_archive_creation_allowed_next": {
+      "const": false
+    },
+    "stage8_triangle_readiness_started_now": {
+      "const": false
+    },
+    "stage9_experiments_started_now": {
       "const": false
     },
     "stage_id": {
@@ -386,6 +616,9 @@
     "stage_registry_is_source_of_truth": {
       "const": true
     },
+    "stegdetect_execution_performed_now": {
+      "const": false
+    },
     "stego_tool_execution_performed": {
       "const": false
     },
@@ -405,6 +638,12 @@
       "const": false
     },
     "triangle_route_extraction_performed_now": {
+      "const": false
+    },
+    "triangular_transposition_readouts_generated_now": {
+      "const": false
+    },
+    "triangular_transposition_route_stream_generated_now": {
       "const": false
     },
     "validation_infrastructure_stage": {
